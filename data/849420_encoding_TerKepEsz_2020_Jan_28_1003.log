@@ -1,0 +1,842 @@
+20.5942 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([1., 1., 1.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000009AD3EF9B38>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000009AD4F76F98>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='deg', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+20.5944 	EXP 	window1: recordFrameIntervals = False
+20.7863 	EXP 	window1: recordFrameIntervals = True
+22.7151 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+23.1479 	EXP 	Created welcome_msg = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1, italic=False, languageStyle='LTR', name='welcome_msg', opacity=1.0, ori=0, pos=array([ 0., 12.]), rgb=array([0., 0., 0.]), text='TérKépÉsz', units='deg', win=Window(...), wrapWidth=15.0)
+23.1753 	EXP 	Created logo = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/terkepesz.png', interpolate=True, mask=None, maskParams=None, name='logo', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.321875  , 1.23148148]), texRes=128, units='norm', win=Window(...))
+23.2375 	EXP 	Created lb_check = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='lb_check', opacity=1.0, ori=0, pos=array([-23.,   0.]), rgb=array([0., 0., 0.]), text='Válaszgomb teszt:\n\nNyomja le a bal nyilat!', units='deg', win=Window(...), wrapWidth=15.0)
+23.2492 	EXP 	Created left_upper = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='Stimuli/ScreenCorner1.png', interpolate=True, mask=None, maskParams=None, name='left_upper', opacity=1.0, ori=0.0, pos=array([-0.9,  0.7]), size=array([0.13541667, 0.51481481]), texRes=128, units='norm', win=Window(...))
+23.2571 	EXP 	Created left_lower = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/ScreenCorner2.png', interpolate=True, mask=None, maskParams=None, name='left_lower', opacity=1.0, ori=0.0, pos=array([-0.9, -0.7]), size=array([0.115625  , 0.51666667]), texRes=128, units='norm', win=Window(...))
+23.2619 	EXP 	Created right_upper = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='Stimuli/ScreenCorner3.png', interpolate=True, mask=None, maskParams=None, name='right_upper', opacity=1.0, ori=0.0, pos=array([0.9, 0.7]), size=array([0.11979167, 0.49814815]), texRes=128, units='norm', win=Window(...))
+23.2697 	EXP 	Created right_lower = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='Stimuli/ScreenCorner4.png', interpolate=True, mask=None, maskParams=None, name='right_lower', opacity=1.0, ori=0.0, pos=array([ 0.9, -0.7]), size=array([0.153125 , 0.5037037]), texRes=128, units='norm', win=Window(...))
+23.3143 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=30)
+23.3750 	EXP 	Created story1_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='Stimuli/GalleryBuildingFromOutside.jpg', interpolate=True, mask=None, maskParams=None, name='story1_image', opacity=1.0, ori=0.0, pos=array([0. , 0.9]), size=array([1.01041667, 1.2537037 ]), texRes=128, units='norm', win=Window(...))
+23.4929 	EXP 	Created story1_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='story1_text', opacity=1.0, ori=0, pos=array([ 0., -5.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=30)
+23.5117 	EXP 	Created story2_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='Stimuli/GalleryPlanInside.jpg', interpolate=True, mask=None, maskParams=None, name='story2_image', opacity=1.0, ori=0.0, pos=array([0.5, 0. ]), size=array([0.47916667, 0.84074074]), texRes=128, units='norm', win=Window(...))
+23.6003 	EXP 	Created story2_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='story2_text', opacity=1.0, ori=0, pos=array([-6.,  0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=20)
+23.6576 	EXP 	Created instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='instr_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=15.0)
+23.6580 	EXP 	Created instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='instr_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='', units='deg', win=Window(...), wrapWidth=15.0)
+23.7021 	EXP 	Created start_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='start_task_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=15.0)
+23.7220 	EXP 	Created map_inside_fx = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='Stimuli/GalleryPlanInside.jpg', interpolate=True, mask=None, maskParams=None, name='map_inside_fx', opacity=0.5, ori=0.0, pos=array([  0., -25.]), size=array([1040., 1000.]), texRes=128, units='pix', win=Window(...))
+23.7255 	EXP 	Created fixation_cross = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineWidth=1, name='fixation_cross', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([20., 20.]), units='pix', vertices=ndarray(...), win=Window(...), windingRule=None)
+23.8248 	EXP 	Created main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/Fractals/67b.jpg', interpolate=True, mask=None, maskParams=None, name='main_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+23.8628 	EXP 	Created text_next_run = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.7, italic=False, languageStyle='LTR', name='text_next_run', opacity=1.0, ori=0, pos=array([3., 0.]), rgb=array([0., 0., 0.]), text='Ha folytathatjuk, nyomja meg a jobb nyilat.', units='deg', win=Window(...), wrapWidth=15.0)
+23.8691 	EXP 	Created text_pause = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.7, italic=False, languageStyle='LTR', name='text_pause', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Szünet...', units='deg', win=Window(...), wrapWidth=15.0)
+23.9182 	EXP 	Created text_pause = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1.5, italic=False, languageStyle='LTR', name='text_pause', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Vége a feladatnak. Köszönjük!', units='deg', win=Window(...), wrapWidth=20)
+23.9611 	WARNING 	t of last frame was 1246.31ms (=1/0)
+23.9875 	WARNING 	t of last frame was 26.37ms (=1/37)
+24.0134 	WARNING 	t of last frame was 25.94ms (=1/38)
+24.2643 	WARNING 	t of last frame was 25.29ms (=1/39)
+24.4457 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+34.8867 	DATA 	Keypress: left
+34.9242 	EXP 	lb_check: text = 'Válaszgomb teszt:\n\nNyomja le a jobb nyilat!'
+34.9242 	EXP 	lb_check: pos = (23, 0)
+35.9746 	DATA 	Keypress: right
+39.6383 	DATA 	Keypress: right
+58.2999 	DATA 	Keypress: right
+90.6495 	DATA 	Keypress: right
+98.8843 	DATA 	Keypress: right
+98.9187 	EXP 	instr_text: text = 'Figyeljen, kezdődik a gyakorlás.'
+100.9750 	EXP 	main_image: pos = array([ 105.8791694, -280.6948548])
+100.9750 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/163a.jpg'
+104.3347 	EXP 	main_image: pos = array([  79.33024861, -289.321122  ])
+104.3347 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/164a.jpg'
+107.3898 	EXP 	main_image: pos = array([ 118.8239298, -275.4648321])
+107.3898 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/165a.jpg'
+107.4850 	DATA 	Keypress: left
+109.7621 	DATA 	Keypress: right
+109.9235 	EXP 	instr_text: text = 'Az Ön döntése: A kép nem marad.'
+112.9636 	EXP 	instr_text: text = ''
+112.9636 	EXP 	main_image: pos = array([ 131.511344 , -269.6382139])
+112.9636 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/166a.jpg'
+119.3997 	DATA 	Keypress: right
+119.6054 	EXP 	instr_text: text = 'Az Ön döntése: A kép nem marad.'
+122.5216 	EXP 	instr_text: text = ''
+122.5216 	EXP 	main_image: pos = array([ 143.913934 , -263.2276194])
+122.5216 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/167a.jpg'
+126.1078 	DATA 	Keypress: right
+126.3169 	EXP 	instr_text: text = 'Az Ön döntése: A kép nem marad.'
+129.0959 	EXP 	instr_text: text = ''
+129.0959 	EXP 	main_image: pos = array([ 156.0048384, -256.2469325])
+129.0959 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/168b.jpg'
+130.7949 	DATA 	Keypress: left
+131.0323 	EXP 	instr_text: text = 'Az Ön döntése: A kép marad.'
+134.6337 	EXP 	instr_text: text = ''
+148.0214 	DATA 	Keypress: right
+148.0530 	EXP 	instr_text: text = 'A kísérletvezető indítja a feladatot.'
+153.5750 	DATA 	Keypress: space
+153.6742 	EXP 	start_task_text: text = 'Figyeljen, kezdődik a feladat...'
+155.7331 	EXP 	main_image: pos = array([300.,   0.])
+155.7331 	EXP 	main_image: image = 'Stimuli/Fractals/67b.jpg'
+158.7740 	DATA 	Keypress: left
+160.3032 	EXP 	main_image: pos = array([299.5888604 ,  15.70078687])
+160.3032 	EXP 	main_image: image = 'Stimuli/Fractals/125a.jpg'
+168.9014 	EXP 	main_image: pos = array([298.3565686 ,  31.35853898])
+168.9014 	EXP 	main_image: image = 'Stimuli/Fractals/77c.jpg'
+168.9536 	DATA 	Keypress: left
+171.7740 	DATA 	Keypress: right
+173.4595 	EXP 	main_image: pos = array([296.3065022 ,  46.93033951])
+173.4595 	EXP 	main_image: image = 'Stimuli/Fractals/61b.jpg'
+175.7359 	DATA 	Keypress: left
+177.0423 	EXP 	main_image: pos = array([293.4442802 ,  62.37350725])
+177.0423 	EXP 	main_image: image = 'Stimuli/Fractals/60b.jpg'
+183.3210 	DATA 	Keypress: left
+184.6253 	EXP 	main_image: pos = array([298.3565686 ,  31.35853898])
+184.6253 	EXP 	main_image: image = 'Stimuli/Fractals/77a.jpg'
+188.7628 	DATA 	Keypress: right
+190.1852 	EXP 	main_image: pos = array([296.3065022 ,  46.93033951])
+190.1852 	EXP 	main_image: image = 'Stimuli/Fractals/61b.jpg'
+197.3403 	DATA 	Keypress: left
+198.7700 	EXP 	main_image: pos = array([293.4442802 ,  62.37350725])
+198.7700 	EXP 	main_image: image = 'Stimuli/Fractals/60c.jpg'
+201.6901 	DATA 	Keypress: left
+203.3294 	EXP 	main_image: pos = array([299.5888604 ,  15.70078687])
+203.3294 	EXP 	main_image: image = 'Stimuli/Fractals/125a.jpg'
+207.0476 	DATA 	Keypress: left
+207.8949 	EXP 	main_image: pos = array([300.,   0.])
+207.8949 	EXP 	main_image: image = 'Stimuli/Fractals/67b.jpg'
+212.3857 	DATA 	Keypress: left
+213.4759 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+213.4759 	EXP 	main_image: image = 'Stimuli/Fractals/75c.jpg'
+217.3656 	DATA 	Keypress: right
+218.0716 	EXP 	main_image: pos = array([285.3169549 ,  92.70509831])
+218.0716 	EXP 	main_image: image = 'Stimuli/Fractals/6c.jpg'
+220.9024 	DATA 	Keypress: left
+222.6491 	EXP 	main_image: pos = array([280.0741279, 107.5103849])
+222.6491 	EXP 	main_image: image = 'Stimuli/Fractals/127b.jpg'
+225.9733 	DATA 	Keypress: left
+227.2387 	EXP 	main_image: pos = array([274.0636373, 122.0209929])
+227.2387 	EXP 	main_image: image = 'Stimuli/Fractals/139b.jpg'
+229.4320 	DATA 	Keypress: right
+230.2917 	EXP 	main_image: pos = array([267.3019573, 136.1971499])
+230.2917 	EXP 	main_image: image = 'Stimuli/Fractals/38b.jpg'
+232.9641 	DATA 	Keypress: right
+233.3677 	EXP 	main_image: pos = array([259.8076211, 150.       ])
+233.3677 	EXP 	main_image: image = 'Stimuli/Fractals/1c.jpg'
+235.2115 	DATA 	Keypress: right
+236.9368 	EXP 	main_image: pos = array([ -77.64571353, -289.7777479 ])
+236.9368 	EXP 	main_image: image = 'Stimuli/Fractals/6c.jpg'
+240.8403 	DATA 	Keypress: left
+242.5103 	EXP 	main_image: pos = array([267.3019573, 136.1971499])
+242.5103 	EXP 	main_image: image = 'Stimuli/Fractals/38a.jpg'
+248.1188 	DATA 	Keypress: right
+249.1065 	EXP 	main_image: pos = array([251.6011704, 163.3917105])
+249.1065 	EXP 	main_image: image = 'Stimuli/Fractals/144b.jpg'
+251.1598 	DATA 	Keypress: right
+252.6960 	EXP 	main_image: pos = array([280.0741279, 107.5103849])
+252.6960 	EXP 	main_image: image = 'Stimuli/Fractals/127b.jpg'
+256.0129 	DATA 	Keypress: left
+257.2853 	EXP 	main_image: pos = array([242.7050983, 176.3355757])
+257.2853 	EXP 	main_image: image = 'Stimuli/Fractals/107c.jpg'
+263.5564 	DATA 	Keypress: right
+264.8664 	EXP 	main_image: pos = array([233.1437884, 188.7961173])
+264.8664 	EXP 	main_image: image = 'Stimuli/Fractals/21b.jpg'
+266.8955 	DATA 	Keypress: right
+268.4364 	EXP 	main_image: pos = array([274.0636373, 122.0209929])
+268.4364 	EXP 	main_image: image = 'Stimuli/Fractals/139b.jpg'
+272.2128 	DATA 	Keypress: right
+273.0195 	EXP 	main_image: pos = array([251.6011704, 163.3917105])
+273.0195 	EXP 	main_image: image = 'Stimuli/Fractals/144a.jpg'
+275.8725 	DATA 	Keypress: left
+276.5866 	EXP 	main_image: pos = array([ -77.64571353, -289.7777479 ])
+276.5866 	EXP 	main_image: image = 'Stimuli/Fractals/1c.jpg'
+279.6057 	DATA 	Keypress: right
+281.1470 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+281.1470 	EXP 	main_image: image = 'Stimuli/Fractals/75c.jpg'
+283.2412 	DATA 	Keypress: right
+284.7295 	EXP 	main_image: pos = array([222.9434476, 200.7391819])
+284.7295 	EXP 	main_image: image = 'Stimuli/Fractals/138c.jpg'
+290.9649 	DATA 	Keypress: right
+292.3133 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+292.3133 	EXP 	main_image: image = 'Stimuli/Fractals/66b.jpg'
+295.4271 	DATA 	Keypress: right
+296.8711 	EXP 	main_image: pos = array([ 233.1437884, -188.7961173])
+296.8711 	EXP 	main_image: image = 'Stimuli/Fractals/21b.jpg'
+301.7373 	DATA 	Keypress: right
+303.4329 	EXP 	main_image: pos = array([-280.0741279,  107.5103849])
+303.4329 	EXP 	main_image: image = 'Stimuli/Fractals/107c.jpg'
+305.3409 	DATA 	Keypress: right
+306.9803 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+306.9803 	EXP 	main_image: image = 'Stimuli/Fractals/66b.jpg'
+312.5326 	EXP 	main_image: pos = array([-242.7050983,  176.3355757])
+312.5326 	EXP 	main_image: image = 'Stimuli/Fractals/138c.jpg'
+317.8418 	DATA 	Keypress: right
+319.1003 	EXP 	main_image: pos = array([200.7391819, 222.9434476])
+319.1003 	EXP 	main_image: image = 'Stimuli/Fractals/71b.jpg'
+321.0454 	DATA 	Keypress: left
+322.6622 	EXP 	main_image: pos = array([188.7961173, 233.1437884])
+322.6622 	EXP 	main_image: image = 'Stimuli/Fractals/18c.jpg'
+327.2124 	DATA 	Keypress: right
+328.2502 	EXP 	main_image: pos = array([176.3355757, 242.7050983])
+328.2502 	EXP 	main_image: image = 'Stimuli/Fractals/133c.jpg'
+336.2494 	DATA 	Keypress: right
+337.8435 	EXP 	main_image: pos = array([163.3917105, 251.6011704])
+337.8435 	EXP 	main_image: image = 'Stimuli/Fractals/2b.jpg'
+341.3297 	DATA 	Keypress: left
+341.3969 	EXP 	main_image: pos = array([-176.3355757,  242.7050983])
+341.3969 	EXP 	main_image: image = 'Stimuli/Fractals/18c.jpg'
+343.2172 	DATA 	Keypress: right
+344.9593 	EXP 	main_image: pos = array([150.       , 259.8076211])
+344.9593 	EXP 	main_image: image = 'Stimuli/Fractals/9b.jpg'
+349.6091 	DATA 	Keypress: left
+350.5470 	EXP 	main_image: pos = array([136.1971499, 267.3019573])
+350.5470 	EXP 	main_image: image = 'Stimuli/Fractals/48b.jpg'
+353.8794 	DATA 	Keypress: left
+355.1221 	EXP 	main_image: pos = array([122.0209929, 274.0636373])
+355.1221 	EXP 	main_image: image = 'Stimuli/Fractals/59a.jpg'
+356.8929 	DATA 	Keypress: right
+358.6890 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+358.6890 	EXP 	main_image: image = 'Stimuli/Fractals/75c.jpg'
+362.6878 	DATA 	Keypress: right
+364.2357 	EXP 	main_image: pos = array([200.7391819, 222.9434476])
+364.2357 	EXP 	main_image: image = 'Stimuli/Fractals/71b.jpg'
+368.4938 	DATA 	Keypress: left
+369.7933 	EXP 	main_image: pos = array([163.3917105, 251.6011704])
+369.7933 	EXP 	main_image: image = 'Stimuli/Fractals/2b.jpg'
+372.9926 	DATA 	Keypress: left
+374.3744 	EXP 	main_image: pos = array([176.3355757, 242.7050983])
+374.3744 	EXP 	main_image: image = 'Stimuli/Fractals/133b.jpg'
+377.2604 	DATA 	Keypress: right
+378.9605 	EXP 	main_image: pos = array([107.5103849, 280.0741279])
+378.9605 	EXP 	main_image: image = 'Stimuli/Fractals/142b.jpg'
+380.9336 	DATA 	Keypress: left
+382.5160 	EXP 	main_image: pos = array([136.1971499, 267.3019573])
+382.5160 	EXP 	main_image: image = 'Stimuli/Fractals/48b.jpg'
+387.4582 	DATA 	Keypress: left
+389.0685 	EXP 	main_image: pos = array([289.7777479 , -77.64571353])
+389.0685 	EXP 	main_image: image = 'Stimuli/Fractals/9b.jpg'
+391.2277 	DATA 	Keypress: right
+392.6560 	EXP 	main_image: pos = array([ 92.70509831, 285.3169549 ])
+392.6560 	EXP 	main_image: image = 'Stimuli/Fractals/121a.jpg'
+394.9814 	DATA 	Keypress: right
+396.2058 	EXP 	main_image: pos = array([298.3565686 ,  31.35853898])
+396.2058 	EXP 	main_image: image = 'Stimuli/Fractals/59a.jpg'
+398.2053 	DATA 	Keypress: right
+399.7517 	EXP 	main_image: pos = array([280.0741279, 107.5103849])
+399.7517 	EXP 	main_image: image = 'Stimuli/Fractals/142b.jpg'
+401.5287 	DATA 	Keypress: left
+403.3086 	EXP 	main_image: pos = array([ 77.64571353, 289.7777479 ])
+403.3086 	EXP 	main_image: image = 'Stimuli/Fractals/4b.jpg'
+407.6215 	DATA 	Keypress: left
+408.8921 	EXP 	main_image: pos = array([ 62.37350725, 293.4442802 ])
+408.8921 	EXP 	main_image: image = 'Stimuli/Fractals/42c.jpg'
+412.8664 	DATA 	Keypress: right
+414.4777 	EXP 	main_image: pos = array([ 92.70509831, 285.3169549 ])
+414.4777 	EXP 	main_image: image = 'Stimuli/Fractals/121c.jpg'
+416.0360 	DATA 	Keypress: left
+417.5327 	EXP 	main_image: pos = array([ 77.64571353, 289.7777479 ])
+417.5327 	EXP 	main_image: image = 'Stimuli/Fractals/4c.jpg'
+419.6045 	DATA 	Keypress: left
+421.0988 	EXP 	main_image: pos = array([ 46.93033951, 296.3065022 ])
+421.0988 	EXP 	main_image: image = 'Stimuli/Fractals/17b.jpg'
+423.9145 	DATA 	Keypress: left
+424.6436 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+424.6436 	EXP 	main_image: image = 'Stimuli/Fractals/75c.jpg'
+426.3691 	DATA 	Keypress: right
+428.2055 	EXP 	main_image: pos = array([ 31.35853898, 298.3565686 ])
+428.2055 	EXP 	main_image: image = 'Stimuli/Fractals/33b.jpg'
+429.7778 	DATA 	Keypress: right
+431.2825 	EXP 	main_image: pos = array([ 15.70078687, 299.5888604 ])
+431.2825 	EXP 	main_image: image = 'Stimuli/Fractals/40a.jpg'
+434.5935 	DATA 	Keypress: left
+435.8364 	EXP 	main_image: pos = array([ 62.37350725, 293.4442802 ])
+435.8364 	EXP 	main_image: image = 'Stimuli/Fractals/42c.jpg'
+437.0326 	DATA 	Keypress: right
+438.8956 	EXP 	main_image: pos = array([-242.7050983, -176.3355757])
+438.8956 	EXP 	main_image: image = 'Stimuli/Fractals/33b.jpg'
+445.8864 	DATA 	Keypress: right
+447.4599 	EXP 	main_image: pos = array([ 15.70078687, 299.5888604 ])
+447.4599 	EXP 	main_image: image = 'Stimuli/Fractals/40c.jpg'
+456.3579 	DATA 	Keypress: left
+458.0209 	EXP 	main_image: pos = array([1.84e-14, 3.00e+02])
+458.0209 	EXP 	main_image: image = 'Stimuli/Fractals/54c.jpg'
+465.9173 	DATA 	Keypress: right
+467.6090 	EXP 	main_image: pos = array([-15.70078687, 299.5888604 ])
+467.6090 	EXP 	main_image: image = 'Stimuli/Fractals/78b.jpg'
+469.5763 	DATA 	Keypress: right
+471.1715 	EXP 	main_image: pos = array([ 46.93033951, 296.3065022 ])
+471.1715 	EXP 	main_image: image = 'Stimuli/Fractals/17a.jpg'
+476.2041 	DATA 	Keypress: left
+477.7382 	EXP 	main_image: pos = array([-285.3169549 ,   92.70509831])
+477.7382 	EXP 	main_image: image = 'Stimuli/Fractals/54c.jpg'
+480.4471 	DATA 	Keypress: right
+482.2918 	EXP 	main_image: pos = array([-31.35853898, 298.3565686 ])
+482.2918 	EXP 	main_image: image = 'Stimuli/Fractals/16a.jpg'
+487.6096 	DATA 	Keypress: right
+488.8653 	EXP 	main_image: pos = array([-46.93033951, 296.3065022 ])
+488.8653 	EXP 	main_image: image = 'Stimuli/Fractals/83c.jpg'
+491.5002 	DATA 	Keypress: right
+492.4404 	EXP 	main_image: pos = array([-62.37350725, 293.4442802 ])
+492.4404 	EXP 	main_image: image = 'Stimuli/Fractals/52c.jpg'
+496.5736 	DATA 	Keypress: right
+498.0180 	EXP 	main_image: pos = array([-77.64571353, 289.7777479 ])
+498.0180 	EXP 	main_image: image = 'Stimuli/Fractals/119a.jpg'
+499.8136 	DATA 	Keypress: left
+501.5834 	EXP 	main_image: pos = array([-15.70078687, 299.5888604 ])
+501.5834 	EXP 	main_image: image = 'Stimuli/Fractals/78b.jpg'
+503.5091 	DATA 	Keypress: right
+505.1493 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+505.1493 	EXP 	main_image: image = 'Stimuli/Fractals/75c.jpg'
+506.5002 	DATA 	Keypress: right
+508.2379 	EXP 	main_image: pos = array([-92.70509831, 285.3169549 ])
+508.2379 	EXP 	main_image: image = 'Stimuli/Fractals/11b.jpg'
+516.1388 	DATA 	Keypress: right
+517.8270 	EXP 	main_image: pos = array([-107.5103849,  280.0741279])
+517.8270 	EXP 	main_image: image = 'Stimuli/Fractals/93b.jpg'
+523.0145 	DATA 	Keypress: right
+524.3764 	EXP 	main_image: pos = array([-46.93033951, 296.3065022 ])
+524.3764 	EXP 	main_image: image = 'Stimuli/Fractals/83c.jpg'
+527.3627 	DATA 	Keypress: right
+528.9458 	EXP 	main_image: pos = array([-31.35853898, 298.3565686 ])
+528.9458 	EXP 	main_image: image = 'Stimuli/Fractals/16c.jpg'
+531.7529 	DATA 	Keypress: right
+533.5444 	EXP 	main_image: pos = array([-107.5103849,  280.0741279])
+533.5444 	EXP 	main_image: image = 'Stimuli/Fractals/93c.jpg'
+536.5826 	DATA 	Keypress: right
+538.1006 	EXP 	main_image: pos = array([-285.3169549 ,   92.70509831])
+538.1006 	EXP 	main_image: image = 'Stimuli/Fractals/52c.jpg'
+540.0854 	DATA 	Keypress: right
+541.6624 	EXP 	main_image: pos = array([-77.64571353, 289.7777479 ])
+541.6624 	EXP 	main_image: image = 'Stimuli/Fractals/119a.jpg'
+549.6248 	DATA 	Keypress: left
+551.2633 	EXP 	main_image: pos = array([-122.0209929,  274.0636373])
+551.2633 	EXP 	main_image: image = 'Stimuli/Fractals/34a.jpg'
+553.4837 	DATA 	Keypress: right
+554.8232 	EXP 	main_image: pos = array([-136.1971499,  267.3019573])
+554.8232 	EXP 	main_image: image = 'Stimuli/Fractals/28a.jpg'
+556.6753 	DATA 	Keypress: left
+558.3819 	EXP 	main_image: pos = array([-92.70509831, 285.3169549 ])
+558.3819 	EXP 	main_image: image = 'Stimuli/Fractals/11b.jpg'
+560.4410 	DATA 	Keypress: right
+561.9657 	EXP 	main_image: pos = array([-150.       ,  259.8076211])
+561.9657 	EXP 	main_image: image = 'Stimuli/Fractals/130a.jpg'
+567.9984 	DATA 	Keypress: right
+568.5408 	EXP 	main_image: pos = array([-163.3917105,  251.6011704])
+568.5408 	EXP 	main_image: image = 'Stimuli/Fractals/63c.jpg'
+570.8168 	DATA 	Keypress: left
+572.1032 	EXP 	main_image: pos = array([-176.3355757,  242.7050983])
+572.1032 	EXP 	main_image: image = 'Stimuli/Fractals/110c.jpg'
+576.3085 	DATA 	Keypress: right
+577.6868 	EXP 	main_image: pos = array([-188.7961173,  233.1437884])
+577.6868 	EXP 	main_image: image = 'Stimuli/Fractals/13c.jpg'
+579.6997 	DATA 	Keypress: right
+580.7474 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+580.7474 	EXP 	main_image: image = 'Stimuli/Fractals/75c.jpg'
+584.5540 	DATA 	Keypress: right
+586.3102 	EXP 	main_image: pos = array([-176.3355757,  242.7050983])
+586.3102 	EXP 	main_image: image = 'Stimuli/Fractals/110c.jpg'
+589.1690 	DATA 	Keypress: right
+590.8491 	EXP 	main_image: pos = array([-122.0209929,  274.0636373])
+590.8491 	EXP 	main_image: image = 'Stimuli/Fractals/34b.jpg'
+594.9029 	DATA 	Keypress: right
+596.4242 	EXP 	main_image: pos = array([-150.       , -259.8076211])
+596.4242 	EXP 	main_image: image = 'Stimuli/Fractals/28a.jpg'
+600.5865 	DATA 	Keypress: left
+601.9982 	EXP 	main_image: pos = array([-163.3917105,  251.6011704])
+601.9982 	EXP 	main_image: image = 'Stimuli/Fractals/63b.jpg'
+606.8973 	DATA 	Keypress: left
+608.5779 	EXP 	main_image: pos = array([ -77.64571353, -289.7777479 ])
+608.5779 	EXP 	main_image: image = 'Stimuli/Fractals/130a.jpg'
+612.7016 	DATA 	Keypress: right
+614.1209 	EXP 	main_image: pos = array([259.8076211, 150.       ])
+614.1209 	EXP 	main_image: image = 'Stimuli/Fractals/13c.jpg'
+616.8985 	DATA 	Keypress: right
+618.7090 	EXP 	main_image: pos = array([-200.7391819,  222.9434476])
+618.7090 	EXP 	main_image: image = 'Stimuli/Fractals/50b.jpg'
+628.6933 	DATA 	Keypress: right
+629.2953 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+629.2953 	EXP 	main_image: image = 'Stimuli/Fractals/115c.jpg'
+631.3320 	DATA 	Keypress: right
+632.8553 	EXP 	main_image: pos = array([-222.9434476,  200.7391819])
+632.8553 	EXP 	main_image: image = 'Stimuli/Fractals/90c.jpg'
+634.6642 	DATA 	Keypress: left
+635.9416 	EXP 	main_image: pos = array([-233.1437884,  188.7961173])
+635.9416 	EXP 	main_image: image = 'Stimuli/Fractals/23b.jpg'
+638.6433 	DATA 	Keypress: right
+640.4998 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+640.4998 	EXP 	main_image: image = 'Stimuli/Fractals/115b.jpg'
+644.6247 	DATA 	Keypress: right
+645.0601 	EXP 	main_image: pos = array([285.3169549 ,  92.70509831])
+645.0601 	EXP 	main_image: image = 'Stimuli/Fractals/50b.jpg'
+651.9909 	DATA 	Keypress: right
+653.6362 	EXP 	main_image: pos = array([-242.7050983,  176.3355757])
+653.6362 	EXP 	main_image: image = 'Stimuli/Fractals/37a.jpg'
+659.0915 	DATA 	Keypress: left
+660.2214 	EXP 	main_image: pos = array([-251.6011704,  163.3917105])
+660.2214 	EXP 	main_image: image = 'Stimuli/Fractals/100a.jpg'
+664.2378 	DATA 	Keypress: right
+665.7771 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+665.7771 	EXP 	main_image: image = 'Stimuli/Fractals/75c.jpg'
+672.7234 	DATA 	Keypress: right
+674.3434 	EXP 	main_image: pos = array([-222.9434476,  200.7391819])
+674.3434 	EXP 	main_image: image = 'Stimuli/Fractals/90c.jpg'
+677.5058 	DATA 	Keypress: left
+678.9169 	EXP 	main_image: pos = array([-233.1437884,  188.7961173])
+678.9169 	EXP 	main_image: image = 'Stimuli/Fractals/23c.jpg'
+680.9449 	DATA 	Keypress: right
+682.5070 	EXP 	main_image: pos = array([-259.8076211,  150.       ])
+682.5070 	EXP 	main_image: image = 'Stimuli/Fractals/129c.jpg'
+686.6717 	DATA 	Keypress: right
+688.0685 	EXP 	main_image: pos = array([-267.3019573,  136.1971499])
+688.0685 	EXP 	main_image: image = 'Stimuli/Fractals/7c.jpg'
+690.0999 	DATA 	Keypress: left
+691.6605 	EXP 	main_image: pos = array([-274.0636373,  122.0209929])
+691.6605 	EXP 	main_image: image = 'Stimuli/Fractals/94a.jpg'
+693.7675 	DATA 	Keypress: right
+695.2168 	EXP 	main_image: pos = array([ 62.37350725, 293.4442802 ])
+695.2168 	EXP 	main_image: image = 'Stimuli/Fractals/100a.jpg'
+697.2047 	DATA 	Keypress: right
+698.7828 	EXP 	main_image: pos = array([259.8076211, 150.       ])
+698.7828 	EXP 	main_image: image = 'Stimuli/Fractals/37a.jpg'
+704.7078 	DATA 	Keypress: left
+706.3362 	EXP 	main_image: pos = array([-163.3917105, -251.6011704])
+706.3362 	EXP 	main_image: image = 'Stimuli/Fractals/94a.jpg'
+709.2877 	DATA 	Keypress: right
+710.9630 	EXP 	main_image: pos = array([-280.0741279,  107.5103849])
+710.9630 	EXP 	main_image: image = 'Stimuli/Fractals/56c.jpg'
+714.5517 	EXP 	main_image: pos = array([-285.3169549 ,   92.70509831])
+714.5517 	EXP 	main_image: image = 'Stimuli/Fractals/62b.jpg'
+717.6531 	DATA 	Keypress: right
+719.1212 	EXP 	main_image: pos = array([-289.7777479 ,   77.64571353])
+719.1212 	EXP 	main_image: image = 'Stimuli/Fractals/102b.jpg'
+725.1502 	DATA 	Keypress: left
+726.6920 	EXP 	main_image: pos = array([-259.8076211,  150.       ])
+726.6920 	EXP 	main_image: image = 'Stimuli/Fractals/129b.jpg'
+728.7216 	DATA 	Keypress: right
+730.2594 	EXP 	main_image: pos = array([ -92.70509831, -285.3169549 ])
+730.2594 	EXP 	main_image: image = 'Stimuli/Fractals/7c.jpg'
+732.0030 	DATA 	Keypress: left
+733.8422 	EXP 	main_image: pos = array([-293.4442802 ,   62.37350725])
+733.8422 	EXP 	main_image: image = 'Stimuli/Fractals/124b.jpg'
+736.8070 	DATA 	Keypress: right
+738.3930 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+738.3930 	EXP 	main_image: image = 'Stimuli/Fractals/75c.jpg'
+744.1441 	DATA 	Keypress: right
+745.9888 	EXP 	main_image: pos = array([-296.3065022 ,   46.93033951])
+745.9888 	EXP 	main_image: image = 'Stimuli/Fractals/134b.jpg'
+752.9527 	DATA 	Keypress: right
+754.5660 	EXP 	main_image: pos = array([-298.3565686 ,   31.35853898])
+754.5660 	EXP 	main_image: image = 'Stimuli/Fractals/64b.jpg'
+757.4546 	DATA 	Keypress: right
+759.1281 	EXP 	main_image: pos = array([-280.0741279,  107.5103849])
+759.1281 	EXP 	main_image: image = 'Stimuli/Fractals/56c.jpg'
+760.9470 	DATA 	Keypress: right
+762.2164 	EXP 	main_image: pos = array([-285.3169549 ,   92.70509831])
+762.2164 	EXP 	main_image: image = 'Stimuli/Fractals/62c.jpg'
+764.2066 	DATA 	Keypress: right
+765.7837 	EXP 	main_image: pos = array([-289.7777479 ,   77.64571353])
+765.7837 	EXP 	main_image: image = 'Stimuli/Fractals/102b.jpg'
+769.4907 	DATA 	Keypress: left
+771.3438 	EXP 	main_image: pos = array([-150.       ,  259.8076211])
+771.3438 	EXP 	main_image: image = 'Stimuli/Fractals/124b.jpg'
+773.3001 	DATA 	Keypress: right
+774.9248 	EXP 	main_image: pos = array([-299.5888604 ,   15.70078687])
+774.9248 	EXP 	main_image: image = 'Stimuli/Fractals/96b.jpg'
+777.9232 	DATA 	Keypress: right
+779.4949 	EXP 	main_image: pos = array([-296.3065022 ,   46.93033951])
+779.4949 	EXP 	main_image: image = 'Stimuli/Fractals/134b.jpg'
+782.3522 	DATA 	Keypress: right
+784.0608 	EXP 	main_image: pos = array([-3.00e+02,  3.67e-14])
+784.0608 	EXP 	main_image: image = 'Stimuli/Fractals/76b.jpg'
+786.1789 	DATA 	Keypress: left
+787.6514 	EXP 	main_image: pos = array([-299.5888604 ,  -15.70078687])
+787.6514 	EXP 	main_image: image = 'Stimuli/Fractals/44a.jpg'
+789.6009 	DATA 	Keypress: left
+791.2126 	EXP 	main_image: pos = array([-298.3565686 ,   31.35853898])
+791.2126 	EXP 	main_image: image = 'Stimuli/Fractals/64a.jpg'
+792.6651 	DATA 	Keypress: right
+794.2691 	EXP 	main_image: pos = array([-3.00e+02,  3.67e-14])
+794.2691 	EXP 	main_image: image = 'Stimuli/Fractals/76c.jpg'
+798.2236 	DATA 	Keypress: left
+799.8442 	EXP 	main_image: pos = array([-298.3565686 ,  -31.35853898])
+799.8442 	EXP 	main_image: image = 'Stimuli/Fractals/103c.jpg'
+802.8368 	DATA 	Keypress: left
+804.4142 	EXP 	main_image: pos = array([-296.3065022 ,  -46.93033951])
+804.4142 	EXP 	main_image: image = 'Stimuli/Fractals/15b.jpg'
+807.3119 	DATA 	Keypress: right
+808.9845 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+808.9845 	EXP 	main_image: image = 'Stimuli/Fractals/75c.jpg'
+810.7501 	DATA 	Keypress: right
+812.5675 	EXP 	main_image: pos = array([-299.5888604 ,   15.70078687])
+812.5675 	EXP 	main_image: image = 'Stimuli/Fractals/96b.jpg'
+814.4814 	DATA 	Keypress: right
+816.1512 	EXP 	main_image: pos = array([-293.4442802 ,  -62.37350725])
+816.1512 	EXP 	main_image: image = 'Stimuli/Fractals/87b.jpg'
+818.3160 	DATA 	Keypress: right
+819.7272 	EXP 	main_image: pos = array([-289.7777479 ,  -77.64571353])
+819.7272 	EXP 	main_image: image = 'Stimuli/Fractals/114a.jpg'
+823.9288 	DATA 	Keypress: right
+825.2954 	EXP 	main_image: pos = array([-299.5888604 ,  -15.70078687])
+825.2954 	EXP 	main_image: image = 'Stimuli/Fractals/44a.jpg'
+827.2008 	DATA 	Keypress: left
+828.8667 	EXP 	main_image: pos = array([-285.3169549 ,  -92.70509831])
+828.8667 	EXP 	main_image: image = 'Stimuli/Fractals/68c.jpg'
+832.9519 	DATA 	Keypress: right
+834.4275 	EXP 	main_image: pos = array([-296.3065022 ,  -46.93033951])
+834.4275 	EXP 	main_image: image = 'Stimuli/Fractals/15b.jpg'
+837.3406 	DATA 	Keypress: right
+838.9894 	EXP 	main_image: pos = array([-298.3565686 ,  -31.35853898])
+838.9894 	EXP 	main_image: image = 'Stimuli/Fractals/103c.jpg'
+840.7839 	DATA 	Keypress: left
+842.5597 	EXP 	main_image: pos = array([-280.0741279, -107.5103849])
+842.5597 	EXP 	main_image: image = 'Stimuli/Fractals/86a.jpg'
+845.7893 	DATA 	Keypress: left
+847.1344 	EXP 	main_image: pos = array([-274.0636373, -122.0209929])
+847.1344 	EXP 	main_image: image = 'Stimuli/Fractals/135c.jpg'
+852.0744 	DATA 	Keypress: right
+853.7028 	EXP 	main_image: pos = array([-285.3169549 ,  -92.70509831])
+853.7028 	EXP 	main_image: image = 'Stimuli/Fractals/68a.jpg'
+855.8058 	DATA 	Keypress: right
+857.2600 	EXP 	main_image: pos = array([ -62.37350725, -293.4442802 ])
+857.2600 	EXP 	main_image: image = 'Stimuli/Fractals/87b.jpg'
+861.9380 	DATA 	Keypress: right
+862.8108 	EXP 	main_image: pos = array([ 46.93033951, 296.3065022 ])
+862.8108 	EXP 	main_image: image = 'Stimuli/Fractals/114a.jpg'
+865.8046 	DATA 	Keypress: right
+867.3729 	EXP 	main_image: pos = array([-280.0741279, -107.5103849])
+867.3729 	EXP 	main_image: image = 'Stimuli/Fractals/86b.jpg'
+870.2854 	DATA 	Keypress: left
+871.9474 	EXP 	main_image: pos = array([-267.3019573, -136.1971499])
+871.9474 	EXP 	main_image: image = 'Stimuli/Fractals/106c.jpg'
+875.8429 	DATA 	Keypress: left
+877.5098 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+877.5098 	EXP 	main_image: image = 'Stimuli/Fractals/75c.jpg'
+878.6335 	DATA 	Keypress: right
+880.6036 	EXP 	main_image: pos = array([-274.0636373, -122.0209929])
+880.6036 	EXP 	main_image: image = 'Stimuli/Fractals/135a.jpg'
+884.8962 	DATA 	Keypress: right
+886.1836 	EXP 	main_image: pos = array([-259.8076211, -150.       ])
+886.1836 	EXP 	main_image: image = 'Stimuli/Fractals/105c.jpg'
+887.8691 	DATA 	Keypress: left
+889.7491 	EXP 	main_image: pos = array([-251.6011704, -163.3917105])
+889.7491 	EXP 	main_image: image = 'Stimuli/Fractals/97b.jpg'
+891.0113 	DATA 	Keypress: right
+892.8286 	EXP 	main_image: pos = array([-242.7050983, -176.3355757])
+892.8286 	EXP 	main_image: image = 'Stimuli/Fractals/99a.jpg'
+894.6807 	DATA 	Keypress: right
+896.4058 	EXP 	main_image: pos = array([-233.1437884, -188.7961173])
+896.4058 	EXP 	main_image: image = 'Stimuli/Fractals/140a.jpg'
+899.1977 	DATA 	Keypress: left
+900.9529 	EXP 	main_image: pos = array([ 274.0636373, -122.0209929])
+900.9529 	EXP 	main_image: image = 'Stimuli/Fractals/106c.jpg'
+903.1247 	DATA 	Keypress: left
+904.5391 	EXP 	main_image: pos = array([-222.9434476, -200.7391819])
+904.5391 	EXP 	main_image: image = 'Stimuli/Fractals/51a.jpg'
+909.5695 	DATA 	Keypress: right
+911.1093 	EXP 	main_image: pos = array([-267.3019573,  136.1971499])
+911.1093 	EXP 	main_image: image = 'Stimuli/Fractals/97b.jpg'
+913.0509 	DATA 	Keypress: right
+914.6919 	EXP 	main_image: pos = array([-259.8076211, -150.       ])
+914.6919 	EXP 	main_image: image = 'Stimuli/Fractals/105c.jpg'
+918.5385 	DATA 	Keypress: left
+920.2663 	EXP 	main_image: pos = array([-233.1437884, -188.7961173])
+920.2663 	EXP 	main_image: image = 'Stimuli/Fractals/140b.jpg'
+927.3363 	DATA 	Keypress: left
+928.8289 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+928.8289 	EXP 	main_image: image = 'Stimuli/Fractals/98b.jpg'
+934.5436 	DATA 	Keypress: left
+935.3971 	EXP 	main_image: pos = array([-200.7391819, -222.9434476])
+935.3971 	EXP 	main_image: image = 'Stimuli/Fractals/20c.jpg'
+943.0687 	DATA 	Keypress: right
+943.9391 	EXP 	main_image: pos = array([ 267.3019573, -136.1971499])
+943.9391 	EXP 	main_image: image = 'Stimuli/Fractals/99a.jpg'
+945.7645 	DATA 	Keypress: right
+947.4933 	EXP 	main_image: pos = array([-188.7961173, -233.1437884])
+947.4933 	EXP 	main_image: image = 'Stimuli/Fractals/47a.jpg'
+948.9569 	DATA 	Keypress: right
+950.5717 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+950.5717 	EXP 	main_image: image = 'Stimuli/Fractals/75c.jpg'
+952.5300 	DATA 	Keypress: right
+954.1428 	EXP 	main_image: pos = array([ 200.7391819, -222.9434476])
+954.1428 	EXP 	main_image: image = 'Stimuli/Fractals/51a.jpg'
+958.3058 	DATA 	Keypress: right
+959.7336 	EXP 	main_image: pos = array([-176.3355757, -242.7050983])
+959.7336 	EXP 	main_image: image = 'Stimuli/Fractals/41b.jpg'
+962.7798 	DATA 	Keypress: left
+964.3158 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+964.3158 	EXP 	main_image: image = 'Stimuli/Fractals/98a.jpg'
+965.7431 	DATA 	Keypress: left
+967.3763 	EXP 	main_image: pos = array([293.4442802 , -62.37350725])
+967.3763 	EXP 	main_image: image = 'Stimuli/Fractals/20c.jpg'
+969.2404 	DATA 	Keypress: right
+970.9556 	EXP 	main_image: pos = array([-163.3917105, -251.6011704])
+970.9556 	EXP 	main_image: image = 'Stimuli/Fractals/5a.jpg'
+976.7690 	DATA 	Keypress: left
+978.5074 	EXP 	main_image: pos = array([-188.7961173, -233.1437884])
+978.5074 	EXP 	main_image: image = 'Stimuli/Fractals/47a.jpg'
+982.2046 	DATA 	Keypress: right
+984.0682 	EXP 	main_image: pos = array([-176.3355757, -242.7050983])
+984.0682 	EXP 	main_image: image = 'Stimuli/Fractals/41c.jpg'
+987.8204 	DATA 	Keypress: left
+989.6203 	EXP 	main_image: pos = array([-150.       , -259.8076211])
+989.6203 	EXP 	main_image: image = 'Stimuli/Fractals/113b.jpg'
+991.5849 	DATA 	Keypress: left
+993.2016 	EXP 	main_image: pos = array([-136.1971499, -267.3019573])
+993.2016 	EXP 	main_image: image = 'Stimuli/Fractals/29b.jpg'
+998.0782 	DATA 	Keypress: right
+999.7779 	EXP 	main_image: pos = array([-122.0209929, -274.0636373])
+999.7779 	EXP 	main_image: image = 'Stimuli/Fractals/69a.jpg'
+1005.7586 	DATA 	Keypress: right
+1007.3586 	EXP 	main_image: pos = array([-107.5103849, -280.0741279])
+1007.3586 	EXP 	main_image: image = 'Stimuli/Fractals/108b.jpg'
+1011.4549 	DATA 	Keypress: left
+1012.9088 	EXP 	main_image: pos = array([-233.1437884,  188.7961173])
+1012.9088 	EXP 	main_image: image = 'Stimuli/Fractals/5a.jpg'
+1014.7377 	DATA 	Keypress: left
+1016.4852 	EXP 	main_image: pos = array([-150.       , -259.8076211])
+1016.4852 	EXP 	main_image: image = 'Stimuli/Fractals/113a.jpg'
+1021.4331 	DATA 	Keypress: left
+1023.0450 	EXP 	main_image: pos = array([-136.1971499, -267.3019573])
+1023.0450 	EXP 	main_image: image = 'Stimuli/Fractals/29b.jpg'
+1025.8908 	DATA 	Keypress: right
+1027.5887 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+1027.5887 	EXP 	main_image: image = 'Stimuli/Fractals/75c.jpg'
+1028.7478 	DATA 	Keypress: right
+1030.6773 	EXP 	main_image: pos = array([ -92.70509831, -285.3169549 ])
+1030.6773 	EXP 	main_image: image = 'Stimuli/Fractals/123c.jpg'
+1032.6098 	DATA 	Keypress: right
+1034.2408 	EXP 	main_image: pos = array([-122.0209929, -274.0636373])
+1034.2408 	EXP 	main_image: image = 'Stimuli/Fractals/69a.jpg'
+1037.1643 	DATA 	Keypress: right
+1038.7842 	EXP 	main_image: pos = array([-107.5103849, -280.0741279])
+1038.7842 	EXP 	main_image: image = 'Stimuli/Fractals/108b.jpg'
+1047.8226 	DATA 	Keypress: left
+1049.3595 	EXP 	main_image: pos = array([ -77.64571353, -289.7777479 ])
+1049.3595 	EXP 	main_image: image = 'Stimuli/Fractals/22a.jpg'
+1054.7471 	DATA 	Keypress: left
+1055.9410 	EXP 	main_image: pos = array([ -62.37350725, -293.4442802 ])
+1055.9410 	EXP 	main_image: image = 'Stimuli/Fractals/132a.jpg'
+1063.9570 	DATA 	Keypress: right
+1065.5112 	EXP 	main_image: pos = array([ -46.93033951, -296.3065022 ])
+1065.5112 	EXP 	main_image: image = 'Stimuli/Fractals/118a.jpg'
+1069.5869 	DATA 	Keypress: right
+1071.0972 	EXP 	main_image: pos = array([ -31.35853898, -298.3565686 ])
+1071.0972 	EXP 	main_image: image = 'Stimuli/Fractals/145c.jpg'
+1077.9955 	DATA 	Keypress: left
+1079.6392 	EXP 	main_image: pos = array([ 274.0636373, -122.0209929])
+1079.6392 	EXP 	main_image: image = 'Stimuli/Fractals/123c.jpg'
+1081.4070 	DATA 	Keypress: right
+1083.2043 	EXP 	main_image: pos = array([ -77.64571353, -289.7777479 ])
+1083.2043 	EXP 	main_image: image = 'Stimuli/Fractals/22a.jpg'
+1089.9464 	DATA 	Keypress: left
+1091.7690 	EXP 	main_image: pos = array([ 163.3917105, -251.6011704])
+1091.7690 	EXP 	main_image: image = 'Stimuli/Fractals/132a.jpg'
+1093.0416 	DATA 	Keypress: right
+1094.8541 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+1094.8541 	EXP 	main_image: image = 'Stimuli/Fractals/118a.jpg'
+1096.6148 	DATA 	Keypress: right
+1098.4512 	EXP 	main_image: pos = array([ -15.70078687, -299.5888604 ])
+1098.4512 	EXP 	main_image: image = 'Stimuli/Fractals/74c.jpg'
+1105.1536 	DATA 	Keypress: right
+1106.0452 	EXP 	main_image: pos = array([-5.51e-14, -3.00e+02])
+1106.0452 	EXP 	main_image: image = 'Stimuli/Fractals/109b.jpg'
+1112.7673 	DATA 	Keypress: left
+1113.6172 	EXP 	main_image: pos = array([-296.3065022 ,  -46.93033951])
+1113.6172 	EXP 	main_image: image = 'Stimuli/Fractals/145c.jpg'
+1115.0670 	DATA 	Keypress: left
+1116.6857 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+1116.6857 	EXP 	main_image: image = 'Stimuli/Fractals/75c.jpg'
+1118.3558 	DATA 	Keypress: right
+1120.2391 	EXP 	main_image: pos = array([-289.7777479 ,   77.64571353])
+1120.2391 	EXP 	main_image: image = 'Stimuli/Fractals/109b.jpg'
+1122.0667 	DATA 	Keypress: left
+1123.8023 	EXP 	main_image: pos = array([ -15.70078687, -299.5888604 ])
+1123.8023 	EXP 	main_image: image = 'Stimuli/Fractals/74c.jpg'
+1126.5497 	DATA 	Keypress: right
+1127.3789 	EXP 	main_image: pos = array([  15.70078687, -299.5888604 ])
+1127.3789 	EXP 	main_image: image = 'Stimuli/Fractals/80a.jpg'
+1130.6186 	DATA 	Keypress: left
+1131.9480 	EXP 	main_image: pos = array([  31.35853898, -298.3565686 ])
+1131.9480 	EXP 	main_image: image = 'Stimuli/Fractals/14b.jpg'
+1134.3363 	DATA 	Keypress: left
+1135.5282 	EXP 	main_image: pos = array([  46.93033951, -296.3065022 ])
+1135.5282 	EXP 	main_image: image = 'Stimuli/Fractals/111a.jpg'
+1140.3808 	DATA 	Keypress: left
+1142.0967 	EXP 	main_image: pos = array([  62.37350725, -293.4442802 ])
+1142.0967 	EXP 	main_image: image = 'Stimuli/Fractals/32a.jpg'
+1143.4382 	DATA 	Keypress: left
+1145.1753 	EXP 	main_image: pos = array([  77.64571353, -289.7777479 ])
+1145.1753 	EXP 	main_image: image = 'Stimuli/Fractals/65a.jpg'
+1148.4714 	DATA 	Keypress: left
+1149.7283 	EXP 	main_image: pos = array([  15.70078687, -299.5888604 ])
+1149.7283 	EXP 	main_image: image = 'Stimuli/Fractals/80a.jpg'
+1152.9723 	DATA 	Keypress: left
+1154.2911 	EXP 	main_image: pos = array([293.4442802 ,  62.37350725])
+1154.2911 	EXP 	main_image: image = 'Stimuli/Fractals/32a.jpg'
+1156.2966 	DATA 	Keypress: left
+1157.8830 	EXP 	main_image: pos = array([  92.70509831, -285.3169549 ])
+1157.8830 	EXP 	main_image: image = 'Stimuli/Fractals/136a.jpg'
+1162.9064 	DATA 	Keypress: left
+1164.4583 	EXP 	main_image: pos = array([  31.35853898, -298.3565686 ])
+1164.4583 	EXP 	main_image: image = 'Stimuli/Fractals/14a.jpg'
+1167.3287 	DATA 	Keypress: left
+1169.0362 	EXP 	main_image: pos = array([  46.93033951, -296.3065022 ])
+1169.0362 	EXP 	main_image: image = 'Stimuli/Fractals/111b.jpg'
+1172.1669 	DATA 	Keypress: left
+1172.6011 	EXP 	main_image: pos = array([-289.7777479 ,   77.64571353])
+1172.6011 	EXP 	main_image: image = 'Stimuli/Fractals/136a.jpg'
+1176.2059 	DATA 	Keypress: left
+1177.1888 	EXP 	main_image: pos = array([  77.64571353, -289.7777479 ])
+1177.1888 	EXP 	main_image: image = 'Stimuli/Fractals/65b.jpg'
+1180.9421 	DATA 	Keypress: left
+1181.7473 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+1181.7473 	EXP 	main_image: image = 'Stimuli/Fractals/75c.jpg'
+1189.5474 	DATA 	Keypress: right
+1191.3111 	EXP 	main_image: pos = array([ 107.5103849, -280.0741279])
+1191.3111 	EXP 	main_image: image = 'Stimuli/Fractals/92a.jpg'
+1199.1405 	DATA 	Keypress: right
+1199.8895 	EXP 	main_image: pos = array([ 122.0209929, -274.0636373])
+1199.8895 	EXP 	main_image: image = 'Stimuli/Fractals/82b.jpg'
+1203.1834 	DATA 	Keypress: right
+1204.4460 	EXP 	main_image: pos = array([ 136.1971499, -267.3019573])
+1204.4460 	EXP 	main_image: image = 'Stimuli/Fractals/58a.jpg'
+1211.5172 	DATA 	Keypress: right
+1213.0393 	EXP 	main_image: pos = array([ 150.       , -259.8076211])
+1213.0393 	EXP 	main_image: image = 'Stimuli/Fractals/26a.jpg'
+1217.6681 	DATA 	Keypress: left
+1218.5900 	EXP 	main_image: pos = array([ 163.3917105, -251.6011704])
+1218.5900 	EXP 	main_image: image = 'Stimuli/Fractals/84b.jpg'
+1220.4340 	DATA 	Keypress: right
+1222.1928 	EXP 	main_image: pos = array([ 107.5103849, -280.0741279])
+1222.1928 	EXP 	main_image: image = 'Stimuli/Fractals/92b.jpg'
+1225.7315 	DATA 	Keypress: right
+1226.7537 	EXP 	main_image: pos = array([ 122.0209929, -274.0636373])
+1226.7537 	EXP 	main_image: image = 'Stimuli/Fractals/82b.jpg'
+1229.8343 	DATA 	Keypress: right
+1231.3037 	EXP 	main_image: pos = array([ 136.1971499, -267.3019573])
+1231.3037 	EXP 	main_image: image = 'Stimuli/Fractals/58a.jpg'
+1233.3517 	DATA 	Keypress: right
+1234.8502 	EXP 	main_image: pos = array([ 150.       , -259.8076211])
+1234.8502 	EXP 	main_image: image = 'Stimuli/Fractals/26a.jpg'
+1236.6427 	DATA 	Keypress: left
+1238.4027 	EXP 	main_image: pos = array([ 163.3917105, -251.6011704])
+1238.4027 	EXP 	main_image: image = 'Stimuli/Fractals/84c.jpg'
+1244.3780 	DATA 	Keypress: right
+1246.0068 	EXP 	main_image: pos = array([ 176.3355757, -242.7050983])
+1246.0068 	EXP 	main_image: image = 'Stimuli/Fractals/46c.jpg'
+1247.4493 	DATA 	Keypress: left
+1249.0753 	EXP 	main_image: pos = array([ 188.7961173, -233.1437884])
+1249.0753 	EXP 	main_image: image = 'Stimuli/Fractals/30c.jpg'
+1251.0403 	DATA 	Keypress: right
+1252.6252 	EXP 	main_image: pos = array([ 200.7391819, -222.9434476])
+1252.6252 	EXP 	main_image: image = 'Stimuli/Fractals/43b.jpg'
+1257.5901 	DATA 	Keypress: right
+1259.1954 	EXP 	main_image: pos = array([ 176.3355757, -242.7050983])
+1259.1954 	EXP 	main_image: image = 'Stimuli/Fractals/46c.jpg'
+1260.9547 	DATA 	Keypress: left
+1262.7680 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+1262.7680 	EXP 	main_image: image = 'Stimuli/Fractals/75c.jpg'
+1266.5095 	DATA 	Keypress: right
+1268.3259 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+1268.3259 	EXP 	main_image: image = 'Stimuli/Fractals/3b.jpg'
+1270.6853 	DATA 	Keypress: right
+1271.8904 	EXP 	main_image: pos = array([ 188.7961173, -233.1437884])
+1271.8904 	EXP 	main_image: image = 'Stimuli/Fractals/30b.jpg'
+1274.6269 	DATA 	Keypress: right
+1276.4465 	EXP 	main_image: pos = array([ 200.7391819, -222.9434476])
+1276.4465 	EXP 	main_image: image = 'Stimuli/Fractals/43c.jpg'
+1280.3357 	DATA 	Keypress: right
+1282.0156 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+1282.0156 	EXP 	main_image: image = 'Stimuli/Fractals/3a.jpg'
+1285.1109 	DATA 	Keypress: right
+1286.5935 	EXP 	main_image: pos = array([ 222.9434476, -200.7391819])
+1286.5935 	EXP 	main_image: image = 'Stimuli/Fractals/95b.jpg'
+1289.2898 	DATA 	Keypress: left
+1291.1824 	EXP 	main_image: pos = array([ 233.1437884, -188.7961173])
+1291.1824 	EXP 	main_image: image = 'Stimuli/Fractals/45b.jpg'
+1295.8149 	DATA 	Keypress: left
+1296.7435 	EXP 	main_image: pos = array([ 242.7050983, -176.3355757])
+1296.7435 	EXP 	main_image: image = 'Stimuli/Fractals/112c.jpg'
+1301.6678 	DATA 	Keypress: left
+1303.3116 	EXP 	main_image: pos = array([ 222.9434476, -200.7391819])
+1303.3116 	EXP 	main_image: image = 'Stimuli/Fractals/95b.jpg'
+1309.1828 	DATA 	Keypress: left
+1310.8802 	EXP 	main_image: pos = array([ 251.6011704, -163.3917105])
+1310.8802 	EXP 	main_image: image = 'Stimuli/Fractals/116b.jpg'
+1314.9211 	DATA 	Keypress: left
+1316.4494 	EXP 	main_image: pos = array([ 259.8076211, -150.       ])
+1316.4494 	EXP 	main_image: image = 'Stimuli/Fractals/31a.jpg'
+1318.3089 	DATA 	Keypress: left
+1319.5054 	EXP 	main_image: pos = array([ 233.1437884, -188.7961173])
+1319.5054 	EXP 	main_image: image = 'Stimuli/Fractals/45a.jpg'
+1327.9213 	DATA 	Keypress: left
+1329.0746 	EXP 	main_image: pos = array([ 242.7050983, -176.3355757])
+1329.0746 	EXP 	main_image: image = 'Stimuli/Fractals/112c.jpg'
+1330.8902 	DATA 	Keypress: left
+1332.6343 	EXP 	main_image: pos = array([ 259.8076211, -150.       ])
+1332.6343 	EXP 	main_image: image = 'Stimuli/Fractals/31a.jpg'
+1335.6565 	DATA 	Keypress: left
+1337.1850 	EXP 	main_image: pos = array([ -62.37350725, -293.4442802 ])
+1337.1850 	EXP 	main_image: image = 'Stimuli/Fractals/116b.jpg'
+1339.3849 	DATA 	Keypress: left
+1340.7550 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+1340.7550 	EXP 	main_image: image = 'Stimuli/Fractals/75c.jpg'
+1343.5657 	DATA 	Keypress: right
+1345.3421 	EXP 	main_image: pos = array([ 267.3019573, -136.1971499])
+1345.3421 	EXP 	main_image: image = 'Stimuli/Fractals/53b.jpg'
+1349.9669 	DATA 	Keypress: left
+1350.8941 	EXP 	main_image: pos = array([ 274.0636373, -122.0209929])
+1350.8941 	EXP 	main_image: image = 'Stimuli/Fractals/8b.jpg'
+1353.3822 	DATA 	Keypress: left
+1354.4591 	EXP 	main_image: pos = array([ 280.0741279, -107.5103849])
+1354.4591 	EXP 	main_image: image = 'Stimuli/Fractals/81a.jpg'
+1358.6597 	DATA 	Keypress: left
+1360.0491 	EXP 	main_image: pos = array([285.3169549 , -92.70509831])
+1360.0491 	EXP 	main_image: image = 'Stimuli/Fractals/79b.jpg'
+1362.4374 	DATA 	Keypress: left
+1363.6152 	EXP 	main_image: pos = array([ 274.0636373, -122.0209929])
+1363.6152 	EXP 	main_image: image = 'Stimuli/Fractals/8c.jpg'
+1367.0327 	DATA 	Keypress: left
+1368.2099 	EXP 	main_image: pos = array([ 267.3019573, -136.1971499])
+1368.2099 	EXP 	main_image: image = 'Stimuli/Fractals/53a.jpg'
+1370.5265 	DATA 	Keypress: left
+1371.7892 	EXP 	main_image: pos = array([233.1437884, 188.7961173])
+1371.7892 	EXP 	main_image: image = 'Stimuli/Fractals/79b.jpg'
+1375.1316 	DATA 	Keypress: left
+1376.3478 	EXP 	main_image: pos = array([ 280.0741279, -107.5103849])
+1376.3478 	EXP 	main_image: image = 'Stimuli/Fractals/81a.jpg'
+1384.8369 	DATA 	Keypress: left
+1385.9016 	EXP 	main_image: pos = array([289.7777479 , -77.64571353])
+1385.9016 	EXP 	main_image: image = 'Stimuli/Fractals/89b.jpg'
+1388.8695 	DATA 	Keypress: right
+1390.4794 	EXP 	main_image: pos = array([293.4442802 , -62.37350725])
+1390.4794 	EXP 	main_image: image = 'Stimuli/Fractals/39a.jpg'
+1392.9866 	DATA 	Keypress: left
+1394.0455 	EXP 	main_image: pos = array([296.3065022 , -46.93033951])
+1394.0455 	EXP 	main_image: image = 'Stimuli/Fractals/120b.jpg'
+1403.3674 	DATA 	Keypress: left
+1404.6112 	EXP 	main_image: pos = array([289.7777479 , -77.64571353])
+1404.6112 	EXP 	main_image: image = 'Stimuli/Fractals/89b.jpg'
+1408.3866 	DATA 	Keypress: right
+1410.1691 	EXP 	main_image: pos = array([293.4442802 , -62.37350725])
+1410.1691 	EXP 	main_image: image = 'Stimuli/Fractals/39c.jpg'
+1413.4366 	DATA 	Keypress: left
+1413.7045 	EXP 	main_image: pos = array([-136.1971499, -267.3019573])
+1413.7045 	EXP 	main_image: image = 'Stimuli/Fractals/120b.jpg'
+1416.0597 	DATA 	Keypress: left
+1417.2743 	EXP 	main_image: pos = array([298.3565686 , -31.35853898])
+1417.2743 	EXP 	main_image: image = 'Stimuli/Fractals/122c.jpg'
+1419.2338 	DATA 	Keypress: right
+1420.8390 	EXP 	main_image: pos = array([299.5888604 , -15.70078687])
+1420.8390 	EXP 	main_image: image = 'Stimuli/Fractals/128a.jpg'
+1423.6418 	DATA 	Keypress: right
+1425.4298 	EXP 	main_image: pos = array([ 3.00e+02, -7.35e-14])
+1425.4298 	EXP 	main_image: image = 'Stimuli/Fractals/85b.jpg'
+1428.3197 	DATA 	Keypress: left
+1430.0235 	EXP 	main_image: pos = array([298.3565686 , -31.35853898])
+1430.0235 	EXP 	main_image: image = 'Stimuli/Fractals/122b.jpg'
+1431.7671 	DATA 	Keypress: right
+1433.5681 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+1433.5681 	EXP 	main_image: image = 'Stimuli/Fractals/128a.jpg'
+1437.2737 	DATA 	Keypress: right
+1439.1286 	EXP 	main_image: pos = array([ 3.00e+02, -7.35e-14])
+1439.1286 	EXP 	main_image: image = 'Stimuli/Fractals/85c.jpg'
+1441.8929 	DATA 	Keypress: left
+1443.6511 	EXP 	logo: opacity = 0.8
+1473.6427 	DATA 	Mouse: Left button down, pos=(1462,300)
+1473.7756 	DATA 	Mouse:  Left button up, pos=(1462,300)
+1475.3345 	DATA 	Keypress: return
+1475.3737 	EXP 	window1: mouseVisible = True
