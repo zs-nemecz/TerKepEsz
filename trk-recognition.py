@@ -579,7 +579,7 @@ while practice and cont:
         else:
             practice = 1
 
-instr_text.setText('Régi - bal nyíl\nHasonló - felfelé nyíl\nÚj - jobb nyíl\n\nA kísérletvezető indítja a feladatot.')
+instr_text.setText('Régi - F\nHasonló - J\nÚj - K\n\nA kísérletvezető indítja a feladatot.')
 starting = 1
 while cont and starting:
     instr_text.draw()
@@ -587,7 +587,7 @@ while cont and starting:
     thisKey = keyboard.Keyboard().getKeys()
     if thisKey == ['escape']:
         cont = 0
-    elif thisKey == ['space']:
+    elif thisKey == [experimenter]:
         starting =0
 
 start_task_text.setText('Figyeljen, kezdődik a feladat...')
