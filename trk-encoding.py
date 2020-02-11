@@ -51,6 +51,7 @@ resp_0 = 'f' # response 'not art'
 resp_1 = 'j' # response 'art'
 next = 'right'
 back = 'left'
+pause = 'p'
 experimenter = 'e'
 
 # Ensure that relative paths start from the same directory as this script
@@ -268,15 +269,14 @@ main_image = visual.ImageStim(
     texRes=128, interpolate=True, depth=-1.0)
 
 # Next-Run Components
-next_runClock = core.Clock()
-text_next_run = visual.TextStim(win=win, name='text_next_run',
-    text='Ha folytathatjuk, nyomja meg a jobb nyilat.',
+text_long_pause = visual.TextStim(win=win, name='text_pause',
+    text='Szünet. A folytatáshoz nyomja le a jobb nyilat.',
     font='Arial',
-    units='deg', pos=(3, 0), height=0.7, wrapWidth=None, ori=0,
+    units='deg', pos=(0, 0), height=0.9, wrapWidth=None, ori=0,
     color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
-    depth=0.0);
-key_resp_next_run = keyboard.Keyboard()
+    depth=-2.0);
+
 text_pause = visual.TextStim(win=win, name='text_pause',
     text='Szünet...',
     font='Arial',
@@ -286,13 +286,26 @@ text_pause = visual.TextStim(win=win, name='text_pause',
     depth=-2.0);
 
 # Goodbye Message Components
-text_goodbye = visual.TextStim(win=win, name='text_pause',
+text_goodbye = visual.TextStim(win=win, name='text_goodbye',
     text='Vége a feladatnak. Köszönjük!',
     font='Arial',
     units='deg', pos=(0, 0), height=1.5, wrapWidth=20, ori=0,
     color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=-2.0);
+
+def insert_pause(text = text_long_pause, response = next):
+    pause = 1
+    cont = 1
+    while pause and cont:
+        text.draw()
+        win.flip()
+        thisKey = keyboard.Keyboard().getKeys()
+        if thisKey == ['escape']:
+            cont = 0
+        elif thisKey == [response]:
+            pause = 0
+    return cont
 
 # ##############################################################################################################
 # Procedure
@@ -396,19 +409,28 @@ while practice and cont:
         thisKey = keyboard.Keyboard().getKeys()
         if thisKey == ['escape']:
             cont = 0
+        elif thisKey == [pause]:
+            cont = insert_pause()
     for pr in range(trials):
         # update component parameters for each repeat
         main_image.setPos(trk.set_position(practice_table,pr))
         main_image.setImage(trk.set_image(practice_table,pr, 'practice'))
 
-        fixationTimer.reset(practice_table.at[pr, 'Jitter'])
-        while cont and fixationTimer.getTime() > 0:
-            galley_map.draw()
-            fixation_cross.draw()
-            win.flip()
-            theseKeys = keyboard.Keyboard().getKeys()
-            if theseKeys == ['escape']:
-                cont = 0
+        fx = 1
+        while cont and fx:
+            fixationTimer.reset(practice_table.at[pr, 'Jitter'])
+            while cont and fixationTimer.getTime() > 0:
+                galley_map.draw()
+                fixation_cross.draw()
+                win.flip()
+                theseKeys = keyboard.Keyboard().getKeys()
+                if theseKeys == ['escape']:
+                    cont = 0
+                elif theseKeys == [pause]:
+                    fx = 1
+                    cont = insert_pause()
+                else:
+                    fx = 0
 
         imageTimer.reset(image_presentation_time)
         while cont and imageTimer.getTime() > 0:
@@ -422,6 +444,8 @@ while practice and cont:
                 participant_choice.setText('Az Ön döntése: A kép marad.')
             elif theseKeys == [resp_0]:
                 participant_choice.setText('Az Ön döntése: A kép nem marad.')
+            elif theseKeys == [pause]:
+                cont = insert_pause()
 
         # Give some feedback to the participant if there was an answer
         if participant_choice.text != '':
@@ -434,6 +458,8 @@ while practice and cont:
                 thisKey=event.getKeys()
                 if thisKey == ['escape']:
                     cont = 0
+                elif thisKey == [pause]:
+                    cont = insert_pause()
 
             participant_choice.setText('')
 
@@ -485,20 +511,34 @@ dataFile.write('TrialIndex,Order,StimType,FX/IMG,ImagePreseneted,Xcoordinate,Yco
 trials = len(stim_table.index)
 rt_timer = core.Clock() # for reaction time
 expClock = core.Clock()  # to track the time since experiment started
+previous_run = 1
 for tr in range(trials):
+    if stim_table['ScannerRun'][tr] != previous_run:
+        cont = insert_pause()
     # update component parameters for each repeat
     main_image.setPos(trk.set_position(stim_table,tr))
     main_image.setImage(trk.set_image(stim_table,tr, task))
-    fixationTimer.reset(jitters[tr])
-    while cont and fixationTimer.getTime() > 0:
-        galley_map.draw()
-        fixation_cross.draw()
-        win.flip()
-        theseKeys = keyboard.Keyboard().getKeys()
-        if theseKeys == ['escape']:
-            cont = 0
-        elif len(theseKeys) != 0:
-            dataFile.write('%i,%i,%s,%s,%s,%.6f,%.6f,%s,%.6f,%.6f\n' %(t_index, s_order, s_type,'FX',s_image, xcoordinate, ycoordinate,theseKeys[0].name, rt_timer.getTime(), expClock.getTime())) #log events during fixation belonging to the previous trial (image not seen yet)
+
+    fx = 1
+    while cont and fx:
+        fixationTimer.reset(jitters[tr])
+        while cont and fixationTimer.getTime() > 0:
+            galley_map.draw()
+            fixation_cross.draw()
+            win.flip()
+            theseKeys = keyboard.Keyboard().getKeys()
+            if theseKeys == ['escape']:
+                cont = 0
+            elif len(theseKeys) != 0:
+                dataFile.write('%i,%i,%s,%s,%s,%.6f,%.6f,%s,%.6f,%.6f\n' %(t_index, s_order, s_type,'FX',s_image, xcoordinate, ycoordinate,theseKeys[0].name, rt_timer.getTime(), expClock.getTime())) #log events during fixation belonging to the previous trial (image not seen yet)
+                if theseKeys == [pause]:
+                    cont = insert_pause()
+                    fx = 1
+                else:
+                    fx = 0
+            else:
+                fx = 0
+
 
     # update trial index, type and stimulus type for logging
     t_index = stim_table.at[tr, 'TrialIndex']
@@ -520,12 +560,16 @@ for tr in range(trials):
             cont = 0
         elif len(theseKeys) != 0:
             dataFile.write('%i,%i,%s,%s,%s,%.6f,%.6f,%s,%.6f,%.6f\n' %(t_index, s_order, s_type,'IMG',s_image, xcoordinate, ycoordinate,theseKeys[0].name, rt_timer.getTime(), expClock.getTime()))
+            if theseKeys == [pause]:
+                cont = insert_pause()
 
     theseKeys = keyboard.Keyboard().getKeys()
     if 'escape' in theseKeys:
         cont = 0
     elif len(theseKeys) != 0:
         dataFile.write('%i,%i,%s,%s,%s,%.6f,%.6f,%s,%.6f,%.6f\n' %(t_index, s_order, s_type,'-',s_image, xcoordinate, ycoordinate,theseKeys[0].name,rt_timer.getTime(), expClock.getTime()))
+        if theseKeys == [pause]:
+            cont = insert_pause()
 
     if cont == 0:
         break
