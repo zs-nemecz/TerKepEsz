@@ -1,13 +1,21 @@
+# TODO:
+# add third button check,
+# pause button,
+# edit response buttons
+# improve log files
+
 # Task Procedure
-#1. welcome
+#1. Welcome Screen
 #2. Left and Right Button Check
 #3. Screen Check
 #4. Instructions
-#5. Practice
-#6. task
+#5. Demo
+#6. Practice
+#7. Task
 #    - loop through stimuli list
 #    - with a break every 3 blocks
-#7. thanks & good bye
+#8. Thanks & good bye
+
 from __future__ import absolute_import, division
 
 from psychopy import locale_setup
@@ -20,7 +28,7 @@ import numpy as np  # whole numpy lib is available, prepend 'np.'
 from numpy import (sin, cos, tan, log, log10, pi, average,
                    sqrt, std, deg2rad, rad2deg, linspace, asarray)
 from numpy.random import random, randint, normal, shuffle
-import os  
+import os
 import sys
 import pandas as pd
 
@@ -36,7 +44,7 @@ os.chdir(_thisDir)
 
 # Store info about the experiment session
 psychopyVersion = '3.2.4'
-expName = 'TérKépÉsz'  
+expName = 'TérKépÉsz'
 expInfo = {'participant': '', 'session': '1'}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
@@ -67,10 +75,10 @@ demo_table = pd.read_csv('stimuli_demo.csv', sep=',', lineterminator='\n')
 
 # Setup the Window
 win = visual.Window(
-    size=[1920, 1080], fullscr=True, screen=0, 
+    size=[1920, 1080], fullscr=True, screen=0,
     winType='pyglet', allowGUI=False, allowStencil=False,
     monitor='testMonitor', color=[1.000,1.000,1.000], colorSpace='rgb',
-    blendMode='avg', useFBO=True, 
+    blendMode='avg', useFBO=True,
     units='deg')
 # store frame rate of monitor if we can measure it
 expInfo['frameRate'] = win.getActualFrameRate()
@@ -92,13 +100,13 @@ pause = 1
 welcome_msg = visual.TextStim(win=win, name='welcome_msg',
     text='TérKépÉsz',
     font='Arial',
-    pos=(0, 12), height=1, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
+    pos=(0, 12), height=1, wrapWidth=None, ori=0,
+    color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=0.0);
 logo = visual.ImageStim(
     win=win,
-    name='logo', units='norm', 
+    name='logo', units='norm',
     image='Stimuli/terkepesz.png', mask=None,
     ori=0, pos=(0, 0), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
@@ -109,15 +117,15 @@ logo = visual.ImageStim(
 button_check = visual.TextStim(win=win, name='lb_check',
     text='Válaszgomb teszt:\n\nNyomja le a bal nyilat!',
     font='Arial',
-    pos=(-23, 0), height=0.9, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
+    pos=(-23, 0), height=0.9, wrapWidth=None, ori=0,
+    color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=0.0);
 
 # Screen Check Components
 left_upper = visual.ImageStim(
     win=win,
-    name='left_upper', units='norm', 
+    name='left_upper', units='norm',
     image='Stimuli/ScreenCorner1.png', mask=None,
     ori=0, pos=(-0.9, 0.7), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
@@ -125,7 +133,7 @@ left_upper = visual.ImageStim(
     texRes=128, interpolate=True, depth=0.0)
 left_lower = visual.ImageStim(
     win=win,
-    name='left_lower', units='norm', 
+    name='left_lower', units='norm',
     image='Stimuli/ScreenCorner2.png', mask=None,
     ori=0, pos=(-0.9, -0.7), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
@@ -133,7 +141,7 @@ left_lower = visual.ImageStim(
     texRes=128, interpolate=True, depth=-1.0)
 right_upper = visual.ImageStim(
     win=win,
-    name='right_upper', units='norm', 
+    name='right_upper', units='norm',
     image='Stimuli/ScreenCorner3.png', mask=None,
     ori=0, pos=(0.9, 0.7), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
@@ -141,7 +149,7 @@ right_upper = visual.ImageStim(
     texRes=128, interpolate=True, depth=-2.0)
 right_lower = visual.ImageStim(
     win=win,
-    name='right_lower', units='norm', 
+    name='right_lower', units='norm',
     image='Stimuli/ScreenCorner4.png', mask=None,
     ori=0, pos=(0.9, -0.7), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
@@ -150,8 +158,8 @@ right_lower = visual.ImageStim(
 screen_check_text = visual.TextStim(win=win, name='text_2',
     text='Ha a képernyő mind a négy sarkát látja, nyomja le a jobb nyilat.',
     font='Arial',
-    units='deg', pos=(0, 0), height=0.9, wrapWidth=30, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
+    units='deg', pos=(0, 0), height=0.9, wrapWidth=30, ori=0,
+    color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=-4.0);
 
@@ -161,8 +169,8 @@ instr_text = visual.TextStim(win=win, name='instr_text',
     \n A feladatot két alfeladatra bontottuk. Az egyikben a képekről, a másikban a képek pozíciójáról kell döntenie.\
     \n\nA folytatáshoz nyomja le a jobb nyilat.',
     font='Arial',
-    units='deg', pos=(0, 0), height=0.8, wrapWidth=40, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
+    units='deg', pos=(0, 0), height=0.8, wrapWidth=40, ori=0,
+    color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=0.0);
 
@@ -179,7 +187,7 @@ instr_image_text = 'A \'Kép\' nevű alfeladatban azt kell eldöntenie, látta-e
                     \n\nA döntését így jelölje:\n\tRégi - bal nyíl\t Hasonló - felfelé nyíl\t Új - Jobb nyíl\
                     \n\n A folytatáshoz nyomja le a jobb nyilat'
 
-    
+
 instr_location_text= 'A \'Hely\' nevű alfeladatban azt kell eldöntenie, a képek ugyanott jelennek-e meg, mint az első, műalkotás válogató feladataban.\
                     \nEbben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. A helyek azonban három csoportba oszthatóak:\
                     \n - Régi: Pontosan ugyanitt jelent meg ez a kép az első feladatban.\
@@ -199,16 +207,16 @@ inst_texts = [inst_task_text, instr_image_text, instr_location_text, instr_demo_
 correct_answer = visual.TextStim(win=win, name='start_task_text',
     text='',
     font='Arial',
-    units='deg',pos=(0, 1.5), height=0.9, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
+    units='deg',pos=(0, 1.5), height=0.9, wrapWidth=None, ori=0,
+    color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=0.0);
 
 answer_given = visual.TextStim(win=win, name='start_task_text',
     text='',
     font='Arial',
-    units = 'deg', pos=(0, -1.5), height=0.9, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
+    units = 'deg', pos=(0, -1.5), height=0.9, wrapWidth=None, ori=0,
+    color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=0.0);
 
@@ -216,16 +224,16 @@ answer_given = visual.TextStim(win=win, name='start_task_text',
 stim_type_text = visual.TextStim(win=win, name='start_task_text',
     text='',
     font='Arial',
-    units = 'deg', pos=(-2, 0), height=0.9, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
+    units = 'deg', pos=(-2, 0), height=0.9, wrapWidth=None, ori=0,
+    color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=0.0);
 
 trial_type_text = visual.TextStim(win=win, name='start_task_text',
     text='',
     font='Arial',
-    units = 'deg', pos=(2, 0), height=0.9, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
+    units = 'deg', pos=(2, 0), height=0.9, wrapWidth=None, ori=0,
+    color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=0.0);
 
@@ -233,16 +241,16 @@ trial_type_text = visual.TextStim(win=win, name='start_task_text',
 # Gallery Map
 galley_map = visual.ImageStim(
     win=win,
-    name='map_inside_fx', units='pix', 
+    name='map_inside_fx', units='pix',
     image='Stimuli/GalleryPlanInside.jpg', mask=None,
     ori=0, pos=(0, -25), size=(1040, 1000),
     color=[1,1,1], colorSpace='rgb', opacity=0.5,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
-    
+
 # Fixation Cross
 fixation_cross = visual.ShapeStim(
-    win=win, name='fixation_cross', vertices='cross',units='pix', 
+    win=win, name='fixation_cross', vertices='cross',units='pix',
     size=(20, 20),
     ori=0, pos=(0, 0),
     lineWidth=1, lineColor=[-1.000,-1.000,-1.000], lineColorSpace='rgb',
@@ -252,7 +260,7 @@ key_resp_fx = keyboard.Keyboard()
 # Main image
 main_image = visual.ImageStim(
     win=win,
-    name='main_image', units='pix', 
+    name='main_image', units='pix',
     image=stim_table.at[0, 'ImagePresented'], mask=None,
     ori=0, pos=[0,0], size=300,
     color=[1,1,1], colorSpace='rgb', opacity=1,
@@ -263,16 +271,16 @@ main_image = visual.ImageStim(
 text_long_pause = visual.TextStim(win=win, name='text_pause',
     text='Szünet. A folytatáshoz nyomja le a bal nyilat.',
     font='Arial',
-    units='deg', pos=(0, 0), height=0.9, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
+    units='deg', pos=(0, 0), height=0.9, wrapWidth=None, ori=0,
+    color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=-2.0);
 
 text_practice = visual.TextStim(win=win, name='start_task_text',
     text='Figyeljen, kezdődik a gyakorlás...',
     font='Arial',
-    pos=(0, 0), height=0.9, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
+    pos=(0, 0), height=0.9, wrapWidth=None, ori=0,
+    color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=0.0);
 
@@ -282,8 +290,8 @@ start_task_text = visual.TextStim(win=win, name='start_task_text',
     \n\nEmlékeztető: \nRégi - bal nyíl\nHasonló - felfelé nyíl\nÚj - Jobb nyíl\
     \n\nHa készen áll a feladatra, nyomja le a jobb nyilat. Ha újra szeretne gyakorolni, nyomjon le bármilyen más gombot.',
     font='Arial',
-    pos=(0, 0), height=0.9, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
+    pos=(0, 0), height=0.9, wrapWidth=None, ori=0,
+    color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=0.0);
 
@@ -291,32 +299,32 @@ start_task_text = visual.TextStim(win=win, name='start_task_text',
 text_trial = visual.TextStim(win=win, name='text_trial_type',
     text='Kép',
     font='Arial',
-    units='deg', pos=(0, 15), height=0.9, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
+    units='deg', pos=(0, 15), height=0.9, wrapWidth=None, ori=0,
+    color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=-2.0);
 
 text_trial_image = visual.TextStim(win=win, name='text_trial_type',
     text='Kép',
     font='Arial',
-    units='deg', pos=(0, 0), height=0.9, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
+    units='deg', pos=(0, 0), height=0.9, wrapWidth=None, ori=0,
+    color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=-2.0);
 
 text_trial_location = visual.TextStim(win=win, name='text_trial_type',
     text='Hely',
     font='Arial',
-    units='deg', pos=(0, 0), height=0.9, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
+    units='deg', pos=(0, 0), height=0.9, wrapWidth=None, ori=0,
+    color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=-2.0);
 
 text_inst_reminder= visual.TextStim(win=win, name='text_trial_type',
     text='Régi - Bal Nyíl \t\t\t Hasonló - Felfelé Nyíl \t\t\t Új - Jobb Nyíl',
     font='Arial',
-    units='deg', pos=(0, -10), height=0.9, wrapWidth=30, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
+    units='deg', pos=(0, -10), height=0.9, wrapWidth=30, ori=0,
+    color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=-2.0);
 
@@ -324,8 +332,8 @@ text_inst_reminder= visual.TextStim(win=win, name='text_trial_type',
 text_goodbye = visual.TextStim(win=win, name='text_pause',
     text='Vége a feladatnak. Köszönjük!',
     font='Arial',
-    units='deg', pos=(0, 0), height=1.5, wrapWidth=20, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
+    units='deg', pos=(0, 0), height=1.5, wrapWidth=20, ori=0,
+    color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=-2.0);
 
@@ -338,7 +346,7 @@ welcomeClock = core.Clock()
 while welcomeClock.getTime() < welcome_duration and cont: # Clock times are in seconds
     thisKey = keyboard.Keyboard().getKeys()
     if thisKey == ['escape']:
-        cont = 0    
+        cont = 0
     welcome_msg.draw()
     logo.draw()
     win.flip()
@@ -404,12 +412,12 @@ trialtypeTimer = core.CountdownTimer()
 practiceTimer = core.CountdownTimer()
 practice = 1
 prev_type = 'LOC'
-while practice and cont: 
+while practice and cont:
     trials = len(demo_table.index)
     for dm in range(trials):
         main_image.setPos(trk.set_position(demo_table,dm))
         main_image.setImage(trk.set_image(demo_table,dm, task))
-        
+
         if dm % 2 == 0: #check demo type at every 2nd image (images are shown in pairs)
             if demo_table.at[dm, 'StimType'] == 'TARGET':
                 stim_type_text.setText('Régi')
@@ -419,7 +427,7 @@ while practice and cont:
                 stim_type_text.setText('Új')
             else:
                 stim_type_text.setText('StimType Unkown')
-            
+
             if demo_table.at[dm, 'TrialType'] == 'OBJ':
                 trial_type_text.setText('Képek')
             elif demo_table.at[dm, 'TrialType'] == 'LOC':
@@ -435,7 +443,7 @@ while practice and cont:
                 thisKey=event.getKeys()
                 if thisKey == ['escape']:
                     cont = 0
-        
+
         fixationTimer.reset(demo_table.at[dm, 'Jitter'])
         while cont and fixationTimer.getTime() > 0:
             galley_map.draw()
@@ -444,7 +452,7 @@ while practice and cont:
             theseKeys = keyboard.Keyboard().getKeys()
             if theseKeys == ['escape']:
                 cont = 0
-        
+
         imageTimer.reset(image_presentation_time)
         while cont and imageTimer.getTime() > 0:
             galley_map.draw()
@@ -453,7 +461,7 @@ while practice and cont:
             theseKeys = keyboard.Keyboard().getKeys()
             if theseKeys == ['escape']:
                 cont = 0
-    
+
     if cont:
         instr_text.setText(instr_practice_text)
         instr_text.draw()
@@ -462,7 +470,7 @@ while practice and cont:
         if allKeys == ['escape']:
             cont = 0
 
-    # Start practice 
+    # Start practice
     trials = len(practice_table.index)
     practiceTimer.reset(2.0)
     while cont and practiceTimer.getTime() > 0:
@@ -475,8 +483,8 @@ while practice and cont:
         # update component parameters for each repeat
         main_image.setPos(trk.set_position(practice_table,pr))
         main_image.setImage(trk.set_image(practice_table,pr, task))
-        
-        
+
+
         # Set correct answer for feedback
         if practice_table.at[pr, 'StimType'] == 'FOIL':
             correct_answer.setText('A helyes válasz: Új')
@@ -484,7 +492,7 @@ while practice and cont:
             correct_answer.setText('A helyes válasz: Hasonló')
         elif practice_table.at[pr, 'StimType'] == 'TARGET':
             correct_answer.setText('A helyes válasz: Régi')
-        
+
         if prev_type != trk.get_trialtype(practice_table, pr):
             trialtypeTimer.reset(2.0)
             if trk.get_trialtype(practice_table, pr) == 'LOC':
@@ -509,7 +517,7 @@ while practice and cont:
                     thisKey = keyboard.Keyboard().getKeys()
                     if thisKey == ['escape']:
                         cont = 0
-        
+
         fixationTimer.reset(practice_table.at[pr, 'Jitter'])
         while cont and fixationTimer.getTime() > 0:
             text_trial.draw()
@@ -519,7 +527,7 @@ while practice and cont:
             theseKeys = keyboard.Keyboard().getKeys()
             if theseKeys == ['escape']:
                 cont = 0
-        
+
         imageTimer.reset(image_presentation_time)
         while cont and imageTimer.getTime() > 0:
             text_trial.draw()
@@ -535,7 +543,7 @@ while practice and cont:
                 answer_given.setText('Az Ön válasza: Hasonló')
             elif theseKeys == ['right']:
                 answer_given.setText('Az Ön válasza: Új')
-        
+
         # Give some feedback to the participant
         feedbackTimer.reset(2)
         while cont and feedbackTimer.getTime() > 0:
@@ -550,9 +558,9 @@ while practice and cont:
         theseKeys = keyboard.Keyboard().getKeys()
         if 'escape' in theseKeys:
             cont = 0
-    
+
     # ask user if they want to practice more
-    if cont: 
+    if cont:
         start_task_text.draw()
         win.flip()
         allKeys=event.waitKeys()
@@ -604,7 +612,7 @@ for tr in range(trials):
     if prev_type != trk.get_trialtype(stim_table, tr):
         block_nr += 1
         # check if it is time for a break before the new block
-        if block_nr == 4 or tr == 7: 
+        if block_nr == 4 or tr == 7:
             pause = 1
             while pause and cont:
                 text_long_pause.draw()
@@ -614,7 +622,7 @@ for tr in range(trials):
                     cont = 0
                 elif thisKey == ['left']:
                     pause = 0
-        
+
         trialtypeTimer.reset(2.0)
         if trk.get_trialtype(stim_table, tr) == 'LOC':
             prev_type = 'LOC'
@@ -638,7 +646,7 @@ for tr in range(trials):
                 thisKey = keyboard.Keyboard().getKeys()
                 if thisKey == ['escape']:
                     cont = 0
-            
+
     # update component parameters for each repeat
     main_image.setPos(trk.set_position(stim_table,tr))
     main_image.setImage(trk.set_image(stim_table,tr, task))
@@ -653,7 +661,7 @@ for tr in range(trials):
             cont = 0
         elif len(theseKeys) != 0:
             dataFile.write('%i,%s,%s,%s,%s,%.6f,%.6f\n' %(t_index, t_type, s_type,'FX',theseKeys[0].name, rt_timer.getTime(), expClock.getTime())) #log events during fixation belonging to the previous trial (image not seen yet)
-    
+
     # update trial index, type and stimulus type for logging
     t_index = stim_table.at[tr, 'TrialIndex']
     t_type = stim_table.at[tr, 'TrialType']
@@ -676,10 +684,10 @@ for tr in range(trials):
     if 'escape' in theseKeys:
         cont = 0
     elif len(theseKeys) != 0:
-        dataFile.write('%i,%s,%s,%s,%s,%.6f,%.6f\n' %(t_index, t_type, s_type,'-',theseKeys[0].name, rt_timer.getTime(), expClock.getTime())) 
+        dataFile.write('%i,%s,%s,%s,%s,%.6f,%.6f\n' %(t_index, t_type, s_type,'-',theseKeys[0].name, rt_timer.getTime(), expClock.getTime()))
     if cont == 0:
         break
-        
+
 
 dataFile.close()
 
@@ -689,4 +697,4 @@ logo.draw()
 text_goodbye.draw()
 win.flip()
 event.waitKeys()
-core.quit() 
+core.quit()

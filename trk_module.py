@@ -1,3 +1,8 @@
+# TODO:
+# add function descriptions
+# imrove OLP foil location
+# add comments
+
 import pandas as pd
 import numpy as np
 import random as rd
@@ -10,7 +15,7 @@ def read_jitters(fname):
     return jitters
 
 def select_images(n_images_used = 121, n_all_images= 180):
-    images = [im for im in range(1,n_all_images+1)] 
+    images = [im for im in range(1,n_all_images+1)]
     rd.shuffle(images)
     foils = images[n_images_used:]
     images = images[0:n_images_used]
@@ -24,7 +29,7 @@ def select_images(n_images_used = 121, n_all_images= 180):
             file = 'Stimuli/Fractals/' + str(im) + v + '.jpg'
             image_files.append(file)
     image_files = np.reshape(image_files, (n_images_used, 3))
-    
+
     for f in foils:
         vars = variants.copy()
         rd.shuffle(vars)
@@ -40,7 +45,7 @@ def create_stimtable(images, fname):
     TripletMembers = ['TripletMemberA','TripletMemberB','TripletMemberC']
     for TripletMember in TripletMembers:
         stim_table[TripletMember] = stim_table[TripletMember].astype(str) #change None (float) to 'None' (string)
-        
+
     im_index = 1 #index used to loop through the images - starts at 1 because BL is always image 0
     for i, row in stim_table.iterrows():
         delay = i + stim_table.at[i, 'Delay'] + 1
@@ -49,13 +54,13 @@ def create_stimtable(images, fname):
             for TripletMember, j in zip(TripletMembers, [0,1,2]):
                 stim_table.at[i, TripletMember] = images[0][j]
         #select image for non-BL trials, first and second presentation
-        elif row['Order'] == 1: 
+        elif row['Order'] == 1:
             for TripletMember, j in zip(TripletMembers, [0,1,2]):
                 stim_table.at[i, TripletMember] = images[im_index][j] # first presentation
                 stim_table.at[delay, TripletMember] = images[im_index][j] # second presentation (based on 'Delay' value)
-            
+
             im_index += 1
-            
+
     return stim_table
 
 def set_image(stim_table, tr, task):
@@ -71,14 +76,14 @@ def set_image(stim_table, tr, task):
     else:
         print('Task unknown. Choose encoding, recognition or practice')
     return image
-    
+
 def set_position(stim_table, tr):
     position = (0,0)
     if stim_table.at[tr, 'StimType'] == 'LLP' and stim_table.at[tr, 'Order'] == 2:
         position = (stim_table.at[tr, 'Xcoordinate2'], stim_table.at[tr, 'Ycoordinate2'])
     else:
         position = (stim_table.at[tr, 'Xcoordinate'], stim_table.at[tr, 'Ycoordinate'])
-    
+
     return position
 
 def set_recognition_row(recognition_table, i, trial_type, recognition_type, stimuli_table, stimuli_index, foilx = None, foily = None):
@@ -151,7 +156,7 @@ def set_recognition_row(recognition_table, i, trial_type, recognition_type, stim
         recognition_table.at[i, 'EncodingXcoordinate'] = stimuli_table.at[stimuli_index, 'Xcoordinate']
         recognition_table.at[i, 'EncodingYcoordinate'] = stimuli_table.at[stimuli_index, 'Ycoordinate']
         recognition_table.at[i, 'EncodingTrialIndex'] = stimuli_table.at[stimuli_index, 'TrialIndex']
-    
+
     return recognition_table
 
 def create_recognition_table(encoding_table, foils, fname = 'StimTable-Recognition.txt'):
