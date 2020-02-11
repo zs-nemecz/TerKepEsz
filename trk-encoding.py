@@ -1,6 +1,5 @@
 # TODO:
 # complete cover-up story
-# pause button,
 # improve log files #
 
 # Task Procedure
@@ -295,6 +294,7 @@ text_goodbye = visual.TextStim(win=win, name='text_goodbye',
     depth=-2.0);
 
 def insert_pause(text = text_long_pause, response = next):
+    '''Will pause the experiment until response button is pressed.'''
     pause = 1
     cont = 1
     while pause and cont:
