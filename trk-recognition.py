@@ -1,7 +1,6 @@
 # TODO:
 # add third button check,
 # pause button,
-# edit response buttons
 # improve log files
 
 # Task Procedure
@@ -96,6 +95,7 @@ resp_1 = 'j' # response 'similar
 resp_2 = 'k' # response 'new'
 next = 'right'
 back = 'left'
+pause = 'p'
 experimenter = 'e'
 
 pause_duration = 2.0
@@ -277,7 +277,7 @@ main_image = visual.ImageStim(
 
 # Pause and Next Run Components
 text_long_pause = visual.TextStim(win=win, name='text_pause',
-    text='Szünet. A folytatáshoz nyomja le a bal nyilat.',
+    text='Szünet. A folytatáshoz nyomja le a jobb nyilat.',
     font='Arial',
     units='deg', pos=(0, 0), height=0.9, wrapWidth=None, ori=0,
     color='black', colorSpace='rgb', opacity=1,
@@ -344,6 +344,20 @@ text_goodbye = visual.TextStim(win=win, name='text_pause',
     color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=-2.0);
+
+def insert_pause(text = text_long_pause, response = next):
+    '''Will pause the experiment until response button is pressed.'''
+    pause = 1
+    cont = 1
+    while pause and cont:
+        text.draw()
+        win.flip()
+        thisKey = keyboard.Keyboard().getKeys()
+        if thisKey == ['escape']:
+            cont = 0
+        elif thisKey == [response]:
+            pause = 0
+    return cont
 
 # ##############################################################################################################
 # Procedure
@@ -451,15 +465,23 @@ while practice and cont:
                 thisKey=event.getKeys()
                 if thisKey == ['escape']:
                     cont = 0
-
-        fixationTimer.reset(demo_table.at[dm, 'Jitter'])
-        while cont and fixationTimer.getTime() > 0:
-            galley_map.draw()
-            fixation_cross.draw()
-            win.flip()
-            theseKeys = keyboard.Keyboard().getKeys()
-            if theseKeys == ['escape']:
-                cont = 0
+                elif thisKey == [pause]:
+                    cont = insert_pause()
+        fx = 1
+        while cont and fx:
+            fixationTimer.reset(demo_table.at[dm, 'Jitter'])
+            while cont and fixationTimer.getTime() > 0:
+                galley_map.draw()
+                fixation_cross.draw()
+                win.flip()
+                theseKeys = keyboard.Keyboard().getKeys()
+                if theseKeys == ['escape']:
+                    cont = 0
+                elif theseKeys == [pause]:
+                    cont = insert_pause()
+                    fx = 1
+                else:
+                    fx = 0
 
         imageTimer.reset(image_presentation_time)
         while cont and imageTimer.getTime() > 0:
@@ -469,6 +491,8 @@ while practice and cont:
             theseKeys = keyboard.Keyboard().getKeys()
             if theseKeys == ['escape']:
                 cont = 0
+            elif theseKeys == [pause]:
+                cont = insert_pause()
 
     if cont:
         instr_text.setText(instr_practice_text)
@@ -487,6 +511,9 @@ while practice and cont:
         thisKey = keyboard.Keyboard().getKeys()
         if thisKey == ['escape']:
             cont = 0
+        elif thisKey == [pause]:
+            cont = insert_pause()
+
     for pr in range(trials):
         # update component parameters for each repeat
         main_image.setPos(trk.set_position(practice_table,pr))
@@ -514,6 +541,8 @@ while practice and cont:
                     thisKey = keyboard.Keyboard().getKeys()
                     if thisKey == ['escape']:
                         cont = 0
+                    elif thisKey == [pause]:
+                        cont = insert_pause()
             elif trk.get_trialtype(practice_table, pr) == 'OBJ':
                 prev_type = 'OBJ'
                 # display object block info
@@ -525,16 +554,25 @@ while practice and cont:
                     thisKey = keyboard.Keyboard().getKeys()
                     if thisKey == ['escape']:
                         cont = 0
+                    elif thisKey == [pause]:
+                        cont = insert_pause()
 
-        fixationTimer.reset(practice_table.at[pr, 'Jitter'])
-        while cont and fixationTimer.getTime() > 0:
-            text_trial.draw()
-            galley_map.draw()
-            fixation_cross.draw()
-            win.flip()
-            theseKeys = keyboard.Keyboard().getKeys()
-            if theseKeys == ['escape']:
-                cont = 0
+        fx = 1
+        while cont and fx:
+            fixationTimer.reset(practice_table.at[pr, 'Jitter'])
+            while cont and fixationTimer.getTime() > 0:
+                text_trial.draw()
+                galley_map.draw()
+                fixation_cross.draw()
+                win.flip()
+                theseKeys = keyboard.Keyboard().getKeys()
+                if theseKeys == ['escape']:
+                    cont = 0
+                elif theseKeys == [pause]:
+                    cont = insert_pause()
+                    fx = 1
+                else:
+                    fx = 0
 
         imageTimer.reset(image_presentation_time)
         while cont and imageTimer.getTime() > 0:
@@ -551,6 +589,8 @@ while practice and cont:
                 answer_given.setText('Az Ön válasza: Hasonló')
             elif theseKeys == [resp_2]:
                 answer_given.setText('Az Ön válasza: Új')
+            elif theseKeys == [pause]:
+                cont = insert_pause()
 
         # Give some feedback to the participant
         feedbackTimer.reset(2)
@@ -561,6 +601,8 @@ while practice and cont:
             thisKey=event.getKeys()
             if thisKey == ['escape']:
                 cont = 0
+            elif theseKeys == [pause]:
+                cont = insert_pause()
         correct_answer.setText('')
         answer_given.setText('')
         theseKeys = keyboard.Keyboard().getKeys()
@@ -599,6 +641,8 @@ while cont and startTaskTimer.getTime() > 0:
     thisKey = keyboard.Keyboard().getKeys()
     if thisKey == ['escape']:
         cont = 0
+    elif theseKeys == [pause]:
+        cont = insert_pause()
 
 
 # 6. task
@@ -628,7 +672,7 @@ for tr in range(trials):
                 thisKey = keyboard.Keyboard().getKeys()
                 if thisKey == ['escape']:
                     cont = 0
-                elif thisKey == ['left']:
+                elif thisKey == [next]:
                     pause = 0
 
         trialtypeTimer.reset(2.0)
@@ -643,6 +687,8 @@ for tr in range(trials):
                 thisKey = keyboard.Keyboard().getKeys()
                 if thisKey == ['escape']:
                     cont = 0
+                elif theseKeys == [pause]:
+                    cont = insert_pause()
         elif trk.get_trialtype(stim_table, tr) == 'OBJ':
             prev_type = 'OBJ'
             # display object block info
@@ -654,21 +700,33 @@ for tr in range(trials):
                 thisKey = keyboard.Keyboard().getKeys()
                 if thisKey == ['escape']:
                     cont = 0
+                elif theseKeys == [pause]:
+                    cont = insert_pause()
 
     # update component parameters for each repeat
     main_image.setPos(trk.set_position(stim_table,tr))
     main_image.setImage(trk.set_image(stim_table,tr, task))
-    fixationTimer.reset(jitters[tr])
-    while cont and fixationTimer.getTime() > 0:
-        text_trial.draw()
-        galley_map.draw()
-        fixation_cross.draw()
-        win.flip()
-        theseKeys = keyboard.Keyboard().getKeys()
-        if theseKeys == ['escape']:
-            cont = 0
-        elif len(theseKeys) != 0:
-            dataFile.write('%i,%s,%s,%s,%s,%.6f,%.6f\n' %(t_index, t_type, s_type,'FX',theseKeys[0].name, rt_timer.getTime(), expClock.getTime())) #log events during fixation belonging to the previous trial (image not seen yet)
+
+    fx = 1
+    while cont and fx:
+        fixationTimer.reset(jitters[tr])
+        while cont and fixationTimer.getTime() > 0:
+            text_trial.draw()
+            galley_map.draw()
+            fixation_cross.draw()
+            win.flip()
+            theseKeys = keyboard.Keyboard().getKeys()
+            if theseKeys == ['escape']:
+                cont = 0
+            elif len(theseKeys) != 0:
+                dataFile.write('%i,%s,%s,%s,%s,%.6f,%.6f\n' %(t_index, t_type, s_type,'FX',theseKeys[0].name, rt_timer.getTime(), expClock.getTime())) #log events during fixation belonging to the previous trial (image not seen yet)
+                if theseKeys == [pause]:
+                    cont = insert_pause()
+                    fx = 1
+                else:
+                    fx = 0
+            else:
+                fx = 0
 
     # update trial index, type and stimulus type for logging
     t_index = stim_table.at[tr, 'TrialIndex']
@@ -687,15 +745,18 @@ for tr in range(trials):
             cont = 0
         elif len(theseKeys) != 0:
             dataFile.write('%i,%s,%s,%s,%s,%.6f,%.6f\n' %(t_index, t_type, s_type,'IMG',theseKeys[0].name, rt_timer.getTime(), expClock.getTime()))
+            if theseKeys == [pause]:
+                cont = insert_pause()
 
     theseKeys = keyboard.Keyboard().getKeys()
     if 'escape' in theseKeys:
         cont = 0
     elif len(theseKeys) != 0:
         dataFile.write('%i,%s,%s,%s,%s,%.6f,%.6f\n' %(t_index, t_type, s_type,'-',theseKeys[0].name, rt_timer.getTime(), expClock.getTime()))
+        if theseKeys == [pause]:
+            cont = insert_pause()
     if cont == 0:
         break
-
 
 dataFile.close()
 
