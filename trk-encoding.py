@@ -124,7 +124,7 @@ logo = visual.ImageStim(
 
 # Button check Components
 button_check = visual.TextStim(win=win, name='lb_check',
-    text='Válaszgomb teszt:\n\nNyomja le az F billentyűt!',
+    text='Válaszgomb teszt:\n\nNyomja le az \'F\' billentyűt!',
     font='Arial',
     pos=(-23, 0), height=0.9, wrapWidth=None, ori=0,
     color='black', colorSpace='rgb', opacity=1,
@@ -319,7 +319,7 @@ while resp_0_ok == 0 and cont:
     if allKeys == [resp_0]:
         resp_0_ok = 1
 
-button_check.text ='Válaszgomb teszt:\n\nNyomja le a jobb nyilat!'
+button_check.text ='Válaszgomb teszt:\n\nNyomja le a \'J\' billentyűt!'
 button_check.pos = (23, 0)
 
 resp_1_ok = 0

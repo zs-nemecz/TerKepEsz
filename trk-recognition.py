@@ -123,7 +123,7 @@ logo = visual.ImageStim(
 
 # Button check Components
 button_check = visual.TextStim(win=win, name='lb_check',
-    text='Válaszgomb teszt:\n\nNyomja le a bal nyilat!',
+    text='Válaszgomb teszt:\n\nNyomja le az \'F\' billentyűt!',
     font='Arial',
     pos=(-23, 0), height=0.9, wrapWidth=None, ori=0,
     color='black', colorSpace='rgb', opacity=1,
@@ -192,7 +192,7 @@ instr_image_text = 'A \'Kép\' nevű alfeladatban azt kell eldöntenie, látta-e
                     \n - Hasonló: Ezek a képek nagyon hasonlítanak az első feladatban látott képek egyikéhez.\
                     \n - Új: Teljesen új képek, amelyek nem jelentek meg az első feladatban.\
                     \nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint az első feladatban, melyik hasonló, és melyik új. \nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\
-                    \n\nA döntését így jelölje:\n\tRégi - bal nyíl\t Hasonló - felfelé nyíl\t Új - Jobb nyíl\
+                    \n\nA döntését így jelölje:\n\tRégi - F\t Hasonló - J\t Új - K\
                     \n\n A folytatáshoz nyomja le a jobb nyilat'
 
 
@@ -202,7 +202,7 @@ instr_location_text= 'A \'Hely\' nevű alfeladatban azt kell eldöntenie, a kép
                     \n - Hasonló: Egy hasonló helyen jelent meg ez a kép az első feladatban.\
                     \n - Új: Egy teljesen másik helyen jelent meg ez a kép az első feladatban.\
                     \nAz Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, hasonló, és teljesen új helyen.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\
-                    \n\nA döntését így jelölje:\n\tRégi - bal nyíl\t Hasonló - felfelé nyíl\t Új - Jobb nyíl\
+                    \n\nA döntését így jelölje:\n\tRégi - F\t Hasonló - J\t Új - K\
                     \n\nA folytatáshoz nyomja le a jobb nyilat.'
 
 instr_demo_text= 'A következőkben kép-párokban mutatjuk be Önnek, milyenek a \'régi\', \'hasonló\' és \'új\' képek és helyek. \nA folytatáshoz nyomja le a jobb nyilat.'
@@ -295,7 +295,7 @@ text_practice = visual.TextStim(win=win, name='start_task_text',
 # Start taks Components
 start_task_text = visual.TextStim(win=win, name='start_task_text',
     text='Ez volt a gyakorlás.\
-    \n\nEmlékeztető: \nRégi - bal nyíl\nHasonló - felfelé nyíl\nÚj - Jobb nyíl\
+    \n\nEmlékeztető: \nRégi - F\nHasonló - J\nÚj - K\
     \n\nHa készen áll a feladatra, nyomja le a jobb nyilat. Ha újra szeretne gyakorolni, nyomjon le bármilyen más gombot.',
     font='Arial',
     pos=(0, 0), height=0.9, wrapWidth=None, ori=0,
@@ -329,7 +329,7 @@ text_trial_location = visual.TextStim(win=win, name='text_trial_type',
     depth=-2.0);
 
 text_inst_reminder= visual.TextStim(win=win, name='text_trial_type',
-    text='Régi - Bal Nyíl \t\t\t Hasonló - Felfelé Nyíl \t\t\t Új - Jobb Nyíl',
+    text='Régi - F\t\t\t Hasonló - J\t\t\t Új - K',
     font='Arial',
     units='deg', pos=(0, -10), height=0.9, wrapWidth=30, ori=0,
     color='black', colorSpace='rgb', opacity=1,
@@ -370,7 +370,7 @@ while resp_0_ok == 0 and cont:
     if allKeys == [resp_0]:
         resp_0_ok = 1
 
-button_check.text ='Válaszgomb teszt:\n\nNyomja le a jobb nyilat!'
+button_check.text ='Válaszgomb teszt:\n\nNyomja le a \'J\' billentyűt!'
 button_check.pos = (23, 0)
 
 resp_1_ok = 0
