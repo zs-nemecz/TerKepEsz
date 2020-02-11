@@ -50,7 +50,7 @@ resp_0 = 'f' # response 'not art'
 resp_1 = 'j' # response 'art'
 next = 'right'
 back = 'left'
-pause = 'p'
+pause_button = 'p'
 experimenter = 'e'
 
 # Ensure that relative paths start from the same directory as this script
@@ -295,16 +295,16 @@ text_goodbye = visual.TextStim(win=win, name='text_goodbye',
 
 def insert_pause(text = text_long_pause, response = next):
     '''Will pause the experiment until response button is pressed.'''
-    pause = 1
+    keep_paused = 1
     cont = 1
-    while pause and cont:
+    while keep_paused and cont:
         text.draw()
         win.flip()
         thisKey = keyboard.Keyboard().getKeys()
         if thisKey == ['escape']:
             cont = 0
         elif thisKey == [response]:
-            pause = 0
+            keep_paused = 0
     return cont
 
 # ##############################################################################################################
@@ -409,7 +409,7 @@ while practice and cont:
         thisKey = keyboard.Keyboard().getKeys()
         if thisKey == ['escape']:
             cont = 0
-        elif thisKey == [pause]:
+        elif thisKey == [pause_button]:
             cont = insert_pause()
     for pr in range(trials):
         # update component parameters for each repeat
@@ -426,7 +426,7 @@ while practice and cont:
                 theseKeys = keyboard.Keyboard().getKeys()
                 if theseKeys == ['escape']:
                     cont = 0
-                elif theseKeys == [pause]:
+                elif theseKeys == [pause_button]:
                     fx = 1
                     cont = insert_pause()
                 else:
@@ -444,7 +444,7 @@ while practice and cont:
                 participant_choice.setText('Az Ön döntése: A kép marad.')
             elif theseKeys == [resp_0]:
                 participant_choice.setText('Az Ön döntése: A kép nem marad.')
-            elif theseKeys == [pause]:
+            elif theseKeys == [pause_button]:
                 cont = insert_pause()
 
         # Give some feedback to the participant if there was an answer
@@ -458,7 +458,7 @@ while practice and cont:
                 thisKey=event.getKeys()
                 if thisKey == ['escape']:
                     cont = 0
-                elif thisKey == [pause]:
+                elif thisKey == [pause_button]:
                     cont = insert_pause()
 
             participant_choice.setText('')
@@ -531,7 +531,7 @@ for tr in range(trials):
                 cont = 0
             elif len(theseKeys) != 0:
                 dataFile.write('%i,%i,%s,%s,%s,%.6f,%.6f,%s,%.6f,%.6f\n' %(t_index, s_order, s_type,'FX',s_image, xcoordinate, ycoordinate,theseKeys[0].name, rt_timer.getTime(), expClock.getTime())) #log events during fixation belonging to the previous trial (image not seen yet)
-                if theseKeys == [pause]:
+                if theseKeys == [pause_button]:
                     cont = insert_pause()
                     fx = 1
                 else:
@@ -560,7 +560,7 @@ for tr in range(trials):
             cont = 0
         elif len(theseKeys) != 0:
             dataFile.write('%i,%i,%s,%s,%s,%.6f,%.6f,%s,%.6f,%.6f\n' %(t_index, s_order, s_type,'IMG',s_image, xcoordinate, ycoordinate,theseKeys[0].name, rt_timer.getTime(), expClock.getTime()))
-            if theseKeys == [pause]:
+            if theseKeys == [pause_button]:
                 cont = insert_pause()
 
     theseKeys = keyboard.Keyboard().getKeys()
@@ -568,7 +568,7 @@ for tr in range(trials):
         cont = 0
     elif len(theseKeys) != 0:
         dataFile.write('%i,%i,%s,%s,%s,%.6f,%.6f,%s,%.6f,%.6f\n' %(t_index, s_order, s_type,'-',s_image, xcoordinate, ycoordinate,theseKeys[0].name,rt_timer.getTime(), expClock.getTime()))
-        if theseKeys == [pause]:
+        if theseKeys == [pause_button]:
             cont = insert_pause()
 
     if cont == 0:

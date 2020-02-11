@@ -95,7 +95,7 @@ resp_1 = 'j' # response 'similar
 resp_2 = 'k' # response 'new'
 next = 'right'
 back = 'left'
-pause = 'p'
+pause_button = 'p'
 experimenter = 'e'
 
 pause_duration = 2.0
@@ -347,16 +347,16 @@ text_goodbye = visual.TextStim(win=win, name='text_pause',
 
 def insert_pause(text = text_long_pause, response = next):
     '''Will pause the experiment until response button is pressed.'''
-    pause = 1
+    keep_paused = 1
     cont = 1
-    while pause and cont:
+    while keep_paused and cont:
         text.draw()
         win.flip()
         thisKey = keyboard.Keyboard().getKeys()
         if thisKey == ['escape']:
             cont = 0
         elif thisKey == [response]:
-            pause = 0
+            keep_paused = 0
     return cont
 
 # ##############################################################################################################
@@ -462,10 +462,10 @@ while practice and cont:
                 stim_type_text.draw()
                 trial_type_text.draw()
                 win.flip()
-                thisKey=event.getKeys()
+                thisKey=keyboard.Keyboard().getKeys()
                 if thisKey == ['escape']:
                     cont = 0
-                elif thisKey == [pause]:
+                elif thisKey == [pause_button]:
                     cont = insert_pause()
         fx = 1
         while cont and fx:
@@ -477,7 +477,7 @@ while practice and cont:
                 theseKeys = keyboard.Keyboard().getKeys()
                 if theseKeys == ['escape']:
                     cont = 0
-                elif theseKeys == [pause]:
+                elif theseKeys == [pause_button]:
                     cont = insert_pause()
                     fx = 1
                 else:
@@ -491,7 +491,7 @@ while practice and cont:
             theseKeys = keyboard.Keyboard().getKeys()
             if theseKeys == ['escape']:
                 cont = 0
-            elif theseKeys == [pause]:
+            elif theseKeys == [pause_button]:
                 cont = insert_pause()
 
     if cont:
@@ -511,7 +511,7 @@ while practice and cont:
         thisKey = keyboard.Keyboard().getKeys()
         if thisKey == ['escape']:
             cont = 0
-        elif thisKey == [pause]:
+        elif thisKey == [pause_button]:
             cont = insert_pause()
 
     for pr in range(trials):
@@ -541,7 +541,7 @@ while practice and cont:
                     thisKey = keyboard.Keyboard().getKeys()
                     if thisKey == ['escape']:
                         cont = 0
-                    elif thisKey == [pause]:
+                    elif thisKey == [pause_button]:
                         cont = insert_pause()
             elif trk.get_trialtype(practice_table, pr) == 'OBJ':
                 prev_type = 'OBJ'
@@ -554,7 +554,7 @@ while practice and cont:
                     thisKey = keyboard.Keyboard().getKeys()
                     if thisKey == ['escape']:
                         cont = 0
-                    elif thisKey == [pause]:
+                    elif thisKey == [pause_button]:
                         cont = insert_pause()
 
         fx = 1
@@ -568,7 +568,7 @@ while practice and cont:
                 theseKeys = keyboard.Keyboard().getKeys()
                 if theseKeys == ['escape']:
                     cont = 0
-                elif theseKeys == [pause]:
+                elif theseKeys == [pause_button]:
                     cont = insert_pause()
                     fx = 1
                 else:
@@ -589,7 +589,7 @@ while practice and cont:
                 answer_given.setText('Az Ön válasza: Hasonló')
             elif theseKeys == [resp_2]:
                 answer_given.setText('Az Ön válasza: Új')
-            elif theseKeys == [pause]:
+            elif theseKeys == [pause_button]:
                 cont = insert_pause()
 
         # Give some feedback to the participant
@@ -601,7 +601,7 @@ while practice and cont:
             thisKey=event.getKeys()
             if thisKey == ['escape']:
                 cont = 0
-            elif theseKeys == [pause]:
+            elif theseKeys == [pause_button]:
                 cont = insert_pause()
         correct_answer.setText('')
         answer_given.setText('')
@@ -641,7 +641,7 @@ while cont and startTaskTimer.getTime() > 0:
     thisKey = keyboard.Keyboard().getKeys()
     if thisKey == ['escape']:
         cont = 0
-    elif theseKeys == [pause]:
+    elif theseKeys == [pause_button]:
         cont = insert_pause()
 
 
@@ -687,7 +687,7 @@ for tr in range(trials):
                 thisKey = keyboard.Keyboard().getKeys()
                 if thisKey == ['escape']:
                     cont = 0
-                elif theseKeys == [pause]:
+                elif theseKeys == [pause_button]:
                     cont = insert_pause()
         elif trk.get_trialtype(stim_table, tr) == 'OBJ':
             prev_type = 'OBJ'
@@ -700,7 +700,7 @@ for tr in range(trials):
                 thisKey = keyboard.Keyboard().getKeys()
                 if thisKey == ['escape']:
                     cont = 0
-                elif theseKeys == [pause]:
+                elif theseKeys == [pause_button]:
                     cont = insert_pause()
 
     # update component parameters for each repeat
@@ -720,7 +720,7 @@ for tr in range(trials):
                 cont = 0
             elif len(theseKeys) != 0:
                 dataFile.write('%i,%s,%s,%s,%s,%.6f,%.6f\n' %(t_index, t_type, s_type,'FX',theseKeys[0].name, rt_timer.getTime(), expClock.getTime())) #log events during fixation belonging to the previous trial (image not seen yet)
-                if theseKeys == [pause]:
+                if theseKeys == [pause_button]:
                     cont = insert_pause()
                     fx = 1
                 else:
@@ -745,7 +745,7 @@ for tr in range(trials):
             cont = 0
         elif len(theseKeys) != 0:
             dataFile.write('%i,%s,%s,%s,%s,%.6f,%.6f\n' %(t_index, t_type, s_type,'IMG',theseKeys[0].name, rt_timer.getTime(), expClock.getTime()))
-            if theseKeys == [pause]:
+            if theseKeys == [pause_button]:
                 cont = insert_pause()
 
     theseKeys = keyboard.Keyboard().getKeys()
@@ -753,7 +753,7 @@ for tr in range(trials):
         cont = 0
     elif len(theseKeys) != 0:
         dataFile.write('%i,%s,%s,%s,%s,%.6f,%.6f\n' %(t_index, t_type, s_type,'-',theseKeys[0].name, rt_timer.getTime(), expClock.getTime()))
-        if theseKeys == [pause]:
+        if theseKeys == [pause_button]:
             cont = insert_pause()
     if cont == 0:
         break
