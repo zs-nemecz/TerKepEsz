@@ -1,7 +1,6 @@
 # TODO:
 # complete cover-up story
 # pause button,
-# edit response buttons
 # improve log files #
 
 # Task Procedure
@@ -125,7 +124,7 @@ logo = visual.ImageStim(
 
 # Button check Components
 button_check = visual.TextStim(win=win, name='lb_check',
-    text='Válaszgomb teszt:\n\nNyomja le a bal nyilat!',
+    text='Válaszgomb teszt:\n\nNyomja le az F billentyűt!',
     font='Arial',
     pos=(-23, 0), height=0.9, wrapWidth=None, ori=0,
     color='black', colorSpace='rgb', opacity=1,
@@ -213,7 +212,7 @@ gallery_inside_text = visual.TextStim(win=win, name='story2_text',
     depth=-2.0);
 
 instr_text = visual.TextStim(win=win, name='instr_text',
-    text='A bal nyíllal jelölje azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen.\n\nA jobb nyíllal jelölje a képeket, amelyek nem maradnak kiállítva a bemutatott helyen. \n\nHa készen áll a gyakorlásra, nyomja le a jobb nyilat.',
+    text='A \'J\' billentyűvel jelölje azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen.\n\nAz \'F\' billentyűvel jelölje a képeket, amelyek nem maradnak kiállítva a bemutatott helyen. \n\nHa készen áll a gyakorlásra, nyomja le a jobb nyilat.',
     font='Arial',
     units='deg', pos=(0, 0), height=0.9, wrapWidth=None, ori=0,
     color='black', colorSpace='rgb', opacity=1,
@@ -508,7 +507,7 @@ for tr in range(trials):
     s_image = main_image.image
     xcoordinate=main_image.pos[0]
     ycoordinate=main_image.pos[1]
-    
+
     rt_timer.reset()
     imageTimer.reset(image_presentation_time)
     while cont and imageTimer.getTime() > 0:
