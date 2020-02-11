@@ -1,3 +1,5 @@
 data/*.csv
 data/stim_tables/*.csv
 __pycache__
+Stimuli/Fractals/*.jpg
+Stimuli/Fractals/*.png
