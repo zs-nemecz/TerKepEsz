@@ -37,7 +37,7 @@ import trk_module as trk
 
 task = 'encoding'
 image_size = 300
-cont = 1 # Flag for continuing the experimnt
+cont = 1 # Flag for continuing the experiment, 0 will quit
 
 # Set durations
 welcome_duration = 2.0
@@ -46,6 +46,13 @@ welcome_duration = 2.0
 goodbye_duration = 2.0
 image_presentation_time = 2.5
 pause = 1
+
+# Response buttons
+resp_0 = 'f' # response 'not art'
+resp_1 = 'j' # response 'art'
+next = 'right'
+back = 'left'
+experimenter = 'e'
 
 # Ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
@@ -303,28 +310,28 @@ while welcomeClock.getTime() < welcome_duration and cont: # Clock times are in s
     win.flip()
 
 #2. Button ckecks
-left_ok = 0
-while left_ok == 0 and cont:
+resp_0_ok = 0
+while resp_0_ok == 0 and cont:
     button_check.draw()
     win.flip()
     allKeys=event.waitKeys()
     if allKeys == ['escape']:
         cont = 0
-    if allKeys == ['left']:
-        left_ok = 1
+    if allKeys == [resp_0]:
+        resp_0_ok = 1
 
 button_check.text ='Válaszgomb teszt:\n\nNyomja le a jobb nyilat!'
 button_check.pos = (23, 0)
 
-right_ok = 0
-while right_ok == 0 and cont:
+resp_1_ok = 0
+while resp_1_ok == 0 and cont:
     button_check.draw()
     win.flip()
     allKeys=event.waitKeys()
     if allKeys == ['escape']:
         cont = 0
-    if allKeys == ['right']:
-        right_ok = 1
+    if allKeys == [resp_1]:
+        resp_1_ok = 1
 
 #3. Screen Check
 screen_check = 1
@@ -338,7 +345,7 @@ while screen_check and cont:
     allKeys=event.waitKeys()
     if allKeys == ['escape']:
         cont = 0
-    if allKeys == ['right']:
+    if allKeys == [next]:
         screen_check = 0
 
 #4. Instructions
@@ -350,7 +357,7 @@ while gallery_outside and cont:
     allKeys=event.getKeys()
     if allKeys == ['escape']:
         cont = 0
-    elif allKeys == ['right']:
+    elif allKeys == [next]:
         gallery_outside=0
 
 gallery_inside = 1
@@ -361,7 +368,7 @@ while gallery_inside and cont:
     allKeys=event.getKeys()
     if allKeys == ['escape']:
         cont = 0
-    elif allKeys == ['right']:
+    elif allKeys == [next]:
         gallery_inside=0
 
 instructions = 1
@@ -371,7 +378,7 @@ while instructions and cont:
     allKeys=event.getKeys()
     if allKeys == ['escape']:
         cont = 0
-    elif allKeys == ['right']:
+    elif allKeys == [next]:
         instructions=0
 
 # 5. Practice
@@ -412,9 +419,9 @@ while practice and cont:
             theseKeys = keyboard.Keyboard().getKeys()
             if theseKeys == ['escape']:
                 cont = 0
-            elif theseKeys == ['left']:
+            elif theseKeys == [resp_1]:
                 participant_choice.setText('Az Ön döntése: A kép marad.')
-            elif theseKeys == ['right']:
+            elif theseKeys == [resp_0]:
                 participant_choice.setText('Az Ön döntése: A kép nem marad.')
 
         # Give some feedback to the participant if there was an answer
@@ -442,7 +449,7 @@ while practice and cont:
         allKeys=event.waitKeys()
         if allKeys == ['escape']:
             cont = 0
-        elif allKeys == ['right']:
+        elif allKeys == [next]:
             practice = 0
         else:
             practice = 1
@@ -455,7 +462,7 @@ while cont and starting:
     thisKey = keyboard.Keyboard().getKeys()
     if thisKey == ['escape']:
         cont = 0
-    elif thisKey == ['space']:
+    elif thisKey == [experimenter]:
         starting =0
 
 start_task_text.setText('Figyeljen, kezdődik a feladat...')
@@ -501,7 +508,7 @@ for tr in range(trials):
     s_image = main_image.image
     xcoordinate=main_image.pos[0]
     ycoordinate=main_image.pos[1]
-    # text_trial.setText(s_type) # for testing testing the right input
+    
     rt_timer.reset()
     imageTimer.reset(image_presentation_time)
     while cont and imageTimer.getTime() > 0:
