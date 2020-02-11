@@ -90,6 +90,14 @@ else:
 # Continue/Escape Flag (1/0) and Task Type
 cont = 1
 
+# Response buttons
+resp_0 = 'f' # response 'old'
+resp_1 = 'j' # response 'similar
+resp_2 = 'k' # response 'new'
+next = 'right'
+back = 'left'
+experimenter = 'e'
+
 pause_duration = 2.0
 welcome_duration = 2.0
 goodbye_duration = 2.0
@@ -352,28 +360,28 @@ while welcomeClock.getTime() < welcome_duration and cont: # Clock times are in s
     win.flip()
 
 #2. Button ckecks
-left_ok = 0
-while left_ok == 0 and cont:
+resp_0_ok = 0
+while resp_0_ok == 0 and cont:
     button_check.draw()
     win.flip()
     allKeys=event.waitKeys()
     if allKeys == ['escape']:
         cont = 0
-    if allKeys == ['left']:
-        left_ok = 1
+    if allKeys == [resp_0]:
+        resp_0_ok = 1
 
 button_check.text ='Válaszgomb teszt:\n\nNyomja le a jobb nyilat!'
 button_check.pos = (23, 0)
 
-right_ok = 0
-while right_ok == 0 and cont:
+resp_1_ok = 0
+while resp_1_ok == 0 and cont:
     button_check.draw()
     win.flip()
     allKeys=event.waitKeys()
     if allKeys == ['escape']:
         cont = 0
-    if allKeys == ['right']:
-        right_ok = 1
+    if allKeys == [resp_1]:
+        resp_1_ok = 1
 
 #3. Screen Check
 screen_check = 1
@@ -387,7 +395,7 @@ while screen_check and cont:
     allKeys=event.waitKeys()
     if allKeys == ['escape']:
         cont = 0
-    if allKeys == ['right']:
+    if allKeys == [next]:
         screen_check = 0
 
 #4. Instructions
@@ -400,7 +408,7 @@ for text in inst_texts:
         allKeys=event.getKeys()
         if allKeys == ['escape']:
             cont = 0
-        elif allKeys == ['right']:
+        elif allKeys == [next]:
             instructions=0
 
 
@@ -537,11 +545,11 @@ while practice and cont:
             theseKeys = keyboard.Keyboard().getKeys()
             if theseKeys == ['escape']:
                 cont = 0
-            elif theseKeys == ['left']:
+            elif theseKeys == [resp_0]:
                 answer_given.setText('Az Ön válasza: Régi')
-            elif theseKeys == ['up']:
+            elif theseKeys == [resp_1]:
                 answer_given.setText('Az Ön válasza: Hasonló')
-            elif theseKeys == ['right']:
+            elif theseKeys == [resp_2]:
                 answer_given.setText('Az Ön válasza: Új')
 
         # Give some feedback to the participant
@@ -566,7 +574,7 @@ while practice and cont:
         allKeys=event.waitKeys()
         if allKeys == ['escape']:
             cont = 0
-        elif allKeys == ['right']:
+        elif allKeys == [next]:
             practice = 0
         else:
             practice = 1
