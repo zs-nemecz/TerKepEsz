@@ -3,15 +3,15 @@
 # improve log files #
 
 # Task Procedure
-#1. Welcome Screen
-#2. Left and Right Button Check
-#3. Screen Check
-#4. Instructions
-#5. Practice
-#6s. Task
+# 1. Welcome Screen
+# 2. Left and Right Button Check
+# 3. Screen Check
+# 4. Instructions
+# 5. Practice
+# 6. Task
 #    - loop through stimuli list
 #    - with a break every 3 blocks
-#7. Thanks & good bye
+# 7. Thanks & good bye
 from __future__ import absolute_import, division
 
 from psychopy import locale_setup

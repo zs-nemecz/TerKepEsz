@@ -1,19 +1,18 @@
 # TODO:
 # add third button check,
-# pause button,
 # improve log files
 
 # Task Procedure
-#1. Welcome Screen
-#2. Left and Right Button Check
-#3. Screen Check
-#4. Instructions
-#5. Demo
-#6. Practice
-#7. Task
+# 1. Welcome Screen
+# 2. Left and Right Button Check
+# 3. Screen Check
+# 4. Instructions
+# 5. Demo
+# 6. Practice
+# 7. Task
 #    - loop through stimuli list
 #    - with a break every 3 blocks
-#8. Thanks & good bye
+# 8. Thanks & good bye
 
 from __future__ import absolute_import, division
 
