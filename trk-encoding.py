@@ -80,7 +80,7 @@ logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a f
 # Select images and create stimulus table for BOTH tasks
 jitters = trk.read_jitters('jitters-Encoding.txt')
 images, foils = trk.select_images(n_images_used = 121, n_all_images= 145)
-stim_table = trk.create_stimtable(images, 'StimuliTable-Encoding.csv')
+stim_table = trk.create_stimtable(images, 'StimuliTable-Encoding-3run-40-520-2468.csv')
 recogniton_table = trk.create_recognition_table(stim_table, foils, fname = 'StimTable-Recognition.txt')
 recogniton_table.to_csv(os.path.join('data','stim_tables',expInfo['participant']+'_recognition_table.csv'))
 stim_table.to_csv(os.path.join('data','stim_tables', expInfo['participant']+'_stim_table.csv'))

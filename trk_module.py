@@ -41,7 +41,7 @@ def select_images(n_images_used = 121, n_all_images= 180):
     return image_files, foil_files
 
 def create_stimtable(images, fname):
-    stim_table = pd.read_csv(fname, sep=',', lineterminator='\n')
+    stim_table = pd.read_csv(fname, sep='\t', lineterminator='\n')
     TripletMembers = ['TripletMemberA','TripletMemberB','TripletMemberC']
     for TripletMember in TripletMembers:
         stim_table[TripletMember] = stim_table[TripletMember].astype(str) #change None (float) to 'None' (string)
