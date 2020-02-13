@@ -60,7 +60,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '3.2.4'
 expName = 'TerKepEsz'  # from the Builder filename that created this script
-expInfo = {'participant': '', 'session': '1'}
+expInfo = {'participant': '', 'practice': '1', 'trial': '0'}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -68,6 +68,11 @@ expInfo['date'] = data.getDateStr()  # add a simple timestamp
 expInfo['expName'] = expName
 expInfo['psychopyVersion'] = psychopyVersion
 expInfo['Task'] = task
+
+# start from trial specified by the user
+first_trial = int(expInfo['trial'])
+# check whether practice is needed
+practice = int(expInfo['practice'])
 
 # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
 filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['participant'],task, expName, expInfo['date'])
@@ -80,10 +85,15 @@ logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a f
 # Select images and create stimulus table for BOTH tasks
 jitters = trk.read_jitters('jitters-Encoding.txt')
 images, foils = trk.select_images(n_images_used = 121, n_all_images= 145)
-stim_table = trk.create_stimtable(images, 'StimuliTable-Encoding-3run-40-520-2468.csv')
-recogniton_table = trk.create_recognition_table(stim_table, foils, fname = 'StimTable-Recognition.txt')
-recogniton_table.to_csv(os.path.join('data','stim_tables',expInfo['participant']+'_recognition_table.csv'))
-stim_table.to_csv(os.path.join('data','stim_tables', expInfo['participant']+'_stim_table.csv'))
+fname = 'data/stim_tables/' + expInfo['participant'] + '_stim_table.csv'
+# try to read the participant's stimuli table, in case they have one already
+try:
+    stim_table = pd.read_csv(fname, sep=',', lineterminator='\n')
+except:
+    stim_table = trk.create_stimtable(images, 'StimuliTable-Encoding-3run-40-520-2468.csv')
+    recogniton_table = trk.create_recognition_table(stim_table, foils, fname = 'StimTable-Recognition.txt')
+    recogniton_table.to_csv(os.path.join('data','stim_tables',expInfo['participant']+'_recognition_table.csv'))
+    stim_table.to_csv(os.path.join('data','stim_tables', expInfo['participant']+'_stim_table.csv'))
 
 practice_table = pd.read_csv('practice_trials.csv', sep=',', lineterminator='\n')
 
@@ -398,7 +408,6 @@ fixationTimer = core.CountdownTimer()
 feedbackTimer = core.CountdownTimer()
 imageTimer = core.CountdownTimer()
 practiceTimer = core.CountdownTimer()
-practice = 1
 while practice and cont:
     instr_text.setText('Figyeljen, kezdődik a gyakorlás.')
     trials = len(practice_table.index)
@@ -508,13 +517,15 @@ s_image = 'NaN'
 xcoordinate = 0
 ycoordinate = 0
 dataFile.write('TrialIndex,Order,StimType,FX/IMG,ImagePreseneted,Xcoordinate,Ycoordinate,Response,RT, TimePassed\n')
-trials = len(stim_table.index)
+#trials = len(stim_table.index)
+trials = np.arange(first_trial,len(stim_table.index),1, dtype =int)
 rt_timer = core.Clock() # for reaction time
 expClock = core.Clock()  # to track the time since experiment started
 previous_run = 1
-for tr in range(trials):
+for tr in trials:
     if stim_table['ScannerRun'][tr] != previous_run:
         cont = insert_pause()
+        previous_run = stim_table['ScannerRun'][tr]
     # update component parameters for each repeat
     main_image.setPos(trk.set_position(stim_table,tr))
     main_image.setImage(trk.set_image(stim_table,tr, task))
