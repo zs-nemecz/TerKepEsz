@@ -80,7 +80,7 @@ def set_image(stim_table, tr, task):
 def set_position(stim_table, tr):
     position = (0,0)
     if stim_table.at[tr, 'StimType'] == 'LLP' and stim_table.at[tr, 'Order'] == 2:
-        position = (stim_table.at[tr, 'Xcoordinate2'], stim_table.at[tr, 'Ycoordinate2'])
+        position = (stim_table.at[tr, 'Xcoordinate_lure1'], stim_table.at[tr, 'Ycoordinate_lure1'])
     else:
         position = (stim_table.at[tr, 'Xcoordinate'], stim_table.at[tr, 'Ycoordinate'])
 
