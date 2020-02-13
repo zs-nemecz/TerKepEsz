@@ -142,4 +142,4 @@ TrialIndex	BlockNr	TrialType	EncodingStimType	StimType	ImagePresented	Xcoordinat
 141	8	LOC	OLP	LURE								0
 142	8	LOC	OLP	TARGET								0
 143	8	LOC	OLP	LURE								0
-143	8	LOC	OLP	LURE								0
+144	8	LOC	OLP	LURE								0

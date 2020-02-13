@@ -79,7 +79,7 @@ def set_image(stim_table, tr, task):
 
 def set_position(stim_table, tr):
     position = (0,0)
-    if stim_table.at[tr, 'StimType'] == 'LLP' and stim_table.at[tr, 'Order'] == 2:
+    if stim_table.at[tr, 'StimType'] == 'LLP' and stim_table.at[tr, 'Order'] == 2: #in the recognition table, StimType is always FOIL, TARGET or LURE. in the encodint stim_table, StimType is LLP, ERP or LLP 
         position = (stim_table.at[tr, 'Xcoordinate_lure1'], stim_table.at[tr, 'Ycoordinate_lure1'])
     else:
         position = (stim_table.at[tr, 'Xcoordinate'], stim_table.at[tr, 'Ycoordinate'])
@@ -174,10 +174,9 @@ def create_recognition_table(encoding_table, foils, fname = 'StimTable-Recogniti
     i_erp = 0
     #get OLP foil locations
     #loop through recog table and add lines
-    #18-cal osztható indexek után legyen váltás a recognition taskban
     recognition_table = pd.read_csv(fname, sep='\t', lineterminator='\n')
-    recognition_table['ImagePresented'] = recognition_table['ImagePresented'].astype(str)
-    recognition_table['EncodingImage'] = recognition_table['EncodingImage'].astype(str)
+    recognition_table['ImagePresented'] = recognition_table['ImagePresented'].astype(str) # change to string Nan
+    recognition_table['EncodingImage'] = recognition_table['EncodingImage'].astype(str) # change to string Nan
     i_foil = 0 #index for looping through foils
     for i, row in recognition_table.iterrows():
         if row['StimType'] == 'FOIL' and row['TrialType'] == 'OBJ':
