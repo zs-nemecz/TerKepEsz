@@ -1,4 +1,4 @@
-TrialIndex	StimType	Order	Delay	ScannerRun	TripletMemberA	TripletMemberB	TripletMemberC	Xcoordinate	Ycoordinate	Xcoordinate_lure1	Ycoordinate_lure1	Xcoordinate_lure2	Ycoordinate_lure2	Xcoordinate_foil	Ycoordinate_foil
+TrialIndex	StimType	Order	Delay	ScannerRun	TripletMemberA	TripletMemberB	TripletMemberC	Xcoordinate	Ycoordinate	Xcoordinate_lure1	Ycoordinate_lure1	Xcoordinate_lure2	Ycoordinate_lure2	Xcoordinate_foil	Ycoordinate_foil	Fill
 1	OLP	1	6	1				300	0	200.739181907657	222.943447643218	285.316954888546	107.51038486359	-300	3.67394039744206E-14
 2	ERP	1	6	1				299.588860426372	15.7007868728831	233.143788437091	200.739181907657	222.943447643218	-188.796117314951	-299.588860426372	-15.7007868728831
 3	LLP	1	8	1				298.356568610482	31.358538980296	233.143788437091	188.796117314951	280.074127949161	-92.7050983124843	-298.356568610482	-31.3585389802959
