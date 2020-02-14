@@ -69,8 +69,8 @@ coord['Ycoordinate_lure1'] = ycoordinate_lure1
 coord['Xcoordinate_lure2'] = xcoordinate_lure2
 coord['Ycoordinate_lure2'] = ycoordinate_lure2
 
-coord['Xcoordinate_foil'] = xcoordinate_lure1
-coord['Ycoordinate_foil'] = ycoordinate_lure1
+coord['Xcoordinate_foil'] = xcoordinate_foil
+coord['Ycoordinate_foil'] = ycoordinate_foil
 
 coord['Lure1_Distance'] = lure1_distance
 coord['Lure1_Index'] = lure1_indexes
