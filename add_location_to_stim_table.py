@@ -27,8 +27,8 @@ for row in range(len(stim_table)):
 
         stim_table['Xcoordinate_foil'][row] = coord['Xcoordinate_foil'][i]
         stim_table['Ycoordinate_foil'][row] = coord['Ycoordinate_foil'][i]
-        stim_table['Xcoordinate_foil'][row+delay] = coord['Xcoordinate_lure2'][i]
-        stim_table['Ycoordinate_foil'][row+delay] = coord['Ycoordinate_lure2'][i]
+        stim_table['Xcoordinate_foil'][row+delay] = coord['Xcoordinate_foil'][i]
+        stim_table['Ycoordinate_foil'][row+delay] = coord['Ycoordinate_foil'][i]
 
         i +=1
 

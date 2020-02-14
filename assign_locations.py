@@ -66,8 +66,8 @@ for i in range(len(coord.index)):
 
 coord['Xcoordinate_lure1'] = xcoordinate_lure1
 coord['Ycoordinate_lure1'] = ycoordinate_lure1
-coord['Xcoordinate_lure2'] = xcoordinate_lure1
-coord['Ycoordinate_lure2'] = ycoordinate_lure1
+coord['Xcoordinate_lure2'] = xcoordinate_lure2
+coord['Ycoordinate_lure2'] = ycoordinate_lure2
 
 coord['Xcoordinate_foil'] = xcoordinate_lure1
 coord['Ycoordinate_foil'] = ycoordinate_lure1
