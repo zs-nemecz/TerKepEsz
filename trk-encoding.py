@@ -194,7 +194,7 @@ gallery_outside_image = visual.ImageStim(
 gallery_outside_text = visual.TextStim(win=win, name='story1_text',
     text='Ön ennek a modern képgalériának a kurátora.\nA legújabb kiállításra a vártnál több kép érkezett.\
     \n\nKurátorként az Ön feladata lesz eldönteni, mely képeket válogatjuk be a kiállított darabok közé, és hogy a kép illeszkedik-e a galéria adott pontjára.\
-    Az Ön ideje nagyon drága a galériának, így a döntésre csak pár másodperce lesz.\
+    Az Ön ideje nagyon drága a galériának, így a döntésre egy-egy képről csak 2.5 másodperce lesz.\
     \n\nA folytatáshoz nyomja le a jobb nyilat.',
     font='Arial',
     units='deg', pos=(0, -5), height=0.9, wrapWidth=30, ori=0,
@@ -205,15 +205,15 @@ gallery_outside_text = visual.TextStim(win=win, name='story1_text',
 gallery_inside_image = visual.ImageStim(
     win=win,
     name='story2_image', units='norm',
-    image='Stimuli/GalleryPlanInside.jpg', mask=None,
-    ori=0, pos=(0.5, 0), size=None,
+    image='Stimuli/GalleryInfo.jpg', mask=None,
+    ori=0, pos=(0.5, 0), size=(1.5,1.5),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
 
 gallery_inside_text = visual.TextStim(win=win, name='story2_text',
-    text='Ez a galéria térképe felülről.\nMost végigvezetjük Önt a galérián.\n\nDöntse el a képekről, hogy valódi műalkotások-e, és illenek-e az adott helyre.\
-    \nAz Ön döntése, hogy a képeket kiállítjuk-e a következő kiállításon. \n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz. \
+    text='Ez a galéria térképe felülről, nézze meg figyelmesen.\nA feladat során a képek a térképre vetítve jelennek meg, azon a helyen, ahol kiállításra kerülhetnek.\n\nDöntse el a képekről, hogy ki legyenek-e állítva a bemutatott helyen.\
+    \n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ.\
     \n\nA folytatáshoz nyomja le a jobb nyilat.\n',
     font='Arial',
     units='deg', pos=(-6, 0), height=0.9, wrapWidth=20, ori=0,
