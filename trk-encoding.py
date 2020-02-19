@@ -204,19 +204,19 @@ gallery_outside_text = visual.TextStim(win=win, name='story1_text',
 
 gallery_inside_image = visual.ImageStim(
     win=win,
-    name='story2_image', units='norm',
+    name='story2_image', units='pix',
     image='Stimuli/GalleryInfo.jpg', mask=None,
-    ori=0, pos=(0.5, 0), size=(1.5,1.5),
+    ori=0, pos=(425, 0), size=(1000,750),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
 
 gallery_inside_text = visual.TextStim(win=win, name='story2_text',
-    text='Ez a galéria térképe felülről, nézze meg figyelmesen.\nA feladat során a képek a térképre vetítve jelennek meg, azon a helyen, ahol kiállításra kerülhetnek.\n\nDöntse el a képekről, hogy ki legyenek-e állítva a bemutatott helyen.\
+    text='Ez a galéria térképe felülről, nézze meg figyelmesen.\n\nA feladat során a képek a térképre vetítve jelennek meg,\nazon a helyen, ahol kiállításra kerülhetnek.\n\nDöntse el a képekről, hogy ki legyenek-e állítva a bemutatott helyen.\
     \n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ.\
     \n\nA folytatáshoz nyomja le a jobb nyilat.\n',
     font='Arial',
-    units='deg', pos=(-6, 0), height=0.9, wrapWidth=20, ori=0,
+    units='deg', pos=(-14, 0), height=0.9, wrapWidth=24, ori=0,
     color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=-2.0);
