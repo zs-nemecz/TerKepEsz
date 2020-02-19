@@ -51,7 +51,7 @@ resp_1 = 'j' # response 'art'
 next = 'right'
 back = 'left'
 pause_button = 'p'
-experimenter = 'e'
+experimenter = 'space'
 
 # Ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
@@ -90,7 +90,7 @@ fname = 'data/stim_tables/' + expInfo['participant'] + '_stim_table.csv'
 try:
     stim_table = pd.read_csv(fname, sep=',', lineterminator='\n')
 except:
-    stim_table = trk.create_stimtable(images, 'StimuliTable-Encoding-3run-40-315-24568.csv')
+    stim_table = trk.create_stimtable(images, 'StimuliTable-Encoding-3run-40-520-12345.csv')
     recogniton_table = trk.create_recognition_table(stim_table, foils, fname = 'StimTable-Recognition.txt')
     recogniton_table.to_csv(os.path.join('data','stim_tables',expInfo['participant']+'_recognition_table.csv'))
     stim_table.to_csv(os.path.join('data','stim_tables', expInfo['participant']+'_stim_table.csv'))
@@ -240,7 +240,7 @@ participant_choice = visual.TextStim(win=win, name='instr_text',
 # Start Task Components
 start_task_text = visual.TextStim(win=win, name='start_task_text',
     text='Ez volt a gyakorlás.\
-    \n\nHa kezdhetjük a feladatot, nyomja le a jobb nyilat.\n\n Ha újra szeretne gyakorolni, nyomjon le bármilyen más billentyűt',
+    \n\nHa kezdhetjük a feladatot, nyomja le a jobb nyilat.\n\nHa újra szeretne gyakorolni, nyomjon le bármilyen más billentyűt',
     font='Arial',
     pos=(0, 0), height=0.9, wrapWidth=None, ori=0,
     color='black', colorSpace='rgb', opacity=1,

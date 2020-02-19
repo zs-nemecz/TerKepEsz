@@ -95,7 +95,7 @@ resp_2 = 'k' # response 'new'
 next = 'right'
 back = 'left'
 pause_button = 'p'
-experimenter = 'e'
+experimenter = 'space'
 
 pause_duration = 2.0
 welcome_duration = 2.0

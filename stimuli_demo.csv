@@ -1,8 +1,6 @@
 ﻿Pair,TrialType,StimType,ImagePresented,Xcoordinate,Ycoordinate,Jitter,Filler
 1,OBJ,TARGET,Stimuli/Fractals/Practice/163a.jpg,105.8791694,-280.6948548,0.6,0
 1,OBJ,TARGET,Stimuli/Fractals/Practice/163a.jpg,105.8791694,-280.6948548,2,0
-2,OBJ,LURE,Stimuli/Fractals/Practice/163a.jpg,105.8791694,-280.6948548,0.6,0
-2,OBJ,LURE,Stimuli/Fractals/Practice/163b.jpg,105.8791694,-280.6948548,2.3,0
 3,OBJ,LURE,Stimuli/Fractals/Practice/167a.jpg,79.33024861,-289.321122,2.3,0
 3,OBJ,LURE,Stimuli/Fractals/Practice/167b.jpg,79.33024861,-289.321122,1,0
 4,OBJ,LURE,Stimuli/Fractals/Practice/165a.jpg,118.8239298,-275.4648321,0.8,0
@@ -13,7 +11,5 @@
 6,LOC,TARGET,Stimuli/Fractals/Practice/163a.jpg,105.8791694,-280.6948548,1,0
 7,LOC,LURE,Stimuli/Fractals/Practice/163a.jpg,105.8791694,-280.6948548,0.8,0
 7,LOC,LURE,Stimuli/Fractals/Practice/163a.jpg,246.7425286,-1.71E+02,1.5,0
-5,LOC,LURE,Stimuli/Fractals/Practice/180a.jpg,179.1475775,-240.6369578,0.6,0
-8,LOC,LURE,Stimuli/Fractals/Practice/180a.jpg,118.8239298,-275.4648321,0.6,0
 9,LOC,FOIL,Stimuli/Fractals/Practice/163a.jpg,105.8791694,-280.6948548,0.8,0
 9,LOC,FOIL,Stimuli/Fractals/Practice/163b.jpg,-99.31902537,283.0825519,1.5,0

@@ -1,9 +1,9 @@
 import pandas as pd
 import numpy as np
 import random
-fname ='StimuliTable-Encoding-3run-40-315-24568.csv'
+fname ='StimuliTable-Encoding-3run-40-520-12345.csv'
 stim_table = pd.read_csv(fname, sep=',', lineterminator='\n')
-coord = pd.read_csv('coordinate_table.csv')
+coord = pd.read_csv('coordinate_table_5-20.csv')
 i = 0
 for row in range(len(stim_table)):
     if stim_table['Order'][row] == 1:
@@ -32,4 +32,4 @@ for row in range(len(stim_table)):
 
         i +=1
 
-stim_table.to_csv('StimuliTable-Encoding-3run-40-315-24568_new_coord.csv')
+stim_table.to_csv('StimuliTable-Encoding-3run-40-520-12345_new_coord.csv')

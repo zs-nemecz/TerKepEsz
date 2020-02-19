@@ -17,11 +17,15 @@ def assign_index(raw_i,max_i):
 orig = 'original_coordinates_121.csv'
 coord = pd.read_csv(orig, sep=',', lineterminator='\n')
 indeces = np.arange(0, len(coord))
-print(coord)
 
-lure1_distance=np.random.randint(3,16,size=indeces.shape)
-lure2_distance=np.random.randint(3,16,size=indeces.shape)
-foil_distance = np.random.randint(58,63,size=indeces.shape)
+min_distance = 5
+max_distance = 20
+min_foil_distance = 58
+max_foil_distance = 62
+
+lure1_distance=np.random.randint(min_distance,max_distance + 1,size=indeces.shape)
+lure2_distance=np.random.randint(min_distance,max_distance + 1,size=indeces.shape)
+foil_distance = np.random.randint(min_foil_distance,max_foil_distance + 1,size=indeces.shape)
 lure1_signs =[(-1)**random.randint(0,1) for i in lure1_distance]
 lure2_signs =[(-1)**random.randint(0,1) for i in lure2_distance]
 lure1_distance = lure1_distance*lure1_signs
@@ -29,7 +33,7 @@ lure2_distance = lure2_distance*lure2_signs
 
 #check distances on histogram
 plt.hist(lure1_distance)
-plt.hist(lure2_distance)
+plt.hist(lure2_distance, alpha=0.5)
 plt.show()
 
 lure1_indexes = []
@@ -81,5 +85,5 @@ coord['Lure2_Index'] = lure2_indexes
 coord['Foil_Distance'] = foil_distance
 coord['Foil_Index'] = foil_indexes
 
-coord.to_csv('coordinate_table.csv')
+coord.to_csv('coordinate_table_5-20.csv')
 print(coord)
