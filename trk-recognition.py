@@ -204,7 +204,7 @@ instr_location_text= 'A \'Hely\' nevű alfeladatban azt kell eldöntenie, a kép
                     \n\nA döntését így jelölje:\n\tRégi - F\t Hasonló - J\t Új - K\
                     \n\nA folytatáshoz nyomja le a jobb nyilat.'
 
-instr_demo_text= 'A következőkben kép-párokban mutatjuk be Önnek, milyenek a \'régi\', \'hasonló\' és \'új\' képek és helyek. \nA folytatáshoz nyomja le a jobb nyilat.'
+instr_demo_text= 'A következőkben bemutatjuk Önnek, milyenek a \'hasonló\'/\'új\' képek és helyek. \nA jobb nyillal tud továbblépni.'
 
 instr_practice_text= 'Most a gyakorlás következik. Ha készen áll, nyomjon le egy billentyűt.'
 
@@ -243,6 +243,15 @@ trial_type_text = visual.TextStim(win=win, name='start_task_text',
     color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=0.0);
+
+demo_image = visual.ImageStim(
+    win=win,
+    name='main_image', units='pix',
+    image=stim_table.at[0, 'ImagePresented'], mask=None,
+    ori=0, pos=[0,0], size=300,
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-1.0)
 
 # Trial Components
 # Gallery Map
@@ -436,60 +445,42 @@ prev_type = 'LOC'
 while practice and cont:
     trials = len(demo_table.index)
     for dm in range(trials):
-        main_image.setPos(trk.set_position(demo_table,dm))
-        main_image.setImage(trk.set_image(demo_table,dm, task))
+        main_image.setPos((demo_table.at[dm, 'Xcoordinate'], demo_table.at[dm, 'Ycoordinate']))
+        main_image.setImage(demo_table.at[dm, 'ImagePresented'])
+        demo_image.setPos((demo_table.at[dm, 'Xcoordinate_demo'], demo_table.at[dm, 'Ycoordinate_demo']))
+        demo_image.setImage(demo_table.at[dm, 'DemoImage'])
 
-        if dm % 2 == 0: #check demo type at every 2nd image (images are shown in pairs)
-            if demo_table.at[dm, 'StimType'] == 'TARGET':
-                stim_type_text.setText('Régi')
-            elif demo_table.at[dm, 'StimType'] == 'LURE':
-                stim_type_text.setText('Hasonló')
-            elif demo_table.at[dm, 'StimType'] == 'FOIL':
-                stim_type_text.setText('Új')
-            else:
-                stim_type_text.setText('StimType Unkown')
+        if demo_table.at[dm, 'StimType'] == 'TARGET':
+            stim_type_text.setText('Régi')
+        elif demo_table.at[dm, 'StimType'] == 'LURE':
+            stim_type_text.setText('Hasonló')
+        elif demo_table.at[dm, 'StimType'] == 'FOIL':
+            stim_type_text.setText('Új')
+        else:
+            stim_type_text.setText('StimType Unkown')
 
-            if demo_table.at[dm, 'TrialType'] == 'OBJ':
-                trial_type_text.setText('Képek')
-            elif demo_table.at[dm, 'TrialType'] == 'LOC':
-                trial_type_text.setText('Helyek')
-            else:
-                trial_type_text.setText('TrialType Unkown')
-            # inform participant about the type demostrated
-            practiceTimer.reset(2.0)
-            while cont and practiceTimer.getTime() > 0:
-                stim_type_text.draw()
-                trial_type_text.draw()
-                win.flip()
-                thisKey=keyboard.Keyboard().getKeys()
-                if thisKey == ['escape']:
-                    cont = 0
-                elif thisKey == [pause_button]:
-                    cont = insert_pause()
-        fx = 1
-        while cont and fx:
-            fixationTimer.reset(demo_table.at[dm, 'Jitter'])
-            while cont and fixationTimer.getTime() > 0:
+        if demo_table.at[dm, 'TrialType'] == 'OBJ':
+            trial_type_text.setText('Képek')
+        elif demo_table.at[dm, 'TrialType'] == 'LOC':
+            trial_type_text.setText('Helyek')
+        else:
+            trial_type_text.setText('TrialType Unkown')
+
+        demo = 1
+        while cont and demo:
+            if demo_table.at[dm, 'TrialType'] == 'LOC':
                 galley_map.draw()
-                fixation_cross.draw()
-                win.flip()
-                theseKeys = keyboard.Keyboard().getKeys()
-                if theseKeys == ['escape']:
-                    cont = 0
-                elif theseKeys == [pause_button]:
-                    cont = insert_pause()
-                    fx = 1
-                else:
-                    fx = 0
-
-        imageTimer.reset(image_presentation_time)
-        while cont and imageTimer.getTime() > 0:
-            galley_map.draw()
+            stim_type_text.draw()
+            trial_type_text.draw()
             main_image.draw()
+            demo_image.draw()
             win.flip()
+            core.wait(1)
             theseKeys = keyboard.Keyboard().getKeys()
             if theseKeys == ['escape']:
                 cont = 0
+            elif theseKeys == [next]:
+                demo = 0
             elif theseKeys == [pause_button]:
                 cont = insert_pause()
 
@@ -517,7 +508,6 @@ while practice and cont:
         # update component parameters for each repeat
         main_image.setPos(trk.set_position(practice_table,pr))
         main_image.setImage(trk.set_image(practice_table,pr, task))
-
 
         # Set correct answer for feedback
         if practice_table.at[pr, 'StimType'] == 'FOIL':
@@ -597,10 +587,10 @@ while practice and cont:
             correct_answer.draw()
             answer_given.draw()
             win.flip()
-            thisKey=event.getKeys()
+            thisKey=keyboard.Keyboard().getKeys()
             if thisKey == ['escape']:
                 cont = 0
-            elif theseKeys == [pause_button]:
+            elif thisKey == [pause_button]:
                 cont = insert_pause()
         correct_answer.setText('')
         answer_given.setText('')
