@@ -1,7 +1,3 @@
-# TODO:
-# complete cover-up story
-# improve log files #
-
 # Task Procedure
 # 1. Welcome Screen
 # 2. Left and Right Button Check
