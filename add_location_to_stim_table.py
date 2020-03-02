@@ -3,7 +3,7 @@ import numpy as np
 import random
 fname ='StimuliTable-Encoding-3run-40-520-12345.csv'
 stim_table = pd.read_csv(fname, sep=',', lineterminator='\n')
-coord = pd.read_csv('coordinate_table_5-20.csv')
+coord = pd.read_csv('coordinate_table_discrete_1.csv')
 i = 0
 for row in range(len(stim_table)):
     if stim_table['Order'][row] == 1:
