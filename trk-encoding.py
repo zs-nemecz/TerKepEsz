@@ -86,7 +86,7 @@ fname = 'data/stim_tables/' + expInfo['participant'] + '_stim_table.csv'
 try:
     stim_table = pd.read_csv(fname, sep=',', lineterminator='\n')
 except:
-    stim_table = trk.create_stimtable(images, 'StimuliTable-Encoding-3run-40-520-12345.csv')
+    stim_table = trk.create_stimtable(images, 'StimuliTable-Encoding-3run-40-discrete-8-12345.xlsx')
     recogniton_table = trk.create_recognition_table(stim_table, foils, fname = 'StimTable-Recognition.txt')
     recogniton_table.to_csv(os.path.join('data','stim_tables',expInfo['participant']+'_recognition_table.csv'))
     stim_table.to_csv(os.path.join('data','stim_tables', expInfo['participant']+'_stim_table.csv'))
