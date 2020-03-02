@@ -8,6 +8,7 @@ print(stim_table)
 coord = pd.read_excel('coordinate_table_discrete_1.xlsx')
 i = 0
 for row in range(len(stim_table)):
+    #todo: add locations for BL trials
     if stim_table['Order'][row] == 1:
         delay = stim_table['Delay'][row] + 1
         stim_table.at[row, 'Xcoordinate'] = coord.at[i, 'Xcoordinate']
