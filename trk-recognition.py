@@ -43,7 +43,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '3.2.4'
 expName = 'TérKépÉsz'
-expInfo = {'participant': '', 'session': '1'}
+expInfo = {'participant': '', 'demo': '1', 'practice': '1', 'session': '1'}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -206,7 +206,7 @@ instr_location_text= 'A \'Hely\' nevű alfeladatban azt kell eldöntenie, a kép
 
 instr_demo_text= 'A következőkben bemutatjuk Önnek, milyenek a \'hasonló\'/\'új\' képek és helyek. \nA jobb nyillal tud továbblépni.'
 
-instr_practice_text= 'Most a gyakorlás következik. Ha készen áll, nyomjon le egy billentyűt.'
+instr_practice_text= 'Most a gyakorlás következik. Ha készen áll a gyakorlásra, nyomja le a jobb nyilat.\n\nHa újra megnézné a bemutatót, nyomjon le bármilyen más gombot.'
 
 inst_texts = [inst_task_text, instr_image_text, instr_location_text, instr_demo_text]
 
@@ -440,9 +440,10 @@ feedbackTimer = core.CountdownTimer()
 imageTimer = core.CountdownTimer()
 trialtypeTimer = core.CountdownTimer()
 practiceTimer = core.CountdownTimer()
-practice = 1
+practice = int(expInfo['practice'])
+demo = int(expInfo['demo'])
 prev_type = 'LOC'
-while practice and cont:
+while demo and cont:
     trials = len(demo_table.index)
     for dm in range(trials):
         main_image.setPos((demo_table.at[dm, 'Xcoordinate'], demo_table.at[dm, 'Ycoordinate']))
@@ -466,8 +467,8 @@ while practice and cont:
         else:
             trial_type_text.setText('TrialType Unkown')
 
-        demo = 1
-        while cont and demo:
+        show_demo_images = 1
+        while cont and show_demo_images:
             if demo_table.at[dm, 'TrialType'] == 'LOC':
                 galley_map.draw()
             stim_type_text.draw()
@@ -475,12 +476,12 @@ while practice and cont:
             main_image.draw()
             demo_image.draw()
             win.flip()
-            core.wait(1)
+            core.wait(0.5)
             theseKeys = keyboard.Keyboard().getKeys()
             if theseKeys == ['escape']:
                 cont = 0
             elif theseKeys == [next]:
-                demo = 0
+                show_demo_images = 0
             elif theseKeys == [pause_button]:
                 cont = insert_pause()
 
@@ -488,11 +489,16 @@ while practice and cont:
         instr_text.setText(instr_practice_text)
         instr_text.draw()
         win.flip()
-        allKeys=event.waitKeys()
-        if allKeys == ['escape']:
+        anyKey=event.waitKeys()
+        if anyKey == ['escape']:
             cont = 0
+        elif anyKey == [next]:
+            demo = 0
+        else:
+            demo = 1
 
-    # Start practice
+# Start practice
+while practice and cont:
     trials = len(practice_table.index)
     practiceTimer.reset(2.0)
     while cont and practiceTimer.getTime() > 0:
@@ -630,7 +636,7 @@ while cont and startTaskTimer.getTime() > 0:
     thisKey = keyboard.Keyboard().getKeys()
     if thisKey == ['escape']:
         cont = 0
-    elif theseKeys == [pause_button]:
+    elif thisKey == [pause_button]:
         cont = insert_pause()
 
 
@@ -676,7 +682,7 @@ for tr in range(trials):
                 thisKey = keyboard.Keyboard().getKeys()
                 if thisKey == ['escape']:
                     cont = 0
-                elif theseKeys == [pause_button]:
+                elif thisKey == [pause_button]:
                     cont = insert_pause()
         elif trk.get_trialtype(stim_table, tr) == 'OBJ':
             prev_type = 'OBJ'
@@ -689,7 +695,7 @@ for tr in range(trials):
                 thisKey = keyboard.Keyboard().getKeys()
                 if thisKey == ['escape']:
                     cont = 0
-                elif theseKeys == [pause_button]:
+                elif thisKey == [pause_button]:
                     cont = insert_pause()
 
     # update component parameters for each repeat
