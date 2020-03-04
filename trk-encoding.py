@@ -38,7 +38,7 @@ welcome_duration = 2.0
 pause_duration = 2.0
 welcome_duration = 2.0
 goodbye_duration = 2.0
-image_presentation_time = 2.5
+image_presentation_time = 3
 pause = 1
 
 # Response buttons
