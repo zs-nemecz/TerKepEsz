@@ -4,7 +4,8 @@ OBJ,LURE,Stimuli/Fractals/Practice/149a.jpg,Stimuli/Fractals/Practice/149b.jpg,3
 OBJ,LURE,Stimuli/Fractals/Practice/160b.jpg,Stimuli/Fractals/Practice/160c.jpg,300,0,-300,0,-,0.8,0
 OBJ,LURE,Stimuli/Fractals/Practice/167a.jpg,Stimuli/Fractals/Practice/167b.jpg,300,0,-300,0,OBJ-TARGET,1.5,0
 OBJ,FOIL,Stimuli/Fractals/Practice/163a.jpg,Stimuli/Fractals/Practice/173c.jpg,300,0,-300,0,-,0.6,0
-LOC,LURE,Stimuli/Fractals/Practice/166a.jpg,Stimuli/Fractals/Practice/166a.jpg,122.0209929,-274.0636373,222.9434476,-200.7391819,"LOC-TARGET, OBJ-LURE",0.8,0
-LOC,LURE,Stimuli/Fractals/Practice/159a.jpg,Stimuli/Fractals/Practice/159a.jpg,-285.3169549,-92.70509831,-136.1971499,-267.3019573,LOC-LURE,1.5,0
-LOC,LURE,Stimuli/Fractals/Practice/148b.jpg,Stimuli/Fractals/Practice/148b.jpg,200.7391819,222.9434476,300,0,LOC-FOIL,0.8,0
-LOC,FOIL,Stimuli/Fractals/Practice/177b.jpg,Stimuli/Fractals/Practice/177b.jpg,31.35853898,298.3565686,-46.93033951,-296.3065022,OBJ-LURE,0.8,0
+LOC,LURE,Stimuli/Fractals/Practice/166a.jpg,Stimuli/Fractals/Practice/166a.jpg,-300,0,-212.1320344,-212.1320344,"LOC-TARGET, OBJ-LURE",0.8,0
+LOC,LURE,Stimuli/Fractals/Practice/159a.jpg,Stimuli/Fractals/Practice/159a.jpg,0,300,-212.1320344,212.1320344,LOC-LURE,1.5,0
+LOC,LURE,Stimuli/Fractals/Practice/148b.jpg,Stimuli/Fractals/Practice/148b.jpg,212.1320344,212.1320344,0,300,LOC-FOIL,0.8,0
+LOC,FOIL,Stimuli/Fractals/Practice/177b.jpg,Stimuli/Fractals/Practice/177b.jpg,300,0,-212.1320344,212.1320344,OBJ-LURE,0.8,0
+LOC,FOIL,Stimuli/Fractals/Practice/177b.jpg,Stimuli/Fractals/Practice/177b.jpg,300,0,-300,0,OBJ-LURE,1.2,0
