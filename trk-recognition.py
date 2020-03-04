@@ -43,7 +43,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '3.2.4'
 expName = 'TérKépÉsz'
-expInfo = {'participant': '', 'demo': '1', 'practice': '1', 'session': '1'}
+expInfo = {'participant': '', 'demo': '1', 'practice': '1', 'trial': '0'}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -52,11 +52,12 @@ expInfo['expName'] = expName
 expInfo['psychopyVersion'] = psychopyVersion
 expInfo['Task'] = task
 
-#try:  # try to get the recognition stimulus list created at encoding
-#    expInfo = fromFile('lastParams.pickle')
-#except:  # if not there then use a default set
-#    expInfo = {'observer':'jwp', 'refOrientation':0}
+# check user settings
+first_trial = int(expInfo['trial']) # which trial to start from
+demo = int(expInfo['demo']) # should there be a stimuli demonstration?
+practice = int(expInfo['practice']) # sould there be practice trials?
 
+# save relevant data to csv file
 filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['participant'],task, expName, expInfo['date'])
 dataFile = open(filename+'.csv', 'w')  # a simple text file with 'comma-separated-values'
 
@@ -440,8 +441,6 @@ feedbackTimer = core.CountdownTimer()
 imageTimer = core.CountdownTimer()
 trialtypeTimer = core.CountdownTimer()
 practiceTimer = core.CountdownTimer()
-practice = int(expInfo['practice'])
-demo = int(expInfo['demo'])
 prev_type = 'LOC'
 while demo and cont:
     trials = len(demo_table.index)
@@ -641,7 +640,7 @@ while cont and startTaskTimer.getTime() > 0:
 
 
 # 6. task
-trials = len(stim_table.index)
+trials = np.arange(first_trial,len(stim_table.index),1, dtype =int)
 #create vars for logging and log file header
 t_index = 0
 t_type = 'NaN'
@@ -654,7 +653,7 @@ block_nr = 0
 # Reset timer and start experiment
 rt_timer = core.Clock() # for reaction time
 expClock.reset()
-for tr in range(trials):
+for tr in trials:
     # Check whether we are starting a new block
     if prev_type != trk.get_trialtype(stim_table, tr):
         block_nr += 1
