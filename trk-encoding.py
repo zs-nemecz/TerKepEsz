@@ -91,7 +91,7 @@ except:
     recogniton_table.to_csv(os.path.join('data','stim_tables',expInfo['participant']+'_recognition_table.csv'))
     stim_table.to_csv(os.path.join('data','stim_tables', expInfo['participant']+'_stim_table.csv'))
 
-practice_table = pd.read_csv('practice_trials.csv', sep=',', lineterminator='\n')
+practice_table = pd.read_csv('encoding_practice_trials.csv', sep=',', lineterminator='\n')
 
 # Setup the Window
 win = visual.Window(

@@ -68,7 +68,7 @@ logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a f
 stimuli_fname = os.path.join('data','stim_tables',expInfo['participant']+'_recognition_table.csv')
 jitters = trk.read_jitters('jitters-Recognition.txt')
 stim_table = pd.read_csv(stimuli_fname, sep=',', lineterminator='\n')
-practice_table = pd.read_csv('rec_practice_trials.csv', sep=',', lineterminator='\n')
+practice_table = pd.read_csv('recognition_practice_trials.csv', sep=',', lineterminator='\n')
 demo_table = pd.read_csv('stimuli_demo.csv', sep=',', lineterminator='\n')
 
 # Setup the Window
