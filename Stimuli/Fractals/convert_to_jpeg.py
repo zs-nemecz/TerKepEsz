@@ -1,6 +1,6 @@
 from PIL import Image
 
-for i in range(1,181):
+for i in range(111,112):
     type=str(int(i))
     for item in ['a', 'b','c']:
         name = type + item
