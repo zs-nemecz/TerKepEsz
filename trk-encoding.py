@@ -38,7 +38,7 @@ welcome_duration = 2.0
 pause_duration = 2.0
 welcome_duration = 2.0
 goodbye_duration = 2.0
-image_presentation_time = 3
+image_presentation_time = 3.0
 pause = 1
 
 # Response buttons
@@ -190,7 +190,7 @@ gallery_outside_image = visual.ImageStim(
 gallery_outside_text = visual.TextStim(win=win, name='story1_text',
     text='Ön ennek a modern képgalériának a kurátora.\nA legújabb kiállításra a vártnál több kép érkezett.\
     \n\nKurátorként az Ön feladata lesz eldönteni, mely képeket válogatjuk be a kiállított darabok közé, és hogy a kép illeszkedik-e a galéria adott pontjára.\
-    Az Ön ideje nagyon drága a galériának, így a döntésre egy-egy képről csak 2.5 másodperce lesz.\
+    Az Ön ideje nagyon drága a galériának, így a döntésre egy-egy képről csak 3 másodperce lesz.\
     \n\nA folytatáshoz nyomja le a jobb nyilat.',
     font='Arial',
     units='deg', pos=(0, -5), height=0.9, wrapWidth=30, ori=0,

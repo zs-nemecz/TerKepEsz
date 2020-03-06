@@ -1,7 +1,7 @@
 ﻿TrialType,StimType,ImagePresented,DemoImage,Xcoordinate,Ycoordinate,Xcoordinate_demo,Ycoordinate_demo,InPractice,Jitter,Filler
-OBJ,LURE,Stimuli/Fractals/Practice/164a.jpg,Stimuli/Fractals/Practice/164b.jpg,300,0,-300,0,-,2.3,0
+OBJ,LURE,Stimuli/Fractals/Practice/181b.jpg,Stimuli/Fractals/Practice/181c.jpg,300,0,-300,0,-,2.3,0
 OBJ,LURE,Stimuli/Fractals/Practice/149a.jpg,Stimuli/Fractals/Practice/149b.jpg,300,0,-300,0,-,1,0
-OBJ,LURE,Stimuli/Fractals/Practice/160b.jpg,Stimuli/Fractals/Practice/160c.jpg,300,0,-300,0,-,0.8,0
+OBJ,LURE,Stimuli/Fractals/Practice/177b.jpg,Stimuli/Fractals/Practice/177c.jpg,300,0,-300,0,-,0.8,0
 OBJ,LURE,Stimuli/Fractals/Practice/167a.jpg,Stimuli/Fractals/Practice/167b.jpg,300,0,-300,0,OBJ-TARGET,1.5,0
 OBJ,FOIL,Stimuli/Fractals/Practice/163a.jpg,Stimuli/Fractals/Practice/173c.jpg,300,0,-300,0,-,0.6,0
 LOC,LURE,Stimuli/Fractals/Practice/166a.jpg,Stimuli/Fractals/Practice/166a.jpg,-300,0,-212.1320344,-212.1320344,"LOC-TARGET, OBJ-LURE",0.8,0
