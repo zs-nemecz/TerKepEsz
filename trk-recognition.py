@@ -261,7 +261,7 @@ galley_map = visual.ImageStim(
     name='map_inside_fx', units='pix',
     image='Stimuli/GalleryPlanInside.jpg', mask=None,
     ori=0, pos=(0, -25), size=(1040, 1000),
-    color=[1,1,1], colorSpace='rgb', opacity=0.5,
+    color=[1,1,1], colorSpace='rgb', opacity=0.7,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
 

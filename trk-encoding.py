@@ -251,7 +251,7 @@ galley_map = visual.ImageStim(
     name='map_inside_fx', units='pix',
     image='Stimuli/GalleryPlanInside.jpg', mask=None,
     ori=0, pos=(0, -25), size=(1040, 1000),
-    color=[1,1,1], colorSpace='rgb', opacity=0.5,
+    color=[1,1,1], colorSpace='rgb', opacity=0.7,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
 # Fixation Cross
@@ -275,9 +275,9 @@ main_image = visual.ImageStim(
 
 # Next-Run Components
 text_long_pause = visual.TextStim(win=win, name='text_pause',
-    text='Szünet. A folytatáshoz nyomja le a jobb nyilat.',
+    text='Szünet.\n\nA folytatáshoz nyomja le a jobb nyilat.',
     font='Arial',
-    units='deg', pos=(0, 0), height=0.9, wrapWidth=None, ori=0,
+    units='deg', pos=(-10, 0), height=0.9, wrapWidth=None, ori=0,
     color='black', colorSpace='rgb', opacity=1,
     languageStyle='LTR',
     depth=-2.0);
@@ -304,6 +304,7 @@ def insert_pause(text = text_long_pause, response = next):
     keep_paused = 1
     cont = 1
     while keep_paused and cont:
+        gallery_inside_image.draw()
         text.draw()
         win.flip()
         thisKey = keyboard.Keyboard().getKeys()
@@ -446,9 +447,9 @@ while practice and cont:
             if theseKeys == ['escape']:
                 cont = 0
             elif theseKeys == [resp_1]:
-                participant_choice.setText('Az Ön döntése: A kép marad.')
+                participant_choice.setText('Az Ön döntése:\nA kép marad.')
             elif theseKeys == [resp_0]:
-                participant_choice.setText('Az Ön döntése: A kép nem marad.')
+                participant_choice.setText('Az Ön döntése:\nA kép nem marad.')
             elif theseKeys == [pause_button]:
                 cont = insert_pause()
 
