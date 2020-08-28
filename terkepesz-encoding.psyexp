@@ -4,9 +4,9 @@
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
     <Param name="Completed URL" updates="None" val="https://docs.google.com/forms/d/e/1FAIpQLSe-JyQOJB2rcwl0jYrK_pOr_J8RNK4YRzq_I4WmRa4Pfox_aA/viewform?usp=sf_link" valType="str"/>
-    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s_%s' % (expInfo['Azonosító kód'],'pilot', expName, expInfo['date'])" valType="code"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s_%s' % (expInfo['ID'],'pilot', expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
-    <Param name="Experiment info" updates="None" val="{'Azonosító kód': '', 'Nem': '', 'Csoport': ''}" valType="code"/>
+    <Param name="Experiment info" updates="None" val="{'ID': '', 'practice': '1'}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
     <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="html" valType="str"/>
@@ -225,39 +225,6 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="start_enc_run_trigger">
-        <Param name="allowedKeys" updates="constant" val="'s'" valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="start_enc_run_trigger" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="3.0" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
-      <CodeComponent name="start_enc_run_timer">
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="if start_enc_run_trigger.keys == 's':&amp;#10;    start_enc_run_trigger.keys == None&amp;#10;    trigger +=  globalClock.getTime() - trigger_time&amp;#10;    thisExp.addData('trigger', trigger)" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="if ((start_enc_run_trigger.keys === &quot;s&quot;)) {&amp;#10;    (start_enc_run_trigger.keys === null);&amp;#10;    trigger += (globalClock.getTime() - trigger_time);&amp;#10;    thisExp.addData(&quot;trigger&quot;, trigger);&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="start_enc_run_timer" valType="code"/>
-      </CodeComponent>
     </Routine>
     <Routine name="enc_trial">
       <CodeComponent name="get_size">
@@ -346,11 +313,11 @@
       <CodeComponent name="enc_trial_timer">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="stimulus_start_time = (globalClock.getTime() - trigger_time);&amp;#10;thisExp.addData(&quot;stimulus_start_time&quot;, stimulus_start_time);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="stimulus_start_time = globalClock.getTime() - trigger_time&amp;#10;# store the data:&amp;#10;thisExp.addData('stimulus_start_time', stimulus_start_time)" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="if enc_trial_trigger.keys == 's':&amp;#10;    enc_trial_trigger.keys == None&amp;#10;    trigger +=  globalClock.getTime() - trigger_time&amp;#10;    thisExp.addData('trigger', trigger)" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="if ((enc_trial_trigger.keys === &quot;s&quot;)) {&amp;#10;    (enc_trial_trigger.keys === null);&amp;#10;    trigger += (globalClock.getTime() - trigger_time);&amp;#10;    thisExp.addData(&quot;trigger&quot;, trigger);&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="if frameN == 0: # start of the trial&amp;#10;    trial_start_time = globalClock.getTime() - trigger_time&amp;#10;    thisExp.addData('trial_start_time', trial_start_time)&amp;#10;elif frameN == 1: # the zeroth frame has just been drawn&amp;#10;    stimulus_start_time = globalClock.getTime() - trigger_time&amp;#10;    # store the data:&amp;#10;    thisExp.addData('stimulus_start_time', stimulus_start_time)&amp;#10;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if ((frameN === 0)) {&amp;#10;    trial_start_time = (globalClock.getTime() - trigger_time);&amp;#10;    thisExp.addData(&quot;trial_start_time&quot;, trial_start_time);&amp;#10;} else {&amp;#10;    if ((frameN === 1)) {&amp;#10;        stimulus_start_time = (globalClock.getTime() - trigger_time);&amp;#10;        thisExp.addData(&quot;stimulus_start_time&quot;, stimulus_start_time);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
@@ -358,24 +325,6 @@
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="enc_trial_timer" valType="code"/>
       </CodeComponent>
-      <KeyboardComponent name="enc_trial_trigger">
-        <Param name="allowedKeys" updates="constant" val="'s'" valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="enc_trial_trigger" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="3.0" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
     </Routine>
     <Routine name="info"/>
     <Routine name="lab_introduction">
@@ -728,11 +677,11 @@
       <CodeComponent name="enc_fx_timer">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="fx_start_time = (globalClock.getTime() - trigger_time);&amp;#10;thisExp.addData(&quot;fx_start_time&quot;, fx_start_time);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="fx_start_time = globalClock.getTime() - trigger_time&amp;#10;thisExp.addData('fx_start_time', fx_start_time)" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="if enc_fx_trigger.keys == 's':&amp;#10;    enc_fx_trigger.keys == None&amp;#10;    trigger +=  globalClock.getTime() - trigger_time&amp;#10;    thisExp.addData('trigger', trigger)" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="if ((enc_fx_trigger.keys === &quot;s&quot;)) {&amp;#10;    (enc_fx_trigger.keys === null);&amp;#10;    trigger += (globalClock.getTime() - trigger_time);&amp;#10;    thisExp.addData(&quot;trigger&quot;, trigger);&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="if enc_trials.thisN == 0 and frameN == 0: # start of the loop&amp;#10;    loop_start_time = globalClock.getTime() - trigger_time&amp;#10;    thisExp.addData('loop_start_time', loop_start_time)&amp;#10;elif frameN == 1: # the zeroth frame has just been drawn&amp;#10;    fx_start_time = globalClock.getTime() - trigger_time&amp;#10;    # store the data:&amp;#10;    thisExp.addData('fx_start_time', fx_start_time)&amp;#10;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if (((enc_trials.thisN === 0) &amp;&amp; (frameN === 0))) {&amp;#10;    loop_start_time = (globalClock.getTime() - trigger_time);&amp;#10;    thisExp.addData(&quot;loop_start_time&quot;, loop_start_time);&amp;#10;} else {&amp;#10;    if ((frameN === 1)) {&amp;#10;        fx_start_time = (globalClock.getTime() - trigger_time);&amp;#10;        thisExp.addData(&quot;fx_start_time&quot;, fx_start_time);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
@@ -740,24 +689,6 @@
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="enc_fx_timer" valType="code"/>
       </CodeComponent>
-      <KeyboardComponent name="enc_fx_trigger">
-        <Param name="allowedKeys" updates="constant" val="'s'" valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="1.5" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="enc_fx_trigger" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="$Jitter/1000" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
     </Routine>
     <Routine name="start_rec_run">
       <CodeComponent name="rec_run_counter">
@@ -1332,6 +1263,21 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
+      <CodeComponent name="code">
+        <Param name="Begin Experiment" updates="constant" val="practice = int(expInfo['practice'])" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="practice = Number.parseInt(expInfo[&quot;practice&quot;]);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="end_practice">
       <TextComponent name="end_practice_text">
@@ -2044,7 +1990,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.3" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
         <Param name="name" updates="None" val="start_MR_text" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -2079,8 +2025,8 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
       <CodeComponent name="start_MR_timer">
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="trigger_key = 's'&amp;#10;&amp;#10;def get_current_trigger_time():&amp;#10;    trigger = globalClock.getTime() - trigger_time&amp;#10;    thisExp.addData('triggers', trigger)&amp;#10;    print(trigger)&amp;#10;    return trigger&amp;#10;    " valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="trigger_key = &quot;s&quot;;&amp;#10;function get_current_trigger_time() {&amp;#10;    var trigger;&amp;#10;    trigger = (globalClock.getTime() - trigger_time);&amp;#10;    thisExp.addData(&quot;triggers&quot;, trigger);&amp;#10;    console.log(trigger);&amp;#10;    return trigger;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -2088,8 +2034,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="trigger_time = globalClock.getTime();&amp;#10;(start_enc_run_trigger.keys === null);&amp;#10;thisExp.addData(&quot;trigger_time&quot;, trigger_time);&amp;#10;thisExp.addData(&quot;trigger&quot;, trigger);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="trigger_time = globalClock.getTime()&amp;#10;start_enc_run_trigger.keys == None&amp;#10;thisExp.addData('trigger_time', trigger_time)&amp;#10;thisExp.addData('trigger', trigger)&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="trigger_time = globalClock.getTime();&amp;#10;event.globalKeys.add({&quot;key&quot;: trigger_key, &quot;func&quot;: get_current_trigger_time});&amp;#10;thisExp.addData(&quot;trigger_time&quot;, trigger_time);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="trigger_time = globalClock.getTime()&amp;#10;event.globalKeys.add(key=trigger_key, func=get_current_trigger_time)&amp;#10;thisExp.addData('trigger_time', trigger_time)&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="start_MR_timer" valType="code"/>
       </CodeComponent>
@@ -2262,7 +2208,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="nReps" updates="None" val="$practice" valType="code"/>
       <Param name="name" updates="None" val="enc_practice_trials" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>

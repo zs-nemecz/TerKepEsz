@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 27, 2020, at 19:58
+    on August 28, 2020, at 15:32
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -37,7 +37,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '2020.1.3'
 expName = 'TerKepEsz-Encoding_MR'  # from the Builder filename that created this script
-expInfo = {'Azonosító kód': '', 'Nem': '', 'Csoport': ''}
+expInfo = {'ID': '', 'practice': '1'}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -46,7 +46,7 @@ expInfo['expName'] = expName
 expInfo['psychopyVersion'] = psychopyVersion
 
 # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
-filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['Azonosító kód'],'pilot', expName, expInfo['date'])
+filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['ID'],'pilot', expName, expInfo['date'])
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
@@ -176,6 +176,7 @@ start_practice_text = visual.TextStim(win=win, name='start_practice_text',
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
+practice = int(expInfo['practice'])
 
 # Initialize components for Routine "enc_practice_fx"
 enc_practice_fxClock = core.Clock()
@@ -271,11 +272,19 @@ start_MRClock = core.Clock()
 start_MR_text = visual.TextStim(win=win, name='start_MR_text',
     text='A vizsgálatvezető indítja a szkennert...',
     font='Arial',
-    units='norm', pos=(0, 0), height=0.3, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 start_MR_trigger = keyboard.Keyboard()
+trigger_key = 's'
+
+def get_current_trigger_time():
+    trigger = globalClock.getTime() - trigger_time
+    thisExp.addData('triggers', trigger)
+    print(trigger)
+    return trigger
+    
 
 # Initialize components for Routine "start_enc_run"
 start_enc_runClock = core.Clock()
@@ -286,7 +295,6 @@ start_enc_run_text = visual.TextStim(win=win, name='start_enc_run_text',
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
-start_enc_run_trigger = keyboard.Keyboard()
 
 # Initialize components for Routine "enc_fx"
 enc_fxClock = core.Clock()
@@ -306,7 +314,6 @@ enc_fx_cross = visual.TextStim(win=win, name='enc_fx_cross',
     languageStyle='LTR',
     depth=-1.0);
 enc_fx_key = keyboard.Keyboard()
-enc_fx_trigger = keyboard.Keyboard()
 
 # Initialize components for Routine "enc_trial"
 enc_trialClock = core.Clock()
@@ -333,7 +340,6 @@ enc_trial_main_image = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
 enc_trial_key = keyboard.Keyboard()
-enc_trial_trigger = keyboard.Keyboard()
 
 # Initialize components for Routine "end_enc_run"
 end_enc_runClock = core.Clock()
@@ -940,7 +946,7 @@ thisExp.addData('start_practice_text.started', start_practice_text.tStartRefresh
 thisExp.addData('start_practice_text.stopped', start_practice_text.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-enc_practice_trials = data.TrialHandler(nReps=1, method='sequential', 
+enc_practice_trials = data.TrialHandler(nReps=practice, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('stimuli_tables/encoding_practice_trials.csv'),
     seed=None, name='enc_practice_trials')
@@ -1344,7 +1350,7 @@ for thisEnc_practice_trial in enc_practice_trials:
     enc_practice_trials.addData('enc_practice_feedback_text.stopped', enc_practice_feedback_text.tStopRefresh)
     thisExp.nextEntry()
     
-# completed 1 repeats of 'enc_practice_trials'
+# completed practice repeats of 'enc_practice_trials'
 
 
 # ------Prepare to start Routine "end_practice"-------
@@ -1589,9 +1595,8 @@ for thisEnc_run in enc_runs:
     enc_runs.addData('start_MR_trigger.started', start_MR_trigger.tStartRefresh)
     enc_runs.addData('start_MR_trigger.stopped', start_MR_trigger.tStopRefresh)
     trigger_time = globalClock.getTime()
-    trigger = 0.0
+    event.globalKeys.add(key=trigger_key, func=get_current_trigger_time)
     thisExp.addData('trigger_time', trigger_time)
-    thisExp.addData('trigger', trigger)
     
     # the Routine "start_MR" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
@@ -1609,11 +1614,8 @@ for thisEnc_run in enc_runs:
     
     if run_counter >= 2:
         end_run_text = 'Vége az első feladatnak.'
-    start_enc_run_trigger.keys = []
-    start_enc_run_trigger.rt = []
-    _start_enc_run_trigger_allKeys = []
     # keep track of which components have finished
-    start_enc_runComponents = [start_enc_run_text, start_enc_run_trigger]
+    start_enc_runComponents = [start_enc_run_text]
     for thisComponent in start_enc_runComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1653,38 +1655,6 @@ for thisEnc_run in enc_runs:
                 win.timeOnFlip(start_enc_run_text, 'tStopRefresh')  # time at next scr refresh
                 start_enc_run_text.setAutoDraw(False)
         
-        # *start_enc_run_trigger* updates
-        waitOnFlip = False
-        if start_enc_run_trigger.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            start_enc_run_trigger.frameNStart = frameN  # exact frame index
-            start_enc_run_trigger.tStart = t  # local t and not account for scr refresh
-            start_enc_run_trigger.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(start_enc_run_trigger, 'tStartRefresh')  # time at next scr refresh
-            start_enc_run_trigger.status = STARTED
-            # keyboard checking is just starting
-            waitOnFlip = True
-            win.callOnFlip(start_enc_run_trigger.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(start_enc_run_trigger.clearEvents, eventType='keyboard')  # clear events on next screen flip
-        if start_enc_run_trigger.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > start_enc_run_trigger.tStartRefresh + 3.0-frameTolerance:
-                # keep track of stop time/frame for later
-                start_enc_run_trigger.tStop = t  # not accounting for scr refresh
-                start_enc_run_trigger.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(start_enc_run_trigger, 'tStopRefresh')  # time at next scr refresh
-                start_enc_run_trigger.status = FINISHED
-        if start_enc_run_trigger.status == STARTED and not waitOnFlip:
-            theseKeys = start_enc_run_trigger.getKeys(keyList=['s'], waitRelease=False)
-            _start_enc_run_trigger_allKeys.extend(theseKeys)
-            if len(_start_enc_run_trigger_allKeys):
-                start_enc_run_trigger.keys = _start_enc_run_trigger_allKeys[-1].name  # just the last key pressed
-                start_enc_run_trigger.rt = _start_enc_run_trigger_allKeys[-1].rt
-        if start_enc_run_trigger.keys == 's':
-            start_enc_run_trigger.keys == None
-            trigger +=  globalClock.getTime() - trigger_time
-            thisExp.addData('trigger', trigger)
-        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -1708,14 +1678,6 @@ for thisEnc_run in enc_runs:
             thisComponent.setAutoDraw(False)
     enc_runs.addData('start_enc_run_text.started', start_enc_run_text.tStartRefresh)
     enc_runs.addData('start_enc_run_text.stopped', start_enc_run_text.tStopRefresh)
-    # check responses
-    if start_enc_run_trigger.keys in ['', [], None]:  # No response was made
-        start_enc_run_trigger.keys = None
-    enc_runs.addData('start_enc_run_trigger.keys',start_enc_run_trigger.keys)
-    if start_enc_run_trigger.keys != None:  # we had a response
-        enc_runs.addData('start_enc_run_trigger.rt', start_enc_run_trigger.rt)
-    enc_runs.addData('start_enc_run_trigger.started', start_enc_run_trigger.tStartRefresh)
-    enc_runs.addData('start_enc_run_trigger.stopped', start_enc_run_trigger.tStopRefresh)
     
     # set up handler to look after randomisation of conditions etc
     enc_trials = data.TrialHandler(nReps=1, method='sequential', 
@@ -1743,13 +1705,8 @@ for thisEnc_run in enc_runs:
         enc_fx_key.keys = []
         enc_fx_key.rt = []
         _enc_fx_key_allKeys = []
-        fx_start_time = globalClock.getTime() - trigger_time
-        thisExp.addData('fx_start_time', fx_start_time)
-        enc_fx_trigger.keys = []
-        enc_fx_trigger.rt = []
-        _enc_fx_trigger_allKeys = []
         # keep track of which components have finished
-        enc_fxComponents = [enc_fx_interior, enc_fx_cross, enc_fx_key, enc_fx_trigger]
+        enc_fxComponents = [enc_fx_interior, enc_fx_cross, enc_fx_key]
         for thisComponent in enc_fxComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -1833,38 +1790,14 @@ for thisEnc_run in enc_runs:
                 if len(_enc_fx_key_allKeys):
                     enc_fx_key.keys = _enc_fx_key_allKeys[-1].name  # just the last key pressed
                     enc_fx_key.rt = _enc_fx_key_allKeys[-1].rt
-            if enc_fx_trigger.keys == 's':
-                enc_fx_trigger.keys == None
-                trigger +=  globalClock.getTime() - trigger_time
-                thisExp.addData('trigger', trigger)
+            if enc_trials.thisN == 0 and frameN == 0: # start of the loop
+                loop_start_time = globalClock.getTime() - trigger_time
+                thisExp.addData('loop_start_time', loop_start_time)
+            elif frameN == 1: # the zeroth frame has just been drawn
+                fx_start_time = globalClock.getTime() - trigger_time
+                # store the data:
+                thisExp.addData('fx_start_time', fx_start_time)
             
-            # *enc_fx_trigger* updates
-            waitOnFlip = False
-            if enc_fx_trigger.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                enc_fx_trigger.frameNStart = frameN  # exact frame index
-                enc_fx_trigger.tStart = t  # local t and not account for scr refresh
-                enc_fx_trigger.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(enc_fx_trigger, 'tStartRefresh')  # time at next scr refresh
-                enc_fx_trigger.status = STARTED
-                # keyboard checking is just starting
-                waitOnFlip = True
-                win.callOnFlip(enc_fx_trigger.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(enc_fx_trigger.clearEvents, eventType='keyboard')  # clear events on next screen flip
-            if enc_fx_trigger.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > enc_fx_trigger.tStartRefresh + Jitter/1000-frameTolerance:
-                    # keep track of stop time/frame for later
-                    enc_fx_trigger.tStop = t  # not accounting for scr refresh
-                    enc_fx_trigger.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(enc_fx_trigger, 'tStopRefresh')  # time at next scr refresh
-                    enc_fx_trigger.status = FINISHED
-            if enc_fx_trigger.status == STARTED and not waitOnFlip:
-                theseKeys = enc_fx_trigger.getKeys(keyList=['s'], waitRelease=False)
-                _enc_fx_trigger_allKeys.extend(theseKeys)
-                if len(_enc_fx_trigger_allKeys):
-                    enc_fx_trigger.keys = _enc_fx_trigger_allKeys[-1].name  # just the last key pressed
-                    enc_fx_trigger.rt = _enc_fx_trigger_allKeys[-1].rt
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1899,14 +1832,6 @@ for thisEnc_run in enc_runs:
             enc_trials.addData('enc_fx_key.rt', enc_fx_key.rt)
         enc_trials.addData('enc_fx_key.started', enc_fx_key.tStartRefresh)
         enc_trials.addData('enc_fx_key.stopped', enc_fx_key.tStopRefresh)
-        # check responses
-        if enc_fx_trigger.keys in ['', [], None]:  # No response was made
-            enc_fx_trigger.keys = None
-        enc_trials.addData('enc_fx_trigger.keys',enc_fx_trigger.keys)
-        if enc_fx_trigger.keys != None:  # we had a response
-            enc_trials.addData('enc_fx_trigger.rt', enc_fx_trigger.rt)
-        enc_trials.addData('enc_fx_trigger.started', enc_fx_trigger.tStartRefresh)
-        enc_trials.addData('enc_fx_trigger.stopped', enc_fx_trigger.tStopRefresh)
         # the Routine "enc_fx" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
@@ -1926,14 +1851,8 @@ for thisEnc_run in enc_runs:
         enc_trial_key.keys = []
         enc_trial_key.rt = []
         _enc_trial_key_allKeys = []
-        stimulus_start_time = globalClock.getTime() - trigger_time
-        # store the data:
-        thisExp.addData('stimulus_start_time', stimulus_start_time)
-        enc_trial_trigger.keys = []
-        enc_trial_trigger.rt = []
-        _enc_trial_trigger_allKeys = []
         # keep track of which components have finished
-        enc_trialComponents = [enc_trial_interior, enc_trial_main_image, enc_trial_key, enc_trial_trigger]
+        enc_trialComponents = [enc_trial_interior, enc_trial_main_image, enc_trial_key]
         for thisComponent in enc_trialComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -2017,38 +1936,14 @@ for thisEnc_run in enc_runs:
                 if len(_enc_trial_key_allKeys):
                     enc_trial_key.keys = _enc_trial_key_allKeys[-1].name  # just the last key pressed
                     enc_trial_key.rt = _enc_trial_key_allKeys[-1].rt
-            if enc_trial_trigger.keys == 's':
-                enc_trial_trigger.keys == None
-                trigger +=  globalClock.getTime() - trigger_time
-                thisExp.addData('trigger', trigger)
+            if frameN == 0: # start of the trial
+                trial_start_time = globalClock.getTime() - trigger_time
+                thisExp.addData('trial_start_time', trial_start_time)
+            elif frameN == 1: # the zeroth frame has just been drawn
+                stimulus_start_time = globalClock.getTime() - trigger_time
+                # store the data:
+                thisExp.addData('stimulus_start_time', stimulus_start_time)
             
-            # *enc_trial_trigger* updates
-            waitOnFlip = False
-            if enc_trial_trigger.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                enc_trial_trigger.frameNStart = frameN  # exact frame index
-                enc_trial_trigger.tStart = t  # local t and not account for scr refresh
-                enc_trial_trigger.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(enc_trial_trigger, 'tStartRefresh')  # time at next scr refresh
-                enc_trial_trigger.status = STARTED
-                # keyboard checking is just starting
-                waitOnFlip = True
-                win.callOnFlip(enc_trial_trigger.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(enc_trial_trigger.clearEvents, eventType='keyboard')  # clear events on next screen flip
-            if enc_trial_trigger.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > enc_trial_trigger.tStartRefresh + 3.0-frameTolerance:
-                    # keep track of stop time/frame for later
-                    enc_trial_trigger.tStop = t  # not accounting for scr refresh
-                    enc_trial_trigger.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(enc_trial_trigger, 'tStopRefresh')  # time at next scr refresh
-                    enc_trial_trigger.status = FINISHED
-            if enc_trial_trigger.status == STARTED and not waitOnFlip:
-                theseKeys = enc_trial_trigger.getKeys(keyList=['s'], waitRelease=False)
-                _enc_trial_trigger_allKeys.extend(theseKeys)
-                if len(_enc_trial_trigger_allKeys):
-                    enc_trial_trigger.keys = _enc_trial_trigger_allKeys[-1].name  # just the last key pressed
-                    enc_trial_trigger.rt = _enc_trial_trigger_allKeys[-1].rt
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2083,14 +1978,6 @@ for thisEnc_run in enc_runs:
             enc_trials.addData('enc_trial_key.rt', enc_trial_key.rt)
         enc_trials.addData('enc_trial_key.started', enc_trial_key.tStartRefresh)
         enc_trials.addData('enc_trial_key.stopped', enc_trial_key.tStopRefresh)
-        # check responses
-        if enc_trial_trigger.keys in ['', [], None]:  # No response was made
-            enc_trial_trigger.keys = None
-        enc_trials.addData('enc_trial_trigger.keys',enc_trial_trigger.keys)
-        if enc_trial_trigger.keys != None:  # we had a response
-            enc_trials.addData('enc_trial_trigger.rt', enc_trial_trigger.rt)
-        enc_trials.addData('enc_trial_trigger.started', enc_trial_trigger.tStartRefresh)
-        enc_trials.addData('enc_trial_trigger.stopped', enc_trial_trigger.tStopRefresh)
         thisExp.nextEntry()
         
     # completed 1 repeats of 'enc_trials'
