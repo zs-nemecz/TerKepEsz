@@ -2025,8 +2025,8 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
       <CodeComponent name="start_MR_timer">
-        <Param name="Begin Experiment" updates="constant" val="trigger_key = 's'&amp;#10;&amp;#10;def get_current_trigger_time():&amp;#10;    trigger = globalClock.getTime() - trigger_time&amp;#10;    thisExp.addData('triggers', trigger)&amp;#10;    print(trigger)&amp;#10;    return trigger&amp;#10;    " valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="trigger_key = &quot;s&quot;;&amp;#10;function get_current_trigger_time() {&amp;#10;    var trigger;&amp;#10;    trigger = (globalClock.getTime() - trigger_time);&amp;#10;    thisExp.addData(&quot;triggers&quot;, trigger);&amp;#10;    console.log(trigger);&amp;#10;    return trigger;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="trigger_key = 's'&amp;#10;&amp;#10;def get_current_trigger_time():&amp;#10;    trigger = globalClock.getTime() - trigger_time&amp;#10;    thisExp.addData('triggers', trigger)&amp;#10;    thisExp.nextEntry()&amp;#10;    return trigger&amp;#10;    " valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="trigger_key = &quot;s&quot;;&amp;#10;function get_current_trigger_time() {&amp;#10;    var trigger;&amp;#10;    trigger = (globalClock.getTime() - trigger_time);&amp;#10;    thisExp.addData(&quot;triggers&quot;, trigger);&amp;#10;    thisExp.nextEntry();&amp;#10;    return trigger;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>

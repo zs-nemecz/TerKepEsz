@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 28, 2020, at 15:32
+    on August 31, 2020, at 11:48
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -282,7 +282,7 @@ trigger_key = 's'
 def get_current_trigger_time():
     trigger = globalClock.getTime() - trigger_time
     thisExp.addData('triggers', trigger)
-    print(trigger)
+    thisExp.nextEntry()
     return trigger
     
 
