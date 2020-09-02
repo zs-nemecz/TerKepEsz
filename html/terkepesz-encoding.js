@@ -292,7 +292,7 @@ function experimentInit() {
     depth: 0.0 
   });
   
-  practice = Number.parseInt(expInfo["practice"]);
+  practice = parseInt(expInfo["practice"]);
   
   // Initialize components for Routine "enc_practice_fx"
   enc_practice_fxClock = new util.Clock();
