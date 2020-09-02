@@ -71,6 +71,8 @@ psychoJS.start({
   expInfo: expInfo,
   });
 
+
+var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
@@ -91,6 +93,72 @@ function updateInfo() {
   return Scheduler.Event.NEXT;
 }
 
+
+var start_encodingClock;
+var start_encoding_text;
+var tables;
+var trial_table;
+var stimuli_table;
+var enc_instructions_1Clock;
+var enc_instructions_1_text;
+var enc_instructions_1_image;
+var enc_instructions_1_key;
+var instructions_1_continue;
+var enc_instructions_2Clock;
+var enc_instructions_2_text;
+var enc_instructions_2_image;
+var enc_instructions_2_key;
+var instructions_2_continue;
+var enc_instructions_3Clock;
+var enc_instructions_3_text;
+var enc_instructions_3_key;
+var enc_instructions_3_continue;
+var start_practiceClock;
+var start_practice_text;
+var practice;
+var enc_practice_fxClock;
+var enc_practice_fx_interior;
+var enc_practice_fx_cross;
+var enc_practice_fx_key;
+var enc_practice_trialClock;
+var w_size;
+var x_size;
+var y_size;
+var scr_resolution;
+var enc_practice_trial_interior;
+var enc_practice_trial_main_image;
+var enc_practice_trial_key;
+var enc_practice_feedbackClock;
+var enc_practice_feedback_interior;
+var enc_practice_feedback_image;
+var enc_practice_feedback_text;
+var end_practiceClock;
+var end_practice_text;
+var end_practice_key;
+var end_practice_continue;
+var start_MRClock;
+var start_MR_text;
+var start_MR_trigger;
+var trigger_key;
+var trigger_time;
+var start_enc_runClock;
+var start_enc_run_text;
+var enc_fxClock;
+var enc_fx_interior;
+var enc_fx_cross;
+var enc_fx_key;
+var enc_trialClock;
+var enc_trial_interior;
+var enc_trial_main_image;
+var enc_trial_key;
+var end_enc_runClock;
+var end_enc_run_text;
+var enc_run_end_key;
+var enc_run_end_continue;
+var inter_task_breakClock;
+var inter_task_break_text;
+var globalClock;
+var routineTimer;
 function experimentInit() {
   // Initialize components for Routine "start_encoding"
   start_encodingClock = new util.Clock();
@@ -354,7 +422,7 @@ function experimentInit() {
       return trigger;
   }
   trigger_time = 0;
-  #event.globalKeys.add({"key": trigger_key, "func": get_current_trigger_time});
+  event.globalKeys.add({"key": trigger_key, "func": get_current_trigger_time});
   
   // Initialize components for Routine "start_enc_run"
   start_enc_runClock = new util.Clock();
@@ -468,6 +536,15 @@ function experimentInit() {
   return Scheduler.Event.NEXT;
 }
 
+
+var t;
+var frameN;
+var start;
+var end;
+var step;
+var n_runs;
+var run_counter;
+var start_encodingComponents;
 function start_encodingRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'start_encoding'-------
@@ -496,6 +573,9 @@ function start_encodingRoutineBegin(trials) {
   };
 }
 
+
+var frameRemains;
+var continueRoutine;
 function start_encodingRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'start_encoding'-------
@@ -544,6 +624,7 @@ function start_encodingRoutineEachFrame(trials) {
   };
 }
 
+
 function start_encodingRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'start_encoding'-------
@@ -556,6 +637,9 @@ function start_encodingRoutineEnd(trials) {
   };
 }
 
+
+var _enc_instructions_1_key_allKeys;
+var enc_instructions_1Components;
 function enc_instructions_1RoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'enc_instructions_1'-------
@@ -582,6 +666,7 @@ function enc_instructions_1RoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function enc_instructions_1RoutineEachFrame(trials) {
   return function () {
@@ -688,6 +773,7 @@ function enc_instructions_1RoutineEachFrame(trials) {
   };
 }
 
+
 function enc_instructions_1RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'enc_instructions_1'-------
@@ -707,6 +793,9 @@ function enc_instructions_1RoutineEnd(trials) {
   };
 }
 
+
+var _enc_instructions_2_key_allKeys;
+var enc_instructions_2Components;
 function enc_instructions_2RoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'enc_instructions_2'-------
@@ -733,6 +822,7 @@ function enc_instructions_2RoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function enc_instructions_2RoutineEachFrame(trials) {
   return function () {
@@ -839,6 +929,7 @@ function enc_instructions_2RoutineEachFrame(trials) {
   };
 }
 
+
 function enc_instructions_2RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'enc_instructions_2'-------
@@ -858,6 +949,9 @@ function enc_instructions_2RoutineEnd(trials) {
   };
 }
 
+
+var _enc_instructions_3_key_allKeys;
+var enc_instructions_3Components;
 function enc_instructions_3RoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'enc_instructions_3'-------
@@ -883,6 +977,7 @@ function enc_instructions_3RoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function enc_instructions_3RoutineEachFrame(trials) {
   return function () {
@@ -975,6 +1070,7 @@ function enc_instructions_3RoutineEachFrame(trials) {
   };
 }
 
+
 function enc_instructions_3RoutineEnd(trials) {
   return function () {
     //------Ending Routine 'enc_instructions_3'-------
@@ -994,6 +1090,8 @@ function enc_instructions_3RoutineEnd(trials) {
   };
 }
 
+
+var start_practiceComponents;
 function start_practiceRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'start_practice'-------
@@ -1014,6 +1112,7 @@ function start_practiceRoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function start_practiceRoutineEachFrame(trials) {
   return function () {
@@ -1063,6 +1162,7 @@ function start_practiceRoutineEachFrame(trials) {
   };
 }
 
+
 function start_practiceRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'start_practice'-------
@@ -1075,6 +1175,9 @@ function start_practiceRoutineEnd(trials) {
   };
 }
 
+
+var enc_practice_trials;
+var currentLoop;
 function enc_practice_trialsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   enc_practice_trials = new TrialHandler({
@@ -1107,12 +1210,15 @@ function enc_practice_trialsLoopBegin(thisScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
 function enc_practice_trialsLoopEnd() {
   psychoJS.experiment.removeLoop(enc_practice_trials);
 
   return Scheduler.Event.NEXT;
 }
 
+
+var enc_runs;
 function enc_runsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   enc_runs = new TrialHandler({
@@ -1149,6 +1255,8 @@ function enc_runsLoopBegin(thisScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
+var enc_trials;
 function enc_trialsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   enc_trials = new TrialHandler({
@@ -1178,11 +1286,13 @@ function enc_trialsLoopBegin(thisScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
 function enc_trialsLoopEnd() {
   psychoJS.experiment.removeLoop(enc_trials);
 
   return Scheduler.Event.NEXT;
 }
+
 
 function enc_runsLoopEnd() {
   psychoJS.experiment.removeLoop(enc_runs);
@@ -1190,6 +1300,9 @@ function enc_runsLoopEnd() {
   return Scheduler.Event.NEXT;
 }
 
+
+var _enc_practice_fx_key_allKeys;
+var enc_practice_fxComponents;
 function enc_practice_fxRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'enc_practice_fx'-------
@@ -1215,6 +1328,7 @@ function enc_practice_fxRoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function enc_practice_fxRoutineEachFrame(trials) {
   return function () {
@@ -1305,6 +1419,7 @@ function enc_practice_fxRoutineEachFrame(trials) {
   };
 }
 
+
 function enc_practice_fxRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'enc_practice_fx'-------
@@ -1326,6 +1441,9 @@ function enc_practice_fxRoutineEnd(trials) {
   };
 }
 
+
+var _enc_practice_trial_key_allKeys;
+var enc_practice_trialComponents;
 function enc_practice_trialRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'enc_practice_trial'-------
@@ -1361,6 +1479,7 @@ function enc_practice_trialRoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function enc_practice_trialRoutineEachFrame(trials) {
   return function () {
@@ -1451,6 +1570,7 @@ function enc_practice_trialRoutineEachFrame(trials) {
   };
 }
 
+
 function enc_practice_trialRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'enc_practice_trial'-------
@@ -1469,6 +1589,10 @@ function enc_practice_trialRoutineEnd(trials) {
   };
 }
 
+
+var response;
+var feedback_text;
+var enc_practice_feedbackComponents;
 function enc_practice_feedbackRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'enc_practice_feedback'-------
@@ -1508,6 +1632,7 @@ function enc_practice_feedbackRoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function enc_practice_feedbackRoutineEachFrame(trials) {
   return function () {
@@ -1585,6 +1710,7 @@ function enc_practice_feedbackRoutineEachFrame(trials) {
   };
 }
 
+
 function enc_practice_feedbackRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'enc_practice_feedback'-------
@@ -1597,6 +1723,9 @@ function enc_practice_feedbackRoutineEnd(trials) {
   };
 }
 
+
+var _end_practice_key_allKeys;
+var end_practiceComponents;
 function end_practiceRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'end_practice'-------
@@ -1622,6 +1751,7 @@ function end_practiceRoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function end_practiceRoutineEachFrame(trials) {
   return function () {
@@ -1714,6 +1844,7 @@ function end_practiceRoutineEachFrame(trials) {
   };
 }
 
+
 function end_practiceRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'end_practice'-------
@@ -1733,6 +1864,9 @@ function end_practiceRoutineEnd(trials) {
   };
 }
 
+
+var _start_MR_trigger_allKeys;
+var start_MRComponents;
 function start_MRRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'start_MR'-------
@@ -1756,6 +1890,7 @@ function start_MRRoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function start_MRRoutineEachFrame(trials) {
   return function () {
@@ -1825,6 +1960,7 @@ function start_MRRoutineEachFrame(trials) {
   };
 }
 
+
 function start_MRRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'start_MR'-------
@@ -1850,6 +1986,10 @@ function start_MRRoutineEnd(trials) {
   };
 }
 
+
+var selection;
+var end_run_text;
+var start_enc_runComponents;
 function start_enc_runRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'start_enc_run'-------
@@ -1879,6 +2019,7 @@ function start_enc_runRoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function start_enc_runRoutineEachFrame(trials) {
   return function () {
@@ -1928,6 +2069,7 @@ function start_enc_runRoutineEachFrame(trials) {
   };
 }
 
+
 function start_enc_runRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'start_enc_run'-------
@@ -1940,6 +2082,9 @@ function start_enc_runRoutineEnd(trials) {
   };
 }
 
+
+var _enc_fx_key_allKeys;
+var enc_fxComponents;
 function enc_fxRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'enc_fx'-------
@@ -1966,6 +2111,8 @@ function enc_fxRoutineBegin(trials) {
   };
 }
 
+
+var loop_start_time;
 function enc_fxRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'enc_fx'-------
@@ -2065,6 +2212,7 @@ function enc_fxRoutineEachFrame(trials) {
   };
 }
 
+
 function enc_fxRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'enc_fx'-------
@@ -2086,6 +2234,9 @@ function enc_fxRoutineEnd(trials) {
   };
 }
 
+
+var _enc_trial_key_allKeys;
+var enc_trialComponents;
 function enc_trialRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'enc_trial'-------
@@ -2122,6 +2273,8 @@ function enc_trialRoutineBegin(trials) {
   };
 }
 
+
+var trial_start_time;
 function enc_trialRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'enc_trial'-------
@@ -2221,6 +2374,7 @@ function enc_trialRoutineEachFrame(trials) {
   };
 }
 
+
 function enc_trialRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'enc_trial'-------
@@ -2239,6 +2393,9 @@ function enc_trialRoutineEnd(trials) {
   };
 }
 
+
+var _enc_run_end_key_allKeys;
+var end_enc_runComponents;
 function end_enc_runRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'end_enc_run'-------
@@ -2265,6 +2422,7 @@ function end_enc_runRoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function end_enc_runRoutineEachFrame(trials) {
   return function () {
@@ -2357,6 +2515,7 @@ function end_enc_runRoutineEachFrame(trials) {
   };
 }
 
+
 function end_enc_runRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'end_enc_run'-------
@@ -2376,6 +2535,8 @@ function end_enc_runRoutineEnd(trials) {
   };
 }
 
+
+var inter_task_breakComponents;
 function inter_task_breakRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'inter_task_break'-------
@@ -2396,6 +2557,7 @@ function inter_task_breakRoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function inter_task_breakRoutineEachFrame(trials) {
   return function () {
@@ -2445,6 +2607,7 @@ function inter_task_breakRoutineEachFrame(trials) {
   };
 }
 
+
 function inter_task_breakRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'inter_task_break'-------
@@ -2456,6 +2619,7 @@ function inter_task_breakRoutineEnd(trials) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function endLoopIteration(thisScheduler, loop) {
   // ------Prepare for next entry------
@@ -2479,12 +2643,14 @@ function endLoopIteration(thisScheduler, loop) {
   };
 }
 
+
 function importConditions(trials) {
   return function () {
     psychoJS.importAttributes(trials.getCurrentTrial());
     return Scheduler.Event.NEXT;
     };
 }
+
 
 function quitPsychoJS(message, isCompleted) {
   // Check for and save orphaned data
