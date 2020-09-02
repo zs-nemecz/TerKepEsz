@@ -1999,7 +1999,7 @@ function start_enc_runRoutineBegin(trials) {
     selection = Array.from({length: end - start}, (_, index) => index + start)
     run_counter = (run_counter + 1);
     end_run_text = "R\u00f6vid sz\u00fcnet.";
-    if ((run_counter >= 2)) {
+    if ((run_counter >= 3)) {
         end_run_text = "V\u00e9ge az els\u0151 feladatnak.";
     }
     
