@@ -1265,7 +1265,7 @@
       </TextComponent>
       <CodeComponent name="practice_value">
         <Param name="Begin Experiment" updates="constant" val="practice = int(expInfo['practice'])" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="practice = Number.parseInt(expInfo[&quot;practice&quot;]);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="practice = parseInt(expInfo[&quot;practice&quot;]);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -2026,7 +2026,7 @@
       </KeyboardComponent>
       <CodeComponent name="start_MR_timer">
         <Param name="Begin Experiment" updates="constant" val="trigger_key = 's'&amp;#10;&amp;#10;def get_current_trigger_time():&amp;#10;    trigger = globalClock.getTime() - trigger_time&amp;#10;    thisExp.addData('triggers', trigger)&amp;#10;    thisExp.nextEntry()&amp;#10;    return trigger&amp;#10;&amp;#10;trigger_time = 0&amp;#10;event.globalKeys.add(key=trigger_key, func=get_current_trigger_time)&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="trigger_key = &quot;s&quot;;&amp;#10;function get_current_trigger_time() {&amp;#10;    var trigger;&amp;#10;    trigger = (globalClock.getTime() - trigger_time);&amp;#10;    thisExp.addData(&quot;triggers&quot;, trigger);&amp;#10;    thisExp.nextEntry();&amp;#10;    return trigger;&amp;#10;}&amp;#10;event=psychoJS.eventManager;&amp;#10;trigger_time = 0;&amp;#10;event.globalKeys.add({&quot;key&quot;: trigger_key, &quot;func&quot;: get_current_trigger_time});&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
@@ -2208,7 +2208,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="$practice" valType="code"/>
+      <Param name="nReps" updates="None" val="practice" valType="code"/>
       <Param name="name" updates="None" val="enc_practice_trials" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>

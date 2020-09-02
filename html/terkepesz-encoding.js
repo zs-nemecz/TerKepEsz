@@ -1172,7 +1172,7 @@ function enc_practice_trialsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   enc_practice_trials = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: $practice, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: practice, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'stimuli_tables/encoding_practice_trials.csv',
     seed: undefined, name: 'enc_practice_trials'
