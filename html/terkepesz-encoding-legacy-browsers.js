@@ -2166,11 +2166,11 @@ function enc_fxRoutineEachFrame(trials) {
     
     if (((enc_trials.thisN === 0) && (frameN === 0))) {
         loop_start_time = (globalClock.getTime() - trigger_time);
-        thisExp.addData("loop_start_time", loop_start_time);
+        psychoJS.experiment.addData("loop_start_time", loop_start_time);
     } else {
         if ((frameN === 1)) {
             fx_start_time = (globalClock.getTime() - trigger_time);
-            thisExp.addData("fx_start_time", fx_start_time);
+            psychoJS.experiment.addData("fx_start_time", fx_start_time);
         }
     }
     
@@ -2328,11 +2328,11 @@ function enc_trialRoutineEachFrame(trials) {
     
     if ((frameN === 0)) {
         trial_start_time = (globalClock.getTime() - trigger_time);
-        thisExp.addData("trial_start_time", trial_start_time);
+        psychoJS.experiment.addData("trial_start_time", trial_start_time);
     } else {
         if ((frameN === 1)) {
             stimulus_start_time = (globalClock.getTime() - trigger_time);
-            thisExp.addData("stimulus_start_time", stimulus_start_time);
+            psychoJS.experiment.addData("stimulus_start_time", stimulus_start_time);
         }
     }
     
