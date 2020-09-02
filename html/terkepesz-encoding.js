@@ -153,10 +153,14 @@ var enc_fxClock;
 var enc_fx_interior;
 var enc_fx_cross;
 var enc_fx_key;
+var loop_start_time;
+var fx_start_time;
 var enc_trialClock;
 var enc_trial_interior;
 var enc_trial_main_image;
 var enc_trial_key;
+var trial_start_time;
+var stimulus_start_time;
 var end_enc_runClock;
 var end_enc_run_text;
 var enc_run_end_key;
@@ -456,6 +460,8 @@ function experimentInit() {
   
   enc_fx_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  loop_start_time = 0;
+  fx_start_time = 0;
   // Initialize components for Routine "enc_trial"
   enc_trialClock = new util.Clock();
   w_size = psychoJS.window.size;
@@ -485,6 +491,8 @@ function experimentInit() {
   });
   enc_trial_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  trial_start_time=0
+  stimulus_start_time=0
   // Initialize components for Routine "end_enc_run"
   end_enc_runClock = new util.Clock();
   end_enc_run_text = new visual.TextStim({
@@ -2093,8 +2101,6 @@ function enc_fxRoutineBegin(trials) {
 }
 
 
-var loop_start_time;
-var fx_start_time;
 function enc_fxRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'enc_fx'-------
@@ -2158,15 +2164,13 @@ function enc_fxRoutineEachFrame(trials) {
       }
     }
     
-    loop_start_time = 0;
-    fx_start_time = 0;
     if (((enc_trials.thisN === 0) && (frameN === 0))) {
         loop_start_time = (globalClock.getTime() - trigger_time);
-        thisExp.addData("loop_start_time", loop_start_time);
+        psychoJS.experiment.addData("loop_start_time", loop_start_time);
     } else {
         if ((frameN === 1)) {
             fx_start_time = (globalClock.getTime() - trigger_time);
-            thisExp.addData("fx_start_time", fx_start_time);
+            psychoJS.experiment.addData("fx_start_time", fx_start_time);
         }
     }
     
@@ -2257,7 +2261,6 @@ function enc_trialRoutineBegin(trials) {
 }
 
 
-var trial_start_time;
 function enc_trialRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'enc_trial'-------
