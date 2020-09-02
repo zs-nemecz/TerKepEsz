@@ -1263,7 +1263,7 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <CodeComponent name="code">
+      <CodeComponent name="practice_value">
         <Param name="Begin Experiment" updates="constant" val="practice = int(expInfo['practice'])" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="practice = Number.parseInt(expInfo[&quot;practice&quot;]);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
@@ -1276,7 +1276,7 @@
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="code" valType="code"/>
+        <Param name="name" updates="None" val="practice_value" valType="code"/>
       </CodeComponent>
     </Routine>
     <Routine name="end_practice">
@@ -2026,10 +2026,10 @@
       </KeyboardComponent>
       <CodeComponent name="start_MR_timer">
         <Param name="Begin Experiment" updates="constant" val="trigger_key = 's'&amp;#10;&amp;#10;def get_current_trigger_time():&amp;#10;    trigger = globalClock.getTime() - trigger_time&amp;#10;    thisExp.addData('triggers', trigger)&amp;#10;    thisExp.nextEntry()&amp;#10;    return trigger&amp;#10;&amp;#10;trigger_time = 0&amp;#10;event.globalKeys.add(key=trigger_key, func=get_current_trigger_time)&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="trigger_key = &quot;s&quot;;&amp;#10;function get_current_trigger_time() {&amp;#10;    var trigger;&amp;#10;    trigger = (globalClock.getTime() - trigger_time);&amp;#10;    thisExp.addData(&quot;triggers&quot;, trigger);&amp;#10;    thisExp.nextEntry();&amp;#10;    return trigger;&amp;#10;}&amp;#10;trigger_time = 0;&amp;#10;event.globalKeys.add({&quot;key&quot;: trigger_key, &quot;func&quot;: get_current_trigger_time});&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="trigger_key = &quot;s&quot;;&amp;#10;function get_current_trigger_time() {&amp;#10;    var trigger;&amp;#10;    trigger = (globalClock.getTime() - trigger_time);&amp;#10;    thisExp.addData(&quot;triggers&quot;, trigger);&amp;#10;    thisExp.nextEntry();&amp;#10;    return trigger;&amp;#10;}&amp;#10;trigger_time = 0;&amp;#10;#event.globalKeys.add({&quot;key&quot;: trigger_key, &quot;func&quot;: get_current_trigger_time});&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>

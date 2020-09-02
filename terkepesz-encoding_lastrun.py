@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on September 02, 2020, at 15:59
+    on September 02, 2020, at 16:27
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -152,7 +152,7 @@ instructions_2_continue = visual.TextStim(win=win, name='instructions_2_continue
 # Initialize components for Routine "enc_instructions_3"
 enc_instructions_3Clock = core.Clock()
 enc_instructions_3_text = visual.TextStim(win=win, name='enc_instructions_3_text',
-    text='Az első feladat nagyjából 25 percet vesz igénybe, közben két rövid szünettel. Ügyeljen, hogy ezek a szünetek ne legyenek 2 percnél hosszabbak. \n\nA jobb mutatóujjával jelölje azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen.\n\nA bal mutatóujjával jelölje a képeket, amelyek nem maradnak kiállítva a bemutatott helyen. \n\nMost a gyakorló feladat következik. \n',
+    text='Az első feladat nagyjából 25 percet vesz igénybe, közben két rövid szünettel.\n\nA jobb mutatóujjával jelölje azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen.\n\nA bal mutatóujjával jelölje a képeket, amelyek nem maradnak kiállítva a bemutatott helyen. \n\nMost a gyakorló feladat következik. \n',
     font='Arial',
     pos=(0, 0), height=0.04, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
