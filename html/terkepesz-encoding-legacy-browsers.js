@@ -1965,7 +1965,7 @@ function start_MRRoutineEnd(trials) {
     
     start_MR_trigger.stop();
     trigger_time = globalClock.getTime();
-    thisExp.addData("trigger_time", trigger_time);
+    psychoJS.experiment.addData("trigger_time", trigger_time);
     
     // the Routine "start_MR" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();

@@ -317,7 +317,7 @@
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="if frameN == 0: # start of the trial&amp;#10;    trial_start_time = globalClock.getTime() - trigger_time&amp;#10;    thisExp.addData('trial_start_time', trial_start_time)&amp;#10;elif frameN == 1: # the zeroth frame has just been drawn&amp;#10;    stimulus_start_time = globalClock.getTime() - trigger_time&amp;#10;    # store the data:&amp;#10;    thisExp.addData('stimulus_start_time', stimulus_start_time)&amp;#10;" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="if ((frameN === 0)) {&amp;#10;    trial_start_time = (globalClock.getTime() - trigger_time);&amp;#10;    thisExp.addData(&quot;trial_start_time&quot;, trial_start_time);&amp;#10;} else {&amp;#10;    if ((frameN === 1)) {&amp;#10;        stimulus_start_time = (globalClock.getTime() - trigger_time);&amp;#10;        thisExp.addData(&quot;stimulus_start_time&quot;, stimulus_start_time);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if ((frameN === 0)) {&amp;#10;    trial_start_time = (globalClock.getTime() - trigger_time);&amp;#10;    psychoJS.experiment.addData(&quot;trial_start_time&quot;, trial_start_time);&amp;#10;} else {&amp;#10;    if ((frameN === 1)) {&amp;#10;        stimulus_start_time = (globalClock.getTime() - trigger_time);&amp;#10;        psychoJS.experiment.addData(&quot;stimulus_start_time&quot;, stimulus_start_time);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
@@ -681,7 +681,7 @@
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="if enc_trials.thisN == 0 and frameN == 0: # start of the loop&amp;#10;    loop_start_time = globalClock.getTime() - trigger_time&amp;#10;    thisExp.addData('loop_start_time', loop_start_time)&amp;#10;elif frameN == 1: # the zeroth frame has just been drawn&amp;#10;    fx_start_time = globalClock.getTime() - trigger_time&amp;#10;    # store the data:&amp;#10;    thisExp.addData('fx_start_time', fx_start_time)&amp;#10;" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="if (((enc_trials.thisN === 0) &amp;&amp; (frameN === 0))) {&amp;#10;    loop_start_time = (globalClock.getTime() - trigger_time);&amp;#10;    thisExp.addData(&quot;loop_start_time&quot;, loop_start_time);&amp;#10;} else {&amp;#10;    if ((frameN === 1)) {&amp;#10;        fx_start_time = (globalClock.getTime() - trigger_time);&amp;#10;        thisExp.addData(&quot;fx_start_time&quot;, fx_start_time);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if (((enc_trials.thisN === 0) &amp;&amp; (frameN === 0))) {&amp;#10;    loop_start_time = (globalClock.getTime() - trigger_time);&amp;#10;    psychoJS.experiment.addData(&quot;loop_start_time&quot;, loop_start_time);&amp;#10;} else {&amp;#10;    if ((frameN === 1)) {&amp;#10;        fx_start_time = (globalClock.getTime() - trigger_time);&amp;#10;        psychoJS.experiment.addData(&quot;fx_start_time&quot;, fx_start_time);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
@@ -2029,13 +2029,13 @@
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="trigger_time = globalClock.getTime();&amp;#10;thisExp.addData(&quot;trigger_time&quot;, trigger_time);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="trigger_time = globalClock.getTime()&amp;#10;thisExp.addData('trigger_time', trigger_time)&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="trigger_time = globalClock.getTime();&amp;#10;psychoJS.experiment.addData(&quot;trigger_time&quot;, trigger_time);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="trigger_time = globalClock.getTime()&amp;#10;psychoJS.experiment.addData('trigger_time', trigger_time)&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="start_MR_timer" valType="code"/>
       </CodeComponent>
