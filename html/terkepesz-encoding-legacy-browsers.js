@@ -422,7 +422,7 @@ function experimentInit() {
       return trigger;
   }
   trigger_time = 0;
-  event.globalKeys.add({"key": trigger_key, "func": get_current_trigger_time});
+  psychoJS.event.globalKeys.add({"key": trigger_key, "func": get_current_trigger_time});
   
   // Initialize components for Routine "start_enc_run"
   start_enc_runClock = new util.Clock();
