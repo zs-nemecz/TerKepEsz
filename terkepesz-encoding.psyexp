@@ -189,8 +189,8 @@
       <CodeComponent name="enc_run_counter">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="run_counter = (run_counter + 1);&amp;#10;end_run_text = &quot;R\u00f6vid sz\u00fcnet.&quot;;&amp;#10;if ((run_counter &gt;= 2)) {&amp;#10;    end_run_text = &quot;V\u00e9ge az els\u0151 feladatnak.&quot;;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="run_counter = run_counter + 1&amp;#10;end_run_text = 'Rövid szünet.'&amp;#10;&amp;#10;if run_counter &gt;= 2:&amp;#10;    end_run_text = 'Vége az első feladatnak.'" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="run_counter = (run_counter + 1);&amp;#10;end_run_text = &quot;R\u00f6vid sz\u00fcnet.&quot;;&amp;#10;if ((run_counter &gt;= 3)) {&amp;#10;    end_run_text = &quot;V\u00e9ge az els\u0151 feladatnak.&quot;;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="run_counter = run_counter + 1&amp;#10;end_run_text = 'Rövid szünet.'&amp;#10;&amp;#10;if run_counter &gt;= 3:&amp;#10;    end_run_text = 'Vége az első feladatnak.'" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -312,10 +312,10 @@
       </KeyboardComponent>
       <CodeComponent name="enc_trial_timer">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="trial_start_time=0&amp;#10;stimulus_start_time=0" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="if frameN == 0: # start of the trial&amp;#10;    trial_start_time = globalClock.getTime() - trigger_time&amp;#10;    thisExp.addData('trial_start_time', trial_start_time)&amp;#10;elif frameN == 1: # the zeroth frame has just been drawn&amp;#10;    stimulus_start_time = globalClock.getTime() - trigger_time&amp;#10;    # store the data:&amp;#10;    thisExp.addData('stimulus_start_time', stimulus_start_time)&amp;#10;" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="if ((frameN === 0)) {&amp;#10;    trial_start_time = (globalClock.getTime() - trigger_time);&amp;#10;    psychoJS.experiment.addData(&quot;trial_start_time&quot;, trial_start_time);&amp;#10;} else {&amp;#10;    if ((frameN === 1)) {&amp;#10;        stimulus_start_time = (globalClock.getTime() - trigger_time);&amp;#10;        psychoJS.experiment.addData(&quot;stimulus_start_time&quot;, stimulus_start_time);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -676,7 +676,7 @@
       </KeyboardComponent>
       <CodeComponent name="enc_fx_timer">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="loop_start_time = 0;&amp;#10;fx_start_time = 0;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -2035,7 +2035,7 @@
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="trigger_time = globalClock.getTime();&amp;#10;psychoJS.experiment.addData(&quot;trigger_time&quot;, trigger_time);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="trigger_time = globalClock.getTime()&amp;#10;psychoJS.experiment.addData('trigger_time', trigger_time)&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="trigger_time = globalClock.getTime()&amp;#10;thisExp.addData('trigger_time', trigger_time)&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="start_MR_timer" valType="code"/>
       </CodeComponent>
@@ -2224,7 +2224,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="2" valType="code"/>
+      <Param name="nReps" updates="None" val="3" valType="code"/>
       <Param name="name" updates="None" val="enc_runs" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>

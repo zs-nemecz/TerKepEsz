@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on September 02, 2020, at 17:04
+    on September 02, 2020, at 18:07
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1487,7 +1487,7 @@ thisExp.addData('end_practice_continue.started', end_practice_continue.tStartRef
 thisExp.addData('end_practice_continue.stopped', end_practice_continue.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-enc_runs = data.TrialHandler(nReps=2, method='sequential', 
+enc_runs = data.TrialHandler(nReps=3, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=[None],
     seed=None, name='enc_runs')
@@ -1615,7 +1615,7 @@ for thisEnc_run in enc_runs:
     run_counter = run_counter + 1
     end_run_text = 'Rövid szünet.'
     
-    if run_counter >= 2:
+    if run_counter >= 3:
         end_run_text = 'Vége az első feladatnak.'
     # keep track of which components have finished
     start_enc_runComponents = [start_enc_run_text]
@@ -2115,7 +2115,7 @@ for thisEnc_run in enc_runs:
     enc_runs.addData('enc_run_end_key.stopped', enc_run_end_key.tStopRefresh)
     enc_runs.addData('enc_run_end_continue.started', enc_run_end_continue.tStartRefresh)
     enc_runs.addData('enc_run_end_continue.stopped', enc_run_end_continue.tStopRefresh)
-# completed 2 repeats of 'enc_runs'
+# completed 3 repeats of 'enc_runs'
 
 
 # ------Prepare to start Routine "inter_task_break"-------
