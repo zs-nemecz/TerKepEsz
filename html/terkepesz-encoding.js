@@ -148,6 +148,7 @@ var start_MRClock;
 var start_MR_text;
 var start_MR_trigger;
 var trigger_key;
+var event;
 var trigger_time;
 var start_enc_runClock;
 var start_enc_run_text;
@@ -429,8 +430,9 @@ function experimentInit() {
       thisExp.nextEntry();
       return trigger;
   }
+  event=psychoJS.eventManager;
   trigger_time = 0;
-  psychoJS.event.globalKeys.add({"key": trigger_key, "func": get_current_trigger_time});
+  event.globalKeys.add({"key": trigger_key, "func": get_current_trigger_time});
   
   // Initialize components for Routine "start_enc_run"
   start_enc_runClock = new util.Clock();
