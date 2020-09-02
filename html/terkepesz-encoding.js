@@ -1220,7 +1220,7 @@ function enc_runsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   enc_runs = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 2, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 3, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: undefined,
     seed: undefined, name: 'enc_runs'

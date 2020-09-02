@@ -1,0 +1,406 @@
+5.8700 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([1., 1., 1.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000018858C24FD0>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000018858BEB240>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='deg', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+5.8700 	EXP 	window1: recordFrameIntervals = False
+6.0363 	EXP 	window1: recordFrameIntervals = True
+6.2197 	EXP 	window1: recordFrameIntervals = False
+6.3218 	EXP 	Created welcome_msg = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1, italic=False, languageStyle='LTR', name='welcome_msg', opacity=1.0, ori=0, pos=array([ 0., 12.]), rgb=array([0., 0., 0.]), text='TérKépÉsz', units='deg', win=Window(...), wrapWidth=15.0)
+6.3416 	EXP 	Created logo = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/terkepesz.png', interpolate=True, mask=None, maskParams=None, name='logo', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.321875  , 1.23148148]), texRes=128, units='norm', win=Window(...))
+6.3548 	EXP 	Created lb_check = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='lb_check', opacity=1.0, ori=0, pos=array([-23.,   0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=15.0)
+6.3584 	EXP 	Created left_upper = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='Stimuli/ScreenCorner1.png', interpolate=True, mask=None, maskParams=None, name='left_upper', opacity=1.0, ori=0.0, pos=array([-0.9,  0.7]), size=array([0.13541667, 0.51481481]), texRes=128, units='norm', win=Window(...))
+6.3621 	EXP 	Created left_lower = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/ScreenCorner2.png', interpolate=True, mask=None, maskParams=None, name='left_lower', opacity=1.0, ori=0.0, pos=array([-0.9, -0.7]), size=array([0.115625  , 0.51666667]), texRes=128, units='norm', win=Window(...))
+6.3657 	EXP 	Created right_upper = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='Stimuli/ScreenCorner3.png', interpolate=True, mask=None, maskParams=None, name='right_upper', opacity=1.0, ori=0.0, pos=array([0.9, 0.7]), size=array([0.11979167, 0.49814815]), texRes=128, units='norm', win=Window(...))
+6.3698 	EXP 	Created right_lower = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='Stimuli/ScreenCorner4.png', interpolate=True, mask=None, maskParams=None, name='right_lower', opacity=1.0, ori=0.0, pos=array([ 0.9, -0.7]), size=array([0.153125 , 0.5037037]), texRes=128, units='norm', win=Window(...))
+6.3778 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=30)
+6.4063 	EXP 	Created instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.8, italic=False, languageStyle='LTR', name='instr_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=40)
+6.4067 	EXP 	Created start_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='start_task_text', opacity=1.0, ori=0, pos=array([0. , 1.5]), rgb=array([0., 0., 0.]), text='', units='deg', win=Window(...), wrapWidth=15.0)
+6.4070 	EXP 	Created start_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='start_task_text', opacity=1.0, ori=0, pos=array([ 0. , -1.5]), rgb=array([0., 0., 0.]), text='', units='deg', win=Window(...), wrapWidth=15.0)
+6.4073 	EXP 	Created start_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='start_task_text', opacity=1.0, ori=0, pos=array([-2.,  0.]), rgb=array([0., 0., 0.]), text='', units='deg', win=Window(...), wrapWidth=15.0)
+6.4076 	EXP 	Created start_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='start_task_text', opacity=1.0, ori=0, pos=array([2., 0.]), rgb=array([0., 0., 0.]), text='', units='deg', win=Window(...), wrapWidth=15.0)
+6.4454 	EXP 	Created main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/Fractals/25a.jpg', interpolate=True, mask=None, maskParams=None, name='main_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+6.4607 	EXP 	Created map_inside_fx = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='Stimuli/GalleryPlanInside.jpg', interpolate=True, mask=None, maskParams=None, name='map_inside_fx', opacity=0.5, ori=0.0, pos=array([  0., -25.]), size=array([1040., 1000.]), texRes=128, units='pix', win=Window(...))
+6.4618 	EXP 	Created fixation_cross = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineWidth=1, name='fixation_cross', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([20., 20.]), units='pix', vertices=ndarray(...), win=Window(...), windingRule=None)
+6.6335 	EXP 	Created main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/Fractals/25a.jpg', interpolate=True, mask=None, maskParams=None, name='main_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+6.6406 	EXP 	Created text_pause = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='text_pause', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=15.0)
+6.6446 	EXP 	Created start_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='start_task_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Figyeljen, kezdődik a gyakorlás...', units='deg', win=Window(...), wrapWidth=15.0)
+6.6615 	EXP 	Created start_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='start_task_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=15.0)
+6.6635 	EXP 	Created text_trial_type = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='text_trial_type', opacity=1.0, ori=0, pos=array([ 0., 15.]), rgb=array([0., 0., 0.]), text='Kép', units='deg', win=Window(...), wrapWidth=15.0)
+6.6651 	EXP 	Created text_trial_type = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='text_trial_type', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Kép', units='deg', win=Window(...), wrapWidth=15.0)
+6.6668 	EXP 	Created text_trial_type = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='text_trial_type', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Hely', units='deg', win=Window(...), wrapWidth=15.0)
+6.6709 	EXP 	Created text_trial_type = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='text_trial_type', opacity=1.0, ori=0, pos=array([  0., -10.]), rgb=array([0., 0., 0.]), text='Régi - F\t\t\t Hasonló - J\t\t\t Új - K', units='deg', win=Window(...), wrapWidth=30)
+6.6812 	EXP 	Created text_pause = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1.5, italic=False, languageStyle='LTR', name='text_pause', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Vége a feladatnak. Köszönjük!', units='deg', win=Window(...), wrapWidth=20)
+9.6996 	DATA 	Keypress: right
+11.4439 	DATA 	Keypress: f
+11.4530 	EXP 	lb_check: text = "Válaszgomb teszt:\n\nNyomja le a 'J' billentyűt!"
+11.4530 	EXP 	lb_check: pos = (23, 0)
+11.6599 	DATA 	Keypress: j
+12.1797 	DATA 	Keypress: j
+13.6758 	DATA 	Keypress: right
+13.6863 	EXP 	instr_text: text = 'A következő feladatban ismét absztrakt képeket fog látni, és ezekről kell eldöntenie, látta-e őket az első, műalkotás válogató feladataban, és hogy ugyanott látta-e őket.    \n A feladatot két alfeladatra bontottuk. Az egyikben a képekről, a másikban a képek pozíciójáról kell döntenie.    \n\nA folytatáshoz nyomja le a jobb nyilat.'
+14.2697 	DATA 	Keypress: right
+14.3362 	EXP 	instr_text: text = "A 'Kép' nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket az első, műalkotás válogató feladataban.                    \nHárom csoportba oszthatóak a megjelenő képek:                    \n - Régi: Ezek a képek pontosan megegyeznek majd az első feladatban látott képek egyikével.                    \n - Hasonló: Ezek a képek nagyon hasonlítanak az első feladatban látott képek egyikéhez.                    \n - Új: Teljesen új képek, amelyek nem jelentek meg az első feladatban.                    \nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint az első feladatban, melyik hasonló, és melyik új. \nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.                    \n\nA döntését így jelölje:\n\tRégi - F\t Hasonló - J\t Új - K                    \n\n A folytatáshoz nyomja le a jobb nyilat"
+18.8197 	DATA 	Keypress: right
+18.8861 	EXP 	instr_text: text = "A 'Hely' nevű alfeladatban azt kell eldöntenie, a képek ugyanott jelennek-e meg, mint az első, műalkotás válogató feladataban.                    \nEbben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. A helyek azonban három csoportba oszthatóak:                    \n - Régi: Pontosan ugyanitt jelent meg ez a kép az első feladatban.                    \n - Hasonló: Egy hasonló helyen jelent meg ez a kép az első feladatban.                    \n - Új: Egy teljesen másik helyen jelent meg ez a kép az első feladatban.                    \nAz Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, hasonló, és teljesen új helyen.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.                    \n\nA döntését így jelölje:\n\tRégi - F\t Hasonló - J\t Új - K                    \n\nA folytatáshoz nyomja le a jobb nyilat."
+20.0029 	DATA 	Keypress: right
+20.0194 	EXP 	instr_text: text = "A következőkben bemutatjuk Önnek, milyenek a 'hasonló'/'új' képek és helyek. \nA jobb nyillal tud továbblépni."
+20.6696 	DATA 	Keypress: right
+20.7028 	EXP 	main_image: pos = array([300.,   0.])
+20.7028 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/164a.jpg'
+20.7028 	EXP 	main_image: pos = array([-300.,    0.])
+20.7028 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/164b.jpg'
+20.7028 	EXP 	start_task_text: text = 'Hasonló'
+20.7028 	EXP 	start_task_text: text = 'Képek'
+34.7197 	DATA 	Keypress: right
+34.9524 	EXP 	main_image: pos = array([300.,   0.])
+34.9524 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/149a.jpg'
+34.9524 	EXP 	main_image: pos = array([-300.,    0.])
+34.9524 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/149b.jpg'
+34.9524 	EXP 	start_task_text: text = 'Hasonló'
+34.9524 	EXP 	start_task_text: text = 'Képek'
+42.8839 	DATA 	Keypress: right
+43.1188 	EXP 	main_image: pos = array([300.,   0.])
+43.1188 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/160b.jpg'
+43.1188 	EXP 	main_image: pos = array([-300.,    0.])
+43.1188 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/160c.jpg'
+43.1188 	EXP 	start_task_text: text = 'Hasonló'
+43.1188 	EXP 	start_task_text: text = 'Képek'
+45.9530 	DATA 	Keypress: right
+46.2021 	EXP 	main_image: pos = array([300.,   0.])
+46.2021 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/167a.jpg'
+46.2021 	EXP 	main_image: pos = array([-300.,    0.])
+46.2021 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/167b.jpg'
+46.2021 	EXP 	start_task_text: text = 'Hasonló'
+46.2021 	EXP 	start_task_text: text = 'Képek'
+53.1018 	DATA 	Keypress: right
+53.3519 	EXP 	main_image: pos = array([300.,   0.])
+53.3519 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/163a.jpg'
+53.3519 	EXP 	main_image: pos = array([-300.,    0.])
+53.3519 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/173c.jpg'
+53.3519 	EXP 	start_task_text: text = 'Új'
+53.3519 	EXP 	start_task_text: text = 'Képek'
+56.1864 	DATA 	Keypress: right
+56.4354 	EXP 	main_image: pos = array([ 122.0209929, -274.0636373])
+56.4354 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/166a.jpg'
+56.4354 	EXP 	main_image: pos = array([ 222.9434476, -200.7391819])
+56.4354 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/166a.jpg'
+56.4354 	EXP 	start_task_text: text = 'Hasonló'
+56.4354 	EXP 	start_task_text: text = 'Helyek'
+60.2866 	DATA 	Keypress: right
+60.5350 	EXP 	main_image: pos = array([-285.3169549 ,  -92.70509831])
+60.5350 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/159a.jpg'
+60.5350 	EXP 	main_image: pos = array([-136.1971499, -267.3019573])
+60.5350 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/159a.jpg'
+60.5350 	EXP 	start_task_text: text = 'Hasonló'
+60.5350 	EXP 	start_task_text: text = 'Helyek'
+65.4028 	DATA 	Keypress: right
+65.6516 	EXP 	main_image: pos = array([200.7391819, 222.9434476])
+65.6516 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/148b.jpg'
+65.6516 	EXP 	main_image: pos = array([300.,   0.])
+65.6516 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/148b.jpg'
+65.6516 	EXP 	start_task_text: text = 'Hasonló'
+65.6516 	EXP 	start_task_text: text = 'Helyek'
+67.4689 	DATA 	Keypress: right
+67.7182 	EXP 	main_image: pos = array([ 31.35853898, 298.3565686 ])
+67.7182 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/177b.jpg'
+67.7182 	EXP 	main_image: pos = array([ -46.93033951, -296.3065022 ])
+67.7182 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/177b.jpg'
+67.7182 	EXP 	start_task_text: text = 'Új'
+67.7182 	EXP 	start_task_text: text = 'Helyek'
+75.6346 	DATA 	Keypress: right
+75.8513 	EXP 	instr_text: text = 'Most a gyakorlás következik. Ha készen áll, nyomjon le egy billentyűt.'
+76.9635 	DATA 	Keypress: right
+79.0012 	EXP 	main_image: pos = array([-99.31902537, 283.0825519 ])
+79.0012 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/156b.jpg'
+79.0012 	EXP 	start_task_text: text = 'A helyes válasz: Új'
+79.0012 	EXP 	text_trial_type: text = 'Kép'
+79.0179 	EXP 	text_trial_type: text = 'Kép'
+79.0345 	EXP 	text_trial_type: text = 'Kép'
+79.0512 	EXP 	text_trial_type: text = 'Kép'
+79.0679 	EXP 	text_trial_type: text = 'Kép'
+79.0845 	EXP 	text_trial_type: text = 'Kép'
+79.1012 	EXP 	text_trial_type: text = 'Kép'
+79.1179 	EXP 	text_trial_type: text = 'Kép'
+79.1345 	EXP 	text_trial_type: text = 'Kép'
+79.1512 	EXP 	text_trial_type: text = 'Kép'
+79.1679 	EXP 	text_trial_type: text = 'Kép'
+79.1845 	EXP 	text_trial_type: text = 'Kép'
+79.2012 	EXP 	text_trial_type: text = 'Kép'
+79.2179 	EXP 	text_trial_type: text = 'Kép'
+79.2345 	EXP 	text_trial_type: text = 'Kép'
+79.2512 	EXP 	text_trial_type: text = 'Kép'
+79.2679 	EXP 	text_trial_type: text = 'Kép'
+79.2846 	EXP 	text_trial_type: text = 'Kép'
+79.3012 	EXP 	text_trial_type: text = 'Kép'
+79.3179 	EXP 	text_trial_type: text = 'Kép'
+79.3345 	EXP 	text_trial_type: text = 'Kép'
+79.3512 	EXP 	text_trial_type: text = 'Kép'
+79.3679 	EXP 	text_trial_type: text = 'Kép'
+79.3845 	EXP 	text_trial_type: text = 'Kép'
+79.4012 	EXP 	text_trial_type: text = 'Kép'
+79.4179 	EXP 	text_trial_type: text = 'Kép'
+79.4345 	EXP 	text_trial_type: text = 'Kép'
+79.4512 	EXP 	text_trial_type: text = 'Kép'
+79.4679 	EXP 	text_trial_type: text = 'Kép'
+79.4845 	EXP 	text_trial_type: text = 'Kép'
+79.5012 	EXP 	text_trial_type: text = 'Kép'
+79.5179 	EXP 	text_trial_type: text = 'Kép'
+79.5345 	EXP 	text_trial_type: text = 'Kép'
+79.5512 	EXP 	text_trial_type: text = 'Kép'
+79.5679 	EXP 	text_trial_type: text = 'Kép'
+79.5845 	EXP 	text_trial_type: text = 'Kép'
+79.6012 	EXP 	text_trial_type: text = 'Kép'
+79.6179 	EXP 	text_trial_type: text = 'Kép'
+79.6345 	EXP 	text_trial_type: text = 'Kép'
+79.6512 	EXP 	text_trial_type: text = 'Kép'
+79.6679 	EXP 	text_trial_type: text = 'Kép'
+79.6845 	EXP 	text_trial_type: text = 'Kép'
+79.7012 	EXP 	text_trial_type: text = 'Kép'
+79.7179 	EXP 	text_trial_type: text = 'Kép'
+79.7345 	EXP 	text_trial_type: text = 'Kép'
+79.7512 	EXP 	text_trial_type: text = 'Kép'
+79.7679 	EXP 	text_trial_type: text = 'Kép'
+79.7845 	EXP 	text_trial_type: text = 'Kép'
+79.8012 	EXP 	text_trial_type: text = 'Kép'
+79.8179 	EXP 	text_trial_type: text = 'Kép'
+79.8345 	EXP 	text_trial_type: text = 'Kép'
+79.8512 	EXP 	text_trial_type: text = 'Kép'
+79.8679 	EXP 	text_trial_type: text = 'Kép'
+79.8845 	EXP 	text_trial_type: text = 'Kép'
+79.9012 	EXP 	text_trial_type: text = 'Kép'
+79.9179 	EXP 	text_trial_type: text = 'Kép'
+79.9345 	EXP 	text_trial_type: text = 'Kép'
+79.9512 	EXP 	text_trial_type: text = 'Kép'
+79.9679 	EXP 	text_trial_type: text = 'Kép'
+79.9845 	EXP 	text_trial_type: text = 'Kép'
+80.0012 	EXP 	text_trial_type: text = 'Kép'
+80.0179 	EXP 	text_trial_type: text = 'Kép'
+80.0345 	EXP 	text_trial_type: text = 'Kép'
+80.0512 	EXP 	text_trial_type: text = 'Kép'
+80.0679 	EXP 	text_trial_type: text = 'Kép'
+80.0845 	EXP 	text_trial_type: text = 'Kép'
+80.1012 	EXP 	text_trial_type: text = 'Kép'
+80.1179 	EXP 	text_trial_type: text = 'Kép'
+80.1345 	EXP 	text_trial_type: text = 'Kép'
+80.1512 	EXP 	text_trial_type: text = 'Kép'
+80.1679 	EXP 	text_trial_type: text = 'Kép'
+80.1845 	EXP 	text_trial_type: text = 'Kép'
+80.2012 	EXP 	text_trial_type: text = 'Kép'
+80.2179 	EXP 	text_trial_type: text = 'Kép'
+80.2345 	EXP 	text_trial_type: text = 'Kép'
+80.2512 	EXP 	text_trial_type: text = 'Kép'
+80.2679 	EXP 	text_trial_type: text = 'Kép'
+80.2845 	EXP 	text_trial_type: text = 'Kép'
+80.3012 	EXP 	text_trial_type: text = 'Kép'
+80.3178 	EXP 	text_trial_type: text = 'Kép'
+80.3345 	EXP 	text_trial_type: text = 'Kép'
+80.3512 	EXP 	text_trial_type: text = 'Kép'
+80.3678 	EXP 	text_trial_type: text = 'Kép'
+80.3845 	EXP 	text_trial_type: text = 'Kép'
+80.4012 	EXP 	text_trial_type: text = 'Kép'
+80.4179 	EXP 	text_trial_type: text = 'Kép'
+80.4345 	EXP 	text_trial_type: text = 'Kép'
+80.4512 	EXP 	text_trial_type: text = 'Kép'
+80.4678 	EXP 	text_trial_type: text = 'Kép'
+80.4845 	EXP 	text_trial_type: text = 'Kép'
+80.5012 	EXP 	text_trial_type: text = 'Kép'
+80.5178 	EXP 	text_trial_type: text = 'Kép'
+80.5345 	EXP 	text_trial_type: text = 'Kép'
+80.5512 	EXP 	text_trial_type: text = 'Kép'
+80.5678 	EXP 	text_trial_type: text = 'Kép'
+80.5845 	EXP 	text_trial_type: text = 'Kép'
+80.6012 	EXP 	text_trial_type: text = 'Kép'
+80.6178 	EXP 	text_trial_type: text = 'Kép'
+80.6345 	EXP 	text_trial_type: text = 'Kép'
+80.6512 	EXP 	text_trial_type: text = 'Kép'
+80.6678 	EXP 	text_trial_type: text = 'Kép'
+80.6845 	EXP 	text_trial_type: text = 'Kép'
+80.7012 	EXP 	text_trial_type: text = 'Kép'
+80.7178 	EXP 	text_trial_type: text = 'Kép'
+80.7345 	EXP 	text_trial_type: text = 'Kép'
+80.7512 	EXP 	text_trial_type: text = 'Kép'
+80.7678 	EXP 	text_trial_type: text = 'Kép'
+80.7845 	EXP 	text_trial_type: text = 'Kép'
+80.8012 	EXP 	text_trial_type: text = 'Kép'
+80.8178 	EXP 	text_trial_type: text = 'Kép'
+80.8345 	EXP 	text_trial_type: text = 'Kép'
+80.8512 	EXP 	text_trial_type: text = 'Kép'
+80.8678 	EXP 	text_trial_type: text = 'Kép'
+80.8845 	EXP 	text_trial_type: text = 'Kép'
+80.9012 	EXP 	text_trial_type: text = 'Kép'
+80.9178 	EXP 	text_trial_type: text = 'Kép'
+80.9345 	EXP 	text_trial_type: text = 'Kép'
+80.9512 	EXP 	text_trial_type: text = 'Kép'
+80.9678 	EXP 	text_trial_type: text = 'Kép'
+80.9845 	EXP 	text_trial_type: text = 'Kép'
+82.8025 	DATA 	Keypress: k
+82.9507 	EXP 	start_task_text: text = 'Az Ön válasza: Új'
+87.6509 	EXP 	start_task_text: text = ''
+87.6509 	EXP 	start_task_text: text = ''
+87.6509 	EXP 	main_image: pos = array([ 122.0209929, -274.0636373])
+87.6509 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/166b.jpg'
+87.6509 	EXP 	start_task_text: text = 'A helyes válasz: Hasonló'
+90.6697 	DATA 	Keypress: j
+90.8505 	EXP 	start_task_text: text = 'Az Ön válasza: Hasonló'
+94.2838 	EXP 	start_task_text: text = ''
+94.2838 	EXP 	start_task_text: text = ''
+94.2838 	EXP 	main_image: pos = array([300.,   0.])
+94.2838 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/167a.jpg'
+94.2838 	EXP 	start_task_text: text = 'A helyes válasz: Régi'
+98.2689 	DATA 	Keypress: f
+98.4504 	EXP 	start_task_text: text = 'Az Ön válasza: Régi'
+102.3502 	EXP 	start_task_text: text = ''
+102.3502 	EXP 	start_task_text: text = ''
+102.3502 	EXP 	main_image: pos = array([ 31.35853898, 298.3565686 ])
+102.3502 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/177c.jpg'
+102.3502 	EXP 	start_task_text: text = 'A helyes válasz: Hasonló'
+107.7016 	DATA 	Keypress: j
+107.8668 	EXP 	start_task_text: text = 'Az Ön válasza: Hasonló'
+110.7000 	EXP 	start_task_text: text = ''
+110.7000 	EXP 	start_task_text: text = ''
+110.7000 	EXP 	main_image: pos = array([-259.8076211,  150.       ])
+110.7000 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/159a.jpg'
+110.7000 	EXP 	start_task_text: text = 'A helyes válasz: Hasonló'
+110.7000 	EXP 	text_trial_type: text = 'Hely'
+110.7167 	EXP 	text_trial_type: text = 'Hely'
+110.7334 	EXP 	text_trial_type: text = 'Hely'
+110.7500 	EXP 	text_trial_type: text = 'Hely'
+110.7667 	EXP 	text_trial_type: text = 'Hely'
+110.7834 	EXP 	text_trial_type: text = 'Hely'
+110.8000 	EXP 	text_trial_type: text = 'Hely'
+110.8167 	EXP 	text_trial_type: text = 'Hely'
+110.8334 	EXP 	text_trial_type: text = 'Hely'
+110.8500 	EXP 	text_trial_type: text = 'Hely'
+110.8667 	EXP 	text_trial_type: text = 'Hely'
+110.8834 	EXP 	text_trial_type: text = 'Hely'
+110.9000 	EXP 	text_trial_type: text = 'Hely'
+110.9167 	EXP 	text_trial_type: text = 'Hely'
+110.9334 	EXP 	text_trial_type: text = 'Hely'
+110.9500 	EXP 	text_trial_type: text = 'Hely'
+110.9667 	EXP 	text_trial_type: text = 'Hely'
+110.9833 	EXP 	text_trial_type: text = 'Hely'
+111.0000 	EXP 	text_trial_type: text = 'Hely'
+111.0167 	EXP 	text_trial_type: text = 'Hely'
+111.0333 	EXP 	text_trial_type: text = 'Hely'
+111.0500 	EXP 	text_trial_type: text = 'Hely'
+111.0667 	EXP 	text_trial_type: text = 'Hely'
+111.0834 	EXP 	text_trial_type: text = 'Hely'
+111.1000 	EXP 	text_trial_type: text = 'Hely'
+111.1167 	EXP 	text_trial_type: text = 'Hely'
+111.1334 	EXP 	text_trial_type: text = 'Hely'
+111.1500 	EXP 	text_trial_type: text = 'Hely'
+111.1667 	EXP 	text_trial_type: text = 'Hely'
+111.1834 	EXP 	text_trial_type: text = 'Hely'
+111.2000 	EXP 	text_trial_type: text = 'Hely'
+111.2167 	EXP 	text_trial_type: text = 'Hely'
+111.2334 	EXP 	text_trial_type: text = 'Hely'
+111.2500 	EXP 	text_trial_type: text = 'Hely'
+111.2667 	EXP 	text_trial_type: text = 'Hely'
+111.2834 	EXP 	text_trial_type: text = 'Hely'
+111.3000 	EXP 	text_trial_type: text = 'Hely'
+111.3167 	EXP 	text_trial_type: text = 'Hely'
+111.3333 	EXP 	text_trial_type: text = 'Hely'
+111.3500 	EXP 	text_trial_type: text = 'Hely'
+111.3667 	EXP 	text_trial_type: text = 'Hely'
+111.3833 	EXP 	text_trial_type: text = 'Hely'
+111.4000 	EXP 	text_trial_type: text = 'Hely'
+111.4167 	EXP 	text_trial_type: text = 'Hely'
+111.4333 	EXP 	text_trial_type: text = 'Hely'
+111.4500 	EXP 	text_trial_type: text = 'Hely'
+111.4667 	EXP 	text_trial_type: text = 'Hely'
+111.4833 	EXP 	text_trial_type: text = 'Hely'
+111.5000 	EXP 	text_trial_type: text = 'Hely'
+111.5167 	EXP 	text_trial_type: text = 'Hely'
+111.5333 	EXP 	text_trial_type: text = 'Hely'
+111.5500 	EXP 	text_trial_type: text = 'Hely'
+111.5667 	EXP 	text_trial_type: text = 'Hely'
+111.5833 	EXP 	text_trial_type: text = 'Hely'
+111.6000 	EXP 	text_trial_type: text = 'Hely'
+111.6167 	EXP 	text_trial_type: text = 'Hely'
+111.6334 	EXP 	text_trial_type: text = 'Hely'
+111.6500 	EXP 	text_trial_type: text = 'Hely'
+111.6667 	EXP 	text_trial_type: text = 'Hely'
+111.6833 	EXP 	text_trial_type: text = 'Hely'
+111.7000 	EXP 	text_trial_type: text = 'Hely'
+111.7167 	EXP 	text_trial_type: text = 'Hely'
+111.7333 	EXP 	text_trial_type: text = 'Hely'
+111.7500 	EXP 	text_trial_type: text = 'Hely'
+111.7667 	EXP 	text_trial_type: text = 'Hely'
+111.7833 	EXP 	text_trial_type: text = 'Hely'
+111.8000 	EXP 	text_trial_type: text = 'Hely'
+111.8167 	EXP 	text_trial_type: text = 'Hely'
+111.8333 	EXP 	text_trial_type: text = 'Hely'
+111.8500 	EXP 	text_trial_type: text = 'Hely'
+111.8667 	EXP 	text_trial_type: text = 'Hely'
+111.8833 	EXP 	text_trial_type: text = 'Hely'
+111.9000 	EXP 	text_trial_type: text = 'Hely'
+111.9167 	EXP 	text_trial_type: text = 'Hely'
+111.9333 	EXP 	text_trial_type: text = 'Hely'
+111.9500 	EXP 	text_trial_type: text = 'Hely'
+111.9667 	EXP 	text_trial_type: text = 'Hely'
+111.9834 	EXP 	text_trial_type: text = 'Hely'
+112.0000 	EXP 	text_trial_type: text = 'Hely'
+112.0167 	EXP 	text_trial_type: text = 'Hely'
+112.0333 	EXP 	text_trial_type: text = 'Hely'
+112.0500 	EXP 	text_trial_type: text = 'Hely'
+112.0667 	EXP 	text_trial_type: text = 'Hely'
+112.0833 	EXP 	text_trial_type: text = 'Hely'
+112.1000 	EXP 	text_trial_type: text = 'Hely'
+112.1167 	EXP 	text_trial_type: text = 'Hely'
+112.1333 	EXP 	text_trial_type: text = 'Hely'
+112.1500 	EXP 	text_trial_type: text = 'Hely'
+112.1667 	EXP 	text_trial_type: text = 'Hely'
+112.1833 	EXP 	text_trial_type: text = 'Hely'
+112.2000 	EXP 	text_trial_type: text = 'Hely'
+112.2167 	EXP 	text_trial_type: text = 'Hely'
+112.2333 	EXP 	text_trial_type: text = 'Hely'
+112.2500 	EXP 	text_trial_type: text = 'Hely'
+112.2667 	EXP 	text_trial_type: text = 'Hely'
+112.2833 	EXP 	text_trial_type: text = 'Hely'
+112.3000 	EXP 	text_trial_type: text = 'Hely'
+112.3167 	EXP 	text_trial_type: text = 'Hely'
+112.3333 	EXP 	text_trial_type: text = 'Hely'
+112.3500 	EXP 	text_trial_type: text = 'Hely'
+112.3667 	EXP 	text_trial_type: text = 'Hely'
+112.3833 	EXP 	text_trial_type: text = 'Hely'
+112.4000 	EXP 	text_trial_type: text = 'Hely'
+112.4167 	EXP 	text_trial_type: text = 'Hely'
+112.4333 	EXP 	text_trial_type: text = 'Hely'
+112.4500 	EXP 	text_trial_type: text = 'Hely'
+112.4667 	EXP 	text_trial_type: text = 'Hely'
+112.4833 	EXP 	text_trial_type: text = 'Hely'
+112.5000 	EXP 	text_trial_type: text = 'Hely'
+112.5167 	EXP 	text_trial_type: text = 'Hely'
+112.5333 	EXP 	text_trial_type: text = 'Hely'
+112.5500 	EXP 	text_trial_type: text = 'Hely'
+112.5667 	EXP 	text_trial_type: text = 'Hely'
+112.5833 	EXP 	text_trial_type: text = 'Hely'
+112.6000 	EXP 	text_trial_type: text = 'Hely'
+112.6167 	EXP 	text_trial_type: text = 'Hely'
+112.6333 	EXP 	text_trial_type: text = 'Hely'
+112.6500 	EXP 	text_trial_type: text = 'Hely'
+112.6667 	EXP 	text_trial_type: text = 'Hely'
+112.6833 	EXP 	text_trial_type: text = 'Hely'
+112.7000 	EXP 	text_trial_type: text = 'Hely'
+116.6527 	DATA 	Keypress: j
+116.8165 	EXP 	start_task_text: text = 'Az Ön válasza: Hasonló'
+119.7665 	EXP 	start_task_text: text = ''
+119.7665 	EXP 	start_task_text: text = ''
+119.7665 	EXP 	main_image: pos = array([-176.3355757, -242.7050983])
+119.7665 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/148b.jpg'
+119.7665 	EXP 	start_task_text: text = 'A helyes válasz: Új'
+125.2029 	DATA 	Keypress: k
+127.2996 	EXP 	start_task_text: text = ''
+127.2996 	EXP 	start_task_text: text = ''
+127.2996 	EXP 	main_image: pos = array([ 122.0209929, -274.0636373])
+127.2996 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/166a.jpg'
+127.2996 	EXP 	start_task_text: text = 'A helyes válasz: Régi'
+132.2682 	DATA 	Keypress: f
+134.3329 	EXP 	start_task_text: text = ''
+134.3329 	EXP 	start_task_text: text = ''
+139.6837 	DATA 	Keypress: right
+139.6996 	EXP 	instr_text: text = 'Régi - F\nHasonló - J\nÚj - K\n\nA kísérletvezető indítja a feladatot.'
+145.4182 	DATA 	Keypress: escape
+145.6995 	EXP 	start_task_text: text = 'Figyeljen, kezdődik a feladat...'
+145.6995 	EXP 	main_image: pos = array([-299.9187724 ,   -6.98068691])
+145.6995 	EXP 	main_image: image = 'Stimuli/Fractals/25a.jpg'
+145.6995 	EXP 	logo: opacity = 0.8
+146.6195 	DATA 	Keypress: return
+146.6698 	EXP 	window1: mouseVisible = True

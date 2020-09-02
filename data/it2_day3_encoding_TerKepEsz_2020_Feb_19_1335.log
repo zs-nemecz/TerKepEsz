@@ -1,0 +1,136 @@
+25.1480 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([1., 1., 1.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000022C6FFAD668>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000022C6FE66F98>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='deg', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+25.1481 	EXP 	window1: recordFrameIntervals = False
+25.3144 	EXP 	window1: recordFrameIntervals = True
+25.4978 	EXP 	window1: recordFrameIntervals = False
+26.5525 	EXP 	Created welcome_msg = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1, italic=False, languageStyle='LTR', name='welcome_msg', opacity=1.0, ori=0, pos=array([ 0., 12.]), rgb=array([0., 0., 0.]), text='TérKépÉsz', units='deg', win=Window(...), wrapWidth=15.0)
+26.5749 	EXP 	Created logo = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/terkepesz.png', interpolate=True, mask=None, maskParams=None, name='logo', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.321875  , 1.23148148]), texRes=128, units='norm', win=Window(...))
+26.5902 	EXP 	Created lb_check = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='lb_check', opacity=1.0, ori=0, pos=array([-23.,   0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=15.0)
+26.5949 	EXP 	Created left_upper = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='Stimuli/ScreenCorner1.png', interpolate=True, mask=None, maskParams=None, name='left_upper', opacity=1.0, ori=0.0, pos=array([-0.9,  0.7]), size=array([0.13541667, 0.51481481]), texRes=128, units='norm', win=Window(...))
+26.5995 	EXP 	Created left_lower = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/ScreenCorner2.png', interpolate=True, mask=None, maskParams=None, name='left_lower', opacity=1.0, ori=0.0, pos=array([-0.9, -0.7]), size=array([0.115625  , 0.51666667]), texRes=128, units='norm', win=Window(...))
+26.6041 	EXP 	Created right_upper = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='Stimuli/ScreenCorner3.png', interpolate=True, mask=None, maskParams=None, name='right_upper', opacity=1.0, ori=0.0, pos=array([0.9, 0.7]), size=array([0.11979167, 0.49814815]), texRes=128, units='norm', win=Window(...))
+26.6089 	EXP 	Created right_lower = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='Stimuli/ScreenCorner4.png', interpolate=True, mask=None, maskParams=None, name='right_lower', opacity=1.0, ori=0.0, pos=array([ 0.9, -0.7]), size=array([0.153125 , 0.5037037]), texRes=128, units='norm', win=Window(...))
+26.6179 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=30)
+26.6711 	EXP 	Created story1_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='Stimuli/GalleryBuildingFromOutside.jpg', interpolate=True, mask=None, maskParams=None, name='story1_image', opacity=1.0, ori=0.0, pos=array([0. , 0.9]), size=array([1.01041667, 1.2537037 ]), texRes=128, units='norm', win=Window(...))
+26.6997 	EXP 	Created story1_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='story1_text', opacity=1.0, ori=0, pos=array([ 0., -5.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=30)
+26.7362 	EXP 	Created story2_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='Stimuli/GalleryInfo.jpg', interpolate=True, mask=None, maskParams=None, name='story2_image', opacity=1.0, ori=0.0, pos=array([425.,   0.]), size=array([1000.,  750.]), texRes=128, units='pix', win=Window(...))
+26.7595 	EXP 	Created story2_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='story2_text', opacity=1.0, ori=0, pos=array([-14.,   0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=24)
+26.7766 	EXP 	Created instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='instr_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=15.0)
+26.7772 	EXP 	Created instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='instr_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='', units='deg', win=Window(...), wrapWidth=15.0)
+26.7878 	EXP 	Created start_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='start_task_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=15.0)
+26.8081 	EXP 	Created map_inside_fx = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='Stimuli/GalleryPlanInside.jpg', interpolate=True, mask=None, maskParams=None, name='map_inside_fx', opacity=0.5, ori=0.0, pos=array([  0., -25.]), size=array([1040., 1000.]), texRes=128, units='pix', win=Window(...))
+26.8091 	EXP 	Created fixation_cross = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineWidth=1, name='fixation_cross', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([20., 20.]), units='pix', vertices=ndarray(...), win=Window(...), windingRule=None)
+26.8549 	EXP 	Created main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/Fractals/101b.jpg', interpolate=True, mask=None, maskParams=None, name='main_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+26.8604 	EXP 	Created text_pause = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='text_pause', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=15.0)
+26.8646 	EXP 	Created text_pause = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.7, italic=False, languageStyle='LTR', name='text_pause', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Szünet...', units='deg', win=Window(...), wrapWidth=15.0)
+26.8740 	EXP 	Created text_goodbye = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1.5, italic=False, languageStyle='LTR', name='text_goodbye', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Vége a feladatnak. Köszönjük!', units='deg', win=Window(...), wrapWidth=20)
+30.3859 	DATA 	Keypress: f
+30.3975 	EXP 	lb_check: text = "Válaszgomb teszt:\n\nNyomja le a 'J' billentyűt!"
+30.3975 	EXP 	lb_check: pos = (23, 0)
+30.7059 	DATA 	Keypress: j
+31.7304 	DATA 	Keypress: right
+32.6643 	DATA 	Keypress: right
+51.1469 	DATA 	Keypress: right
+63.0469 	DATA 	Keypress: right
+63.0634 	EXP 	instr_text: text = 'Figyeljen, kezdődik a gyakorlás.'
+65.0967 	EXP 	main_image: pos = array([ 105.8791694, -280.6948548])
+65.0967 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/163a.jpg'
+68.4129 	EXP 	main_image: pos = array([  79.33024861, -289.321122  ])
+68.4129 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/164a.jpg'
+71.4462 	EXP 	main_image: pos = array([ 118.8239298, -275.4648321])
+71.4462 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/165a.jpg'
+74.9628 	EXP 	main_image: pos = array([ 131.511344 , -269.6382139])
+74.9628 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/166a.jpg'
+82.4959 	EXP 	main_image: pos = array([ 143.913934 , -263.2276194])
+82.4959 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/167a.jpg'
+87.0291 	EXP 	main_image: pos = array([ 156.0048384, -256.2469325])
+87.0291 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/168b.jpg'
+94.5220 	DATA 	Keypress: right
+94.5460 	EXP 	instr_text: text = 'A kísérletvezető indítja a feladatot.'
+100.4312 	DATA 	Keypress: e
+100.5125 	EXP 	start_task_text: text = 'Figyeljen, kezdődik a feladat...'
+102.5624 	EXP 	main_image: pos = array([300.,   0.])
+102.5624 	EXP 	main_image: image = 'Stimuli/Fractals/101b.jpg'
+107.0786 	EXP 	main_image: pos = array([299.5888604 ,  15.70078687])
+107.0786 	EXP 	main_image: image = 'Stimuli/Fractals/111b.jpg'
+115.5951 	EXP 	main_image: pos = array([298.3565686 ,  31.35853898])
+115.5951 	EXP 	main_image: image = 'Stimuli/Fractals/87c.jpg'
+120.1283 	EXP 	main_image: pos = array([251.6011704, 163.3917105])
+120.1283 	EXP 	main_image: image = 'Stimuli/Fractals/101b.jpg'
+123.6616 	EXP 	main_image: pos = array([299.5888604 ,  15.70078687])
+123.6616 	EXP 	main_image: image = 'Stimuli/Fractals/111b.jpg'
+131.2114 	EXP 	main_image: pos = array([296.3065022 ,  46.93033951])
+131.2114 	EXP 	main_image: image = 'Stimuli/Fractals/56a.jpg'
+136.7279 	EXP 	main_image: pos = array([293.4442802 ,  62.37350725])
+136.7279 	EXP 	main_image: image = 'Stimuli/Fractals/97c.jpg'
+145.2611 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+145.2611 	EXP 	main_image: image = 'Stimuli/Fractals/117c.jpg'
+149.7776 	EXP 	main_image: pos = array([285.3169549 , -92.70509831])
+149.7776 	EXP 	main_image: image = 'Stimuli/Fractals/87c.jpg'
+154.3108 	EXP 	main_image: pos = array([285.3169549 ,  92.70509831])
+154.3108 	EXP 	main_image: image = 'Stimuli/Fractals/50c.jpg'
+159.8442 	EXP 	main_image: pos = array([280.0741279, 107.5103849])
+159.8442 	EXP 	main_image: image = 'Stimuli/Fractals/103c.jpg'
+164.3939 	EXP 	main_image: pos = array([285.3169549 , -92.70509831])
+164.3939 	EXP 	main_image: image = 'Stimuli/Fractals/97c.jpg'
+168.9105 	EXP 	main_image: pos = array([274.0636373, 122.0209929])
+168.9105 	EXP 	main_image: image = 'Stimuli/Fractals/68a.jpg'
+173.4437 	EXP 	main_image: pos = array([267.3019573, 136.1971499])
+173.4437 	EXP 	main_image: image = 'Stimuli/Fractals/59b.jpg'
+176.4937 	EXP 	main_image: pos = array([296.3065022 ,  46.93033951])
+176.4937 	EXP 	main_image: image = 'Stimuli/Fractals/56c.jpg'
+179.5436 	EXP 	main_image: pos = array([285.3169549 ,  92.70509831])
+179.5436 	EXP 	main_image: image = 'Stimuli/Fractals/50b.jpg'
+183.0768 	EXP 	main_image: pos = array([289.7777479 ,  77.64571353])
+183.0768 	EXP 	main_image: image = 'Stimuli/Fractals/117b.jpg'
+188.6100 	EXP 	main_image: pos = array([280.0741279, 107.5103849])
+188.6100 	EXP 	main_image: image = 'Stimuli/Fractals/103a.jpg'
+195.1599 	EXP 	main_image: pos = array([267.3019573, 136.1971499])
+195.1599 	EXP 	main_image: image = 'Stimuli/Fractals/59b.jpg'
+198.6931 	EXP 	main_image: pos = array([274.0636373, 122.0209929])
+198.6931 	EXP 	main_image: image = 'Stimuli/Fractals/68c.jpg'
+203.2430 	EXP 	main_image: pos = array([259.8076211, 150.       ])
+203.2430 	EXP 	main_image: image = 'Stimuli/Fractals/66b.jpg'
+210.7762 	EXP 	main_image: pos = array([259.8076211, 150.       ])
+210.7762 	EXP 	main_image: image = 'Stimuli/Fractals/104a.jpg'
+214.3094 	EXP 	main_image: pos = array([251.6011704, 163.3917105])
+214.3094 	EXP 	main_image: image = 'Stimuli/Fractals/121b.jpg'
+218.8593 	EXP 	main_image: pos = array([242.7050983, 176.3355757])
+218.8593 	EXP 	main_image: image = 'Stimuli/Fractals/81b.jpg'
+222.4092 	EXP 	main_image: pos = array([259.8076211, 150.       ])
+222.4092 	EXP 	main_image: image = 'Stimuli/Fractals/104c.jpg'
+226.9591 	EXP 	main_image: pos = array([233.1437884, 188.7961173])
+226.9591 	EXP 	main_image: image = 'Stimuli/Fractals/118a.jpg'
+230.5090 	EXP 	main_image: pos = array([242.7050983, 176.3355757])
+230.5090 	EXP 	main_image: image = 'Stimuli/Fractals/81a.jpg'
+238.0588 	EXP 	main_image: pos = array([222.9434476, 200.7391819])
+238.0588 	EXP 	main_image: image = 'Stimuli/Fractals/64b.jpg'
+242.5921 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+242.5921 	EXP 	main_image: image = 'Stimuli/Fractals/6a.jpg'
+249.1253 	EXP 	main_image: pos = array([251.6011704, 163.3917105])
+249.1253 	EXP 	main_image: image = 'Stimuli/Fractals/121a.jpg'
+252.6752 	EXP 	main_image: pos = array([200.7391819, 222.9434476])
+252.6752 	EXP 	main_image: image = 'Stimuli/Fractals/136b.jpg'
+258.2085 	EXP 	main_image: pos = array([188.7961173, 233.1437884])
+258.2085 	EXP 	main_image: image = 'Stimuli/Fractals/17a.jpg'
+264.7582 	EXP 	main_image: pos = array([ 62.37350725, 293.4442802 ])
+264.7582 	EXP 	main_image: image = 'Stimuli/Fractals/64b.jpg'
+268.2915 	EXP 	main_image: pos = array([176.3355757, 242.7050983])
+268.2915 	EXP 	main_image: image = 'Stimuli/Fractals/8b.jpg'
+273.8080 	EXP 	main_image: pos = array([ 62.37350725, 293.4442802 ])
+273.8080 	EXP 	main_image: image = 'Stimuli/Fractals/118a.jpg'
+283.3578 	EXP 	main_image: pos = array([163.3917105, 251.6011704])
+283.3578 	EXP 	main_image: image = 'Stimuli/Fractals/131a.jpg'
+286.8910 	EXP 	main_image: pos = array([296.3065022 ,  46.93033951])
+286.8910 	EXP 	main_image: image = 'Stimuli/Fractals/136b.jpg'
+290.4243 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+290.4243 	EXP 	main_image: image = 'Stimuli/Fractals/6a.jpg'
+295.9408 	EXP 	main_image: pos = array([188.7961173, 233.1437884])
+295.9408 	EXP 	main_image: image = 'Stimuli/Fractals/17b.jpg'
+300.4740 	EXP 	main_image: pos = array([176.3355757, 242.7050983])
+300.4740 	EXP 	main_image: image = 'Stimuli/Fractals/8c.jpg'
+304.0073 	EXP 	main_image: pos = array([222.9434476, 200.7391819])
+304.0073 	EXP 	main_image: image = 'Stimuli/Fractals/131a.jpg'
+306.9761 	DATA 	Keypress: escape
+307.1072 	EXP 	logo: opacity = 0.8
+308.5304 	DATA 	Keypress: return
+308.5965 	EXP 	window1: mouseVisible = True

@@ -1,0 +1,1803 @@
+13.7253 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([1., 1., 1.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000018E7D5F9C50>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000018E7D2EA3C8>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='deg', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+13.7253 	EXP 	window1: recordFrameIntervals = False
+13.8916 	EXP 	window1: recordFrameIntervals = True
+14.0750 	EXP 	window1: recordFrameIntervals = False
+14.1915 	EXP 	Created welcome_msg = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1, italic=False, languageStyle='LTR', name='welcome_msg', opacity=1.0, ori=0, pos=array([ 0., 12.]), rgb=array([0., 0., 0.]), text='TérKépÉsz', units='deg', win=Window(...), wrapWidth=15.0)
+14.2131 	EXP 	Created logo = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/terkepesz.png', interpolate=True, mask=None, maskParams=None, name='logo', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.321875  , 1.23148148]), texRes=128, units='norm', win=Window(...))
+14.2264 	EXP 	Created lb_check = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='lb_check', opacity=1.0, ori=0, pos=array([-23.,   0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=15.0)
+14.2309 	EXP 	Created left_upper = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='Stimuli/ScreenCorner1.png', interpolate=True, mask=None, maskParams=None, name='left_upper', opacity=1.0, ori=0.0, pos=array([-0.9,  0.7]), size=array([0.13541667, 0.51481481]), texRes=128, units='norm', win=Window(...))
+14.2354 	EXP 	Created left_lower = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/ScreenCorner2.png', interpolate=True, mask=None, maskParams=None, name='left_lower', opacity=1.0, ori=0.0, pos=array([-0.9, -0.7]), size=array([0.115625  , 0.51666667]), texRes=128, units='norm', win=Window(...))
+14.2398 	EXP 	Created right_upper = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='Stimuli/ScreenCorner3.png', interpolate=True, mask=None, maskParams=None, name='right_upper', opacity=1.0, ori=0.0, pos=array([0.9, 0.7]), size=array([0.11979167, 0.49814815]), texRes=128, units='norm', win=Window(...))
+14.2446 	EXP 	Created right_lower = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='Stimuli/ScreenCorner4.png', interpolate=True, mask=None, maskParams=None, name='right_lower', opacity=1.0, ori=0.0, pos=array([ 0.9, -0.7]), size=array([0.153125 , 0.5037037]), texRes=128, units='norm', win=Window(...))
+14.2534 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=30)
+14.3019 	EXP 	Created instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.8, italic=False, languageStyle='LTR', name='instr_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=40)
+14.3022 	EXP 	Created start_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='start_task_text', opacity=1.0, ori=0, pos=array([0. , 1.5]), rgb=array([0., 0., 0.]), text='', units='deg', win=Window(...), wrapWidth=15.0)
+14.3025 	EXP 	Created start_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='start_task_text', opacity=1.0, ori=0, pos=array([ 0. , -1.5]), rgb=array([0., 0., 0.]), text='', units='deg', win=Window(...), wrapWidth=15.0)
+14.3028 	EXP 	Created start_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='start_task_text', opacity=1.0, ori=0, pos=array([-2.,  0.]), rgb=array([0., 0., 0.]), text='', units='deg', win=Window(...), wrapWidth=15.0)
+14.3031 	EXP 	Created start_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='start_task_text', opacity=1.0, ori=0, pos=array([2., 0.]), rgb=array([0., 0., 0.]), text='', units='deg', win=Window(...), wrapWidth=15.0)
+14.3751 	EXP 	Created main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/Fractals/86c.jpg', interpolate=True, mask=None, maskParams=None, name='main_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+14.3954 	EXP 	Created map_inside_fx = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='Stimuli/GalleryPlanInside.jpg', interpolate=True, mask=None, maskParams=None, name='map_inside_fx', opacity=0.5, ori=0.0, pos=array([  0., -25.]), size=array([1040., 1000.]), texRes=128, units='pix', win=Window(...))
+14.3965 	EXP 	Created fixation_cross = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-1.0, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineWidth=1, name='fixation_cross', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([20., 20.]), units='pix', vertices=ndarray(...), win=Window(...), windingRule=None)
+14.5822 	EXP 	Created main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/Fractals/86c.jpg', interpolate=True, mask=None, maskParams=None, name='main_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+14.5889 	EXP 	Created text_pause = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='text_pause', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=15.0)
+14.5929 	EXP 	Created start_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='start_task_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Figyeljen, kezdődik a gyakorlás...', units='deg', win=Window(...), wrapWidth=15.0)
+14.6101 	EXP 	Created start_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='start_task_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='deg', win=Window(...), wrapWidth=15.0)
+14.6120 	EXP 	Created text_trial_type = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='text_trial_type', opacity=1.0, ori=0, pos=array([ 0., 15.]), rgb=array([0., 0., 0.]), text='Kép', units='deg', win=Window(...), wrapWidth=15.0)
+14.6135 	EXP 	Created text_trial_type = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='text_trial_type', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Kép', units='deg', win=Window(...), wrapWidth=15.0)
+14.6152 	EXP 	Created text_trial_type = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='text_trial_type', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Hely', units='deg', win=Window(...), wrapWidth=15.0)
+14.6188 	EXP 	Created text_trial_type = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.9, italic=False, languageStyle='LTR', name='text_trial_type', opacity=1.0, ori=0, pos=array([  0., -10.]), rgb=array([0., 0., 0.]), text='Régi - F\t\t\t Hasonló - J\t\t\t Új - K', units='deg', win=Window(...), wrapWidth=30)
+14.6298 	EXP 	Created text_pause = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1.5, italic=False, languageStyle='LTR', name='text_pause', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Vége a feladatnak. Köszönjük!', units='deg', win=Window(...), wrapWidth=20)
+18.6650 	DATA 	Keypress: f
+18.6748 	EXP 	lb_check: text = "Válaszgomb teszt:\n\nNyomja le a 'J' billentyűt!"
+18.6748 	EXP 	lb_check: pos = (23, 0)
+19.4887 	DATA 	Keypress: j
+21.4169 	DATA 	Keypress: right
+21.4247 	EXP 	instr_text: text = 'A következő feladatban ismét absztrakt képeket fog látni, és ezekről kell eldöntenie, látta-e őket az első, műalkotás válogató feladataban, és hogy ugyanott látta-e őket.    \n A feladatot két alfeladatra bontottuk. Az egyikben a képekről, a másikban a képek pozíciójáról kell döntenie.    \n\nA folytatáshoz nyomja le a jobb nyilat.'
+28.2747 	DATA 	Keypress: right
+28.3412 	EXP 	instr_text: text = "A 'Kép' nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket az első, műalkotás válogató feladataban.                    \nHárom csoportba oszthatóak a megjelenő képek:                    \n - Régi: Ezek a képek pontosan megegyeznek majd az első feladatban látott képek egyikével.                    \n - Hasonló: Ezek a képek nagyon hasonlítanak az első feladatban látott képek egyikéhez.                    \n - Új: Teljesen új képek, amelyek nem jelentek meg az első feladatban.                    \nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint az első feladatban, melyik hasonló, és melyik új. \nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.                    \n\nA döntését így jelölje:\n\tRégi - F\t Hasonló - J\t Új - K                    \n\n A folytatáshoz nyomja le a jobb nyilat"
+64.7070 	DATA 	Keypress: right
+64.7736 	EXP 	instr_text: text = "A 'Hely' nevű alfeladatban azt kell eldöntenie, a képek ugyanott jelennek-e meg, mint az első, műalkotás válogató feladataban.                    \nEbben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. A helyek azonban három csoportba oszthatóak:                    \n - Régi: Pontosan ugyanitt jelent meg ez a kép az első feladatban.                    \n - Hasonló: Egy hasonló helyen jelent meg ez a kép az első feladatban.                    \n - Új: Egy teljesen másik helyen jelent meg ez a kép az első feladatban.                    \nAz Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, hasonló, és teljesen új helyen.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.                    \n\nA döntését így jelölje:\n\tRégi - F\t Hasonló - J\t Új - K                    \n\nA folytatáshoz nyomja le a jobb nyilat."
+83.1066 	DATA 	Keypress: right
+83.1398 	EXP 	instr_text: text = "A következőkben bemutatjuk Önnek, milyenek a 'hasonló'/'új' képek és helyek. \nA jobb nyillal tud továbblépni."
+85.6565 	DATA 	Keypress: right
+85.7730 	EXP 	main_image: pos = array([300.,   0.])
+85.7730 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/164a.jpg'
+85.7730 	EXP 	main_image: pos = array([-300.,    0.])
+85.7730 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/164b.jpg'
+85.7730 	EXP 	start_task_text: text = 'Hasonló'
+85.7730 	EXP 	start_task_text: text = 'Képek'
+90.7229 	DATA 	Keypress: right
+90.9729 	EXP 	main_image: pos = array([300.,   0.])
+90.9729 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/149a.jpg'
+90.9729 	EXP 	main_image: pos = array([-300.,    0.])
+90.9729 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/149b.jpg'
+90.9729 	EXP 	start_task_text: text = 'Hasonló'
+90.9729 	EXP 	start_task_text: text = 'Képek'
+99.1846 	DATA 	Keypress: right
+99.7893 	EXP 	main_image: pos = array([300.,   0.])
+99.7893 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/160b.jpg'
+99.7893 	EXP 	main_image: pos = array([-300.,    0.])
+99.7893 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/160c.jpg'
+99.7893 	EXP 	start_task_text: text = 'Hasonló'
+99.7893 	EXP 	start_task_text: text = 'Képek'
+104.2646 	DATA 	Keypress: right
+104.9892 	EXP 	main_image: pos = array([300.,   0.])
+104.9892 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/167a.jpg'
+104.9892 	EXP 	main_image: pos = array([-300.,    0.])
+104.9892 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/167b.jpg'
+104.9892 	EXP 	start_task_text: text = 'Hasonló'
+104.9892 	EXP 	start_task_text: text = 'Képek'
+108.9056 	DATA 	Keypress: right
+109.1891 	EXP 	main_image: pos = array([300.,   0.])
+109.1891 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/163a.jpg'
+109.1891 	EXP 	main_image: pos = array([-300.,    0.])
+109.1891 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/173c.jpg'
+109.1891 	EXP 	start_task_text: text = 'Új'
+109.1891 	EXP 	start_task_text: text = 'Képek'
+114.1392 	DATA 	Keypress: right
+114.3889 	EXP 	main_image: pos = array([-300.,    0.])
+114.3889 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/166a.jpg'
+114.3889 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+114.3889 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/166a.jpg'
+114.3889 	EXP 	start_task_text: text = 'Hasonló'
+114.3889 	EXP 	start_task_text: text = 'Helyek'
+118.4886 	DATA 	Keypress: right
+119.0721 	EXP 	main_image: pos = array([  0., 300.])
+119.0721 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/159a.jpg'
+119.0721 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+119.0721 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/159a.jpg'
+119.0721 	EXP 	start_task_text: text = 'Hasonló'
+119.0721 	EXP 	start_task_text: text = 'Helyek'
+121.4388 	DATA 	Keypress: right
+121.6887 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+121.6887 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/148b.jpg'
+121.6887 	EXP 	main_image: pos = array([  0., 300.])
+121.6887 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/148b.jpg'
+121.6887 	EXP 	start_task_text: text = 'Hasonló'
+121.6887 	EXP 	start_task_text: text = 'Helyek'
+123.6490 	DATA 	Keypress: right
+124.3220 	EXP 	main_image: pos = array([300.,   0.])
+124.3220 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/177b.jpg'
+124.3220 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+124.3220 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/177b.jpg'
+124.3220 	EXP 	start_task_text: text = 'Új'
+124.3220 	EXP 	start_task_text: text = 'Helyek'
+126.6885 	DATA 	Keypress: right
+126.9386 	EXP 	main_image: pos = array([300.,   0.])
+126.9386 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/177b.jpg'
+126.9386 	EXP 	main_image: pos = array([-300.,    0.])
+126.9386 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/177b.jpg'
+126.9386 	EXP 	start_task_text: text = 'Új'
+126.9386 	EXP 	start_task_text: text = 'Helyek'
+127.7555 	DATA 	Keypress: right
+127.9719 	EXP 	instr_text: text = 'Most a gyakorlás következik. Ha készen áll a gyakorlásra, nyomja le a jobb nyilat.\n\nHa újra megnézné a bemutatót, nyomjon le bármilyen más gombot.'
+130.1929 	DATA 	Keypress: right
+132.2551 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+132.2551 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/156b.jpg'
+132.2551 	EXP 	start_task_text: text = 'A helyes válasz: Új'
+132.2551 	EXP 	text_trial_type: text = 'Kép'
+132.2718 	EXP 	text_trial_type: text = 'Kép'
+132.2885 	EXP 	text_trial_type: text = 'Kép'
+132.3051 	EXP 	text_trial_type: text = 'Kép'
+132.3218 	EXP 	text_trial_type: text = 'Kép'
+132.3384 	EXP 	text_trial_type: text = 'Kép'
+132.3551 	EXP 	text_trial_type: text = 'Kép'
+132.3718 	EXP 	text_trial_type: text = 'Kép'
+132.3884 	EXP 	text_trial_type: text = 'Kép'
+132.4051 	EXP 	text_trial_type: text = 'Kép'
+132.4218 	EXP 	text_trial_type: text = 'Kép'
+132.4384 	EXP 	text_trial_type: text = 'Kép'
+132.4551 	EXP 	text_trial_type: text = 'Kép'
+132.4718 	EXP 	text_trial_type: text = 'Kép'
+132.4884 	EXP 	text_trial_type: text = 'Kép'
+132.5051 	EXP 	text_trial_type: text = 'Kép'
+132.5218 	EXP 	text_trial_type: text = 'Kép'
+132.5384 	EXP 	text_trial_type: text = 'Kép'
+132.5551 	EXP 	text_trial_type: text = 'Kép'
+132.5718 	EXP 	text_trial_type: text = 'Kép'
+132.5884 	EXP 	text_trial_type: text = 'Kép'
+132.6051 	EXP 	text_trial_type: text = 'Kép'
+132.6218 	EXP 	text_trial_type: text = 'Kép'
+132.6384 	EXP 	text_trial_type: text = 'Kép'
+132.6551 	EXP 	text_trial_type: text = 'Kép'
+132.6718 	EXP 	text_trial_type: text = 'Kép'
+132.6884 	EXP 	text_trial_type: text = 'Kép'
+132.7051 	EXP 	text_trial_type: text = 'Kép'
+132.7218 	EXP 	text_trial_type: text = 'Kép'
+132.7384 	EXP 	text_trial_type: text = 'Kép'
+132.7551 	EXP 	text_trial_type: text = 'Kép'
+132.7718 	EXP 	text_trial_type: text = 'Kép'
+132.7884 	EXP 	text_trial_type: text = 'Kép'
+132.8051 	EXP 	text_trial_type: text = 'Kép'
+132.8218 	EXP 	text_trial_type: text = 'Kép'
+132.8384 	EXP 	text_trial_type: text = 'Kép'
+132.8551 	EXP 	text_trial_type: text = 'Kép'
+132.8718 	EXP 	text_trial_type: text = 'Kép'
+132.8884 	EXP 	text_trial_type: text = 'Kép'
+132.9051 	EXP 	text_trial_type: text = 'Kép'
+132.9218 	EXP 	text_trial_type: text = 'Kép'
+132.9384 	EXP 	text_trial_type: text = 'Kép'
+132.9551 	EXP 	text_trial_type: text = 'Kép'
+132.9718 	EXP 	text_trial_type: text = 'Kép'
+132.9884 	EXP 	text_trial_type: text = 'Kép'
+133.0051 	EXP 	text_trial_type: text = 'Kép'
+133.0218 	EXP 	text_trial_type: text = 'Kép'
+133.0384 	EXP 	text_trial_type: text = 'Kép'
+133.0551 	EXP 	text_trial_type: text = 'Kép'
+133.0718 	EXP 	text_trial_type: text = 'Kép'
+133.0884 	EXP 	text_trial_type: text = 'Kép'
+133.1051 	EXP 	text_trial_type: text = 'Kép'
+133.1218 	EXP 	text_trial_type: text = 'Kép'
+133.1384 	EXP 	text_trial_type: text = 'Kép'
+133.1551 	EXP 	text_trial_type: text = 'Kép'
+133.1718 	EXP 	text_trial_type: text = 'Kép'
+133.1884 	EXP 	text_trial_type: text = 'Kép'
+133.2051 	EXP 	text_trial_type: text = 'Kép'
+133.2217 	EXP 	text_trial_type: text = 'Kép'
+133.2384 	EXP 	text_trial_type: text = 'Kép'
+133.2551 	EXP 	text_trial_type: text = 'Kép'
+133.2718 	EXP 	text_trial_type: text = 'Kép'
+133.2884 	EXP 	text_trial_type: text = 'Kép'
+133.3051 	EXP 	text_trial_type: text = 'Kép'
+133.3218 	EXP 	text_trial_type: text = 'Kép'
+133.3384 	EXP 	text_trial_type: text = 'Kép'
+133.3551 	EXP 	text_trial_type: text = 'Kép'
+133.3718 	EXP 	text_trial_type: text = 'Kép'
+133.3884 	EXP 	text_trial_type: text = 'Kép'
+133.4051 	EXP 	text_trial_type: text = 'Kép'
+133.4218 	EXP 	text_trial_type: text = 'Kép'
+133.4384 	EXP 	text_trial_type: text = 'Kép'
+133.4551 	EXP 	text_trial_type: text = 'Kép'
+133.4718 	EXP 	text_trial_type: text = 'Kép'
+133.4884 	EXP 	text_trial_type: text = 'Kép'
+133.5051 	EXP 	text_trial_type: text = 'Kép'
+133.5218 	EXP 	text_trial_type: text = 'Kép'
+133.5384 	EXP 	text_trial_type: text = 'Kép'
+133.5551 	EXP 	text_trial_type: text = 'Kép'
+133.5717 	EXP 	text_trial_type: text = 'Kép'
+133.5884 	EXP 	text_trial_type: text = 'Kép'
+133.6051 	EXP 	text_trial_type: text = 'Kép'
+133.6218 	EXP 	text_trial_type: text = 'Kép'
+133.6384 	EXP 	text_trial_type: text = 'Kép'
+133.6551 	EXP 	text_trial_type: text = 'Kép'
+133.6718 	EXP 	text_trial_type: text = 'Kép'
+133.6884 	EXP 	text_trial_type: text = 'Kép'
+133.7051 	EXP 	text_trial_type: text = 'Kép'
+133.7218 	EXP 	text_trial_type: text = 'Kép'
+133.7384 	EXP 	text_trial_type: text = 'Kép'
+133.7551 	EXP 	text_trial_type: text = 'Kép'
+133.7718 	EXP 	text_trial_type: text = 'Kép'
+133.7884 	EXP 	text_trial_type: text = 'Kép'
+133.8051 	EXP 	text_trial_type: text = 'Kép'
+133.8218 	EXP 	text_trial_type: text = 'Kép'
+133.8384 	EXP 	text_trial_type: text = 'Kép'
+133.8551 	EXP 	text_trial_type: text = 'Kép'
+133.8718 	EXP 	text_trial_type: text = 'Kép'
+133.8884 	EXP 	text_trial_type: text = 'Kép'
+133.9051 	EXP 	text_trial_type: text = 'Kép'
+133.9217 	EXP 	text_trial_type: text = 'Kép'
+133.9384 	EXP 	text_trial_type: text = 'Kép'
+133.9551 	EXP 	text_trial_type: text = 'Kép'
+133.9717 	EXP 	text_trial_type: text = 'Kép'
+133.9884 	EXP 	text_trial_type: text = 'Kép'
+134.0051 	EXP 	text_trial_type: text = 'Kép'
+134.0217 	EXP 	text_trial_type: text = 'Kép'
+134.0384 	EXP 	text_trial_type: text = 'Kép'
+134.0551 	EXP 	text_trial_type: text = 'Kép'
+134.0717 	EXP 	text_trial_type: text = 'Kép'
+134.0884 	EXP 	text_trial_type: text = 'Kép'
+134.1051 	EXP 	text_trial_type: text = 'Kép'
+134.1218 	EXP 	text_trial_type: text = 'Kép'
+134.1384 	EXP 	text_trial_type: text = 'Kép'
+134.1551 	EXP 	text_trial_type: text = 'Kép'
+134.1717 	EXP 	text_trial_type: text = 'Kép'
+134.1884 	EXP 	text_trial_type: text = 'Kép'
+134.2051 	EXP 	text_trial_type: text = 'Kép'
+134.2218 	EXP 	text_trial_type: text = 'Kép'
+134.2384 	EXP 	text_trial_type: text = 'Kép'
+136.5233 	DATA 	Keypress: k
+136.6546 	EXP 	start_task_text: text = 'Az Ön válasza: Új'
+140.9214 	EXP 	start_task_text: text = ''
+140.9214 	EXP 	start_task_text: text = ''
+140.9214 	EXP 	main_image: pos = array([-300.,    0.])
+140.9214 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/166c.jpg'
+140.9214 	EXP 	start_task_text: text = 'A helyes válasz: Hasonló'
+143.0730 	DATA 	Keypress: k
+143.2045 	EXP 	start_task_text: text = 'Az Ön válasza: Új'
+147.5543 	EXP 	start_task_text: text = ''
+147.5543 	EXP 	start_task_text: text = ''
+147.5543 	EXP 	main_image: pos = array([  0., 300.])
+147.5543 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/167a.jpg'
+147.5543 	EXP 	start_task_text: text = 'A helyes válasz: Régi'
+150.4237 	DATA 	Keypress: f
+150.5209 	EXP 	start_task_text: text = 'Az Ön válasza: Régi'
+155.6375 	EXP 	start_task_text: text = ''
+155.6375 	EXP 	start_task_text: text = ''
+155.6375 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+155.6375 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/159a.jpg'
+155.6375 	EXP 	start_task_text: text = 'A helyes válasz: Hasonló'
+155.6375 	EXP 	text_trial_type: text = 'Hely'
+155.6541 	EXP 	text_trial_type: text = 'Hely'
+155.6708 	EXP 	text_trial_type: text = 'Hely'
+155.6875 	EXP 	text_trial_type: text = 'Hely'
+155.7041 	EXP 	text_trial_type: text = 'Hely'
+155.7208 	EXP 	text_trial_type: text = 'Hely'
+155.7375 	EXP 	text_trial_type: text = 'Hely'
+155.7541 	EXP 	text_trial_type: text = 'Hely'
+155.7708 	EXP 	text_trial_type: text = 'Hely'
+155.7875 	EXP 	text_trial_type: text = 'Hely'
+155.8041 	EXP 	text_trial_type: text = 'Hely'
+155.8208 	EXP 	text_trial_type: text = 'Hely'
+155.8375 	EXP 	text_trial_type: text = 'Hely'
+155.8541 	EXP 	text_trial_type: text = 'Hely'
+155.8708 	EXP 	text_trial_type: text = 'Hely'
+155.8875 	EXP 	text_trial_type: text = 'Hely'
+155.9041 	EXP 	text_trial_type: text = 'Hely'
+155.9208 	EXP 	text_trial_type: text = 'Hely'
+155.9375 	EXP 	text_trial_type: text = 'Hely'
+155.9541 	EXP 	text_trial_type: text = 'Hely'
+155.9708 	EXP 	text_trial_type: text = 'Hely'
+155.9875 	EXP 	text_trial_type: text = 'Hely'
+156.0041 	EXP 	text_trial_type: text = 'Hely'
+156.0208 	EXP 	text_trial_type: text = 'Hely'
+156.0375 	EXP 	text_trial_type: text = 'Hely'
+156.0541 	EXP 	text_trial_type: text = 'Hely'
+156.0708 	EXP 	text_trial_type: text = 'Hely'
+156.0875 	EXP 	text_trial_type: text = 'Hely'
+156.1041 	EXP 	text_trial_type: text = 'Hely'
+156.1208 	EXP 	text_trial_type: text = 'Hely'
+156.1375 	EXP 	text_trial_type: text = 'Hely'
+156.1541 	EXP 	text_trial_type: text = 'Hely'
+156.1708 	EXP 	text_trial_type: text = 'Hely'
+156.1874 	EXP 	text_trial_type: text = 'Hely'
+156.2041 	EXP 	text_trial_type: text = 'Hely'
+156.2208 	EXP 	text_trial_type: text = 'Hely'
+156.2374 	EXP 	text_trial_type: text = 'Hely'
+156.2541 	EXP 	text_trial_type: text = 'Hely'
+156.2708 	EXP 	text_trial_type: text = 'Hely'
+156.2875 	EXP 	text_trial_type: text = 'Hely'
+156.3041 	EXP 	text_trial_type: text = 'Hely'
+156.3208 	EXP 	text_trial_type: text = 'Hely'
+156.3375 	EXP 	text_trial_type: text = 'Hely'
+156.3541 	EXP 	text_trial_type: text = 'Hely'
+156.3708 	EXP 	text_trial_type: text = 'Hely'
+156.3874 	EXP 	text_trial_type: text = 'Hely'
+156.4041 	EXP 	text_trial_type: text = 'Hely'
+156.4208 	EXP 	text_trial_type: text = 'Hely'
+156.4375 	EXP 	text_trial_type: text = 'Hely'
+156.4541 	EXP 	text_trial_type: text = 'Hely'
+156.4708 	EXP 	text_trial_type: text = 'Hely'
+156.4874 	EXP 	text_trial_type: text = 'Hely'
+156.5041 	EXP 	text_trial_type: text = 'Hely'
+156.5208 	EXP 	text_trial_type: text = 'Hely'
+156.5374 	EXP 	text_trial_type: text = 'Hely'
+156.5541 	EXP 	text_trial_type: text = 'Hely'
+156.5708 	EXP 	text_trial_type: text = 'Hely'
+156.5874 	EXP 	text_trial_type: text = 'Hely'
+156.6041 	EXP 	text_trial_type: text = 'Hely'
+156.6208 	EXP 	text_trial_type: text = 'Hely'
+156.6374 	EXP 	text_trial_type: text = 'Hely'
+156.6541 	EXP 	text_trial_type: text = 'Hely'
+156.6708 	EXP 	text_trial_type: text = 'Hely'
+156.6874 	EXP 	text_trial_type: text = 'Hely'
+156.7041 	EXP 	text_trial_type: text = 'Hely'
+156.7208 	EXP 	text_trial_type: text = 'Hely'
+156.7374 	EXP 	text_trial_type: text = 'Hely'
+156.7541 	EXP 	text_trial_type: text = 'Hely'
+156.7708 	EXP 	text_trial_type: text = 'Hely'
+156.7874 	EXP 	text_trial_type: text = 'Hely'
+156.8041 	EXP 	text_trial_type: text = 'Hely'
+156.8208 	EXP 	text_trial_type: text = 'Hely'
+156.8374 	EXP 	text_trial_type: text = 'Hely'
+156.8541 	EXP 	text_trial_type: text = 'Hely'
+156.8708 	EXP 	text_trial_type: text = 'Hely'
+156.8874 	EXP 	text_trial_type: text = 'Hely'
+156.9041 	EXP 	text_trial_type: text = 'Hely'
+156.9208 	EXP 	text_trial_type: text = 'Hely'
+156.9374 	EXP 	text_trial_type: text = 'Hely'
+156.9541 	EXP 	text_trial_type: text = 'Hely'
+156.9708 	EXP 	text_trial_type: text = 'Hely'
+156.9875 	EXP 	text_trial_type: text = 'Hely'
+157.0041 	EXP 	text_trial_type: text = 'Hely'
+157.0208 	EXP 	text_trial_type: text = 'Hely'
+157.0374 	EXP 	text_trial_type: text = 'Hely'
+157.0541 	EXP 	text_trial_type: text = 'Hely'
+157.0708 	EXP 	text_trial_type: text = 'Hely'
+157.0874 	EXP 	text_trial_type: text = 'Hely'
+157.1041 	EXP 	text_trial_type: text = 'Hely'
+157.1208 	EXP 	text_trial_type: text = 'Hely'
+157.1374 	EXP 	text_trial_type: text = 'Hely'
+157.1541 	EXP 	text_trial_type: text = 'Hely'
+157.1708 	EXP 	text_trial_type: text = 'Hely'
+157.1874 	EXP 	text_trial_type: text = 'Hely'
+157.2041 	EXP 	text_trial_type: text = 'Hely'
+157.2208 	EXP 	text_trial_type: text = 'Hely'
+157.2374 	EXP 	text_trial_type: text = 'Hely'
+157.2541 	EXP 	text_trial_type: text = 'Hely'
+157.2708 	EXP 	text_trial_type: text = 'Hely'
+157.2874 	EXP 	text_trial_type: text = 'Hely'
+157.3041 	EXP 	text_trial_type: text = 'Hely'
+157.3208 	EXP 	text_trial_type: text = 'Hely'
+157.3374 	EXP 	text_trial_type: text = 'Hely'
+157.3541 	EXP 	text_trial_type: text = 'Hely'
+157.3708 	EXP 	text_trial_type: text = 'Hely'
+157.3874 	EXP 	text_trial_type: text = 'Hely'
+157.4041 	EXP 	text_trial_type: text = 'Hely'
+157.4207 	EXP 	text_trial_type: text = 'Hely'
+157.4374 	EXP 	text_trial_type: text = 'Hely'
+157.4541 	EXP 	text_trial_type: text = 'Hely'
+157.4708 	EXP 	text_trial_type: text = 'Hely'
+157.4874 	EXP 	text_trial_type: text = 'Hely'
+157.5041 	EXP 	text_trial_type: text = 'Hely'
+157.5208 	EXP 	text_trial_type: text = 'Hely'
+157.5374 	EXP 	text_trial_type: text = 'Hely'
+157.5541 	EXP 	text_trial_type: text = 'Hely'
+157.5708 	EXP 	text_trial_type: text = 'Hely'
+157.5874 	EXP 	text_trial_type: text = 'Hely'
+157.6041 	EXP 	text_trial_type: text = 'Hely'
+157.6208 	EXP 	text_trial_type: text = 'Hely'
+160.4056 	DATA 	Keypress: j
+160.5040 	EXP 	start_task_text: text = 'Az Ön válasza: Hasonló'
+164.6872 	EXP 	start_task_text: text = ''
+164.6872 	EXP 	start_task_text: text = ''
+164.6872 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+164.6872 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/148b.jpg'
+164.6872 	EXP 	start_task_text: text = 'A helyes válasz: Új'
+167.7560 	DATA 	Keypress: j
+167.8871 	EXP 	start_task_text: text = 'Az Ön válasza: Hasonló'
+172.2370 	EXP 	start_task_text: text = ''
+172.2370 	EXP 	start_task_text: text = ''
+172.2370 	EXP 	main_image: pos = array([-300.,    0.])
+172.2370 	EXP 	main_image: image = 'Stimuli/Fractals/Practice/166a.jpg'
+172.2370 	EXP 	start_task_text: text = 'A helyes válasz: Régi'
+174.8233 	DATA 	Keypress: k
+174.9203 	EXP 	start_task_text: text = 'Az Ön válasza: Új'
+179.2869 	EXP 	start_task_text: text = ''
+179.2869 	EXP 	start_task_text: text = ''
+185.0485 	DATA 	Keypress: right
+185.0704 	EXP 	instr_text: text = 'Régi - F\nHasonló - J\nÚj - K\n\nA kísérletvezető indítja a feladatot.'
+188.3889 	DATA 	Keypress: space
+188.5203 	EXP 	start_task_text: text = 'Figyeljen, kezdődik a feladat...'
+190.5369 	EXP 	text_trial_type: text = 'Kép'
+190.5536 	EXP 	text_trial_type: text = 'Kép'
+190.5702 	EXP 	text_trial_type: text = 'Kép'
+190.5869 	EXP 	text_trial_type: text = 'Kép'
+190.6036 	EXP 	text_trial_type: text = 'Kép'
+190.6202 	EXP 	text_trial_type: text = 'Kép'
+190.6369 	EXP 	text_trial_type: text = 'Kép'
+190.6536 	EXP 	text_trial_type: text = 'Kép'
+190.6702 	EXP 	text_trial_type: text = 'Kép'
+190.6869 	EXP 	text_trial_type: text = 'Kép'
+190.7036 	EXP 	text_trial_type: text = 'Kép'
+190.7202 	EXP 	text_trial_type: text = 'Kép'
+190.7369 	EXP 	text_trial_type: text = 'Kép'
+190.7536 	EXP 	text_trial_type: text = 'Kép'
+190.7702 	EXP 	text_trial_type: text = 'Kép'
+190.7869 	EXP 	text_trial_type: text = 'Kép'
+190.8036 	EXP 	text_trial_type: text = 'Kép'
+190.8202 	EXP 	text_trial_type: text = 'Kép'
+190.8369 	EXP 	text_trial_type: text = 'Kép'
+190.8536 	EXP 	text_trial_type: text = 'Kép'
+190.8702 	EXP 	text_trial_type: text = 'Kép'
+190.8869 	EXP 	text_trial_type: text = 'Kép'
+190.9036 	EXP 	text_trial_type: text = 'Kép'
+190.9202 	EXP 	text_trial_type: text = 'Kép'
+190.9369 	EXP 	text_trial_type: text = 'Kép'
+190.9536 	EXP 	text_trial_type: text = 'Kép'
+190.9702 	EXP 	text_trial_type: text = 'Kép'
+190.9869 	EXP 	text_trial_type: text = 'Kép'
+191.0036 	EXP 	text_trial_type: text = 'Kép'
+191.0203 	EXP 	text_trial_type: text = 'Kép'
+191.0369 	EXP 	text_trial_type: text = 'Kép'
+191.0536 	EXP 	text_trial_type: text = 'Kép'
+191.0702 	EXP 	text_trial_type: text = 'Kép'
+191.0869 	EXP 	text_trial_type: text = 'Kép'
+191.1036 	EXP 	text_trial_type: text = 'Kép'
+191.1202 	EXP 	text_trial_type: text = 'Kép'
+191.1369 	EXP 	text_trial_type: text = 'Kép'
+191.1536 	EXP 	text_trial_type: text = 'Kép'
+191.1702 	EXP 	text_trial_type: text = 'Kép'
+191.1869 	EXP 	text_trial_type: text = 'Kép'
+191.2036 	EXP 	text_trial_type: text = 'Kép'
+191.2202 	EXP 	text_trial_type: text = 'Kép'
+191.2369 	EXP 	text_trial_type: text = 'Kép'
+191.2536 	EXP 	text_trial_type: text = 'Kép'
+191.2702 	EXP 	text_trial_type: text = 'Kép'
+191.2869 	EXP 	text_trial_type: text = 'Kép'
+191.3036 	EXP 	text_trial_type: text = 'Kép'
+191.3202 	EXP 	text_trial_type: text = 'Kép'
+191.3369 	EXP 	text_trial_type: text = 'Kép'
+191.3536 	EXP 	text_trial_type: text = 'Kép'
+191.3703 	EXP 	text_trial_type: text = 'Kép'
+191.3869 	EXP 	text_trial_type: text = 'Kép'
+191.4036 	EXP 	text_trial_type: text = 'Kép'
+191.4202 	EXP 	text_trial_type: text = 'Kép'
+191.4369 	EXP 	text_trial_type: text = 'Kép'
+191.4536 	EXP 	text_trial_type: text = 'Kép'
+191.4702 	EXP 	text_trial_type: text = 'Kép'
+191.4869 	EXP 	text_trial_type: text = 'Kép'
+191.5036 	EXP 	text_trial_type: text = 'Kép'
+191.5202 	EXP 	text_trial_type: text = 'Kép'
+191.5369 	EXP 	text_trial_type: text = 'Kép'
+191.5536 	EXP 	text_trial_type: text = 'Kép'
+191.5702 	EXP 	text_trial_type: text = 'Kép'
+191.5869 	EXP 	text_trial_type: text = 'Kép'
+191.6036 	EXP 	text_trial_type: text = 'Kép'
+191.6202 	EXP 	text_trial_type: text = 'Kép'
+191.6369 	EXP 	text_trial_type: text = 'Kép'
+191.6536 	EXP 	text_trial_type: text = 'Kép'
+191.6702 	EXP 	text_trial_type: text = 'Kép'
+191.6869 	EXP 	text_trial_type: text = 'Kép'
+191.7036 	EXP 	text_trial_type: text = 'Kép'
+191.7202 	EXP 	text_trial_type: text = 'Kép'
+191.7369 	EXP 	text_trial_type: text = 'Kép'
+191.7535 	EXP 	text_trial_type: text = 'Kép'
+191.7702 	EXP 	text_trial_type: text = 'Kép'
+191.7869 	EXP 	text_trial_type: text = 'Kép'
+191.8035 	EXP 	text_trial_type: text = 'Kép'
+191.8202 	EXP 	text_trial_type: text = 'Kép'
+191.8369 	EXP 	text_trial_type: text = 'Kép'
+191.8535 	EXP 	text_trial_type: text = 'Kép'
+191.8702 	EXP 	text_trial_type: text = 'Kép'
+191.8869 	EXP 	text_trial_type: text = 'Kép'
+191.9035 	EXP 	text_trial_type: text = 'Kép'
+191.9202 	EXP 	text_trial_type: text = 'Kép'
+191.9369 	EXP 	text_trial_type: text = 'Kép'
+191.9535 	EXP 	text_trial_type: text = 'Kép'
+191.9702 	EXP 	text_trial_type: text = 'Kép'
+191.9869 	EXP 	text_trial_type: text = 'Kép'
+192.0035 	EXP 	text_trial_type: text = 'Kép'
+192.0202 	EXP 	text_trial_type: text = 'Kép'
+192.0369 	EXP 	text_trial_type: text = 'Kép'
+192.0535 	EXP 	text_trial_type: text = 'Kép'
+192.0702 	EXP 	text_trial_type: text = 'Kép'
+192.0869 	EXP 	text_trial_type: text = 'Kép'
+192.1035 	EXP 	text_trial_type: text = 'Kép'
+192.1202 	EXP 	text_trial_type: text = 'Kép'
+192.1369 	EXP 	text_trial_type: text = 'Kép'
+192.1535 	EXP 	text_trial_type: text = 'Kép'
+192.1702 	EXP 	text_trial_type: text = 'Kép'
+192.1869 	EXP 	text_trial_type: text = 'Kép'
+192.2035 	EXP 	text_trial_type: text = 'Kép'
+192.2202 	EXP 	text_trial_type: text = 'Kép'
+192.2369 	EXP 	text_trial_type: text = 'Kép'
+192.2535 	EXP 	text_trial_type: text = 'Kép'
+192.2702 	EXP 	text_trial_type: text = 'Kép'
+192.2869 	EXP 	text_trial_type: text = 'Kép'
+192.3035 	EXP 	text_trial_type: text = 'Kép'
+192.3202 	EXP 	text_trial_type: text = 'Kép'
+192.3369 	EXP 	text_trial_type: text = 'Kép'
+192.3535 	EXP 	text_trial_type: text = 'Kép'
+192.3702 	EXP 	text_trial_type: text = 'Kép'
+192.3869 	EXP 	text_trial_type: text = 'Kép'
+192.4035 	EXP 	text_trial_type: text = 'Kép'
+192.4202 	EXP 	text_trial_type: text = 'Kép'
+192.4369 	EXP 	text_trial_type: text = 'Kép'
+192.4535 	EXP 	text_trial_type: text = 'Kép'
+192.4702 	EXP 	text_trial_type: text = 'Kép'
+192.4869 	EXP 	text_trial_type: text = 'Kép'
+192.5035 	EXP 	text_trial_type: text = 'Kép'
+192.5202 	EXP 	text_trial_type: text = 'Kép'
+192.5369 	EXP 	text_trial_type: text = 'Kép'
+192.5702 	EXP 	main_image: pos = array([-299.9187724 ,   -6.98068691])
+192.5702 	EXP 	main_image: image = 'Stimuli/Fractals/86c.jpg'
+194.5224 	DATA 	Keypress: k
+197.5865 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+197.5865 	EXP 	main_image: image = 'Stimuli/Fractals/36a.jpg'
+200.8882 	DATA 	Keypress: k
+203.6195 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+203.6195 	EXP 	main_image: image = 'Stimuli/Fractals/69a.jpg'
+208.2218 	DATA 	Keypress: j
+210.6693 	EXP 	main_image: pos = array([-299.2692151 ,  -20.92694212])
+210.6693 	EXP 	main_image: image = 'Stimuli/Fractals/131a.jpg'
+214.1223 	DATA 	Keypress: f
+216.6859 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+216.6859 	EXP 	main_image: image = 'Stimuli/Fractals/135c.jpg'
+219.3046 	DATA 	Keypress: j
+221.7357 	EXP 	main_image: pos = array([-297.9715073 ,  -34.82787424])
+221.7357 	EXP 	main_image: image = 'Stimuli/Fractals/63a.jpg'
+226.1720 	DATA 	Keypress: k
+228.7856 	EXP 	main_image: pos = array([  0., 300.])
+228.7856 	EXP 	main_image: image = 'Stimuli/Fractals/98a.jpg'
+231.4041 	DATA 	Keypress: j
+233.8187 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+233.8187 	EXP 	main_image: image = 'Stimuli/Fractals/125a.jpg'
+236.8042 	DATA 	Keypress: k
+239.8353 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+239.8353 	EXP 	main_image: image = 'Stimuli/Fractals/10c.jpg'
+244.0718 	DATA 	Keypress: k
+245.8852 	EXP 	main_image: pos = array([-299.9187724 ,   -6.98068691])
+245.8852 	EXP 	main_image: image = 'Stimuli/Fractals/119c.jpg'
+253.4036 	DATA 	Keypress: f
+255.9182 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+255.9182 	EXP 	main_image: image = 'Stimuli/Fractals/103a.jpg'
+259.3541 	DATA 	Keypress: j
+261.9514 	EXP 	main_image: pos = array([-296.0284596 ,  -48.65337693])
+261.9514 	EXP 	main_image: image = 'Stimuli/Fractals/48b.jpg'
+264.9201 	DATA 	Keypress: k
+268.0012 	EXP 	main_image: pos = array([  0., 300.])
+268.0012 	EXP 	main_image: image = 'Stimuli/Fractals/108a.jpg'
+271.8535 	DATA 	Keypress: k
+275.0510 	EXP 	main_image: pos = array([-293.4442802 ,  -62.37350725])
+275.0510 	EXP 	main_image: image = 'Stimuli/Fractals/134c.jpg'
+278.4036 	DATA 	Keypress: j
+281.0842 	EXP 	main_image: pos = array([-300.,    0.])
+281.0842 	EXP 	main_image: image = 'Stimuli/Fractals/111a.jpg'
+283.6367 	DATA 	Keypress: j
+286.1340 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+286.1340 	EXP 	main_image: image = 'Stimuli/Fractals/81c.jpg'
+288.5694 	DATA 	Keypress: f
+291.1839 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+291.1839 	EXP 	main_image: image = 'Stimuli/Fractals/21b.jpg'
+292.7693 	DATA 	Keypress: k
+295.7005 	EXP 	main_image: pos = array([-290.2245658 ,  -75.95855043])
+295.7005 	EXP 	main_image: image = 'Stimuli/Fractals/18a.jpg'
+299.7369 	DATA 	Keypress: k
+302.7336 	EXP 	text_trial_type: text = 'Hely'
+302.7503 	EXP 	text_trial_type: text = 'Hely'
+302.7669 	EXP 	text_trial_type: text = 'Hely'
+302.7836 	EXP 	text_trial_type: text = 'Hely'
+302.8003 	EXP 	text_trial_type: text = 'Hely'
+302.8169 	EXP 	text_trial_type: text = 'Hely'
+302.8336 	EXP 	text_trial_type: text = 'Hely'
+302.8503 	EXP 	text_trial_type: text = 'Hely'
+302.8669 	EXP 	text_trial_type: text = 'Hely'
+302.8836 	EXP 	text_trial_type: text = 'Hely'
+302.9003 	EXP 	text_trial_type: text = 'Hely'
+302.9169 	EXP 	text_trial_type: text = 'Hely'
+302.9336 	EXP 	text_trial_type: text = 'Hely'
+302.9503 	EXP 	text_trial_type: text = 'Hely'
+302.9669 	EXP 	text_trial_type: text = 'Hely'
+302.9836 	EXP 	text_trial_type: text = 'Hely'
+303.0003 	EXP 	text_trial_type: text = 'Hely'
+303.0169 	EXP 	text_trial_type: text = 'Hely'
+303.0336 	EXP 	text_trial_type: text = 'Hely'
+303.0503 	EXP 	text_trial_type: text = 'Hely'
+303.0669 	EXP 	text_trial_type: text = 'Hely'
+303.0836 	EXP 	text_trial_type: text = 'Hely'
+303.1003 	EXP 	text_trial_type: text = 'Hely'
+303.1169 	EXP 	text_trial_type: text = 'Hely'
+303.1336 	EXP 	text_trial_type: text = 'Hely'
+303.1503 	EXP 	text_trial_type: text = 'Hely'
+303.1669 	EXP 	text_trial_type: text = 'Hely'
+303.1836 	EXP 	text_trial_type: text = 'Hely'
+303.2003 	EXP 	text_trial_type: text = 'Hely'
+303.2169 	EXP 	text_trial_type: text = 'Hely'
+303.2336 	EXP 	text_trial_type: text = 'Hely'
+303.2503 	EXP 	text_trial_type: text = 'Hely'
+303.2669 	EXP 	text_trial_type: text = 'Hely'
+303.2836 	EXP 	text_trial_type: text = 'Hely'
+303.3003 	EXP 	text_trial_type: text = 'Hely'
+303.3169 	EXP 	text_trial_type: text = 'Hely'
+303.3336 	EXP 	text_trial_type: text = 'Hely'
+303.3503 	EXP 	text_trial_type: text = 'Hely'
+303.3669 	EXP 	text_trial_type: text = 'Hely'
+303.3836 	EXP 	text_trial_type: text = 'Hely'
+303.4003 	EXP 	text_trial_type: text = 'Hely'
+303.4169 	EXP 	text_trial_type: text = 'Hely'
+303.4336 	EXP 	text_trial_type: text = 'Hely'
+303.4503 	EXP 	text_trial_type: text = 'Hely'
+303.4669 	EXP 	text_trial_type: text = 'Hely'
+303.4836 	EXP 	text_trial_type: text = 'Hely'
+303.5003 	EXP 	text_trial_type: text = 'Hely'
+303.5169 	EXP 	text_trial_type: text = 'Hely'
+303.5336 	EXP 	text_trial_type: text = 'Hely'
+303.5503 	EXP 	text_trial_type: text = 'Hely'
+303.5669 	EXP 	text_trial_type: text = 'Hely'
+303.5836 	EXP 	text_trial_type: text = 'Hely'
+303.6003 	EXP 	text_trial_type: text = 'Hely'
+303.6169 	EXP 	text_trial_type: text = 'Hely'
+303.6336 	EXP 	text_trial_type: text = 'Hely'
+303.6503 	EXP 	text_trial_type: text = 'Hely'
+303.6669 	EXP 	text_trial_type: text = 'Hely'
+303.6836 	EXP 	text_trial_type: text = 'Hely'
+303.7002 	EXP 	text_trial_type: text = 'Hely'
+303.7169 	EXP 	text_trial_type: text = 'Hely'
+303.7336 	EXP 	text_trial_type: text = 'Hely'
+303.7502 	EXP 	text_trial_type: text = 'Hely'
+303.7669 	EXP 	text_trial_type: text = 'Hely'
+303.7836 	EXP 	text_trial_type: text = 'Hely'
+303.8002 	EXP 	text_trial_type: text = 'Hely'
+303.8169 	EXP 	text_trial_type: text = 'Hely'
+303.8336 	EXP 	text_trial_type: text = 'Hely'
+303.8502 	EXP 	text_trial_type: text = 'Hely'
+303.8669 	EXP 	text_trial_type: text = 'Hely'
+303.8836 	EXP 	text_trial_type: text = 'Hely'
+303.9003 	EXP 	text_trial_type: text = 'Hely'
+303.9169 	EXP 	text_trial_type: text = 'Hely'
+303.9336 	EXP 	text_trial_type: text = 'Hely'
+303.9503 	EXP 	text_trial_type: text = 'Hely'
+303.9669 	EXP 	text_trial_type: text = 'Hely'
+303.9836 	EXP 	text_trial_type: text = 'Hely'
+304.0003 	EXP 	text_trial_type: text = 'Hely'
+304.0169 	EXP 	text_trial_type: text = 'Hely'
+304.0336 	EXP 	text_trial_type: text = 'Hely'
+304.0502 	EXP 	text_trial_type: text = 'Hely'
+304.0669 	EXP 	text_trial_type: text = 'Hely'
+304.0836 	EXP 	text_trial_type: text = 'Hely'
+304.1002 	EXP 	text_trial_type: text = 'Hely'
+304.1169 	EXP 	text_trial_type: text = 'Hely'
+304.1336 	EXP 	text_trial_type: text = 'Hely'
+304.1502 	EXP 	text_trial_type: text = 'Hely'
+304.1669 	EXP 	text_trial_type: text = 'Hely'
+304.1836 	EXP 	text_trial_type: text = 'Hely'
+304.2002 	EXP 	text_trial_type: text = 'Hely'
+304.2169 	EXP 	text_trial_type: text = 'Hely'
+304.2336 	EXP 	text_trial_type: text = 'Hely'
+304.2502 	EXP 	text_trial_type: text = 'Hely'
+304.2669 	EXP 	text_trial_type: text = 'Hely'
+304.2836 	EXP 	text_trial_type: text = 'Hely'
+304.3003 	EXP 	text_trial_type: text = 'Hely'
+304.3169 	EXP 	text_trial_type: text = 'Hely'
+304.3336 	EXP 	text_trial_type: text = 'Hely'
+304.3503 	EXP 	text_trial_type: text = 'Hely'
+304.3669 	EXP 	text_trial_type: text = 'Hely'
+304.3836 	EXP 	text_trial_type: text = 'Hely'
+304.4003 	EXP 	text_trial_type: text = 'Hely'
+304.4169 	EXP 	text_trial_type: text = 'Hely'
+304.4336 	EXP 	text_trial_type: text = 'Hely'
+304.4502 	EXP 	text_trial_type: text = 'Hely'
+304.4669 	EXP 	text_trial_type: text = 'Hely'
+304.4836 	EXP 	text_trial_type: text = 'Hely'
+304.5002 	EXP 	text_trial_type: text = 'Hely'
+304.5169 	EXP 	text_trial_type: text = 'Hely'
+304.5336 	EXP 	text_trial_type: text = 'Hely'
+304.5502 	EXP 	text_trial_type: text = 'Hely'
+304.5669 	EXP 	text_trial_type: text = 'Hely'
+304.5836 	EXP 	text_trial_type: text = 'Hely'
+304.6002 	EXP 	text_trial_type: text = 'Hely'
+304.6169 	EXP 	text_trial_type: text = 'Hely'
+304.6336 	EXP 	text_trial_type: text = 'Hely'
+304.6503 	EXP 	text_trial_type: text = 'Hely'
+304.6669 	EXP 	text_trial_type: text = 'Hely'
+304.6836 	EXP 	text_trial_type: text = 'Hely'
+304.7002 	EXP 	text_trial_type: text = 'Hely'
+304.7169 	EXP 	text_trial_type: text = 'Hely'
+304.7335 	EXP 	text_trial_type: text = 'Hely'
+304.7669 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+304.7669 	EXP 	main_image: image = 'Stimuli/Fractals/127c.jpg'
+308.3521 	DATA 	Keypress: k
+310.8167 	EXP 	main_image: pos = array([  0., 300.])
+310.8167 	EXP 	main_image: image = 'Stimuli/Fractals/142b.jpg'
+313.1852 	DATA 	Keypress: j
+315.8333 	EXP 	main_image: pos = array([300.,   0.])
+315.8333 	EXP 	main_image: image = 'Stimuli/Fractals/114c.jpg'
+320.1687 	DATA 	Keypress: f
+322.8664 	EXP 	main_image: pos = array([-300.,    0.])
+322.8664 	EXP 	main_image: image = 'Stimuli/Fractals/71a.jpg'
+325.8185 	DATA 	Keypress: j
+327.9163 	EXP 	main_image: pos = array([  0., 300.])
+327.9163 	EXP 	main_image: image = 'Stimuli/Fractals/57b.jpg'
+330.2686 	DATA 	Keypress: f
+332.9495 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+332.9495 	EXP 	main_image: image = 'Stimuli/Fractals/73a.jpg'
+335.6020 	DATA 	Keypress: k
+337.9660 	EXP 	main_image: pos = array([  0., 300.])
+337.9660 	EXP 	main_image: image = 'Stimuli/Fractals/1b.jpg'
+344.9840 	DATA 	Keypress: j
+347.0158 	EXP 	main_image: pos = array([   0., -300.])
+347.0158 	EXP 	main_image: image = 'Stimuli/Fractals/12c.jpg'
+349.7674 	DATA 	Keypress: f
+351.5490 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+351.5490 	EXP 	main_image: image = 'Stimuli/Fractals/104c.jpg'
+354.7021 	DATA 	Keypress: j
+356.5822 	EXP 	main_image: pos = array([-300.,    0.])
+356.5822 	EXP 	main_image: image = 'Stimuli/Fractals/75a.jpg'
+360.2005 	DATA 	Keypress: j
+362.6154 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+362.6154 	EXP 	main_image: image = 'Stimuli/Fractals/133a.jpg'
+372.0838 	DATA 	Keypress: k
+374.6651 	EXP 	main_image: pos = array([300.,   0.])
+374.6651 	EXP 	main_image: image = 'Stimuli/Fractals/141c.jpg'
+378.9674 	DATA 	Keypress: k
+381.6982 	EXP 	main_image: pos = array([300.,   0.])
+381.6982 	EXP 	main_image: image = 'Stimuli/Fractals/26a.jpg'
+383.8002 	DATA 	Keypress: j
+386.2148 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+386.2148 	EXP 	main_image: image = 'Stimuli/Fractals/93c.jpg'
+389.8500 	DATA 	Keypress: k
+392.2480 	EXP 	main_image: pos = array([300.,   0.])
+392.2480 	EXP 	main_image: image = 'Stimuli/Fractals/97c.jpg'
+394.6833 	DATA 	Keypress: j
+397.2812 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+397.2812 	EXP 	main_image: image = 'Stimuli/Fractals/140c.jpg'
+399.6499 	DATA 	Keypress: f
+402.2977 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+402.2977 	EXP 	main_image: image = 'Stimuli/Fractals/115c.jpg'
+404.2994 	DATA 	Keypress: f
+407.3476 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+407.3476 	EXP 	main_image: image = 'Stimuli/Fractals/137c.jpg'
+410.6173 	DATA 	Keypress: f
+413.3641 	EXP 	text_trial_type: text = 'Kép'
+413.3807 	EXP 	text_trial_type: text = 'Kép'
+413.3974 	EXP 	text_trial_type: text = 'Kép'
+413.4141 	EXP 	text_trial_type: text = 'Kép'
+413.4307 	EXP 	text_trial_type: text = 'Kép'
+413.4474 	EXP 	text_trial_type: text = 'Kép'
+413.4641 	EXP 	text_trial_type: text = 'Kép'
+413.4807 	EXP 	text_trial_type: text = 'Kép'
+413.4974 	EXP 	text_trial_type: text = 'Kép'
+413.5141 	EXP 	text_trial_type: text = 'Kép'
+413.5307 	EXP 	text_trial_type: text = 'Kép'
+413.5474 	EXP 	text_trial_type: text = 'Kép'
+413.5641 	EXP 	text_trial_type: text = 'Kép'
+413.5807 	EXP 	text_trial_type: text = 'Kép'
+413.5974 	EXP 	text_trial_type: text = 'Kép'
+413.6141 	EXP 	text_trial_type: text = 'Kép'
+413.6307 	EXP 	text_trial_type: text = 'Kép'
+413.6474 	EXP 	text_trial_type: text = 'Kép'
+413.6641 	EXP 	text_trial_type: text = 'Kép'
+413.6807 	EXP 	text_trial_type: text = 'Kép'
+413.6974 	EXP 	text_trial_type: text = 'Kép'
+413.7141 	EXP 	text_trial_type: text = 'Kép'
+413.7307 	EXP 	text_trial_type: text = 'Kép'
+413.7474 	EXP 	text_trial_type: text = 'Kép'
+413.7641 	EXP 	text_trial_type: text = 'Kép'
+413.7807 	EXP 	text_trial_type: text = 'Kép'
+413.7974 	EXP 	text_trial_type: text = 'Kép'
+413.8141 	EXP 	text_trial_type: text = 'Kép'
+413.8307 	EXP 	text_trial_type: text = 'Kép'
+413.8474 	EXP 	text_trial_type: text = 'Kép'
+413.8641 	EXP 	text_trial_type: text = 'Kép'
+413.8807 	EXP 	text_trial_type: text = 'Kép'
+413.8974 	EXP 	text_trial_type: text = 'Kép'
+413.9140 	EXP 	text_trial_type: text = 'Kép'
+413.9307 	EXP 	text_trial_type: text = 'Kép'
+413.9474 	EXP 	text_trial_type: text = 'Kép'
+413.9640 	EXP 	text_trial_type: text = 'Kép'
+413.9807 	EXP 	text_trial_type: text = 'Kép'
+413.9974 	EXP 	text_trial_type: text = 'Kép'
+414.0140 	EXP 	text_trial_type: text = 'Kép'
+414.0307 	EXP 	text_trial_type: text = 'Kép'
+414.0474 	EXP 	text_trial_type: text = 'Kép'
+414.0640 	EXP 	text_trial_type: text = 'Kép'
+414.0807 	EXP 	text_trial_type: text = 'Kép'
+414.0974 	EXP 	text_trial_type: text = 'Kép'
+414.1140 	EXP 	text_trial_type: text = 'Kép'
+414.1307 	EXP 	text_trial_type: text = 'Kép'
+414.1474 	EXP 	text_trial_type: text = 'Kép'
+414.1640 	EXP 	text_trial_type: text = 'Kép'
+414.1807 	EXP 	text_trial_type: text = 'Kép'
+414.1974 	EXP 	text_trial_type: text = 'Kép'
+414.2140 	EXP 	text_trial_type: text = 'Kép'
+414.2307 	EXP 	text_trial_type: text = 'Kép'
+414.2474 	EXP 	text_trial_type: text = 'Kép'
+414.2640 	EXP 	text_trial_type: text = 'Kép'
+414.2807 	EXP 	text_trial_type: text = 'Kép'
+414.2974 	EXP 	text_trial_type: text = 'Kép'
+414.3140 	EXP 	text_trial_type: text = 'Kép'
+414.3307 	EXP 	text_trial_type: text = 'Kép'
+414.3474 	EXP 	text_trial_type: text = 'Kép'
+414.3640 	EXP 	text_trial_type: text = 'Kép'
+414.3807 	EXP 	text_trial_type: text = 'Kép'
+414.3974 	EXP 	text_trial_type: text = 'Kép'
+414.4140 	EXP 	text_trial_type: text = 'Kép'
+414.4307 	EXP 	text_trial_type: text = 'Kép'
+414.4474 	EXP 	text_trial_type: text = 'Kép'
+414.4640 	EXP 	text_trial_type: text = 'Kép'
+414.4807 	EXP 	text_trial_type: text = 'Kép'
+414.4974 	EXP 	text_trial_type: text = 'Kép'
+414.5140 	EXP 	text_trial_type: text = 'Kép'
+414.5307 	EXP 	text_trial_type: text = 'Kép'
+414.5474 	EXP 	text_trial_type: text = 'Kép'
+414.5640 	EXP 	text_trial_type: text = 'Kép'
+414.5807 	EXP 	text_trial_type: text = 'Kép'
+414.5974 	EXP 	text_trial_type: text = 'Kép'
+414.6140 	EXP 	text_trial_type: text = 'Kép'
+414.6307 	EXP 	text_trial_type: text = 'Kép'
+414.6474 	EXP 	text_trial_type: text = 'Kép'
+414.6640 	EXP 	text_trial_type: text = 'Kép'
+414.6807 	EXP 	text_trial_type: text = 'Kép'
+414.6974 	EXP 	text_trial_type: text = 'Kép'
+414.7140 	EXP 	text_trial_type: text = 'Kép'
+414.7307 	EXP 	text_trial_type: text = 'Kép'
+414.7474 	EXP 	text_trial_type: text = 'Kép'
+414.7640 	EXP 	text_trial_type: text = 'Kép'
+414.7807 	EXP 	text_trial_type: text = 'Kép'
+414.7974 	EXP 	text_trial_type: text = 'Kép'
+414.8140 	EXP 	text_trial_type: text = 'Kép'
+414.8307 	EXP 	text_trial_type: text = 'Kép'
+414.8474 	EXP 	text_trial_type: text = 'Kép'
+414.8640 	EXP 	text_trial_type: text = 'Kép'
+414.8807 	EXP 	text_trial_type: text = 'Kép'
+414.8974 	EXP 	text_trial_type: text = 'Kép'
+414.9140 	EXP 	text_trial_type: text = 'Kép'
+414.9307 	EXP 	text_trial_type: text = 'Kép'
+414.9474 	EXP 	text_trial_type: text = 'Kép'
+414.9640 	EXP 	text_trial_type: text = 'Kép'
+414.9807 	EXP 	text_trial_type: text = 'Kép'
+414.9974 	EXP 	text_trial_type: text = 'Kép'
+415.0140 	EXP 	text_trial_type: text = 'Kép'
+415.0307 	EXP 	text_trial_type: text = 'Kép'
+415.0474 	EXP 	text_trial_type: text = 'Kép'
+415.0640 	EXP 	text_trial_type: text = 'Kép'
+415.0807 	EXP 	text_trial_type: text = 'Kép'
+415.0974 	EXP 	text_trial_type: text = 'Kép'
+415.1140 	EXP 	text_trial_type: text = 'Kép'
+415.1307 	EXP 	text_trial_type: text = 'Kép'
+415.1474 	EXP 	text_trial_type: text = 'Kép'
+415.1640 	EXP 	text_trial_type: text = 'Kép'
+415.1807 	EXP 	text_trial_type: text = 'Kép'
+415.1974 	EXP 	text_trial_type: text = 'Kép'
+415.2140 	EXP 	text_trial_type: text = 'Kép'
+415.2307 	EXP 	text_trial_type: text = 'Kép'
+415.2473 	EXP 	text_trial_type: text = 'Kép'
+415.2640 	EXP 	text_trial_type: text = 'Kép'
+415.2807 	EXP 	text_trial_type: text = 'Kép'
+415.2974 	EXP 	text_trial_type: text = 'Kép'
+415.3140 	EXP 	text_trial_type: text = 'Kép'
+415.3307 	EXP 	text_trial_type: text = 'Kép'
+415.3474 	EXP 	text_trial_type: text = 'Kép'
+415.3640 	EXP 	text_trial_type: text = 'Kép'
+415.4140 	EXP 	main_image: pos = array([190.1492902, 232.0414778])
+415.4140 	EXP 	main_image: image = 'Stimuli/Fractals/96c.jpg'
+417.7493 	DATA 	Keypress: f
+420.4639 	EXP 	main_image: pos = array([-286.3762897 ,  -89.37908431])
+420.4639 	EXP 	main_image: image = 'Stimuli/Fractals/70b.jpg'
+427.7168 	DATA 	Keypress: f
+430.4970 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+430.4970 	EXP 	main_image: image = 'Stimuli/Fractals/58c.jpg'
+433.8164 	DATA 	Keypress: f
+436.5301 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+436.5301 	EXP 	main_image: image = 'Stimuli/Fractals/105a.jpg'
+439.2491 	DATA 	Keypress: f
+441.5800 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+441.5800 	EXP 	main_image: image = 'Stimuli/Fractals/68c.jpg'
+446.1486 	DATA 	Keypress: f
+448.6132 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+448.6132 	EXP 	main_image: image = 'Stimuli/Fractals/17b.jpg'
+450.7484 	DATA 	Keypress: j
+453.6297 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+453.6297 	EXP 	main_image: image = 'Stimuli/Fractals/5c.jpg'
+460.1652 	DATA 	Keypress: j
+462.6628 	EXP 	main_image: pos = array([300.,   0.])
+462.6628 	EXP 	main_image: image = 'Stimuli/Fractals/79b.jpg'
+464.8988 	DATA 	Keypress: k
+467.6960 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+467.6960 	EXP 	main_image: image = 'Stimuli/Fractals/28b.jpg'
+471.9149 	DATA 	Keypress: f
+474.7125 	EXP 	main_image: pos = array([  0., 300.])
+474.7125 	EXP 	main_image: image = 'Stimuli/Fractals/117c.jpg'
+476.9323 	DATA 	Keypress: f
+479.7790 	EXP 	main_image: pos = array([-300.,    0.])
+479.7790 	EXP 	main_image: image = 'Stimuli/Fractals/22a.jpg'
+481.9480 	DATA 	Keypress: f
+484.8122 	EXP 	main_image: pos = array([300.,   0.])
+484.8122 	EXP 	main_image: image = 'Stimuli/Fractals/143b.jpg'
+488.7475 	DATA 	Keypress: f
+491.8620 	EXP 	main_image: pos = array([-281.9077862, -102.606043 ])
+491.8620 	EXP 	main_image: image = 'Stimuli/Fractals/16c.jpg'
+495.1480 	DATA 	Keypress: j
+497.8952 	EXP 	main_image: pos = array([238.5362389, 181.9353256])
+497.8952 	EXP 	main_image: image = 'Stimuli/Fractals/9b.jpg'
+501.9300 	DATA 	Keypress: j
+504.9450 	EXP 	main_image: pos = array([-300.,    0.])
+504.9450 	EXP 	main_image: image = 'Stimuli/Fractals/4c.jpg'
+507.3469 	DATA 	Keypress: k
+509.9782 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+509.9782 	EXP 	main_image: image = 'Stimuli/Fractals/38a.jpg'
+513.1466 	DATA 	Keypress: j
+516.0114 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+516.0114 	EXP 	main_image: image = 'Stimuli/Fractals/109a.jpg'
+519.9802 	DATA 	Keypress: k
+523.0612 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+523.0612 	EXP 	main_image: image = 'Stimuli/Fractals/54b.jpg'
+526.9297 	DATA 	Keypress: j
+531.1792 	DATA 	Keypress: right
+531.3277 	EXP 	text_trial_type: text = 'Hely'
+531.3443 	EXP 	text_trial_type: text = 'Hely'
+531.3610 	EXP 	text_trial_type: text = 'Hely'
+531.3777 	EXP 	text_trial_type: text = 'Hely'
+531.3943 	EXP 	text_trial_type: text = 'Hely'
+531.4110 	EXP 	text_trial_type: text = 'Hely'
+531.4277 	EXP 	text_trial_type: text = 'Hely'
+531.4443 	EXP 	text_trial_type: text = 'Hely'
+531.4610 	EXP 	text_trial_type: text = 'Hely'
+531.4777 	EXP 	text_trial_type: text = 'Hely'
+531.4943 	EXP 	text_trial_type: text = 'Hely'
+531.5110 	EXP 	text_trial_type: text = 'Hely'
+531.5277 	EXP 	text_trial_type: text = 'Hely'
+531.5443 	EXP 	text_trial_type: text = 'Hely'
+531.5610 	EXP 	text_trial_type: text = 'Hely'
+531.5777 	EXP 	text_trial_type: text = 'Hely'
+531.5943 	EXP 	text_trial_type: text = 'Hely'
+531.6110 	EXP 	text_trial_type: text = 'Hely'
+531.6277 	EXP 	text_trial_type: text = 'Hely'
+531.6443 	EXP 	text_trial_type: text = 'Hely'
+531.6610 	EXP 	text_trial_type: text = 'Hely'
+531.6777 	EXP 	text_trial_type: text = 'Hely'
+531.6943 	EXP 	text_trial_type: text = 'Hely'
+531.7110 	EXP 	text_trial_type: text = 'Hely'
+531.7277 	EXP 	text_trial_type: text = 'Hely'
+531.7443 	EXP 	text_trial_type: text = 'Hely'
+531.7610 	EXP 	text_trial_type: text = 'Hely'
+531.7777 	EXP 	text_trial_type: text = 'Hely'
+531.7943 	EXP 	text_trial_type: text = 'Hely'
+531.8110 	EXP 	text_trial_type: text = 'Hely'
+531.8277 	EXP 	text_trial_type: text = 'Hely'
+531.8443 	EXP 	text_trial_type: text = 'Hely'
+531.8610 	EXP 	text_trial_type: text = 'Hely'
+531.8777 	EXP 	text_trial_type: text = 'Hely'
+531.8943 	EXP 	text_trial_type: text = 'Hely'
+531.9110 	EXP 	text_trial_type: text = 'Hely'
+531.9277 	EXP 	text_trial_type: text = 'Hely'
+531.9443 	EXP 	text_trial_type: text = 'Hely'
+531.9610 	EXP 	text_trial_type: text = 'Hely'
+531.9777 	EXP 	text_trial_type: text = 'Hely'
+531.9943 	EXP 	text_trial_type: text = 'Hely'
+532.0110 	EXP 	text_trial_type: text = 'Hely'
+532.0276 	EXP 	text_trial_type: text = 'Hely'
+532.0443 	EXP 	text_trial_type: text = 'Hely'
+532.0610 	EXP 	text_trial_type: text = 'Hely'
+532.0777 	EXP 	text_trial_type: text = 'Hely'
+532.0943 	EXP 	text_trial_type: text = 'Hely'
+532.1110 	EXP 	text_trial_type: text = 'Hely'
+532.1276 	EXP 	text_trial_type: text = 'Hely'
+532.1443 	EXP 	text_trial_type: text = 'Hely'
+532.1610 	EXP 	text_trial_type: text = 'Hely'
+532.1776 	EXP 	text_trial_type: text = 'Hely'
+532.1944 	EXP 	text_trial_type: text = 'Hely'
+532.2110 	EXP 	text_trial_type: text = 'Hely'
+532.2276 	EXP 	text_trial_type: text = 'Hely'
+532.2443 	EXP 	text_trial_type: text = 'Hely'
+532.2610 	EXP 	text_trial_type: text = 'Hely'
+532.2776 	EXP 	text_trial_type: text = 'Hely'
+532.2943 	EXP 	text_trial_type: text = 'Hely'
+532.3110 	EXP 	text_trial_type: text = 'Hely'
+532.3276 	EXP 	text_trial_type: text = 'Hely'
+532.3443 	EXP 	text_trial_type: text = 'Hely'
+532.3610 	EXP 	text_trial_type: text = 'Hely'
+532.3776 	EXP 	text_trial_type: text = 'Hely'
+532.3943 	EXP 	text_trial_type: text = 'Hely'
+532.4110 	EXP 	text_trial_type: text = 'Hely'
+532.4276 	EXP 	text_trial_type: text = 'Hely'
+532.4443 	EXP 	text_trial_type: text = 'Hely'
+532.4610 	EXP 	text_trial_type: text = 'Hely'
+532.4776 	EXP 	text_trial_type: text = 'Hely'
+532.4943 	EXP 	text_trial_type: text = 'Hely'
+532.5110 	EXP 	text_trial_type: text = 'Hely'
+532.5276 	EXP 	text_trial_type: text = 'Hely'
+532.5443 	EXP 	text_trial_type: text = 'Hely'
+532.5610 	EXP 	text_trial_type: text = 'Hely'
+532.5776 	EXP 	text_trial_type: text = 'Hely'
+532.5943 	EXP 	text_trial_type: text = 'Hely'
+532.6110 	EXP 	text_trial_type: text = 'Hely'
+532.6276 	EXP 	text_trial_type: text = 'Hely'
+532.6443 	EXP 	text_trial_type: text = 'Hely'
+532.6610 	EXP 	text_trial_type: text = 'Hely'
+532.6776 	EXP 	text_trial_type: text = 'Hely'
+532.6943 	EXP 	text_trial_type: text = 'Hely'
+532.7110 	EXP 	text_trial_type: text = 'Hely'
+532.7276 	EXP 	text_trial_type: text = 'Hely'
+532.7443 	EXP 	text_trial_type: text = 'Hely'
+532.7610 	EXP 	text_trial_type: text = 'Hely'
+532.7776 	EXP 	text_trial_type: text = 'Hely'
+532.7943 	EXP 	text_trial_type: text = 'Hely'
+532.8110 	EXP 	text_trial_type: text = 'Hely'
+532.8276 	EXP 	text_trial_type: text = 'Hely'
+532.8443 	EXP 	text_trial_type: text = 'Hely'
+532.8610 	EXP 	text_trial_type: text = 'Hely'
+532.8776 	EXP 	text_trial_type: text = 'Hely'
+532.8943 	EXP 	text_trial_type: text = 'Hely'
+532.9110 	EXP 	text_trial_type: text = 'Hely'
+532.9276 	EXP 	text_trial_type: text = 'Hely'
+532.9443 	EXP 	text_trial_type: text = 'Hely'
+532.9610 	EXP 	text_trial_type: text = 'Hely'
+532.9776 	EXP 	text_trial_type: text = 'Hely'
+532.9943 	EXP 	text_trial_type: text = 'Hely'
+533.0110 	EXP 	text_trial_type: text = 'Hely'
+533.0276 	EXP 	text_trial_type: text = 'Hely'
+533.0443 	EXP 	text_trial_type: text = 'Hely'
+533.0610 	EXP 	text_trial_type: text = 'Hely'
+533.0776 	EXP 	text_trial_type: text = 'Hely'
+533.0943 	EXP 	text_trial_type: text = 'Hely'
+533.1110 	EXP 	text_trial_type: text = 'Hely'
+533.1276 	EXP 	text_trial_type: text = 'Hely'
+533.1443 	EXP 	text_trial_type: text = 'Hely'
+533.1610 	EXP 	text_trial_type: text = 'Hely'
+533.1776 	EXP 	text_trial_type: text = 'Hely'
+533.1943 	EXP 	text_trial_type: text = 'Hely'
+533.2109 	EXP 	text_trial_type: text = 'Hely'
+533.2276 	EXP 	text_trial_type: text = 'Hely'
+533.2443 	EXP 	text_trial_type: text = 'Hely'
+533.2610 	EXP 	text_trial_type: text = 'Hely'
+533.2776 	EXP 	text_trial_type: text = 'Hely'
+533.2943 	EXP 	text_trial_type: text = 'Hely'
+533.3110 	EXP 	text_trial_type: text = 'Hely'
+533.3276 	EXP 	text_trial_type: text = 'Hely'
+533.3443 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+533.3443 	EXP 	main_image: image = 'Stimuli/Fractals/76c.jpg'
+538.9974 	DATA 	Keypress: j
+541.3774 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+541.3774 	EXP 	main_image: image = 'Stimuli/Fractals/74b.jpg'
+546.9960 	DATA 	Keypress: f
+549.4105 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+549.4105 	EXP 	main_image: image = 'Stimuli/Fractals/40b.jpg'
+552.0464 	DATA 	Keypress: j
+554.4604 	EXP 	main_image: pos = array([   0., -300.])
+554.4604 	EXP 	main_image: image = 'Stimuli/Fractals/51b.jpg'
+561.0794 	DATA 	Keypress: k
+563.4935 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+563.4935 	EXP 	main_image: image = 'Stimuli/Fractals/126b.jpg'
+568.4963 	DATA 	Keypress: k
+570.5266 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+570.5266 	EXP 	main_image: image = 'Stimuli/Fractals/23b.jpg'
+573.6787 	DATA 	Keypress: j
+575.5599 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+575.5599 	EXP 	main_image: image = 'Stimuli/Fractals/25a.jpg'
+577.8784 	DATA 	Keypress: j
+580.5931 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+580.5931 	EXP 	main_image: image = 'Stimuli/Fractals/95b.jpg'
+583.8285 	DATA 	Keypress: k
+585.6429 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+585.6429 	EXP 	main_image: image = 'Stimuli/Fractals/106a.jpg'
+587.8118 	DATA 	Keypress: j
+590.6595 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+590.6595 	EXP 	main_image: image = 'Stimuli/Fractals/14b.jpg'
+594.0443 	DATA 	Keypress: j
+596.6926 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+596.6926 	EXP 	main_image: image = 'Stimuli/Fractals/110c.jpg'
+598.9621 	DATA 	Keypress: k
+601.7092 	EXP 	main_image: pos = array([  0., 300.])
+601.7092 	EXP 	main_image: image = 'Stimuli/Fractals/39b.jpg'
+607.2441 	DATA 	Keypress: j
+609.7423 	EXP 	main_image: pos = array([300.,   0.])
+609.7423 	EXP 	main_image: image = 'Stimuli/Fractals/128c.jpg'
+613.7447 	DATA 	Keypress: j
+615.7755 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+615.7755 	EXP 	main_image: image = 'Stimuli/Fractals/100a.jpg'
+620.0108 	DATA 	Keypress: j
+622.8086 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+622.8086 	EXP 	main_image: image = 'Stimuli/Fractals/32c.jpg'
+625.5109 	DATA 	Keypress: f
+627.3418 	EXP 	main_image: pos = array([   0., -300.])
+627.3418 	EXP 	main_image: image = 'Stimuli/Fractals/107a.jpg'
+629.9112 	DATA 	Keypress: f
+632.3752 	EXP 	main_image: pos = array([300.,   0.])
+632.3752 	EXP 	main_image: image = 'Stimuli/Fractals/11c.jpg'
+635.5774 	DATA 	Keypress: k
+638.3916 	EXP 	main_image: pos = array([300.,   0.])
+638.3916 	EXP 	main_image: image = 'Stimuli/Fractals/87a.jpg'
+640.4773 	DATA 	Keypress: k
+643.4248 	EXP 	text_trial_type: text = 'Kép'
+643.4414 	EXP 	text_trial_type: text = 'Kép'
+643.4581 	EXP 	text_trial_type: text = 'Kép'
+643.4748 	EXP 	text_trial_type: text = 'Kép'
+643.4914 	EXP 	text_trial_type: text = 'Kép'
+643.5081 	EXP 	text_trial_type: text = 'Kép'
+643.5248 	EXP 	text_trial_type: text = 'Kép'
+643.5414 	EXP 	text_trial_type: text = 'Kép'
+643.5581 	EXP 	text_trial_type: text = 'Kép'
+643.5747 	EXP 	text_trial_type: text = 'Kép'
+643.5914 	EXP 	text_trial_type: text = 'Kép'
+643.6081 	EXP 	text_trial_type: text = 'Kép'
+643.6247 	EXP 	text_trial_type: text = 'Kép'
+643.6414 	EXP 	text_trial_type: text = 'Kép'
+643.6581 	EXP 	text_trial_type: text = 'Kép'
+643.6748 	EXP 	text_trial_type: text = 'Kép'
+643.6914 	EXP 	text_trial_type: text = 'Kép'
+643.7081 	EXP 	text_trial_type: text = 'Kép'
+643.7248 	EXP 	text_trial_type: text = 'Kép'
+643.7414 	EXP 	text_trial_type: text = 'Kép'
+643.7581 	EXP 	text_trial_type: text = 'Kép'
+643.7748 	EXP 	text_trial_type: text = 'Kép'
+643.7914 	EXP 	text_trial_type: text = 'Kép'
+643.8081 	EXP 	text_trial_type: text = 'Kép'
+643.8248 	EXP 	text_trial_type: text = 'Kép'
+643.8414 	EXP 	text_trial_type: text = 'Kép'
+643.8581 	EXP 	text_trial_type: text = 'Kép'
+643.8748 	EXP 	text_trial_type: text = 'Kép'
+643.8914 	EXP 	text_trial_type: text = 'Kép'
+643.9081 	EXP 	text_trial_type: text = 'Kép'
+643.9247 	EXP 	text_trial_type: text = 'Kép'
+643.9414 	EXP 	text_trial_type: text = 'Kép'
+643.9581 	EXP 	text_trial_type: text = 'Kép'
+643.9747 	EXP 	text_trial_type: text = 'Kép'
+643.9914 	EXP 	text_trial_type: text = 'Kép'
+644.0081 	EXP 	text_trial_type: text = 'Kép'
+644.0247 	EXP 	text_trial_type: text = 'Kép'
+644.0414 	EXP 	text_trial_type: text = 'Kép'
+644.0581 	EXP 	text_trial_type: text = 'Kép'
+644.0747 	EXP 	text_trial_type: text = 'Kép'
+644.0914 	EXP 	text_trial_type: text = 'Kép'
+644.1081 	EXP 	text_trial_type: text = 'Kép'
+644.1247 	EXP 	text_trial_type: text = 'Kép'
+644.1414 	EXP 	text_trial_type: text = 'Kép'
+644.1581 	EXP 	text_trial_type: text = 'Kép'
+644.1747 	EXP 	text_trial_type: text = 'Kép'
+644.1914 	EXP 	text_trial_type: text = 'Kép'
+644.2080 	EXP 	text_trial_type: text = 'Kép'
+644.2247 	EXP 	text_trial_type: text = 'Kép'
+644.2414 	EXP 	text_trial_type: text = 'Kép'
+644.2580 	EXP 	text_trial_type: text = 'Kép'
+644.2748 	EXP 	text_trial_type: text = 'Kép'
+644.2914 	EXP 	text_trial_type: text = 'Kép'
+644.3080 	EXP 	text_trial_type: text = 'Kép'
+644.3247 	EXP 	text_trial_type: text = 'Kép'
+644.3414 	EXP 	text_trial_type: text = 'Kép'
+644.3580 	EXP 	text_trial_type: text = 'Kép'
+644.3747 	EXP 	text_trial_type: text = 'Kép'
+644.3914 	EXP 	text_trial_type: text = 'Kép'
+644.4080 	EXP 	text_trial_type: text = 'Kép'
+644.4247 	EXP 	text_trial_type: text = 'Kép'
+644.4414 	EXP 	text_trial_type: text = 'Kép'
+644.4580 	EXP 	text_trial_type: text = 'Kép'
+644.4747 	EXP 	text_trial_type: text = 'Kép'
+644.4914 	EXP 	text_trial_type: text = 'Kép'
+644.5080 	EXP 	text_trial_type: text = 'Kép'
+644.5247 	EXP 	text_trial_type: text = 'Kép'
+644.5414 	EXP 	text_trial_type: text = 'Kép'
+644.5580 	EXP 	text_trial_type: text = 'Kép'
+644.5747 	EXP 	text_trial_type: text = 'Kép'
+644.5914 	EXP 	text_trial_type: text = 'Kép'
+644.6080 	EXP 	text_trial_type: text = 'Kép'
+644.6247 	EXP 	text_trial_type: text = 'Kép'
+644.6414 	EXP 	text_trial_type: text = 'Kép'
+644.6580 	EXP 	text_trial_type: text = 'Kép'
+644.6747 	EXP 	text_trial_type: text = 'Kép'
+644.6914 	EXP 	text_trial_type: text = 'Kép'
+644.7080 	EXP 	text_trial_type: text = 'Kép'
+644.7247 	EXP 	text_trial_type: text = 'Kép'
+644.7414 	EXP 	text_trial_type: text = 'Kép'
+644.7580 	EXP 	text_trial_type: text = 'Kép'
+644.7747 	EXP 	text_trial_type: text = 'Kép'
+644.7914 	EXP 	text_trial_type: text = 'Kép'
+644.8080 	EXP 	text_trial_type: text = 'Kép'
+644.8247 	EXP 	text_trial_type: text = 'Kép'
+644.8414 	EXP 	text_trial_type: text = 'Kép'
+644.8580 	EXP 	text_trial_type: text = 'Kép'
+644.8747 	EXP 	text_trial_type: text = 'Kép'
+644.8914 	EXP 	text_trial_type: text = 'Kép'
+644.9080 	EXP 	text_trial_type: text = 'Kép'
+644.9247 	EXP 	text_trial_type: text = 'Kép'
+644.9414 	EXP 	text_trial_type: text = 'Kép'
+644.9580 	EXP 	text_trial_type: text = 'Kép'
+644.9747 	EXP 	text_trial_type: text = 'Kép'
+644.9914 	EXP 	text_trial_type: text = 'Kép'
+645.0080 	EXP 	text_trial_type: text = 'Kép'
+645.0247 	EXP 	text_trial_type: text = 'Kép'
+645.0414 	EXP 	text_trial_type: text = 'Kép'
+645.0580 	EXP 	text_trial_type: text = 'Kép'
+645.0747 	EXP 	text_trial_type: text = 'Kép'
+645.0914 	EXP 	text_trial_type: text = 'Kép'
+645.1080 	EXP 	text_trial_type: text = 'Kép'
+645.1247 	EXP 	text_trial_type: text = 'Kép'
+645.1414 	EXP 	text_trial_type: text = 'Kép'
+645.1580 	EXP 	text_trial_type: text = 'Kép'
+645.1747 	EXP 	text_trial_type: text = 'Kép'
+645.1914 	EXP 	text_trial_type: text = 'Kép'
+645.2080 	EXP 	text_trial_type: text = 'Kép'
+645.2247 	EXP 	text_trial_type: text = 'Kép'
+645.2414 	EXP 	text_trial_type: text = 'Kép'
+645.2580 	EXP 	text_trial_type: text = 'Kép'
+645.2747 	EXP 	text_trial_type: text = 'Kép'
+645.2914 	EXP 	text_trial_type: text = 'Kép'
+645.3080 	EXP 	text_trial_type: text = 'Kép'
+645.3247 	EXP 	text_trial_type: text = 'Kép'
+645.3414 	EXP 	text_trial_type: text = 'Kép'
+645.3580 	EXP 	text_trial_type: text = 'Kép'
+645.3747 	EXP 	text_trial_type: text = 'Kép'
+645.3914 	EXP 	text_trial_type: text = 'Kép'
+645.4080 	EXP 	text_trial_type: text = 'Kép'
+645.4247 	EXP 	text_trial_type: text = 'Kép'
+645.4580 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+645.4580 	EXP 	main_image: image = 'Stimuli/Fractals/90b.jpg'
+649.2096 	DATA 	Keypress: j
+651.5079 	EXP 	main_image: pos = array([-161.9251974,  252.5474816])
+651.5079 	EXP 	main_image: image = 'Stimuli/Fractals/65a.jpg'
+653.8434 	DATA 	Keypress: j
+656.0411 	EXP 	main_image: pos = array([  0., 300.])
+656.0411 	EXP 	main_image: image = 'Stimuli/Fractals/139a.jpg'
+658.4431 	DATA 	Keypress: f
+661.0743 	EXP 	main_image: pos = array([  0., 300.])
+661.0743 	EXP 	main_image: image = 'Stimuli/Fractals/35c.jpg'
+666.0929 	DATA 	Keypress: f
+669.1408 	EXP 	main_image: pos = array([-276.8287333, -115.6107798])
+669.1408 	EXP 	main_image: image = 'Stimuli/Fractals/6a.jpg'
+671.0107 	DATA 	Keypress: k
+674.1740 	EXP 	main_image: pos = array([274.0636373, 122.0209929])
+674.1740 	EXP 	main_image: image = 'Stimuli/Fractals/113c.jpg'
+677.7268 	DATA 	Keypress: j
+680.2073 	EXP 	main_image: pos = array([-300.,    0.])
+680.2073 	EXP 	main_image: image = 'Stimuli/Fractals/45b.jpg'
+682.3092 	DATA 	Keypress: f
+685.2570 	EXP 	main_image: pos = array([-293.4442802 ,  -62.37350725])
+685.2570 	EXP 	main_image: image = 'Stimuli/Fractals/2c.jpg'
+689.7922 	DATA 	Keypress: f
+692.2735 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+692.2735 	EXP 	main_image: image = 'Stimuli/Fractals/130b.jpg'
+698.2761 	DATA 	Keypress: k
+701.3066 	EXP 	main_image: pos = array([-290.2245658 ,  -75.95855043])
+701.3066 	EXP 	main_image: image = 'Stimuli/Fractals/83a.jpg'
+705.2589 	DATA 	Keypress: k
+708.3231 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+708.3231 	EXP 	main_image: image = 'Stimuli/Fractals/145c.jpg'
+713.6256 	DATA 	Keypress: j
+716.3562 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+716.3562 	EXP 	main_image: image = 'Stimuli/Fractals/15c.jpg'
+719.9081 	DATA 	Keypress: j
+722.4227 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+722.4227 	EXP 	main_image: image = 'Stimuli/Fractals/61b.jpg'
+730.4558 	EXP 	main_image: pos = array([118.8239298, 275.4648321])
+730.4558 	EXP 	main_image: image = 'Stimuli/Fractals/19c.jpg'
+733.6748 	DATA 	Keypress: j
+736.5223 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+736.5223 	EXP 	main_image: image = 'Stimuli/Fractals/55a.jpg'
+738.7905 	DATA 	Keypress: f
+741.5555 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+741.5555 	EXP 	main_image: image = 'Stimuli/Fractals/129c.jpg'
+750.7913 	DATA 	Keypress: k
+753.6219 	EXP 	main_image: pos = array([-271.150131 , -128.3651295])
+753.6219 	EXP 	main_image: image = 'Stimuli/Fractals/67a.jpg'
+757.9070 	DATA 	Keypress: j
+760.6717 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+760.6717 	EXP 	main_image: image = 'Stimuli/Fractals/43c.jpg'
+766.0573 	DATA 	Keypress: k
+767.6882 	EXP 	text_trial_type: text = 'Hely'
+767.7049 	EXP 	text_trial_type: text = 'Hely'
+767.7215 	EXP 	text_trial_type: text = 'Hely'
+767.7382 	EXP 	text_trial_type: text = 'Hely'
+767.7548 	EXP 	text_trial_type: text = 'Hely'
+767.7715 	EXP 	text_trial_type: text = 'Hely'
+767.7882 	EXP 	text_trial_type: text = 'Hely'
+767.8048 	EXP 	text_trial_type: text = 'Hely'
+767.8215 	EXP 	text_trial_type: text = 'Hely'
+767.8382 	EXP 	text_trial_type: text = 'Hely'
+767.8548 	EXP 	text_trial_type: text = 'Hely'
+767.8715 	EXP 	text_trial_type: text = 'Hely'
+767.8882 	EXP 	text_trial_type: text = 'Hely'
+767.9049 	EXP 	text_trial_type: text = 'Hely'
+767.9215 	EXP 	text_trial_type: text = 'Hely'
+767.9382 	EXP 	text_trial_type: text = 'Hely'
+767.9549 	EXP 	text_trial_type: text = 'Hely'
+767.9715 	EXP 	text_trial_type: text = 'Hely'
+767.9882 	EXP 	text_trial_type: text = 'Hely'
+768.0049 	EXP 	text_trial_type: text = 'Hely'
+768.0215 	EXP 	text_trial_type: text = 'Hely'
+768.0382 	EXP 	text_trial_type: text = 'Hely'
+768.0549 	EXP 	text_trial_type: text = 'Hely'
+768.0715 	EXP 	text_trial_type: text = 'Hely'
+768.0882 	EXP 	text_trial_type: text = 'Hely'
+768.1049 	EXP 	text_trial_type: text = 'Hely'
+768.1215 	EXP 	text_trial_type: text = 'Hely'
+768.1382 	EXP 	text_trial_type: text = 'Hely'
+768.1548 	EXP 	text_trial_type: text = 'Hely'
+768.1715 	EXP 	text_trial_type: text = 'Hely'
+768.1882 	EXP 	text_trial_type: text = 'Hely'
+768.2049 	EXP 	text_trial_type: text = 'Hely'
+768.2215 	EXP 	text_trial_type: text = 'Hely'
+768.2382 	EXP 	text_trial_type: text = 'Hely'
+768.2549 	EXP 	text_trial_type: text = 'Hely'
+768.2715 	EXP 	text_trial_type: text = 'Hely'
+768.2882 	EXP 	text_trial_type: text = 'Hely'
+768.3048 	EXP 	text_trial_type: text = 'Hely'
+768.3215 	EXP 	text_trial_type: text = 'Hely'
+768.3382 	EXP 	text_trial_type: text = 'Hely'
+768.3548 	EXP 	text_trial_type: text = 'Hely'
+768.3715 	EXP 	text_trial_type: text = 'Hely'
+768.3882 	EXP 	text_trial_type: text = 'Hely'
+768.4048 	EXP 	text_trial_type: text = 'Hely'
+768.4215 	EXP 	text_trial_type: text = 'Hely'
+768.4382 	EXP 	text_trial_type: text = 'Hely'
+768.4549 	EXP 	text_trial_type: text = 'Hely'
+768.4715 	EXP 	text_trial_type: text = 'Hely'
+768.4882 	EXP 	text_trial_type: text = 'Hely'
+768.5048 	EXP 	text_trial_type: text = 'Hely'
+768.5215 	EXP 	text_trial_type: text = 'Hely'
+768.5382 	EXP 	text_trial_type: text = 'Hely'
+768.5548 	EXP 	text_trial_type: text = 'Hely'
+768.5715 	EXP 	text_trial_type: text = 'Hely'
+768.5882 	EXP 	text_trial_type: text = 'Hely'
+768.6048 	EXP 	text_trial_type: text = 'Hely'
+768.6215 	EXP 	text_trial_type: text = 'Hely'
+768.6382 	EXP 	text_trial_type: text = 'Hely'
+768.6548 	EXP 	text_trial_type: text = 'Hely'
+768.6715 	EXP 	text_trial_type: text = 'Hely'
+768.6882 	EXP 	text_trial_type: text = 'Hely'
+768.7048 	EXP 	text_trial_type: text = 'Hely'
+768.7215 	EXP 	text_trial_type: text = 'Hely'
+768.7382 	EXP 	text_trial_type: text = 'Hely'
+768.7548 	EXP 	text_trial_type: text = 'Hely'
+768.7715 	EXP 	text_trial_type: text = 'Hely'
+768.7882 	EXP 	text_trial_type: text = 'Hely'
+768.8048 	EXP 	text_trial_type: text = 'Hely'
+768.8215 	EXP 	text_trial_type: text = 'Hely'
+768.8381 	EXP 	text_trial_type: text = 'Hely'
+768.8548 	EXP 	text_trial_type: text = 'Hely'
+768.8715 	EXP 	text_trial_type: text = 'Hely'
+768.8881 	EXP 	text_trial_type: text = 'Hely'
+768.9048 	EXP 	text_trial_type: text = 'Hely'
+768.9215 	EXP 	text_trial_type: text = 'Hely'
+768.9381 	EXP 	text_trial_type: text = 'Hely'
+768.9548 	EXP 	text_trial_type: text = 'Hely'
+768.9715 	EXP 	text_trial_type: text = 'Hely'
+768.9881 	EXP 	text_trial_type: text = 'Hely'
+769.0048 	EXP 	text_trial_type: text = 'Hely'
+769.0215 	EXP 	text_trial_type: text = 'Hely'
+769.0381 	EXP 	text_trial_type: text = 'Hely'
+769.0548 	EXP 	text_trial_type: text = 'Hely'
+769.0715 	EXP 	text_trial_type: text = 'Hely'
+769.0881 	EXP 	text_trial_type: text = 'Hely'
+769.1048 	EXP 	text_trial_type: text = 'Hely'
+769.1215 	EXP 	text_trial_type: text = 'Hely'
+769.1381 	EXP 	text_trial_type: text = 'Hely'
+769.1548 	EXP 	text_trial_type: text = 'Hely'
+769.1715 	EXP 	text_trial_type: text = 'Hely'
+769.1881 	EXP 	text_trial_type: text = 'Hely'
+769.2048 	EXP 	text_trial_type: text = 'Hely'
+769.2215 	EXP 	text_trial_type: text = 'Hely'
+769.2381 	EXP 	text_trial_type: text = 'Hely'
+769.2548 	EXP 	text_trial_type: text = 'Hely'
+769.2715 	EXP 	text_trial_type: text = 'Hely'
+769.2881 	EXP 	text_trial_type: text = 'Hely'
+769.3048 	EXP 	text_trial_type: text = 'Hely'
+769.3215 	EXP 	text_trial_type: text = 'Hely'
+769.3381 	EXP 	text_trial_type: text = 'Hely'
+769.3548 	EXP 	text_trial_type: text = 'Hely'
+769.3715 	EXP 	text_trial_type: text = 'Hely'
+769.3881 	EXP 	text_trial_type: text = 'Hely'
+769.4048 	EXP 	text_trial_type: text = 'Hely'
+769.4215 	EXP 	text_trial_type: text = 'Hely'
+769.4381 	EXP 	text_trial_type: text = 'Hely'
+769.4548 	EXP 	text_trial_type: text = 'Hely'
+769.4715 	EXP 	text_trial_type: text = 'Hely'
+769.4881 	EXP 	text_trial_type: text = 'Hely'
+769.5048 	EXP 	text_trial_type: text = 'Hely'
+769.5215 	EXP 	text_trial_type: text = 'Hely'
+769.5381 	EXP 	text_trial_type: text = 'Hely'
+769.5548 	EXP 	text_trial_type: text = 'Hely'
+769.5715 	EXP 	text_trial_type: text = 'Hely'
+769.5881 	EXP 	text_trial_type: text = 'Hely'
+769.6048 	EXP 	text_trial_type: text = 'Hely'
+769.6215 	EXP 	text_trial_type: text = 'Hely'
+769.6381 	EXP 	text_trial_type: text = 'Hely'
+769.6548 	EXP 	text_trial_type: text = 'Hely'
+769.6715 	EXP 	text_trial_type: text = 'Hely'
+769.6881 	EXP 	text_trial_type: text = 'Hely'
+769.7214 	EXP 	main_image: pos = array([  0., 300.])
+769.7214 	EXP 	main_image: image = 'Stimuli/Fractals/7b.jpg'
+772.1571 	DATA 	Keypress: j
+774.7713 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+774.7713 	EXP 	main_image: image = 'Stimuli/Fractals/29b.jpg'
+780.3907 	DATA 	Keypress: j
+782.8045 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+782.8045 	EXP 	main_image: image = 'Stimuli/Fractals/121c.jpg'
+785.3568 	DATA 	Keypress: k
+787.8210 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+787.8210 	EXP 	main_image: image = 'Stimuli/Fractals/44c.jpg'
+792.5563 	DATA 	Keypress: k
+794.8542 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+794.8542 	EXP 	main_image: image = 'Stimuli/Fractals/41b.jpg'
+797.0892 	DATA 	Keypress: f
+799.9040 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+799.9040 	EXP 	main_image: image = 'Stimuli/Fractals/124a.jpg'
+802.5227 	DATA 	Keypress: k
+804.9205 	EXP 	main_image: pos = array([  0., 300.])
+804.9205 	EXP 	main_image: image = 'Stimuli/Fractals/66b.jpg'
+806.8730 	DATA 	Keypress: f
+809.9538 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+809.9538 	EXP 	main_image: image = 'Stimuli/Fractals/91c.jpg'
+812.3723 	DATA 	Keypress: j
+815.0036 	EXP 	main_image: pos = array([   0., -300.])
+815.0036 	EXP 	main_image: image = 'Stimuli/Fractals/80a.jpg'
+820.6224 	DATA 	Keypress: j
+823.0201 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+823.0201 	EXP 	main_image: image = 'Stimuli/Fractals/31c.jpg'
+832.8564 	DATA 	Keypress: j
+835.0698 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+835.0698 	EXP 	main_image: image = 'Stimuli/Fractals/72c.jpg'
+842.5885 	DATA 	Keypress: f
+845.1029 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+845.1029 	EXP 	main_image: image = 'Stimuli/Fractals/34b.jpg'
+847.1543 	DATA 	Keypress: k
+849.6361 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+849.6361 	EXP 	main_image: image = 'Stimuli/Fractals/116a.jpg'
+852.6554 	DATA 	Keypress: k
+855.6859 	EXP 	main_image: pos = array([300.,   0.])
+855.6859 	EXP 	main_image: image = 'Stimuli/Fractals/122c.jpg'
+860.2383 	DATA 	Keypress: k
+862.7191 	EXP 	main_image: pos = array([-300.,    0.])
+862.7191 	EXP 	main_image: image = 'Stimuli/Fractals/132a.jpg'
+867.0540 	DATA 	Keypress: j
+869.7522 	EXP 	main_image: pos = array([300.,   0.])
+869.7522 	EXP 	main_image: image = 'Stimuli/Fractals/118c.jpg'
+871.6208 	DATA 	Keypress: j
+874.7687 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+874.7687 	EXP 	main_image: image = 'Stimuli/Fractals/101a.jpg'
+877.1869 	DATA 	Keypress: k
+879.8019 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+879.8019 	EXP 	main_image: image = 'Stimuli/Fractals/42c.jpg'
+882.0717 	DATA 	Keypress: j
+884.3185 	EXP 	text_trial_type: text = 'Kép'
+884.3352 	EXP 	text_trial_type: text = 'Kép'
+884.3518 	EXP 	text_trial_type: text = 'Kép'
+884.3685 	EXP 	text_trial_type: text = 'Kép'
+884.3852 	EXP 	text_trial_type: text = 'Kép'
+884.4018 	EXP 	text_trial_type: text = 'Kép'
+884.4185 	EXP 	text_trial_type: text = 'Kép'
+884.4352 	EXP 	text_trial_type: text = 'Kép'
+884.4518 	EXP 	text_trial_type: text = 'Kép'
+884.4685 	EXP 	text_trial_type: text = 'Kép'
+884.4852 	EXP 	text_trial_type: text = 'Kép'
+884.5018 	EXP 	text_trial_type: text = 'Kép'
+884.5185 	EXP 	text_trial_type: text = 'Kép'
+884.5351 	EXP 	text_trial_type: text = 'Kép'
+884.5518 	EXP 	text_trial_type: text = 'Kép'
+884.5685 	EXP 	text_trial_type: text = 'Kép'
+884.5851 	EXP 	text_trial_type: text = 'Kép'
+884.6018 	EXP 	text_trial_type: text = 'Kép'
+884.6185 	EXP 	text_trial_type: text = 'Kép'
+884.6352 	EXP 	text_trial_type: text = 'Kép'
+884.6518 	EXP 	text_trial_type: text = 'Kép'
+884.6685 	EXP 	text_trial_type: text = 'Kép'
+884.6851 	EXP 	text_trial_type: text = 'Kép'
+884.7018 	EXP 	text_trial_type: text = 'Kép'
+884.7185 	EXP 	text_trial_type: text = 'Kép'
+884.7352 	EXP 	text_trial_type: text = 'Kép'
+884.7518 	EXP 	text_trial_type: text = 'Kép'
+884.7685 	EXP 	text_trial_type: text = 'Kép'
+884.7851 	EXP 	text_trial_type: text = 'Kép'
+884.8018 	EXP 	text_trial_type: text = 'Kép'
+884.8185 	EXP 	text_trial_type: text = 'Kép'
+884.8352 	EXP 	text_trial_type: text = 'Kép'
+884.8518 	EXP 	text_trial_type: text = 'Kép'
+884.8685 	EXP 	text_trial_type: text = 'Kép'
+884.8851 	EXP 	text_trial_type: text = 'Kép'
+884.9018 	EXP 	text_trial_type: text = 'Kép'
+884.9185 	EXP 	text_trial_type: text = 'Kép'
+884.9351 	EXP 	text_trial_type: text = 'Kép'
+884.9518 	EXP 	text_trial_type: text = 'Kép'
+884.9685 	EXP 	text_trial_type: text = 'Kép'
+884.9851 	EXP 	text_trial_type: text = 'Kép'
+885.0018 	EXP 	text_trial_type: text = 'Kép'
+885.0185 	EXP 	text_trial_type: text = 'Kép'
+885.0351 	EXP 	text_trial_type: text = 'Kép'
+885.0518 	EXP 	text_trial_type: text = 'Kép'
+885.0685 	EXP 	text_trial_type: text = 'Kép'
+885.0851 	EXP 	text_trial_type: text = 'Kép'
+885.1018 	EXP 	text_trial_type: text = 'Kép'
+885.1185 	EXP 	text_trial_type: text = 'Kép'
+885.1351 	EXP 	text_trial_type: text = 'Kép'
+885.1518 	EXP 	text_trial_type: text = 'Kép'
+885.1685 	EXP 	text_trial_type: text = 'Kép'
+885.1851 	EXP 	text_trial_type: text = 'Kép'
+885.2018 	EXP 	text_trial_type: text = 'Kép'
+885.2185 	EXP 	text_trial_type: text = 'Kép'
+885.2351 	EXP 	text_trial_type: text = 'Kép'
+885.2518 	EXP 	text_trial_type: text = 'Kép'
+885.2685 	EXP 	text_trial_type: text = 'Kép'
+885.2851 	EXP 	text_trial_type: text = 'Kép'
+885.3018 	EXP 	text_trial_type: text = 'Kép'
+885.3185 	EXP 	text_trial_type: text = 'Kép'
+885.3351 	EXP 	text_trial_type: text = 'Kép'
+885.3518 	EXP 	text_trial_type: text = 'Kép'
+885.3685 	EXP 	text_trial_type: text = 'Kép'
+885.3851 	EXP 	text_trial_type: text = 'Kép'
+885.4018 	EXP 	text_trial_type: text = 'Kép'
+885.4185 	EXP 	text_trial_type: text = 'Kép'
+885.4351 	EXP 	text_trial_type: text = 'Kép'
+885.4518 	EXP 	text_trial_type: text = 'Kép'
+885.4685 	EXP 	text_trial_type: text = 'Kép'
+885.4851 	EXP 	text_trial_type: text = 'Kép'
+885.5018 	EXP 	text_trial_type: text = 'Kép'
+885.5185 	EXP 	text_trial_type: text = 'Kép'
+885.5351 	EXP 	text_trial_type: text = 'Kép'
+885.5518 	EXP 	text_trial_type: text = 'Kép'
+885.5685 	EXP 	text_trial_type: text = 'Kép'
+885.5851 	EXP 	text_trial_type: text = 'Kép'
+885.6018 	EXP 	text_trial_type: text = 'Kép'
+885.6185 	EXP 	text_trial_type: text = 'Kép'
+885.6351 	EXP 	text_trial_type: text = 'Kép'
+885.6518 	EXP 	text_trial_type: text = 'Kép'
+885.6684 	EXP 	text_trial_type: text = 'Kép'
+885.6851 	EXP 	text_trial_type: text = 'Kép'
+885.7018 	EXP 	text_trial_type: text = 'Kép'
+885.7184 	EXP 	text_trial_type: text = 'Kép'
+885.7351 	EXP 	text_trial_type: text = 'Kép'
+885.7518 	EXP 	text_trial_type: text = 'Kép'
+885.7684 	EXP 	text_trial_type: text = 'Kép'
+885.7851 	EXP 	text_trial_type: text = 'Kép'
+885.8018 	EXP 	text_trial_type: text = 'Kép'
+885.8184 	EXP 	text_trial_type: text = 'Kép'
+885.8351 	EXP 	text_trial_type: text = 'Kép'
+885.8518 	EXP 	text_trial_type: text = 'Kép'
+885.8684 	EXP 	text_trial_type: text = 'Kép'
+885.8851 	EXP 	text_trial_type: text = 'Kép'
+885.9018 	EXP 	text_trial_type: text = 'Kép'
+885.9184 	EXP 	text_trial_type: text = 'Kép'
+885.9351 	EXP 	text_trial_type: text = 'Kép'
+885.9518 	EXP 	text_trial_type: text = 'Kép'
+885.9684 	EXP 	text_trial_type: text = 'Kép'
+885.9851 	EXP 	text_trial_type: text = 'Kép'
+886.0018 	EXP 	text_trial_type: text = 'Kép'
+886.0184 	EXP 	text_trial_type: text = 'Kép'
+886.0351 	EXP 	text_trial_type: text = 'Kép'
+886.0518 	EXP 	text_trial_type: text = 'Kép'
+886.0684 	EXP 	text_trial_type: text = 'Kép'
+886.0851 	EXP 	text_trial_type: text = 'Kép'
+886.1018 	EXP 	text_trial_type: text = 'Kép'
+886.1185 	EXP 	text_trial_type: text = 'Kép'
+886.1351 	EXP 	text_trial_type: text = 'Kép'
+886.1518 	EXP 	text_trial_type: text = 'Kép'
+886.1684 	EXP 	text_trial_type: text = 'Kép'
+886.1851 	EXP 	text_trial_type: text = 'Kép'
+886.2018 	EXP 	text_trial_type: text = 'Kép'
+886.2184 	EXP 	text_trial_type: text = 'Kép'
+886.2351 	EXP 	text_trial_type: text = 'Kép'
+886.2518 	EXP 	text_trial_type: text = 'Kép'
+886.2684 	EXP 	text_trial_type: text = 'Kép'
+886.2851 	EXP 	text_trial_type: text = 'Kép'
+886.3018 	EXP 	text_trial_type: text = 'Kép'
+886.3184 	EXP 	text_trial_type: text = 'Kép'
+886.3684 	EXP 	main_image: pos = array([300.,   0.])
+886.3684 	EXP 	main_image: image = 'Stimuli/Fractals/123b.jpg'
+889.4541 	DATA 	Keypress: j
+892.4016 	EXP 	main_image: pos = array([   0., -300.])
+892.4016 	EXP 	main_image: image = 'Stimuli/Fractals/30a.jpg'
+895.4710 	DATA 	Keypress: k
+898.4515 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+898.4515 	EXP 	main_image: image = 'Stimuli/Fractals/94b.jpg'
+900.6034 	DATA 	Keypress: f
+903.4847 	EXP 	main_image: pos = array([-264.8842779, -140.8414688])
+903.4847 	EXP 	main_image: image = 'Stimuli/Fractals/59c.jpg'
+905.7035 	DATA 	Keypress: j
+908.5512 	EXP 	main_image: pos = array([-276.8287333, -115.6107798])
+908.5512 	EXP 	main_image: image = 'Stimuli/Fractals/120a.jpg'
+911.4865 	DATA 	Keypress: k
+914.5677 	EXP 	main_image: pos = array([  0., 300.])
+914.5677 	EXP 	main_image: image = 'Stimuli/Fractals/85a.jpg'
+918.5366 	DATA 	Keypress: k
+920.6010 	EXP 	main_image: pos = array([300.,   0.])
+920.6010 	EXP 	main_image: image = 'Stimuli/Fractals/13a.jpg'
+923.9861 	DATA 	Keypress: f
+926.6341 	EXP 	main_image: pos = array([   0., -300.])
+926.6341 	EXP 	main_image: image = 'Stimuli/Fractals/33a.jpg'
+928.8528 	DATA 	Keypress: f
+931.1839 	EXP 	main_image: pos = array([300.,   0.])
+931.1839 	EXP 	main_image: image = 'Stimuli/Fractals/56b.jpg'
+936.2520 	DATA 	Keypress: f
+939.2337 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+939.2337 	EXP 	main_image: image = 'Stimuli/Fractals/53c.jpg'
+942.1187 	DATA 	Keypress: f
+945.3002 	EXP 	main_image: pos = array([-258.0447444, -153.0127769])
+945.3002 	EXP 	main_image: image = 'Stimuli/Fractals/138b.jpg'
+947.3854 	DATA 	Keypress: f
+950.3168 	EXP 	main_image: pos = array([300.,   0.])
+950.3168 	EXP 	main_image: image = 'Stimuli/Fractals/64a.jpg'
+952.6525 	DATA 	Keypress: j
+955.3666 	EXP 	main_image: pos = array([-250.6463434, -164.8526934])
+955.3666 	EXP 	main_image: image = 'Stimuli/Fractals/62b.jpg'
+959.7182 	DATA 	Keypress: j
+962.4165 	EXP 	main_image: pos = array([-242.7050983, -176.3355757])
+962.4165 	EXP 	main_image: image = 'Stimuli/Fractals/3c.jpg'
+966.9680 	DATA 	Keypress: j
+969.4664 	EXP 	main_image: pos = array([-234.238208 , -187.4365544])
+969.4664 	EXP 	main_image: image = 'Stimuli/Fractals/46a.jpg'
+973.1355 	DATA 	Keypress: k
+975.4828 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+975.4828 	EXP 	main_image: image = 'Stimuli/Fractals/37b.jpg'
+978.8520 	DATA 	Keypress: k
+981.5327 	EXP 	main_image: pos = array([-300.,    0.])
+981.5327 	EXP 	main_image: image = 'Stimuli/Fractals/89c.jpg'
+983.7849 	DATA 	Keypress: j
+986.5658 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+986.5658 	EXP 	main_image: image = 'Stimuli/Fractals/27c.jpg'
+988.8339 	DATA 	Keypress: k
+991.5824 	EXP 	text_trial_type: text = 'Hely'
+991.5990 	EXP 	text_trial_type: text = 'Hely'
+991.6157 	EXP 	text_trial_type: text = 'Hely'
+991.6324 	EXP 	text_trial_type: text = 'Hely'
+991.6490 	EXP 	text_trial_type: text = 'Hely'
+991.6657 	EXP 	text_trial_type: text = 'Hely'
+991.6824 	EXP 	text_trial_type: text = 'Hely'
+991.6990 	EXP 	text_trial_type: text = 'Hely'
+991.7157 	EXP 	text_trial_type: text = 'Hely'
+991.7324 	EXP 	text_trial_type: text = 'Hely'
+991.7490 	EXP 	text_trial_type: text = 'Hely'
+991.7657 	EXP 	text_trial_type: text = 'Hely'
+991.7823 	EXP 	text_trial_type: text = 'Hely'
+991.7990 	EXP 	text_trial_type: text = 'Hely'
+991.8157 	EXP 	text_trial_type: text = 'Hely'
+991.8324 	EXP 	text_trial_type: text = 'Hely'
+991.8490 	EXP 	text_trial_type: text = 'Hely'
+991.8657 	EXP 	text_trial_type: text = 'Hely'
+991.8824 	EXP 	text_trial_type: text = 'Hely'
+991.8990 	EXP 	text_trial_type: text = 'Hely'
+991.9157 	EXP 	text_trial_type: text = 'Hely'
+991.9324 	EXP 	text_trial_type: text = 'Hely'
+991.9490 	EXP 	text_trial_type: text = 'Hely'
+991.9657 	EXP 	text_trial_type: text = 'Hely'
+991.9823 	EXP 	text_trial_type: text = 'Hely'
+991.9990 	EXP 	text_trial_type: text = 'Hely'
+992.0157 	EXP 	text_trial_type: text = 'Hely'
+992.0323 	EXP 	text_trial_type: text = 'Hely'
+992.0490 	EXP 	text_trial_type: text = 'Hely'
+992.0657 	EXP 	text_trial_type: text = 'Hely'
+992.0823 	EXP 	text_trial_type: text = 'Hely'
+992.0990 	EXP 	text_trial_type: text = 'Hely'
+992.1157 	EXP 	text_trial_type: text = 'Hely'
+992.1323 	EXP 	text_trial_type: text = 'Hely'
+992.1490 	EXP 	text_trial_type: text = 'Hely'
+992.1657 	EXP 	text_trial_type: text = 'Hely'
+992.1823 	EXP 	text_trial_type: text = 'Hely'
+992.1990 	EXP 	text_trial_type: text = 'Hely'
+992.2157 	EXP 	text_trial_type: text = 'Hely'
+992.2323 	EXP 	text_trial_type: text = 'Hely'
+992.2490 	EXP 	text_trial_type: text = 'Hely'
+992.2657 	EXP 	text_trial_type: text = 'Hely'
+992.2823 	EXP 	text_trial_type: text = 'Hely'
+992.2990 	EXP 	text_trial_type: text = 'Hely'
+992.3157 	EXP 	text_trial_type: text = 'Hely'
+992.3323 	EXP 	text_trial_type: text = 'Hely'
+992.3490 	EXP 	text_trial_type: text = 'Hely'
+992.3657 	EXP 	text_trial_type: text = 'Hely'
+992.3823 	EXP 	text_trial_type: text = 'Hely'
+992.3990 	EXP 	text_trial_type: text = 'Hely'
+992.4157 	EXP 	text_trial_type: text = 'Hely'
+992.4323 	EXP 	text_trial_type: text = 'Hely'
+992.4490 	EXP 	text_trial_type: text = 'Hely'
+992.4657 	EXP 	text_trial_type: text = 'Hely'
+992.4823 	EXP 	text_trial_type: text = 'Hely'
+992.4990 	EXP 	text_trial_type: text = 'Hely'
+992.5157 	EXP 	text_trial_type: text = 'Hely'
+992.5323 	EXP 	text_trial_type: text = 'Hely'
+992.5490 	EXP 	text_trial_type: text = 'Hely'
+992.5657 	EXP 	text_trial_type: text = 'Hely'
+992.5823 	EXP 	text_trial_type: text = 'Hely'
+992.5990 	EXP 	text_trial_type: text = 'Hely'
+992.6157 	EXP 	text_trial_type: text = 'Hely'
+992.6323 	EXP 	text_trial_type: text = 'Hely'
+992.6490 	EXP 	text_trial_type: text = 'Hely'
+992.6657 	EXP 	text_trial_type: text = 'Hely'
+992.6823 	EXP 	text_trial_type: text = 'Hely'
+992.6990 	EXP 	text_trial_type: text = 'Hely'
+992.7157 	EXP 	text_trial_type: text = 'Hely'
+992.7323 	EXP 	text_trial_type: text = 'Hely'
+992.7490 	EXP 	text_trial_type: text = 'Hely'
+992.7657 	EXP 	text_trial_type: text = 'Hely'
+992.7823 	EXP 	text_trial_type: text = 'Hely'
+992.7990 	EXP 	text_trial_type: text = 'Hely'
+992.8157 	EXP 	text_trial_type: text = 'Hely'
+992.8323 	EXP 	text_trial_type: text = 'Hely'
+992.8490 	EXP 	text_trial_type: text = 'Hely'
+992.8657 	EXP 	text_trial_type: text = 'Hely'
+992.8823 	EXP 	text_trial_type: text = 'Hely'
+992.8990 	EXP 	text_trial_type: text = 'Hely'
+992.9157 	EXP 	text_trial_type: text = 'Hely'
+992.9323 	EXP 	text_trial_type: text = 'Hely'
+992.9490 	EXP 	text_trial_type: text = 'Hely'
+992.9657 	EXP 	text_trial_type: text = 'Hely'
+992.9823 	EXP 	text_trial_type: text = 'Hely'
+992.9990 	EXP 	text_trial_type: text = 'Hely'
+993.0157 	EXP 	text_trial_type: text = 'Hely'
+993.0323 	EXP 	text_trial_type: text = 'Hely'
+993.0490 	EXP 	text_trial_type: text = 'Hely'
+993.0657 	EXP 	text_trial_type: text = 'Hely'
+993.0823 	EXP 	text_trial_type: text = 'Hely'
+993.0990 	EXP 	text_trial_type: text = 'Hely'
+993.1157 	EXP 	text_trial_type: text = 'Hely'
+993.1323 	EXP 	text_trial_type: text = 'Hely'
+993.1490 	EXP 	text_trial_type: text = 'Hely'
+993.1657 	EXP 	text_trial_type: text = 'Hely'
+993.1823 	EXP 	text_trial_type: text = 'Hely'
+993.1990 	EXP 	text_trial_type: text = 'Hely'
+993.2157 	EXP 	text_trial_type: text = 'Hely'
+993.2323 	EXP 	text_trial_type: text = 'Hely'
+993.2490 	EXP 	text_trial_type: text = 'Hely'
+993.2657 	EXP 	text_trial_type: text = 'Hely'
+993.2823 	EXP 	text_trial_type: text = 'Hely'
+993.2990 	EXP 	text_trial_type: text = 'Hely'
+993.3156 	EXP 	text_trial_type: text = 'Hely'
+993.3323 	EXP 	text_trial_type: text = 'Hely'
+993.3490 	EXP 	text_trial_type: text = 'Hely'
+993.3656 	EXP 	text_trial_type: text = 'Hely'
+993.3823 	EXP 	text_trial_type: text = 'Hely'
+993.3990 	EXP 	text_trial_type: text = 'Hely'
+993.4156 	EXP 	text_trial_type: text = 'Hely'
+993.4323 	EXP 	text_trial_type: text = 'Hely'
+993.4490 	EXP 	text_trial_type: text = 'Hely'
+993.4656 	EXP 	text_trial_type: text = 'Hely'
+993.4823 	EXP 	text_trial_type: text = 'Hely'
+993.4990 	EXP 	text_trial_type: text = 'Hely'
+993.5156 	EXP 	text_trial_type: text = 'Hely'
+993.5323 	EXP 	text_trial_type: text = 'Hely'
+993.5490 	EXP 	text_trial_type: text = 'Hely'
+993.5656 	EXP 	text_trial_type: text = 'Hely'
+993.5823 	EXP 	text_trial_type: text = 'Hely'
+993.6156 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+993.6156 	EXP 	main_image: image = 'Stimuli/Fractals/88c.jpg'
+996.2350 	DATA 	Keypress: k
+998.6489 	EXP 	main_image: pos = array([   0., -300.])
+998.6489 	EXP 	main_image: image = 'Stimuli/Fractals/77b.jpg'
+1001.1013 	DATA 	Keypress: j
+1003.6987 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+1003.6987 	EXP 	main_image: image = 'Stimuli/Fractals/144b.jpg'
+1006.7670 	DATA 	Keypress: j
+1009.7319 	EXP 	main_image: pos = array([  0., 300.])
+1009.7319 	EXP 	main_image: image = 'Stimuli/Fractals/84c.jpg'
+1013.5349 	DATA 	Keypress: j
+1015.7651 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+1015.7651 	EXP 	main_image: image = 'Stimuli/Fractals/24a.jpg'
+1022.6170 	DATA 	Keypress: f
+1024.7982 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+1024.7982 	EXP 	main_image: image = 'Stimuli/Fractals/8a.jpg'
+1028.3833 	DATA 	Keypress: j
+1030.8313 	EXP 	main_image: pos = array([  0., 300.])
+1030.8313 	EXP 	main_image: image = 'Stimuli/Fractals/47c.jpg'
+1033.3672 	DATA 	Keypress: k
+1035.8645 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+1035.8645 	EXP 	main_image: image = 'Stimuli/Fractals/78a.jpg'
+1041.6008 	DATA 	Keypress: f
+1043.8810 	EXP 	main_image: pos = array([-300.,    0.])
+1043.8810 	EXP 	main_image: image = 'Stimuli/Fractals/49a.jpg'
+1047.3825 	DATA 	Keypress: k
+1049.9142 	EXP 	main_image: pos = array([300.,   0.])
+1049.9142 	EXP 	main_image: image = 'Stimuli/Fractals/20a.jpg'
+1052.7998 	DATA 	Keypress: j
+1054.9307 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+1054.9307 	EXP 	main_image: image = 'Stimuli/Fractals/136b.jpg'
+1058.6324 	DATA 	Keypress: f
+1060.9806 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+1060.9806 	EXP 	main_image: image = 'Stimuli/Fractals/60c.jpg'
+1065.5329 	DATA 	Keypress: j
+1068.0137 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+1068.0137 	EXP 	main_image: image = 'Stimuli/Fractals/50c.jpg'
+1070.6002 	DATA 	Keypress: f
+1072.5636 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+1072.5636 	EXP 	main_image: image = 'Stimuli/Fractals/99c.jpg'
+1079.5983 	DATA 	Keypress: f
+1081.6134 	EXP 	main_image: pos = array([-212.1320344,  212.1320344])
+1081.6134 	EXP 	main_image: image = 'Stimuli/Fractals/52c.jpg'
+1085.1823 	DATA 	Keypress: k
+1087.6632 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+1087.6632 	EXP 	main_image: image = 'Stimuli/Fractals/82c.jpg'
+1089.9485 	DATA 	Keypress: j
+1092.6797 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+1092.6797 	EXP 	main_image: image = 'Stimuli/Fractals/112a.jpg'
+1094.8154 	DATA 	Keypress: k
+1097.2296 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+1097.2296 	EXP 	main_image: image = 'Stimuli/Fractals/102c.jpg'
+1101.3659 	DATA 	Keypress: k
+1103.2628 	EXP 	logo: opacity = 0.8
+1111.7986 	DATA 	Keypress: return
+1111.8556 	EXP 	window1: mouseVisible = True

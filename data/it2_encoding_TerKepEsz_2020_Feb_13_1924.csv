@@ -1,0 +1,4 @@
+TrialIndex,Order,StimType,FX/IMG,ImagePreseneted,Xcoordinate,Ycoordinate,Response,RT, TimePassed
+1,1,LLP,FX,Stimuli/Fractals/134a.jpg,300.000000,0.000000,f,4.583303,6.616302
+1,1,LLP,FX,Stimuli/Fractals/134a.jpg,300.000000,0.000000,j,5.916723,7.949721
+2,1,ERP,IMG,Stimuli/Fractals/79a.jpg,299.588860,15.700787,f,0.782879,11.349683
