@@ -2101,6 +2101,7 @@ function enc_fxRoutineBegin(trials) {
 
 
 var loop_start_time;
+var fx_start_time;
 function enc_fxRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'enc_fx'-------
@@ -2164,13 +2165,15 @@ function enc_fxRoutineEachFrame(trials) {
       }
     }
     
+    loop_start_time = 0;
+    fx_start_time = 0;
     if (((enc_trials.thisN === 0) && (frameN === 0))) {
         loop_start_time = (globalClock.getTime() - trigger_time);
-        psychoJS.experiment.addData("loop_start_time", loop_start_time);
+        thisExp.addData("loop_start_time", loop_start_time);
     } else {
         if ((frameN === 1)) {
             fx_start_time = (globalClock.getTime() - trigger_time);
-            psychoJS.experiment.addData("fx_start_time", fx_start_time);
+            thisExp.addData("fx_start_time", fx_start_time);
         }
     }
     
