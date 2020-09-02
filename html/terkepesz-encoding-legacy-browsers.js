@@ -139,9 +139,6 @@ var end_practice_continue;
 var start_MRClock;
 var start_MR_text;
 var start_MR_trigger;
-var trigger_key;
-var event;
-var trigger_time;
 var start_enc_runClock;
 var start_enc_run_text;
 var enc_fxClock;
@@ -413,18 +410,6 @@ function experimentInit() {
   });
   
   start_MR_trigger = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
-  
-  trigger_key = "s";
-  function get_current_trigger_time() {
-      var trigger;
-      trigger = (globalClock.getTime() - trigger_time);
-      thisExp.addData("triggers", trigger);
-      thisExp.nextEntry();
-      return trigger;
-  }
-  event=psychoJS.eventManager;
-  trigger_time = 0;
-  event.globalKeys.add({"key": trigger_key, "func": get_current_trigger_time});
   
   // Initialize components for Routine "start_enc_run"
   start_enc_runClock = new util.Clock();
@@ -1963,6 +1948,7 @@ function start_MRRoutineEachFrame(trials) {
 }
 
 
+var trigger_time;
 function start_MRRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'start_MR'-------
