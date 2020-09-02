@@ -1,0 +1,10 @@
+Task,TrialType,StimType,Order,CurrentImage,CurrentX,CurrentY,Jitter,Section
+EncodingPractice,OBJ,LURE,1,stimuli/fractals/166a.jpg,-0.0781,0.4167,1500,Encoding
+EncodingPractice,OBJ,TARGET,1,stimuli/fractals/167a.jpg,0.2344,0.4167,500,Encoding
+EncodingPractice,OBJ,FOIL,1,stimuli/fractals/149a.jpg,0.2344,-0.1389,1000,Encoding
+EncodingPractice,LOC,FOIL,1,stimuli/fractals/148b.jpg,0.2344,-0.1389,1000,Encoding
+EncodingPractice,LOC,LURE,1,stimuli/fractals/159a.jpg,-0.3906,0.4167,5000,Encoding
+EncodingPractice,OBJ,LURE,1,stimuli/fractals/177b.jpg,-0.3906,0.4167,800,Encoding
+EncodingPractice,-,-,1,stimuli/fractals/181c.jpg,-0.0781,-0.1389,3000,Encoding
+EncodingPractice,-,-,1,stimuli/fractals/163a.jpg,-0.2344,-0.4167,800,Encoding
+EncodingPractice,LOC,TARGET,1,stimuli/fractals/166a.jpg,-0.0781,0.4167,1500,Encoding

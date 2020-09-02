@@ -1,7 +1,0 @@
-TrialIndex,BlockNr,TrialType,StimType,ImagePresented,Xcoordinate,Ycoordinate,Jitter,Filler
-1,1,OBJ,FOIL,Stimuli/Fractals/Practice/156b.jpg,212.1320344,212.1320344,0.6,0
-1,1,OBJ,LURE,Stimuli/Fractals/Practice/166c.jpg,-300,0,0.6,0
-2,1,OBJ,TARGET,Stimuli/Fractals/Practice/167a.jpg,0,300,2,0
-4,2,LOC,LURE,Stimuli/Fractals/Practice/159a.jpg,212.1320344,212.1320344,1,0
-5,2,LOC,FOIL,Stimuli/Fractals/Practice/148b.jpg,-212.1320344,-212.1320344,1.5,0
-6,2,LOC,TARGET,Stimuli/Fractals/Practice/166a.jpg,-300,0,1,0

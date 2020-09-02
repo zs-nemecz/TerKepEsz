@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 31, 2020, at 11:48
+    on September 02, 2020, at 15:59
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -284,7 +284,10 @@ def get_current_trigger_time():
     thisExp.addData('triggers', trigger)
     thisExp.nextEntry()
     return trigger
-    
+
+trigger_time = 0
+event.globalKeys.add(key=trigger_key, func=get_current_trigger_time)
+
 
 # Initialize components for Routine "start_enc_run"
 start_enc_runClock = core.Clock()
@@ -1595,8 +1598,8 @@ for thisEnc_run in enc_runs:
     enc_runs.addData('start_MR_trigger.started', start_MR_trigger.tStartRefresh)
     enc_runs.addData('start_MR_trigger.stopped', start_MR_trigger.tStopRefresh)
     trigger_time = globalClock.getTime()
-    event.globalKeys.add(key=trigger_key, func=get_current_trigger_time)
     thisExp.addData('trigger_time', trigger_time)
+    
     
     # the Routine "start_MR" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
