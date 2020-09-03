@@ -1,7 +1,0 @@
-Task,TrialIndex,BlockNr,TrialType,StimType,CurrentImage,CurrentX,CurrentY,Jitter,Filler
-RecognitionPractice,1,1,OBJ,FOIL,stimuli/fractals/156b.jpg,0.2344,-0.1389,0.6,0
-RecognitionPractice,1,1,OBJ,LURE,stimuli/fractals/166c.jpg,-0.0781,0.4167,0.6,0
-RecognitionPractice,2,1,OBJ,TARGET,stimuli/fractals/167a.jpg,0.2344,0.4167,2,0
-RecognitionPractice,4,2,LOC,FOIL,stimuli/fractals/159a.jpg,-0.0781,-0.4167,1,0
-RecognitionPractice,5,2,LOC,LURE,stimuli/fractals/148b.jpg,0.2344,-0.4167,1.5,0
-RecognitionPractice,6,2,LOC,TARGET,stimuli/fractals/166a.jpg,-0.0781,0.4167,1,0
