@@ -23,9 +23,9 @@ def get_exp_parameters(encoding_table, recognition_table):
     n_encoding_images = int(n_encoding_images)
 
     # define number of all images as encoding images plus Object trial - foil images
-    object = recognition_table.TrialType == 'OBJ'
+    object_t = recognition_table.TrialType == 'OBJ'
     foil = recognition_table.StimType == 'FOIL'
-    object_foil = object & foil
+    object_foil = object_t & foil
     n_foils = recognition_table[object_foil].shape[0]
     n_all_images = n_foils + n_encoding_images
     n_all_images = int(n_all_images)
@@ -173,20 +173,6 @@ def set_recognition_row(recognition_trials, i, trial_type, recognition_type,\
 
 def set_recognition_trials(recognition_table, encoding_trials, foils):
 
-    # for recognition trials, use 1st presentation of OLP, LLP and ERP stimuli from the encoding task
-    # get OLP stimuli
-    olp = encoding_trials.loc[(encoding_trials['StimType'] == 'OLP') & (encoding_trials['Order'] == 1)].reset_index(drop=True)
-    olp.sample(frac=1).reset_index(drop=True)
-    i_olp = 0 # index, for looping through OLPs
-    # get LLP stimuli
-    llp =encoding_trials.loc[(encoding_trials['StimType'] == 'LLP') & (encoding_trials['Order'] == 1)].reset_index(drop=True)
-    llp.sample(frac=1).reset_index(drop=True)
-    i_llp = 0 # index, for looping through LLPs
-    #get ERP stimuli
-    erp =encoding_trials.loc[(encoding_trials['StimType'] == 'ERP') & (encoding_trials['Order'] == 1)].reset_index(drop=True)
-    erp.sample(frac=1).reset_index(drop=True)
-    i_erp = 0 # index, for looping through ERPs
-
     # OLP foil coordinates - obtain from encoding trials and shuffle together
     foilx = encoding_trials['Xcoordinate_foil']
     foily = encoding_trials['Ycoordinate_foil']
@@ -201,19 +187,43 @@ def set_recognition_trials(recognition_table, encoding_trials, foils):
 
     # loop through recog table and complete rows
     i_foil = 0 #index for looping through foil image names
-    for i, row in recognition_trials.iterrows():
-        if row['StimType'] == 'FOIL' and row['TrialType'] == 'OBJ':
-                recognition_trials = set_recognition_row(recognition_trials, i, 'OBJ', 'FOIL', foils, i_foil, foilx, foily)
-                i_foil += 1
-        else:
-            if row['EncodingStimType'] == 'OLP':
-                recognition_trials = set_recognition_row(recognition_trials, i, row['TrialType'], row['StimType'], olp, i_olp)
-                i_olp += 1
-            elif row['EncodingStimType'] == 'LLP':
-                recognition_trials = set_recognition_row(recognition_trials, i, row['TrialType'], row['StimType'], llp, i_llp)
-                i_llp += 1
-            elif row['EncodingStimType'] == 'ERP':
-                recognition_trials = set_recognition_row(recognition_trials, i, row['TrialType'], row['StimType'], erp, i_erp)
-                i_erp += 1
+    block_start = 0
+    block_len = 50
+    block_end = block_start + block_len
+    for bl in range(6):
+        #take OLP, LLP and ERP trials from the first block
+        block = encoding_trials.iloc[block_start:block_end, :]
+        # get OLP stimuli
+        olp = block.loc[(encoding_trials['StimType'] == 'OLP') & (encoding_trials['Order'] == 1)].reset_index(drop=True)
+        olp.sample(frac=1).reset_index(drop=True)
+        i_olp = 0  # index, for looping through OLPs
+        # get LLP stimuli
+        llp = block.loc[(encoding_trials['StimType'] == 'LLP') & (encoding_trials['Order'] == 1)].reset_index(drop=True)
+        llp.sample(frac=1).reset_index(drop=True)
+        i_llp = 0  # index, for looping through LLPs
+        # get ERP stimuli
+        erp = block.loc[(encoding_trials['StimType'] == 'ERP') & (encoding_trials['Order'] == 1)].reset_index(drop=True)
+        erp.sample(frac=1).reset_index(drop=True)
+        i_erp = 0  # index, for looping through ERPs
+        recognition_block = recognition_trials[recognition_trials["BlockNr"] == (bl+1)]
+        print(len(llp.index))
+        for i, row in recognition_block.iterrows():
+            print(i)
+            if row['StimType'] == 'FOIL' and row['TrialType'] == 'OBJ':
+                    recognition_trials = set_recognition_row(recognition_trials, i, 'OBJ', 'FOIL', foils, i_foil, foilx, foily)
+                    i_foil += 1
+            else:
+                if row['EncodingStimType'] == 'OLP':
+                    recognition_trials = set_recognition_row(recognition_trials, i, row['TrialType'], row['StimType'], olp, i_olp)
+                    i_olp += 1
+                elif row['EncodingStimType'] == 'LLP':
+                    recognition_trials = set_recognition_row(recognition_trials, i, row['TrialType'], row['StimType'], llp, i_llp)
+                    i_llp += 1
+                elif row['EncodingStimType'] == 'ERP':
+                    recognition_trials = set_recognition_row(recognition_trials, i, row['TrialType'], row['StimType'], erp, i_erp)
+                    i_erp += 1
+        # move to the next block
+        block_start = block_end
+        block_end += block_len
 
     return recognition_trials
