@@ -1,10 +1,7 @@
-Task,TrialType,StimType,Order,CurrentImage,CurrentX,CurrentY,Jitter,Section
-EncodingPractice,OBJ,LURE,1,stimuli/fractals/166a.jpg,-0.0781,0.4167,1500,Encoding
-EncodingPractice,OBJ,TARGET,1,stimuli/fractals/167a.jpg,0.2344,0.4167,500,Encoding
-EncodingPractice,OBJ,FOIL,1,stimuli/fractals/149a.jpg,0.2344,-0.1389,1000,Encoding
-EncodingPractice,LOC,FOIL,1,stimuli/fractals/148b.jpg,0.2344,-0.1389,1000,Encoding
-EncodingPractice,LOC,LURE,1,stimuli/fractals/159a.jpg,-0.3906,0.4167,5000,Encoding
-EncodingPractice,OBJ,LURE,1,stimuli/fractals/177b.jpg,-0.3906,0.4167,800,Encoding
-EncodingPractice,-,-,1,stimuli/fractals/181c.jpg,-0.0781,-0.1389,3000,Encoding
-EncodingPractice,-,-,1,stimuli/fractals/163a.jpg,-0.2344,-0.4167,800,Encoding
-EncodingPractice,LOC,TARGET,1,stimuli/fractals/166a.jpg,-0.0781,0.4167,1500,Encoding
+TrialIndex,Jitter,ScannerRun,BlockNr,TrialType,StimType,Order,Delay,CurrentImage,CurrentX,CurrentY,TripletMemberA,TripletMemberB,TripletMemberC,Xcoordinate,Ycoordinate,Xcoordinate_lure1,Ycoordinate_lure1,Xcoordinate_lure2,Ycoordinate_lure2,Xcoordinate_foil,Ycoordinate_foil
+1,800,1,1,OBJ,LURE,1,1,stimuli/fractals/170a.jpg,0.078125,-0.138888888888889,stimuli/fractals/170a.jpg,stimuli/fractals/170b.jpg,stimuli/fractals/170c.jpg,0.078125,-0.138888888888889,0.234375,-0.138888888888889,-0.078125,-0.138888888888889,-0.390625,0.416666666666667
+2,4000,1,1,OBJ,TARGET,1,1,stimuli/fractals/171a.jpg,0.390625,0.416666666666667,stimuli/fractals/171a.jpg,stimuli/fractals/171b.jpg,stimuli/fractals/171c.jpg,0.390625,0.416666666666667,0.234375,0.416666666666667,0.390625,0.138888888888889,-0.234375,0.138888888888889
+3,2000,1,1,OBJ,FOIL,1,1,stimuli/fractals/172a.jpg,-0.390625,-0.138888888888889,stimuli/fractals/172a.jpg,stimuli/fractals/172b.jpg,stimuli/fractals/172c.jpg,-0.390625,-0.138888888888889,-0.234375,-0.138888888888889,-0.390625,0.138888888888889,0.234375,0.138888888888889
+4,1000,1,2,LOC,LURE,1,1,stimuli/fractals/173a.jpg,0.078125,0.416666666666667,stimuli/fractals/173a.jpg,stimuli/fractals/173b.jpg,stimuli/fractals/173c.jpg,0.078125,0.416666666666667,0.078125,0.138888888888889,-0.078125,0.416666666666667,-0.390625,-0.138888888888889
+5,900,1,2,LOC,TARGET,1,1,stimuli/fractals/174a.jpg,0.234375,0.416666666666667,stimuli/fractals/174a.jpg,stimuli/fractals/174b.jpg,stimuli/fractals/174c.jpg,0.234375,0.416666666666667,0.078125,0.416666666666667,0.234375,0.138888888888889,-0.390625,-0.416666666666667
+6,3000,1,2,LOC,FOIL,1,1,stimuli/fractals/175a.jpg,0.234375,-0.138888888888889,stimuli/fractals/175a.jpg,stimuli/fractals/175b.jpg,stimuli/fractals/175c.jpg,0.234375,-0.138888888888889,0.234375,0.138888888888889,0.234375,-0.416666666666667,-0.390625,0.138888888888889
