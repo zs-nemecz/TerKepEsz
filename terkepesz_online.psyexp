@@ -101,6 +101,23 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="update_block_names">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="block_name_selection= [1, 51, 101]" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="block_name_selection = [1, 51, 101];&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="block_name_selection = [151, 201, 251];&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="block_name_selection=[151, 201, 251]" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="update_block_names" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="enc_trial">
       <CodeComponent name="get_size">
@@ -2561,8 +2578,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="practice_end = 0&amp;#10;step = 1&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="practice_end = 0;&amp;#10;step = 1;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="practice_start = practice_end;&amp;#10;practice_end = (practice_start + 3);&amp;#10;practice_selection = Array.from({length: practice_end - practice_start}, (_, index) =&gt; index + practice_start);&amp;#10;block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9p&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Hely&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unkknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="practice_start = practice_end&amp;#10;practice_end = practice_start + 3&amp;#10;practice_selection = np.arange(practice_start, practice_end, step)&amp;#10;&amp;#10;block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Kép'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Hely'&amp;#10;else:&amp;#10;    block_name='Block Unkknown'&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="practice_start = practice_end;&amp;#10;practice_end = (practice_start + 3);&amp;#10;practice_selection = Array.from({length: practice_end - practice_start}, (_, index) =&gt; index + practice_start);&amp;#10;block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9p&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Hely&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="practice_start = practice_end&amp;#10;practice_end = practice_start + 3&amp;#10;practice_selection = np.arange(practice_start, practice_end, step)&amp;#10;&amp;#10;block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Kép'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Hely'&amp;#10;else:&amp;#10;    block_name='Block Unknown'&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -2824,8 +2841,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;Obj&quot;)) {&amp;#10;    block_name = &quot;K\u00e9p&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;Loc&quot;)) {&amp;#10;        block_name = &quot;Hely&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='Obj':&amp;#10;    block_name = 'Kép'&amp;#10;elif TrialType=='Loc':&amp;#10;    block_name = 'Hely'" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9p&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Hely&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Kép'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Hely'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -2979,12 +2996,12 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="2" valType="code"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
       <Param name="name" updates="None" val="session" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <LoopInitiator loopType="TrialHandler" name="run">
-      <Param name="Selected rows" updates="None" val="[1, 51, 101]" valType="str"/>
+      <Param name="Selected rows" updates="None" val="$block_name_selection" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
       <Param name="conditionsFile" updates="None" val="$enc_table" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
