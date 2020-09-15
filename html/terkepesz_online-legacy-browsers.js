@@ -559,7 +559,7 @@ function experimentInit() {
   general_instructions_text_3 = new visual.TextStim({
     win: psychoJS.window,
     name: 'general_instructions_text_3',
-    text: "Képfelismerés:\nHa az alfeladat neve 'Kép', akkor arra kell választ adnia, a bemutatott kép pontosan megegyezik-e a Galériaberendezés feladatban látot képek egyikével. \nHa az alfeladat neve 'Hely', akkor a képek pozíciójáról kell döntenie: a képernyő ugyanezen pontján látta korábban a bemutatott képet?\n\nA vizsgálatot 6 körre osztottuk, úgy, hogy egy Képfelismerés blokkot Önnek mindig a közvetlenül megelőző Galériaberendezés blokk alapján kell elvégeznie. \nA sorrend lehet például:\n\n'Kép' Galériaberendezés -> 'Kép' Képfelismerés -> 'Hely' Galériaberendezés -> 'Hely' Képfelismerés\n",
+    text: "Képfelismerés:\nHa az alfeladat neve 'Kép', akkor arra kell választ adnia, a bemutatott kép pontosan megegyezik-e a Galériaberendezés feladatban látot képek egyikével. \nHa az alfeladat neve 'Hely', akkor a képek pozíciójáról kell döntenie: a képernyő ugyanezen pontján látta korábban a bemutatott képet?\n\nA vizsgálatot 6 körre osztottuk, úgy, hogy egy Képfelismerés blokkot Önnek mindig a közvetlenül megelőző Galériaberendezés blokk alapján kell elvégeznie. \nA sorrend lehet például:\n\n'Kép' Galériaberendezés -> 'Kép' Képfelismerés\n'Hely' Galériaberendezés -> 'Hely' Képfelismerés\n",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
@@ -633,7 +633,7 @@ function experimentInit() {
   enc_instructions_2_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'enc_instructions_2_text',
-    text: "A 'Hely' nevű alfeladat alatt azt döntse el, a bemutatott kép maradhat-e a galéria adott pontján, vagy más helyet keresne neki. \n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ. ",
+    text: "Ez a kiállítóterem, nézze meg figyelmesen. \n\nA feladat során a képek a falra vetítve jelennek meg. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.\n\nA 'Kép' nevű alfeladat alatt döntse el a képekről, hogy ki legyenek-e állítva a galériában. \nA beválogatott képek száma nincsen korlátozva. Minden egyes képről Ön dönt. Ha több képet válogat be, mint amennyi a galériában elfér, akkor a képeket az év során felváltva állítjuk ki.\n",
     font: 'Arial',
     units: undefined, 
     pos: [(- 0.35), 0], height: 0.03,  wrapWidth: 0.5, ori: 0,
@@ -668,7 +668,7 @@ function experimentInit() {
   enc_instructions_2_text_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'enc_instructions_2_text_2',
-    text: "Ez a kiállítóterem, nézze meg figyelmesen. \n\nA feladat során a képek a falra vetítve jelennek meg. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.\n\nA 'Kép' nevű alfeladat alatt döntse el a képekről, hogy ki legyenek-e állítva a galériában. \nA beválogatott képek száma nincsen korlátozva. Minden egyes képről Ön dönt. Ha több képet válogat be, mint amennyi a galériában elfér, akkor a képeket az év során felváltva állítjuk ki.",
+    text: "A 'Hely' nevű alfeladat alatt azt döntse el, a bemutatott kép maradhat-e a galéria adott pontján, vagy más helyet keresne neki. \n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ. ",
     font: 'Arial',
     units: undefined, 
     pos: [(- 0.35), 0], height: 0.03,  wrapWidth: 0.5, ori: 0,
@@ -2592,7 +2592,7 @@ function full_practceLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/recognition_practice_trials.csv', '1, 4'),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/recognition_full_practice_trials.csv', '1, 4'),
     seed: undefined, name: 'full_practce'
   });
   psychoJS.experiment.addLoop(full_practce); // add the loop to the experiment
@@ -2632,9 +2632,9 @@ function enc_full_practiceLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   enc_full_practice = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/recognition_practice_trials.csv', practice_selection),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/encoding_full_practice_trials.csv', practice_selection),
     seed: undefined, name: 'enc_full_practice'
   });
   psychoJS.experiment.addLoop(enc_full_practice); // add the loop to the experiment
@@ -2673,9 +2673,9 @@ function rec_full_practiceLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   rec_full_practice = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/recognition_practice_trials.csv', practice_selection),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/recognition_full_practice_trials.csv', practice_selection),
     seed: undefined, name: 'rec_full_practice'
   });
   psychoJS.experiment.addLoop(rec_full_practice); // add the loop to the experiment
