@@ -354,7 +354,7 @@ function experimentInit() {
   experiment_information_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'experiment_information_text',
-    text: 'Kérjük, figyelmesen olvassa végig az alábbi instrukciókat!\n\nA vizsgálathoz használjon asztali számítógépet vagy laptopot. A vizsgálat nem végezhető el mobil eszközön, például okostelefonon vagy táblagépen. A feladatok elvégzéséhez szüksége lesz működő billentyűzetre és stabil internet kapcsolatra. Az optimális eredmény elérése érdekében Google Chrome, Firefox vagy Safari böngésző használata javasolt. Kérjük, használja a teljes képernyő módot.\nA kísérlet teljes körű, zavartalan figyelmet igényel. A vizsgálat elvégzése 50-60 percet vesz igénybe. Bizonyosodjon meg róla, hogy elég időt tud szánni a vizsgálatra. Ügyeljen arra, hogy telefont, vagy más eszközöket közben ne használjon, és kerülje a másokkal való interakciót.\n\nA vizsgálat két feladattípusból áll, melyek során absztrakt képeket kell kiválogatnia a megadott szempontok szerint. A feladattípusokat kb 8 perces körökben, váltakozva fogja elvégezni. A körök között lesz lehetősége rövid pihenőt tartani. \n\n\n',
+    text: 'Kérjük, figyelmesen olvassa végig az alábbi instrukciókat!\n\nA vizsgálathoz használjon asztali számítógépet vagy laptopot. A vizsgálat nem végezhető el mobil eszközön, például okostelefonon vagy táblagépen. A feladatok elvégzéséhez szüksége lesz működő billentyűzetre és stabil internet kapcsolatra. Az optimális eredmény elérése érdekében Google Chrome, Firefox vagy Safari böngésző használata javasolt. Kérjük, használja a teljes képernyő módot.\nA kísérlet teljes körű, zavartalan figyelmet igényel. A vizsgálat elvégzése 50-60 percet vesz igénybe. Bizonyosodjon meg róla, hogy elég időt tud szánni a vizsgálatra. Ügyeljen arra, hogy telefont, vagy más eszközöket közben ne használjon, és kerülje a másokkal való interakciót.\n\nA vizsgálat két feladattípusból áll, melyek során absztrakt képeket kell kiválogatnia a megadott szempontok szerint. A feladattípusokat 8 perces körökben, váltakozva fogja elvégezni. A körök között lesz lehetősége rövid pihenőt tartani. \n\n\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
@@ -507,7 +507,7 @@ function experimentInit() {
   general_instructions_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'general_instructions_text',
-    text: 'A vizsgálat kétféle feladattípusból áll.\n\nAz első feladattípus a Galériaberendezés. Ebben a feladatban képeket kell beválogatnia egy modern művészeti galériába. \n\nA második feladattípus a Képfelismerés. Ebben a feladatban azt kell eldöntenie, a bemutatott képeket látta-e a megelőző Galériaberendezés feladat során. \n\nA vizsgálatot 6 körre osztottuk, úgy, hogy egy Képfelismerés blokkot Önnek mindig a közvetlenül megelőző Galériaberendezés blokk alapján kell elvégeznie. \n\nEgy kör 8 percet vesz igénybe, a körök között rövid (maximum 2 perces) szünetet tud tartani. A harmadik kör után tarthat egy hosszabb (maximum 10 perces) szünetet. \n\n\n\n\n\n',
+    text: 'A vizsgálat kétféle feladattípusból áll.\n\nAz első feladattípus a Galériaberendezés. Ebben a feladatban képeket kell beválogatnia egy modern művészeti galériába. \n\nA második feladattípus a Képfelismerés. Ebben a feladatban azt kell eldöntenie, a bemutatott képeket látta-e a megelőző Galériaberendezés feladat során. \n\nA vizsgálatot 6 körre osztottuk, úgy, hogy egy Képfelismerés feladatot Önnek mindig a közvetlenül megelőző Galériaberendezés feladat alapján kell elvégeznie. \n\nEgy kör 8 percet vesz igénybe, a körök között rövid (maximum 2 perces) szünetet tud tartani. A harmadik kör után tarthat egy hosszabb (maximum 10 perces) szünetet. \n\n\n\n\n\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
@@ -533,7 +533,7 @@ function experimentInit() {
   general_instructions_text_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'general_instructions_text_2',
-    text: "Mindkét alfeladatnak két típusa van: 'Kép' és 'Hely'.\n\nGalériaberendezés:\nHa az alfeladat neve 'Kép', akkor arról kell döntést hoznia, hogy a bemutatott kép ki legyen-e állítva a következő kiállításon.\nHa az alfeladat neve 'Hely', akkor azt kell eldöntenie, a bemutatt kép az aktuálisan jelzett helyen legyen-e kiállítva.",
+    text: "Mindkét feladatnak két típusa van: 'Kép' és 'Hely'.\n\nGalériaberendezés:\nHa az alfeladat neve 'Kép', akkor arról kell döntést hoznia, hogy a bemutatott kép ki legyen-e állítva a következő kiállításon.\nHa az alfeladat neve 'Hely', akkor azt kell eldöntenie, a bemutatt kép az aktuálisan jelzett helyen legyen-e kiállítva.",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
@@ -633,7 +633,7 @@ function experimentInit() {
   enc_instructions_2_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'enc_instructions_2_text',
-    text: "Ez a kiállítóterem, nézze meg figyelmesen. \n\nA feladat során a képek a falra vetítve jelennek meg. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.\n\nA 'Kép' nevű alfeladat alatt döntse el a képekről, hogy ki legyenek-e állítva a galériában. \n\nA beválogatott képek száma nincsen korlátozva. Minden egyes képről Ön dönt. \n\nHa több képet válogat be, mint amennyi a galériában elfér, akkor a képeket az év során felváltva állítjuk ki.\n",
+    text: "Ez a kiállítóterem, nézze meg figyelmesen. \n\nA feladat során a képek a falra vetítve jelennek meg. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.\n\nA 'Kép' nevű alfeladat alatt döntse el a képekről, hogy ki legyenek-e állítva a galériában. \n\nA beválogatott képek száma nincsen korlátozva. Minden egyes képről Ön dönt. \n\nHa több képet válogat be, mint amennyi a galériába fér, akkor a képeket az év során felváltva állítjuk ki.\n",
     font: 'Arial',
     units: undefined, 
     pos: [(- 0.35), 0], height: 0.03,  wrapWidth: 0.5, ori: 0,
@@ -668,7 +668,7 @@ function experimentInit() {
   enc_instructions_2_text_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'enc_instructions_2_text_2',
-    text: "A 'Hely' nevű alfeladat alatt azt döntse el, a bemutatott kép maradhat-e a galéria adott pontján, vagy más helyet keresne neki. \n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ. ",
+    text: "A 'Hely' nevű alfeladat alatt azt döntse el, a bemutatott kép maradhat-e a galéria adott pontján.\nEzeket a képeket mindenképp kiállítjuk, itt csak a képek helyéről tud dönteni. \n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ. ",
     font: 'Arial',
     units: undefined, 
     pos: [(- 0.35), 0], height: 0.03,  wrapWidth: 0.5, ori: 0,
@@ -703,7 +703,7 @@ function experimentInit() {
   enc_instructions_3_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'enc_instructions_3_text',
-    text: "A 'Kép' alfeladat alatt a 'J' billentyűvel jelölje azokat a képeket, amelyeket beválogat a kiállításra. \n\nAz 'F' billentyűvel jelölje a képeket, amelyeket nem válogat be a kiállításra.\n\n\nA 'Hely' nevű alfeladatban a 'J' billentyűvel jelölje azokat a képeket, amlyek maradhatnak a galéria adott pontján. \n\nAz 'F' billentyűvel jelölje a képeket, amelyek maradhatnak a galéria adott pontján.\n\nMost a Galériaberendezés gyakorlása következik. \n",
+    text: "A 'Kép' alfeladat alatt a 'J' billentyűvel jelölje azokat a képeket, amelyeket beválogat a kiállításra. \n\nAz 'F' billentyűvel jelölje a képeket, amelyeket nem válogat be a kiállításra.\n\n\nA 'Hely' nevű alfeladatban a 'J' billentyűvel jelölje azokat a képeket, amelyek maradhatnak a galéria adott pontján. \n\nAz 'F' billentyűvel jelölje a képeket, amelyek maradhatnak a galéria adott pontján.\n\nMost a Galériaberendezés gyakorlása következik. \n",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
@@ -1036,7 +1036,7 @@ function experimentInit() {
   rec_instructions_1_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_instructions_1_text',
-    text: "A Képfelismerés feladatban ismét absztrakt képeket fog látni, és ezekről kell eldöntenie, látta-e őket az első, 'Galéria berendezés' feladataban, és hogy ugyanott látta-e őket.\n\nA feladatot két alfeladatra bontottuk. Az egyikben a képekről, a másikban a képek pozíciójáról kell döntenie.",
+    text: 'A Képfelismerés feladatban ismét absztrakt képeket fog látni, és ezekről kell eldöntenie, látta-e őket a megelőző Galériaberendezés feladataban, és hogy ugyanott látta-e őket.\n\nA feladatot két alfeladatra bontottuk. Az egyikben a képekről, a másikban a képek pozíciójáról kell döntenie.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
@@ -7368,7 +7368,7 @@ function init_blocksRoutineBegin(trials) {
     start_rec_block_text.setText(block_name);
     enc_start = enc_end;
     enc_end = (enc_start + 50);
-    enc_selection = np.arange(enc_start, enc_end, step);
+    enc_selection = Array.from({length: enc_end - enc_start}, (_, index) => index + enc_start);
     
     block_name = "";
     if ((TrialType === "OBJ")) {
