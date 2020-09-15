@@ -641,7 +641,7 @@ function experimentInit() {
   enc_instructions_2_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'enc_instructions_2_text',
-    text: "Ez a kiállítóterem, nézze meg figyelmesen. \n\nA feladat során a képek a falra vetítve jelennek meg. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.\n\nA 'Kép' nevű alfeladat alatt döntse el a képekről, hogy ki legyenek-e állítva a galériában. \nA beválogatott képek száma nincsen korlátozva. Minden egyes képről Ön dönt. Ha több képet válogat be, mint amennyi a galériában elfér, akkor a képeket az év során felváltva állítjuk ki.\n",
+    text: "Ez a kiállítóterem, nézze meg figyelmesen. \n\nA feladat során a képek a falra vetítve jelennek meg. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.\n\nA 'Kép' nevű alfeladat alatt döntse el a képekről, hogy ki legyenek-e állítva a galériában. \n\nA beválogatott képek száma nincsen korlátozva. Minden egyes képről Ön dönt. \n\nHa több képet válogat be, mint amennyi a galériában elfér, akkor a képeket az év során felváltva állítjuk ki.\n",
     font: 'Arial',
     units: undefined, 
     pos: [(- 0.35), 0], height: 0.03,  wrapWidth: 0.5, ori: 0,
@@ -711,7 +711,7 @@ function experimentInit() {
   enc_instructions_3_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'enc_instructions_3_text',
-    text: "A 'Kép' alfeladat alatt a 'J' billentyűvel jelölje azokat a képeket, amelyeket beválogat a kiállításra. \nA 'Kép' alfeladat alatt az 'F' billentyűvel jelölje a képeket, amelyeket nem válogat be a kiállításra.\n\nA 'Hely' nevű alfeladatban a 'J' billentyűvel jelölje azokat a képeket, amlyek maradhatnak a galéria adott pontján. \nA 'Hely' alfeladat alatt az 'F' billentyűvel jelölje a képeket, amelyek maradhatnak a galéria adott pontján.\n\nMost a Galériaberendezés gyakorlása következik. \n",
+    text: "A 'Kép' alfeladat alatt a 'J' billentyűvel jelölje azokat a képeket, amelyeket beválogat a kiállításra. \n\nAz 'F' billentyűvel jelölje a képeket, amelyeket nem válogat be a kiállításra.\n\n\nA 'Hely' nevű alfeladatban a 'J' billentyűvel jelölje azokat a képeket, amlyek maradhatnak a galéria adott pontján. \n\nAz 'F' billentyűvel jelölje a képeket, amelyek maradhatnak a galéria adott pontján.\n\nMost a Galériaberendezés gyakorlása következik. \n",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
