@@ -1917,6 +1917,19 @@ function experimentInit() {
     depth: 0.0 
   });
   
+  // Initialize components for Routine "block_title"
+  block_titleClock = new util.Clock();
+  block_title_text = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'block_title_text',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: 0.0 
+  });
+  
   // Initialize components for Routine "rec_fx"
   rec_fxClock = new util.Clock();
   rec_fx_interior = new visual.ImageStim({
@@ -2427,7 +2440,7 @@ function enc_practice_blockLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   enc_practice_block = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/encoding_practice_trials.csv', practice_selection),
     seed: undefined, name: 'enc_practice_block'
@@ -2542,7 +2555,7 @@ function rec_practice_trialsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   rec_practice_trials = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/recognition_practice_trials.csv', practice_selection),
     seed: undefined, name: 'rec_practice_trials'
@@ -2782,6 +2795,9 @@ function runLoopBegin(thisScheduler) {
     thisScheduler.add(recognition_titleRoutineBegin(snapshot));
     thisScheduler.add(recognition_titleRoutineEachFrame(snapshot));
     thisScheduler.add(recognition_titleRoutineEnd(snapshot));
+    thisScheduler.add(block_titleRoutineBegin(snapshot));
+    thisScheduler.add(block_titleRoutineEachFrame(snapshot));
+    thisScheduler.add(block_titleRoutineEnd(snapshot));
     const rec_trialsLoopScheduler = new Scheduler(psychoJS);
     thisScheduler.add(rec_trialsLoopBegin, rec_trialsLoopScheduler);
     thisScheduler.add(rec_trialsLoopScheduler);
