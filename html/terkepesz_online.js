@@ -711,7 +711,7 @@ function experimentInit() {
   enc_instructions_3_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'enc_instructions_3_text',
-    text: "A 'Kép' alfeladat alatt a 'J' billentyűvel jelölje azokat a képeket, amelyeket beválogat a kiállításra. \n\nAz 'F' billentyűvel jelölje a képeket, amelyeket nem válogat be a kiállításra.\n\n\nA 'Hely' nevű alfeladatban a 'J' billentyűvel jelölje azokat a képeket, amelyek maradhatnak a galéria adott pontján. \n\nAz 'F' billentyűvel jelölje a képeket, amelyek maradhatnak a galéria adott pontján.\n\nMost a Galériaberendezés gyakorlása következik. \n",
+    text: "A 'Kép' alfeladat alatt a 'J' billentyűvel jelölje azokat a képeket, amelyeket beválogat a kiállításra. \n\nAz 'F' billentyűvel jelölje a képeket, amelyeket nem válogat be a kiállításra.\n\n\nA 'Hely' nevű alfeladatban a 'J' billentyűvel jelölje azokat a képeket, amelyek maradhatnak a galéria adott pontján. \n\nAz 'F' billentyűvel jelölje a képeket, amelyek nem maradhatnak a galéria adott pontján.\n\nMost a Galériaberendezés gyakorlása következik. \n",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,

@@ -111,7 +111,7 @@ screen_height = 1080
 screen_len = 1920
 
 #preparing stimulus list
-stim_fname = "StimuliTable-6-blocks_48-pairs_grid-loc_123456-delays.xlsx"
+stim_fname = "StimuliTable-Encoding-6-blocks_48-pairs_grid-loc_123456-delays.xlsx"
 stim_table = pd.read_excel(stim_fname)
 
 #making a dictionary of possible x-y coordinate combinations
