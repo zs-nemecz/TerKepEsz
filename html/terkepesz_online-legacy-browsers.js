@@ -252,16 +252,16 @@ var practice_end;
 var step;
 var start_practice_block;
 var enc_fxClock;
+var w_size;
+var x_size;
+var y_size;
+var scr_resolution;
 var enc_fx_interior;
 var enc_fx_cross;
 var enc_fx_key;
 var enc_fx_text_block;
 var enc_fx_instructions_text;
 var enc_trialClock;
-var w_size;
-var x_size;
-var y_size;
-var scr_resolution;
 var enc_trial_interior;
 var enc_trial_main_image;
 var enc_trial_key;
@@ -835,6 +835,13 @@ function experimentInit() {
   
   // Initialize components for Routine "enc_fx"
   enc_fxClock = new util.Clock();
+  w_size = psychoJS.window.size;
+  
+  x_size = w_size[0];
+  y_size = w_size[1];
+  
+  scr_resolution = (x_size / y_size);
+  
   enc_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
     name : 'enc_fx_interior', units : 'norm', 
@@ -842,7 +849,7 @@ function experimentInit() {
     ori : 0, pos : [0, (- 0)], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : 0.0 
+    texRes : 128, interpolate : true, depth : -1.0 
   });
   enc_fx_cross = new visual.TextStim({
     win: psychoJS.window,
@@ -852,7 +859,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -1.0 
+    depth: -2.0 
   });
   
   enc_fx_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -865,7 +872,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, 0.87], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -3.0 
+    depth: -4.0 
   });
   
   enc_fx_instructions_text = new visual.TextStim({
@@ -876,7 +883,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.833)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -4.0 
+    depth: -5.0 
   });
   
   // Initialize components for Routine "enc_trial"
@@ -1347,6 +1354,13 @@ function experimentInit() {
   
   // Initialize components for Routine "rec_fx"
   rec_fxClock = new util.Clock();
+  w_size = psychoJS.window.size;
+  
+  x_size = w_size[0];
+  y_size = w_size[1];
+  
+  scr_resolution = (x_size / y_size);
+  
   rec_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
     name : 'rec_fx_interior', units : 'norm', 
@@ -1354,7 +1368,7 @@ function experimentInit() {
     ori : 0, pos : [0, 0], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : 0.0 
+    texRes : 128, interpolate : true, depth : -1.0 
   });
   rec_fx_cross = new visual.TextStim({
     win: psychoJS.window,
@@ -1364,7 +1378,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -1.0 
+    depth: -2.0 
   });
   
   rec_fx_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -1377,7 +1391,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, 0.87], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -3.0 
+    depth: -4.0 
   });
   
   rec_fx_instructions_text = new visual.TextStim({
@@ -1388,7 +1402,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.833)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -4.0 
+    depth: -5.0 
   });
   
   // Initialize components for Routine "rec_trial"
@@ -1516,6 +1530,13 @@ function experimentInit() {
   
   // Initialize components for Routine "enc_fx"
   enc_fxClock = new util.Clock();
+  w_size = psychoJS.window.size;
+  
+  x_size = w_size[0];
+  y_size = w_size[1];
+  
+  scr_resolution = (x_size / y_size);
+  
   enc_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
     name : 'enc_fx_interior', units : 'norm', 
@@ -1523,7 +1544,7 @@ function experimentInit() {
     ori : 0, pos : [0, (- 0)], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : 0.0 
+    texRes : 128, interpolate : true, depth : -1.0 
   });
   enc_fx_cross = new visual.TextStim({
     win: psychoJS.window,
@@ -1533,7 +1554,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -1.0 
+    depth: -2.0 
   });
   
   enc_fx_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -1546,7 +1567,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, 0.87], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -3.0 
+    depth: -4.0 
   });
   
   enc_fx_instructions_text = new visual.TextStim({
@@ -1557,7 +1578,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.833)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -4.0 
+    depth: -5.0 
   });
   
   // Initialize components for Routine "enc_trial"
@@ -1692,6 +1713,13 @@ function experimentInit() {
   
   // Initialize components for Routine "rec_fx"
   rec_fxClock = new util.Clock();
+  w_size = psychoJS.window.size;
+  
+  x_size = w_size[0];
+  y_size = w_size[1];
+  
+  scr_resolution = (x_size / y_size);
+  
   rec_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
     name : 'rec_fx_interior', units : 'norm', 
@@ -1699,7 +1727,7 @@ function experimentInit() {
     ori : 0, pos : [0, 0], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : 0.0 
+    texRes : 128, interpolate : true, depth : -1.0 
   });
   rec_fx_cross = new visual.TextStim({
     win: psychoJS.window,
@@ -1709,7 +1737,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -1.0 
+    depth: -2.0 
   });
   
   rec_fx_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -1722,7 +1750,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, 0.87], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -3.0 
+    depth: -4.0 
   });
   
   rec_fx_instructions_text = new visual.TextStim({
@@ -1733,7 +1761,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.833)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -4.0 
+    depth: -5.0 
   });
   
   // Initialize components for Routine "rec_trial"
@@ -1876,6 +1904,13 @@ function experimentInit() {
   
   // Initialize components for Routine "enc_fx"
   enc_fxClock = new util.Clock();
+  w_size = psychoJS.window.size;
+  
+  x_size = w_size[0];
+  y_size = w_size[1];
+  
+  scr_resolution = (x_size / y_size);
+  
   enc_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
     name : 'enc_fx_interior', units : 'norm', 
@@ -1883,7 +1918,7 @@ function experimentInit() {
     ori : 0, pos : [0, (- 0)], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : 0.0 
+    texRes : 128, interpolate : true, depth : -1.0 
   });
   enc_fx_cross = new visual.TextStim({
     win: psychoJS.window,
@@ -1893,7 +1928,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -1.0 
+    depth: -2.0 
   });
   
   enc_fx_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -1906,7 +1941,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, 0.87], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -3.0 
+    depth: -4.0 
   });
   
   enc_fx_instructions_text = new visual.TextStim({
@@ -1917,7 +1952,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.833)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -4.0 
+    depth: -5.0 
   });
   
   // Initialize components for Routine "enc_trial"
@@ -1999,6 +2034,13 @@ function experimentInit() {
   
   // Initialize components for Routine "rec_fx"
   rec_fxClock = new util.Clock();
+  w_size = psychoJS.window.size;
+  
+  x_size = w_size[0];
+  y_size = w_size[1];
+  
+  scr_resolution = (x_size / y_size);
+  
   rec_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
     name : 'rec_fx_interior', units : 'norm', 
@@ -2006,7 +2048,7 @@ function experimentInit() {
     ori : 0, pos : [0, 0], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : 0.0 
+    texRes : 128, interpolate : true, depth : -1.0 
   });
   rec_fx_cross = new visual.TextStim({
     win: psychoJS.window,
@@ -2016,7 +2058,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -1.0 
+    depth: -2.0 
   });
   
   rec_fx_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -2029,7 +2071,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, 0.87], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -3.0 
+    depth: -4.0 
   });
   
   rec_fx_instructions_text = new visual.TextStim({
@@ -2040,7 +2082,7 @@ function experimentInit() {
     units: 'norm', 
     pos: [0, (- 0.833)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -4.0 
+    depth: -5.0 
   });
   
   // Initialize components for Routine "rec_trial"
@@ -2657,7 +2699,7 @@ function comprehension_questions_3LoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '6,7'),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '5,6'),
     seed: undefined, name: 'comprehension_questions_3'
   });
   psychoJS.experiment.addLoop(comprehension_questions_3); // add the loop to the experiment
@@ -3072,7 +3114,7 @@ function comprehension_question_4LoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '5'),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '4'),
     seed: undefined, name: 'comprehension_question_4'
   });
   psychoJS.experiment.addLoop(comprehension_question_4); // add the loop to the experiment
@@ -3127,7 +3169,7 @@ function comprehension_endLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '8:11'),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '7:10'),
     seed: undefined, name: 'comprehension_end'
   });
   psychoJS.experiment.addLoop(comprehension_end); // add the loop to the experiment
@@ -5180,6 +5222,13 @@ function enc_fxRoutineBegin(trials) {
     enc_fxClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    w_size = psychoJS.window.size;
+    
+    x_size = w_size[0];
+    y_size = w_size[1];
+    
+    scr_resolution = (x_size / y_size);
+    
     enc_fx_cross.setPos([CurrentX, CurrentY]);
     enc_fx_key.keys = undefined;
     enc_fx_key.rt = undefined;
@@ -6956,6 +7005,13 @@ function rec_fxRoutineBegin(trials) {
     rec_fxClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    w_size = psychoJS.window.size;
+    
+    x_size = w_size[0];
+    y_size = w_size[1];
+    
+    scr_resolution = (x_size / y_size);
+    
     rec_fx_cross.setPos([CurrentX, CurrentY]);
     rec_fx_key.keys = undefined;
     rec_fx_key.rt = undefined;
@@ -8156,6 +8212,10 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
+  
+  
   
   
   
