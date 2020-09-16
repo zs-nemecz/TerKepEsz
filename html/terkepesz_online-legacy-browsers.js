@@ -272,7 +272,6 @@ var enc_practice_feedback_interior;
 var enc_practice_feedback_image;
 var enc_practice_feedback_text;
 var enc_practice_feedback_block;
-var enc_practice_feedback_instructions_text;
 var end_practiceClock;
 var end_practice_text;
 var end_practice_key;
@@ -979,17 +978,6 @@ function experimentInit() {
     depth: -4.0 
   });
   
-  enc_practice_feedback_instructions_text = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'enc_practice_feedback_instructions_text',
-    text: '[F - Nem marad]      [J - Marad]',
-    font: 'Arial',
-    units: 'norm', 
-    pos: [0, (- 0.833)], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -5.0 
-  });
-  
   // Initialize components for Routine "end_practice"
   end_practiceClock = new util.Clock();
   end_practice_text = new visual.TextStim({
@@ -1672,17 +1660,6 @@ function experimentInit() {
     pos: [0, 0.87], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
-  });
-  
-  enc_practice_feedback_instructions_text = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'enc_practice_feedback_instructions_text',
-    text: '[F - Nem marad]      [J - Marad]',
-    font: 'Arial',
-    units: 'norm', 
-    pos: [0, (- 0.833)], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -5.0 
   });
   
   // Initialize components for Routine "recognition_title"
@@ -2699,7 +2676,7 @@ function comprehension_questions_3LoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '5,6'),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '6:8'),
     seed: undefined, name: 'comprehension_questions_3'
   });
   psychoJS.experiment.addLoop(comprehension_questions_3); // add the loop to the experiment
@@ -3114,7 +3091,7 @@ function comprehension_question_4LoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '4:5'),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '4:6'),
     seed: undefined, name: 'comprehension_question_4'
   });
   psychoJS.experiment.addLoop(comprehension_question_4); // add the loop to the experiment
@@ -3169,7 +3146,7 @@ function comprehension_endLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '7:10'),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '8:11'),
     seed: undefined, name: 'comprehension_end'
   });
   psychoJS.experiment.addLoop(comprehension_end); // add the loop to the experiment
@@ -5606,7 +5583,6 @@ function enc_practice_feedbackRoutineBegin(trials) {
     enc_practice_feedbackComponents.push(enc_practice_feedback_image);
     enc_practice_feedbackComponents.push(enc_practice_feedback_text);
     enc_practice_feedbackComponents.push(enc_practice_feedback_block);
-    enc_practice_feedbackComponents.push(enc_practice_feedback_instructions_text);
     
     enc_practice_feedbackComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
@@ -5681,20 +5657,6 @@ function enc_practice_feedbackRoutineEachFrame(trials) {
     frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (enc_practice_feedback_block.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       enc_practice_feedback_block.setAutoDraw(false);
-    }
-    
-    // *enc_practice_feedback_instructions_text* updates
-    if (t >= 0.0 && enc_practice_feedback_instructions_text.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      enc_practice_feedback_instructions_text.tStart = t;  // (not accounting for frame time here)
-      enc_practice_feedback_instructions_text.frameNStart = frameN;  // exact frame index
-      
-      enc_practice_feedback_instructions_text.setAutoDraw(true);
-    }
-
-    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (enc_practice_feedback_instructions_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      enc_practice_feedback_instructions_text.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
