@@ -7476,8 +7476,12 @@ function start_runRoutineBegin(trials) {
     // update component parameters for each repeat
     run_counter = (run_counter + 1);
     end_run_text = "R\u00f6vid sz\u00fcnet.\n\nA feladat folytat\u00e1shoz nyomja le a jobb nyilat.";
-    if ((run_counter >= 3)) {
-        end_run_text = "V\u00e9ge a feladat els\u0151 fel\u00e9nek. A folytat\u00e1shoz nyomja le a jobb nyilat";
+    if ((run_counter === 3)) {
+        end_run_text = "V\u00e9ge a feladat els\u0151 fel\u00e9nek. A folytat\u00e1shoz nyomja le a jobb nyilat.";
+    } else {
+        if ((run_counter === 6)) {
+            end_run_text = "V\u00e9ge a feladatnak. A folytat\u00e1shoz nyomja le a jobb nyilat.";
+        }
     }
     
     // keep track of which components have finished
