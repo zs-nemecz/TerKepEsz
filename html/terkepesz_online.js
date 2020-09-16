@@ -2953,7 +2953,7 @@ function runLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   run = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 2, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, enc_table, block_name_selection),
     seed: undefined, name: 'run'

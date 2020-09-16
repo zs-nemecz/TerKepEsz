@@ -2829,9 +2829,9 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="rec_end = 0" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="rec_end = 0;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="rec_start = rec_end;&amp;#10;rec_end = (rec_start + 24);&amp;#10;rec_selection = Array.from({length: rec_end - rec_start}, (_, index) =&gt; index + rec_start)&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="rec_start = rec_end&amp;#10;rec_end = rec_start + 24&amp;#10;rec_selection = np.arange(rec_start,rec_end, step)&amp;#10;" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Begin JS Routine" updates="constant" val="rec_start = rec_end;&amp;#10;rec_end = (rec_start + 4);&amp;#10;rec_selection = Array.from({length: rec_end - rec_start}, (_, index) =&gt; index + rec_start)&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="rec_start = rec_end&amp;#10;rec_end = rec_start + 4&amp;#10;rec_selection = np.arange(rec_start,rec_end, step)&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -2870,9 +2870,9 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="enc_end = 0;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="enc_end = 0;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="enc_start = enc_end;&amp;#10;enc_end = (enc_start + 50);&amp;#10;enc_selection = Array.from({length: enc_end - enc_start}, (_, index) =&gt; index + enc_start);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="enc_start = enc_end&amp;#10;enc_end = enc_start + 50&amp;#10;enc_selection = np.arange(enc_start, enc_end, step)&amp;#10;" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Begin JS Routine" updates="constant" val="enc_start = enc_end;&amp;#10;enc_end = (enc_start + 4);&amp;#10;enc_selection = Array.from({length: enc_end - enc_start}, (_, index) =&gt; index + enc_start);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="enc_start = enc_end&amp;#10;enc_end = enc_start + 4&amp;#10;enc_selection = np.arange(enc_start, enc_end, step)&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -3373,7 +3373,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="nReps" updates="None" val="2" valType="code"/>
       <Param name="name" updates="None" val="run" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
