@@ -2922,7 +2922,7 @@ function sessionLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   session = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 2, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: undefined,
     seed: undefined, name: 'session'
@@ -2953,7 +2953,7 @@ function runLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   run = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 2, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, enc_table, block_name_selection),
     seed: undefined, name: 'run'
@@ -5678,7 +5678,7 @@ function end_practiceRoutineBegin(trials) {
     t = 0;
     end_practiceClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(300.000000);
+    routineTimer.add(600.000000);
     // update component parameters for each repeat
     end_practice_key.keys = undefined;
     end_practice_key.rt = undefined;
@@ -5720,7 +5720,7 @@ function end_practiceRoutineEachFrame(trials) {
       end_practice_text.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 300.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 600.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (end_practice_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       end_practice_text.setAutoDraw(false);
     }
@@ -5737,7 +5737,7 @@ function end_practiceRoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function() { end_practice_key.clearEvents(); });
     }
 
-    frameRemains = 1.0 + 299.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1.0 + 599.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (end_practice_key.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       end_practice_key.status = PsychoJS.Status.FINISHED;
   }
@@ -5763,7 +5763,7 @@ function end_practiceRoutineEachFrame(trials) {
       end_practice_continue.setAutoDraw(true);
     }
 
-    frameRemains = 1.0 + 299.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1.0 + 599.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (end_practice_continue.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       end_practice_continue.setAutoDraw(false);
     }
@@ -5777,7 +5777,7 @@ function end_practiceRoutineEachFrame(trials) {
       coming_up_next_text.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 300.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 600.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (coming_up_next_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       coming_up_next_text.setAutoDraw(false);
     }
@@ -7812,7 +7812,7 @@ function inter_task_breakRoutineBegin(trials) {
         end_task_text = "Feltesz\u00fcnk \u00d6nnek p\u00e1r k\u00e9rd\u00e9st, majd megkapja a vizsg\u00e1lat elv\u00e9gz\u00e9s\u00e9t igazol\u00f3 k\u00f3dot.";
     }
     
-    inter_task_break_text.setText(task_end_text);
+    inter_task_break_text.setText(end_task_text);
     inter_task_break_key.keys = undefined;
     inter_task_break_key.rt = undefined;
     _inter_task_break_key_allKeys = [];

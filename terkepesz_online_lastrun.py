@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on September 16, 2020, at 17:13
+    on September 16, 2020, at 17:42
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -4463,7 +4463,7 @@ for thisEnc_practice_trial in enc_practice_trials:
 
 # ------Prepare to start Routine "end_practice"-------
 continueRoutine = True
-routineTimer.add(300.000000)
+routineTimer.add(600.000000)
 # update component parameters for each repeat
 end_practice_key.keys = []
 end_practice_key.rt = []
@@ -4504,7 +4504,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         end_practice_text.setAutoDraw(True)
     if end_practice_text.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > end_practice_text.tStartRefresh + 300.0-frameTolerance:
+        if tThisFlipGlobal > end_practice_text.tStartRefresh + 600.0-frameTolerance:
             # keep track of stop time/frame for later
             end_practice_text.tStop = t  # not accounting for scr refresh
             end_practice_text.frameNStop = frameN  # exact frame index
@@ -4526,7 +4526,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         win.callOnFlip(end_practice_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
     if end_practice_key.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > end_practice_key.tStartRefresh + 299.0-frameTolerance:
+        if tThisFlipGlobal > end_practice_key.tStartRefresh + 599.0-frameTolerance:
             # keep track of stop time/frame for later
             end_practice_key.tStop = t  # not accounting for scr refresh
             end_practice_key.frameNStop = frameN  # exact frame index
@@ -4551,7 +4551,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         end_practice_continue.setAutoDraw(True)
     if end_practice_continue.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > end_practice_continue.tStartRefresh + 299.0-frameTolerance:
+        if tThisFlipGlobal > end_practice_continue.tStartRefresh + 599.0-frameTolerance:
             # keep track of stop time/frame for later
             end_practice_continue.tStop = t  # not accounting for scr refresh
             end_practice_continue.frameNStop = frameN  # exact frame index
@@ -4568,7 +4568,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         coming_up_next_text.setAutoDraw(True)
     if coming_up_next_text.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > coming_up_next_text.tStartRefresh + 300.0-frameTolerance:
+        if tThisFlipGlobal > coming_up_next_text.tStartRefresh + 600.0-frameTolerance:
             # keep track of stop time/frame for later
             coming_up_next_text.tStop = t  # not accounting for scr refresh
             coming_up_next_text.frameNStop = frameN  # exact frame index
@@ -6659,7 +6659,7 @@ for thisRec_practice_block in rec_practice_blocks:
 
 # ------Prepare to start Routine "end_practice"-------
 continueRoutine = True
-routineTimer.add(300.000000)
+routineTimer.add(600.000000)
 # update component parameters for each repeat
 end_practice_key.keys = []
 end_practice_key.rt = []
@@ -6700,7 +6700,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         end_practice_text.setAutoDraw(True)
     if end_practice_text.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > end_practice_text.tStartRefresh + 300.0-frameTolerance:
+        if tThisFlipGlobal > end_practice_text.tStartRefresh + 600.0-frameTolerance:
             # keep track of stop time/frame for later
             end_practice_text.tStop = t  # not accounting for scr refresh
             end_practice_text.frameNStop = frameN  # exact frame index
@@ -6722,7 +6722,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         win.callOnFlip(end_practice_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
     if end_practice_key.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > end_practice_key.tStartRefresh + 299.0-frameTolerance:
+        if tThisFlipGlobal > end_practice_key.tStartRefresh + 599.0-frameTolerance:
             # keep track of stop time/frame for later
             end_practice_key.tStop = t  # not accounting for scr refresh
             end_practice_key.frameNStop = frameN  # exact frame index
@@ -6747,7 +6747,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         end_practice_continue.setAutoDraw(True)
     if end_practice_continue.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > end_practice_continue.tStartRefresh + 299.0-frameTolerance:
+        if tThisFlipGlobal > end_practice_continue.tStartRefresh + 599.0-frameTolerance:
             # keep track of stop time/frame for later
             end_practice_continue.tStop = t  # not accounting for scr refresh
             end_practice_continue.frameNStop = frameN  # exact frame index
@@ -6764,7 +6764,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         coming_up_next_text.setAutoDraw(True)
     if coming_up_next_text.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > coming_up_next_text.tStartRefresh + 300.0-frameTolerance:
+        if tThisFlipGlobal > coming_up_next_text.tStartRefresh + 600.0-frameTolerance:
             # keep track of stop time/frame for later
             coming_up_next_text.tStop = t  # not accounting for scr refresh
             coming_up_next_text.frameNStop = frameN  # exact frame index
@@ -8091,7 +8091,7 @@ for thisFull_practce in full_practce:
 
 # ------Prepare to start Routine "end_practice"-------
 continueRoutine = True
-routineTimer.add(300.000000)
+routineTimer.add(600.000000)
 # update component parameters for each repeat
 end_practice_key.keys = []
 end_practice_key.rt = []
@@ -8132,7 +8132,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         end_practice_text.setAutoDraw(True)
     if end_practice_text.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > end_practice_text.tStartRefresh + 300.0-frameTolerance:
+        if tThisFlipGlobal > end_practice_text.tStartRefresh + 600.0-frameTolerance:
             # keep track of stop time/frame for later
             end_practice_text.tStop = t  # not accounting for scr refresh
             end_practice_text.frameNStop = frameN  # exact frame index
@@ -8154,7 +8154,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         win.callOnFlip(end_practice_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
     if end_practice_key.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > end_practice_key.tStartRefresh + 299.0-frameTolerance:
+        if tThisFlipGlobal > end_practice_key.tStartRefresh + 599.0-frameTolerance:
             # keep track of stop time/frame for later
             end_practice_key.tStop = t  # not accounting for scr refresh
             end_practice_key.frameNStop = frameN  # exact frame index
@@ -8179,7 +8179,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         end_practice_continue.setAutoDraw(True)
     if end_practice_continue.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > end_practice_continue.tStartRefresh + 299.0-frameTolerance:
+        if tThisFlipGlobal > end_practice_continue.tStartRefresh + 599.0-frameTolerance:
             # keep track of stop time/frame for later
             end_practice_continue.tStop = t  # not accounting for scr refresh
             end_practice_continue.frameNStop = frameN  # exact frame index
@@ -8196,7 +8196,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         coming_up_next_text.setAutoDraw(True)
     if coming_up_next_text.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > coming_up_next_text.tStartRefresh + 300.0-frameTolerance:
+        if tThisFlipGlobal > coming_up_next_text.tStartRefresh + 600.0-frameTolerance:
             # keep track of stop time/frame for later
             coming_up_next_text.tStop = t  # not accounting for scr refresh
             coming_up_next_text.frameNStop = frameN  # exact frame index
@@ -8241,7 +8241,7 @@ thisExp.addData('coming_up_next_text.started', coming_up_next_text.tStartRefresh
 thisExp.addData('coming_up_next_text.stopped', coming_up_next_text.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-session = data.TrialHandler(nReps=1, method='sequential', 
+session = data.TrialHandler(nReps=2, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=[None],
     seed=None, name='session')
@@ -8260,7 +8260,7 @@ for thisSession in session:
             exec('{} = thisSession[paramName]'.format(paramName))
     
     # set up handler to look after randomisation of conditions etc
-    run = data.TrialHandler(nReps=2, method='sequential', 
+    run = data.TrialHandler(nReps=1, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions(enc_table, selection=block_name_selection),
         seed=None, name='run')
@@ -9870,7 +9870,7 @@ for thisSession in session:
             run.addData('enc_run_end_key.rt', enc_run_end_key.rt)
         run.addData('enc_run_end_key.started', enc_run_end_key.tStartRefresh)
         run.addData('enc_run_end_key.stopped', enc_run_end_key.tStopRefresh)
-    # completed 2 repeats of 'run'
+    # completed 1 repeats of 'run'
     
     
     # ------Prepare to start Routine "inter_task_break"-------
@@ -9882,7 +9882,7 @@ for thisSession in session:
     
     if run_counter >= 6:
         end_task_text='Felteszünk Önnek pár kérdést, majd megkapja a vizsgálat elvégzését igazoló kódot.'
-    inter_task_break_text.setText(task_end_text)
+    inter_task_break_text.setText(end_task_text)
     inter_task_break_key.keys = []
     inter_task_break_key.rt = []
     _inter_task_break_key_allKeys = []
@@ -10007,7 +10007,7 @@ for thisSession in session:
         session.addData('inter_task_break_key.rt', inter_task_break_key.rt)
     session.addData('inter_task_break_key.started', inter_task_break_key.tStartRefresh)
     session.addData('inter_task_break_key.stopped', inter_task_break_key.tStopRefresh)
-# completed 1 repeats of 'session'
+# completed 2 repeats of 'session'
 
 
 # set up handler to look after randomisation of conditions etc
