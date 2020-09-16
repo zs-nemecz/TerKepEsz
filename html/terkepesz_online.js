@@ -7584,14 +7584,14 @@ function init_blocksRoutineBegin(trials) {
     }
     
     rec_start = rec_end;
-    rec_end = (rec_start + 24);
+    rec_end = (rec_start + 4);
     rec_selection = Array.from({length: rec_end - rec_start}, (_, index) => index + rec_start)
     
     
     
     start_rec_block_text.setText(block_name);
     enc_start = enc_end;
-    enc_end = (enc_start + 50);
+    enc_end = (enc_start + 4);
     enc_selection = Array.from({length: enc_end - enc_start}, (_, index) => index + enc_start);
     
     // keep track of which components have finished
