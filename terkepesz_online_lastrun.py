@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on September 16, 2020, at 10:25
+    on September 16, 2020, at 11:38
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -8260,7 +8260,7 @@ for thisSession in session:
             exec('{} = thisSession[paramName]'.format(paramName))
     
     # set up handler to look after randomisation of conditions etc
-    run = data.TrialHandler(nReps=3, method='sequential', 
+    run = data.TrialHandler(nReps=1, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions(enc_table, selection=block_name_selection),
         seed=None, name='run')
@@ -8285,8 +8285,10 @@ for thisSession in session:
         run_counter = run_counter + 1
         end_run_text = 'Rövid szünet.\n\nA feladat folytatáshoz nyomja le a jobb nyilat.'
         
-        if run_counter >= 3:
-            end_run_text = 'Vége a feladat első felének. A folytatáshoz nyomja le a jobb nyilat'
+        if run_counter == 3:
+            end_run_text = 'Vége a feladat első felének. A folytatáshoz nyomja le a jobb nyilat.'
+        elif run_counter ==6:
+            end_run_text = 'Vége a feladatnak. A folytatáshoz nyomja le a jobb nyilat.'
         # keep track of which components have finished
         start_runComponents = [start_enc_run_text]
         for thisComponent in start_runComponents:
@@ -9868,7 +9870,7 @@ for thisSession in session:
             run.addData('enc_run_end_key.rt', enc_run_end_key.rt)
         run.addData('enc_run_end_key.started', enc_run_end_key.tStartRefresh)
         run.addData('enc_run_end_key.stopped', enc_run_end_key.tStopRefresh)
-    # completed 3 repeats of 'run'
+    # completed 1 repeats of 'run'
     
     
     # ------Prepare to start Routine "inter_task_break"-------
