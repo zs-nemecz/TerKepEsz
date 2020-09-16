@@ -337,10 +337,10 @@ var end_runClock;
 var end_enc_run_text;
 var enc_run_end_key;
 var inter_task_breakClock;
+var block_name_selection;
 var inter_task_break_continue;
 var inter_task_break_text;
 var inter_task_break_key;
-var block_name_selection;
 var end_experimentClock;
 var end_experiment_text;
 var code;
@@ -2188,31 +2188,31 @@ function experimentInit() {
   
   // Initialize components for Routine "inter_task_break"
   inter_task_breakClock = new util.Clock();
+  block_name_selection = [1, 51, 101];
+  
   inter_task_break_continue = new visual.TextStim({
     win: psychoJS.window,
     name: 'inter_task_break_continue',
-    text: 'Ha úgy érzi készen áll, nyomja le a jobb nyilat.',
+    text: 'A folytatáshoz nyomja le a jobb nyilat.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   inter_task_break_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'inter_task_break_text',
-    text: 'Mielőtt tovább lépne a következő feladathoz, tartson egy rövid szünetet, hogy felfrissüljön. Ha teheti, álljon fel a számítógéptől, pihentesse szemeit, igyon egy pohár vizet. Ügyeljen, hogy ez a szünet ne tartson 10 percnél tovább. ',
+    text: 'default text',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -1.0 
+    depth: -2.0 
   });
   
   inter_task_break_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
-  
-  block_name_selection = [1, 51, 101];
   
   // Initialize components for Routine "comprehension_question"
   comprehension_questionClock = new util.Clock();
@@ -7721,7 +7721,7 @@ function end_runRoutineBegin(trials) {
     t = 0;
     end_runClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(1200.000000);
+    routineTimer.add(1201.000000);
     // update component parameters for each repeat
     end_enc_run_text.setText(end_run_text);
     enc_run_end_key.keys = undefined;
@@ -7766,7 +7766,7 @@ function end_runRoutineEachFrame(trials) {
     }
     
     // *enc_run_end_key* updates
-    if (t >= 0.0 && enc_run_end_key.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 1.0 && enc_run_end_key.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       enc_run_end_key.tStart = t;  // (not accounting for frame time here)
       enc_run_end_key.frameNStart = frameN;  // exact frame index
@@ -7777,7 +7777,7 @@ function end_runRoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function() { enc_run_end_key.clearEvents(); });
     }
 
-    frameRemains = 0.0 + 1200 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1.0 + 1200 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (enc_run_end_key.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       enc_run_end_key.status = PsychoJS.Status.FINISHED;
   }
@@ -7840,6 +7840,7 @@ function end_runRoutineEnd(trials) {
 }
 
 
+var end_task_text;
 var _inter_task_break_key_allKeys;
 var inter_task_breakComponents;
 function inter_task_breakRoutineBegin(trials) {
@@ -7850,11 +7851,16 @@ function inter_task_breakRoutineBegin(trials) {
     frameN = -1;
     routineTimer.add(1200.000000);
     // update component parameters for each repeat
+    block_name_selection = [151, 201, 251];
+    end_task_text = "Miel\u0151tt tov\u00e1bb l\u00e9pne a k\u00f6vetkez\u0151 feladathoz, tartson egy r\u00f6vid sz\u00fcnetet, hogy felfriss\u00fclj\u00f6n. Ha teheti, \u00e1lljon fel a sz\u00e1m\u00edt\u00f3g\u00e9pt\u0151l, pihentesse szemeit, igyon egy poh\u00e1r vizet. \u00dcgyeljen, hogy ez a sz\u00fcnet ne tartson 10 percn\u00e9l tov\u00e1bb. ";
+    if ((run_counter >= 6)) {
+        end_task_text = "Feltesz\u00fcnk \u00d6nnek p\u00e1r k\u00e9rd\u00e9st, majd megkapja a vizsg\u00e1lat elv\u00e9gz\u00e9s\u00e9t igazol\u00f3 k\u00f3dot.";
+    }
+    
+    inter_task_break_text.setText(task_end_text);
     inter_task_break_key.keys = undefined;
     inter_task_break_key.rt = undefined;
     _inter_task_break_key_allKeys = [];
-    block_name_selection = [151, 201, 251];
-    
     // keep track of which components have finished
     inter_task_breakComponents = [];
     inter_task_breakComponents.push(inter_task_break_continue);

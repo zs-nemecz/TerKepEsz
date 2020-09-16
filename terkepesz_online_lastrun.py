@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on September 16, 2020, at 12:33
+    on September 16, 2020, at 17:13
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1448,22 +1448,22 @@ enc_run_end_key = keyboard.Keyboard()
 
 # Initialize components for Routine "inter_task_break"
 inter_task_breakClock = core.Clock()
+block_name_selection= [1, 51, 101]
 inter_task_break_continue = visual.TextStim(win=win, name='inter_task_break_continue',
-    text='Ha úgy érzi készen áll, nyomja le a jobb nyilat.',
+    text='A folytatáshoz nyomja le a jobb nyilat.',
     font='Arial',
     pos=(0,-0.4), height=0.03, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=0.0);
+    depth=-1.0);
 inter_task_break_text = visual.TextStim(win=win, name='inter_task_break_text',
-    text='Mielőtt tovább lépne a következő feladathoz, tartson egy rövid szünetet, hogy felfrissüljön. Ha teheti, álljon fel a számítógéptől, pihentesse szemeit, igyon egy pohár vizet. Ügyeljen, hogy ez a szünet ne tartson 10 percnél tovább. ',
+    text='default text',
     font='Arial',
     pos=(0, 0), height=0.03, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-1.0);
+    depth=-2.0);
 inter_task_break_key = keyboard.Keyboard()
-block_name_selection= [1, 51, 101]
 
 # Initialize components for Routine "comprehension_question"
 comprehension_questionClock = core.Clock()
@@ -9762,7 +9762,7 @@ for thisSession in session:
         
         # ------Prepare to start Routine "end_run"-------
         continueRoutine = True
-        routineTimer.add(1200.000000)
+        routineTimer.add(1201.000000)
         # update component parameters for each repeat
         end_enc_run_text.setText(end_run_text)
         enc_run_end_key.keys = []
@@ -9811,7 +9811,7 @@ for thisSession in session:
             
             # *enc_run_end_key* updates
             waitOnFlip = False
-            if enc_run_end_key.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            if enc_run_end_key.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
                 # keep track of start time/frame for later
                 enc_run_end_key.frameNStart = frameN  # exact frame index
                 enc_run_end_key.tStart = t  # local t and not account for scr refresh
@@ -9877,10 +9877,15 @@ for thisSession in session:
     continueRoutine = True
     routineTimer.add(1200.000000)
     # update component parameters for each repeat
+    block_name_selection=[151, 201, 251]
+    end_task_text = 'Mielőtt tovább lépne a következő feladathoz, tartson egy rövid szünetet, hogy felfrissüljön. Ha teheti, álljon fel a számítógéptől, pihentesse szemeit, igyon egy pohár vizet. Ügyeljen, hogy ez a szünet ne tartson 10 percnél tovább. '
+    
+    if run_counter >= 6:
+        end_task_text='Felteszünk Önnek pár kérdést, majd megkapja a vizsgálat elvégzését igazoló kódot.'
+    inter_task_break_text.setText(task_end_text)
     inter_task_break_key.keys = []
     inter_task_break_key.rt = []
     _inter_task_break_key_allKeys = []
-    block_name_selection=[151, 201, 251]
     # keep track of which components have finished
     inter_task_breakComponents = [inter_task_break_continue, inter_task_break_text, inter_task_break_key]
     for thisComponent in inter_task_breakComponents:

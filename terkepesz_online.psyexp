@@ -35,6 +35,23 @@
   </Settings>
   <Routines>
     <Routine name="inter_task_break">
+      <CodeComponent name="update_block_names">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="block_name_selection= [1, 51, 101]" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="block_name_selection = [1, 51, 101];&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="block_name_selection = [151, 201, 251];&amp;#10;end_task_text = &quot;Miel\u0151tt tov\u00e1bb l\u00e9pne a k\u00f6vetkez\u0151 feladathoz, tartson egy r\u00f6vid sz\u00fcnetet, hogy felfriss\u00fclj\u00f6n. Ha teheti, \u00e1lljon fel a sz\u00e1m\u00edt\u00f3g\u00e9pt\u0151l, pihentesse szemeit, igyon egy poh\u00e1r vizet. \u00dcgyeljen, hogy ez a sz\u00fcnet ne tartson 10 percn\u00e9l tov\u00e1bb. &quot;;&amp;#10;if ((run_counter &gt;= 6)) {&amp;#10;    end_task_text = &quot;Feltesz\u00fcnk \u00d6nnek p\u00e1r k\u00e9rd\u00e9st, majd megkapja a vizsg\u00e1lat elv\u00e9gz\u00e9s\u00e9t igazol\u00f3 k\u00f3dot.&quot;;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="block_name_selection=[151, 201, 251]&amp;#10;end_task_text = 'Mielőtt tovább lépne a következő feladathoz, tartson egy rövid szünetet, hogy felfrissüljön. Ha teheti, álljon fel a számítógéptől, pihentesse szemeit, igyon egy pohár vizet. Ügyeljen, hogy ez a szünet ne tartson 10 percnél tovább. '&amp;#10;&amp;#10;if run_counter &gt;= 6:&amp;#10;    end_task_text='Felteszünk Önnek pár kérdést, majd megkapja a vizsgálat elvégzését igazoló kódot.'" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="update_block_names" valType="code"/>
+      </CodeComponent>
       <TextComponent name="inter_task_break_continue">
         <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -55,7 +72,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="1195.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Ha úgy érzi készen áll, nyomja le a jobb nyilat." valType="str"/>
+        <Param name="text" updates="constant" val="A folytatáshoz nyomja le a jobb nyilat." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -79,7 +96,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="1200.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Mielőtt tovább lépne a következő feladathoz, tartson egy rövid szünetet, hogy felfrissüljön. Ha teheti, álljon fel a számítógéptől, pihentesse szemeit, igyon egy pohár vizet. Ügyeljen, hogy ez a szünet ne tartson 10 percnél tovább. " valType="str"/>
+        <Param name="text" updates="set every repeat" val="$task_end_text" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -101,23 +118,6 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
-      <CodeComponent name="update_block_names">
-        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="block_name_selection= [1, 51, 101]" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="block_name_selection = [1, 51, 101];&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="block_name_selection = [151, 201, 251];&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="block_name_selection=[151, 201, 251]" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="update_block_names" valType="code"/>
-      </CodeComponent>
     </Routine>
     <Routine name="enc_trial">
       <CodeComponent name="get_size">
@@ -2541,7 +2541,7 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="1.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="1200" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
@@ -2831,7 +2831,7 @@
         <Param name="Begin JS Experiment" updates="constant" val="rec_end = 0;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="rec_start = rec_end;&amp;#10;rec_end = (rec_start + 4);&amp;#10;rec_selection = Array.from({length: rec_end - rec_start}, (_, index) =&gt; index + rec_start)&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="rec_start = rec_end&amp;#10;rec_end = rec_start + 4&amp;#10;rec_selection = np.arange(rec_start,rec_end, step)&amp;#10;" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
