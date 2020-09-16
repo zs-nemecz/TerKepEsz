@@ -3104,9 +3104,9 @@ function comprehension_question_4LoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   comprehension_question_4 = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.RANDOM,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '4'),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '4:5'),
     seed: undefined, name: 'comprehension_question_4'
   });
   psychoJS.experiment.addLoop(comprehension_question_4); // add the loop to the experiment
