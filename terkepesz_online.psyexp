@@ -603,6 +603,23 @@
       </TextComponent>
     </Routine>
     <Routine name="enc_fx">
+      <CodeComponent name="get_screen_size">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="w_size = win.size&amp;#10;&amp;#10;x_size = w_size[0]&amp;#10;y_size = w_size[1]&amp;#10;&amp;#10;scr_resolution = x_size/y_size" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="w_size = psychoJS.window.size;&amp;#10;&amp;#10;x_size = w_size[0];&amp;#10;y_size = w_size[1];&amp;#10;&amp;#10;scr_resolution = (x_size / y_size);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="w_size = psychoJS.window.size;&amp;#10;&amp;#10;x_size = w_size[0];&amp;#10;y_size = w_size[1];&amp;#10;&amp;#10;scr_resolution = (x_size / y_size);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="w_size = win.size&amp;#10;&amp;#10;x_size = w_size[0]&amp;#10;y_size = w_size[1]&amp;#10;&amp;#10;scr_resolution = x_size/y_size" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="get_screen_size" valType="code"/>
+      </CodeComponent>
       <ImageComponent name="enc_fx_interior">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -807,6 +824,23 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="rec_fx">
+      <CodeComponent name="screen_size">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="w_size = win.size&amp;#10;&amp;#10;x_size = w_size[0]&amp;#10;y_size = w_size[1]&amp;#10;&amp;#10;scr_resolution = x_size/y_size" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="w_size = psychoJS.window.size;&amp;#10;&amp;#10;x_size = w_size[0];&amp;#10;y_size = w_size[1];&amp;#10;&amp;#10;scr_resolution = (x_size / y_size);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="w_size = psychoJS.window.size;&amp;#10;&amp;#10;x_size = w_size[0];&amp;#10;y_size = w_size[1];&amp;#10;&amp;#10;scr_resolution = (x_size / y_size);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="w_size = win.size&amp;#10;&amp;#10;x_size = w_size[0]&amp;#10;y_size = w_size[1]&amp;#10;&amp;#10;scr_resolution = x_size/y_size" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="screen_size" valType="code"/>
+      </CodeComponent>
       <ImageComponent name="rec_fx_interior">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
