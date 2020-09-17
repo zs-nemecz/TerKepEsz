@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on September 02, 2020, at 18:07
+    on September 17, 2020, at 18:16
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['ID'],'pilot', exp
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='D:\\Zsuzsa\\HCCCL\\experiment\\computer_based_tasks\\terkepesz\\terkepesz-encoding_lastrun.py',
+    originPath='D:\\Zsuzsa\\HCCCL\\experiment\\computer_based_tasks\\terkepesz\\MR_version\\TerKepEsz\\terkepesz-encoding_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -89,13 +89,12 @@ start_encoding_text = visual.TextStim(win=win, name='start_encoding_text',
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
-tables = [0,1,2]
-shuffle(tables)
-trial_table = tables.pop()
-print('selected file {}'.format(trial_table))
-trial_table = str(trial_table)
+#tables = [0,1,2]
+#shuffle(tables)
+#trial_table = tables.pop()
+#trial_table = str(trial_table)
+trial_table = '0'
 stimuli_table = 'stimuli_tables/encoding_trials_'+ trial_table + '.csv'
-
 
 # Initialize components for Routine "enc_instructions_1"
 enc_instructions_1Clock = core.Clock()
@@ -204,7 +203,7 @@ w_size = win.size
 x_size = w_size[0]
 y_size = w_size[1]
 
-scr_resolution = x_size/y_size
+scr_ratio = x_size/y_size
 enc_practice_trial_interior = visual.ImageStim(
     win=win,
     name='enc_practice_trial_interior', units='norm', 
@@ -325,7 +324,7 @@ w_size = win.size
 x_size = w_size[0]
 y_size = w_size[1]
 
-scr_resolution = x_size/y_size
+scr_ratio = x_size/y_size
 enc_trial_interior = visual.ImageStim(
     win=win,
     name='enc_trial_interior', units='norm', 
@@ -362,15 +361,16 @@ enc_run_end_continue = visual.TextStim(win=win, name='enc_run_end_continue',
     languageStyle='LTR',
     depth=-2.0);
 
-# Initialize components for Routine "inter_task_break"
-inter_task_breakClock = core.Clock()
-inter_task_break_text = visual.TextStim(win=win, name='inter_task_break_text',
+# Initialize components for Routine "end_of_encoding"
+end_of_encodingClock = core.Clock()
+end_of_encoding_text = visual.TextStim(win=win, name='end_of_encoding_text',
     text='Most kivesszük Önt a szkennerből.',
     font='Arial',
     pos=(0, 0), height=0.03, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
+end_of_encoding_key = keyboard.Keyboard()
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
@@ -1105,9 +1105,9 @@ for thisEnc_practice_trial in enc_practice_trials:
     x_size = w_size[0]
     y_size = w_size[1]
     
-    scr_resolution = x_size/y_size
+    scr_ratio = x_size/y_size
     enc_practice_trial_main_image.setPos((CurrentX, CurrentY))
-    enc_practice_trial_main_image.setSize((0.3125, 0.3125*scr_resolution))
+    enc_practice_trial_main_image.setSize((0.3125, 0.3125*scr_ratio))
     enc_practice_trial_main_image.setImage(CurrentImage)
     enc_practice_trial_key.keys = []
     enc_practice_trial_key.rt = []
@@ -1245,7 +1245,7 @@ for thisEnc_practice_trial in enc_practice_trials:
     else:
         feedback_text = 'Nem adott választ.'
     enc_practice_feedback_image.setPos((CurrentX, CurrentY))
-    enc_practice_feedback_image.setSize((0.3125, 0.3125*scr_resolution))
+    enc_practice_feedback_image.setSize((0.3125, 0.3125*scr_ratio))
     enc_practice_feedback_image.setImage(CurrentImage)
     enc_practice_feedback_text.setPos((CurrentX, CurrentY - 0.4))
     enc_practice_feedback_text.setText(feedback_text)
@@ -1849,7 +1849,7 @@ for thisEnc_run in enc_runs:
         
         scr_resolution = x_size/y_size
         enc_trial_main_image.setPos((CurrentX, CurrentY))
-        enc_trial_main_image.setSize((0.3125, 0.3125*scr_resolution))
+        enc_trial_main_image.setSize((0.3125, 0.3125*scr_ratio))
         enc_trial_main_image.setImage(CurrentImage)
         enc_trial_key.keys = []
         enc_trial_key.rt = []
@@ -2118,13 +2118,16 @@ for thisEnc_run in enc_runs:
 # completed 3 repeats of 'enc_runs'
 
 
-# ------Prepare to start Routine "inter_task_break"-------
+# ------Prepare to start Routine "end_of_encoding"-------
 continueRoutine = True
 routineTimer.add(120.000000)
 # update component parameters for each repeat
+end_of_encoding_key.keys = []
+end_of_encoding_key.rt = []
+_end_of_encoding_key_allKeys = []
 # keep track of which components have finished
-inter_task_breakComponents = [inter_task_break_text]
-for thisComponent in inter_task_breakComponents:
+end_of_encodingComponents = [end_of_encoding_text, end_of_encoding_key]
+for thisComponent in end_of_encodingComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
     thisComponent.tStartRefresh = None
@@ -2134,34 +2137,64 @@ for thisComponent in inter_task_breakComponents:
 # reset timers
 t = 0
 _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-inter_task_breakClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+end_of_encodingClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
 frameN = -1
 
-# -------Run Routine "inter_task_break"-------
+# -------Run Routine "end_of_encoding"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
-    t = inter_task_breakClock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=inter_task_breakClock)
+    t = end_of_encodingClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=end_of_encodingClock)
     tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
-    # *inter_task_break_text* updates
-    if inter_task_break_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # *end_of_encoding_text* updates
+    if end_of_encoding_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        inter_task_break_text.frameNStart = frameN  # exact frame index
-        inter_task_break_text.tStart = t  # local t and not account for scr refresh
-        inter_task_break_text.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(inter_task_break_text, 'tStartRefresh')  # time at next scr refresh
-        inter_task_break_text.setAutoDraw(True)
-    if inter_task_break_text.status == STARTED:
+        end_of_encoding_text.frameNStart = frameN  # exact frame index
+        end_of_encoding_text.tStart = t  # local t and not account for scr refresh
+        end_of_encoding_text.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(end_of_encoding_text, 'tStartRefresh')  # time at next scr refresh
+        end_of_encoding_text.setAutoDraw(True)
+    if end_of_encoding_text.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > inter_task_break_text.tStartRefresh + 120.0-frameTolerance:
+        if tThisFlipGlobal > end_of_encoding_text.tStartRefresh + 120.0-frameTolerance:
             # keep track of stop time/frame for later
-            inter_task_break_text.tStop = t  # not accounting for scr refresh
-            inter_task_break_text.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(inter_task_break_text, 'tStopRefresh')  # time at next scr refresh
-            inter_task_break_text.setAutoDraw(False)
+            end_of_encoding_text.tStop = t  # not accounting for scr refresh
+            end_of_encoding_text.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(end_of_encoding_text, 'tStopRefresh')  # time at next scr refresh
+            end_of_encoding_text.setAutoDraw(False)
+    
+    # *end_of_encoding_key* updates
+    waitOnFlip = False
+    if end_of_encoding_key.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        end_of_encoding_key.frameNStart = frameN  # exact frame index
+        end_of_encoding_key.tStart = t  # local t and not account for scr refresh
+        end_of_encoding_key.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(end_of_encoding_key, 'tStartRefresh')  # time at next scr refresh
+        end_of_encoding_key.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(end_of_encoding_key.clock.reset)  # t=0 on next screen flip
+        win.callOnFlip(end_of_encoding_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if end_of_encoding_key.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > end_of_encoding_key.tStartRefresh + 120-frameTolerance:
+            # keep track of stop time/frame for later
+            end_of_encoding_key.tStop = t  # not accounting for scr refresh
+            end_of_encoding_key.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(end_of_encoding_key, 'tStopRefresh')  # time at next scr refresh
+            end_of_encoding_key.status = FINISHED
+    if end_of_encoding_key.status == STARTED and not waitOnFlip:
+        theseKeys = end_of_encoding_key.getKeys(keyList=['right', 'space'], waitRelease=False)
+        _end_of_encoding_key_allKeys.extend(theseKeys)
+        if len(_end_of_encoding_key_allKeys):
+            end_of_encoding_key.keys = _end_of_encoding_key_allKeys[-1].name  # just the last key pressed
+            end_of_encoding_key.rt = _end_of_encoding_key_allKeys[-1].rt
+            # a response ends the routine
+            continueRoutine = False
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2171,7 +2204,7 @@ while continueRoutine and routineTimer.getTime() > 0:
     if not continueRoutine:  # a component has requested a forced-end of Routine
         break
     continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in inter_task_breakComponents:
+    for thisComponent in end_of_encodingComponents:
         if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
             continueRoutine = True
             break  # at least one component has not yet finished
@@ -2180,12 +2213,21 @@ while continueRoutine and routineTimer.getTime() > 0:
     if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
         win.flip()
 
-# -------Ending Routine "inter_task_break"-------
-for thisComponent in inter_task_breakComponents:
+# -------Ending Routine "end_of_encoding"-------
+for thisComponent in end_of_encodingComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('inter_task_break_text.started', inter_task_break_text.tStartRefresh)
-thisExp.addData('inter_task_break_text.stopped', inter_task_break_text.tStopRefresh)
+thisExp.addData('end_of_encoding_text.started', end_of_encoding_text.tStartRefresh)
+thisExp.addData('end_of_encoding_text.stopped', end_of_encoding_text.tStopRefresh)
+# check responses
+if end_of_encoding_key.keys in ['', [], None]:  # No response was made
+    end_of_encoding_key.keys = None
+thisExp.addData('end_of_encoding_key.keys',end_of_encoding_key.keys)
+if end_of_encoding_key.keys != None:  # we had a response
+    thisExp.addData('end_of_encoding_key.rt', end_of_encoding_key.rt)
+thisExp.addData('end_of_encoding_key.started', end_of_encoding_key.tStartRefresh)
+thisExp.addData('end_of_encoding_key.stopped', end_of_encoding_key.tStopRefresh)
+thisExp.nextEntry()
 
 # Flip one final time so any remaining win.callOnFlip() 
 # and win.timeOnFlip() tasks get executed before quitting
