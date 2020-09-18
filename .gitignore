@@ -1,2 +1,3 @@
 data/stim_tables/*.csv
 __pycache__
+.idea/*
