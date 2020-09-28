@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on September 10, 2020, at 15:59
+This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4post1),
+    on Fri 25 Sep 2020 04:45:25 PM CEST
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -35,10 +35,10 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-psychopyVersion = '2020.1.3'
+psychopyVersion = '2020.2.4post1'
 expName = 'TerKepEsz-Encoding_MR'  # from the Builder filename that created this script
 expInfo = {'ID': '', 'practice': '1'}
-dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
+dlg = gui.DlgFromDict(dictionary=expInfo, sort_keys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
 expInfo['date'] = data.getDateStr()  # add a simple timestamp
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['ID'],'pilot', exp
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='D:\\Zsuzsa\\HCCCL\\experiment\\computer_based_tasks\\terkepesz\\terkepesz_encoding\\terkepesz_lastrun.py',
+    originPath='/home/zsuzsanna/Documents/TRK/experiment/MR_version/TerKepEsz/terkepesz_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -2340,7 +2340,7 @@ thisExp.addData('inter_task_break_text.stopped', inter_task_break_text.tStopRefr
 win.flip()
 
 # these shouldn't be strictly necessary (should auto-save)
-thisExp.saveAsWideText(filename+'.csv')
+thisExp.saveAsWideText(filename+'.csv', delim='auto')
 thisExp.saveAsPickle(filename)
 logging.flush()
 # make sure everything is closed down
