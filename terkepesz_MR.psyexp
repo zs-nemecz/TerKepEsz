@@ -24,7 +24,7 @@
     <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
     <Param name="Show mouse" updates="None" val="False" valType="bool"/>
     <Param name="Units" updates="None" val="height" valType="str"/>
-    <Param name="Use version" updates="None" val="latest" valType="str"/>
+    <Param name="Use version" updates="None" val="2020.2" valType="str"/>
     <Param name="Window size (pixels)" updates="None" val="[3840, 1080]" valType="code"/>
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
     <Param name="color" updates="None" val="$[0.114,0.310,0.380]" valType="str"/>
@@ -1157,7 +1157,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
         <Param name="name" updates="None" val="enc_practice_feedback_block" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -2056,7 +2056,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A feladat két részből áll.&amp;#10;&amp;#10;Az első rész a Galériaberendezés. A Galériaberendezés alatt képeket kell beválogatnia egy modern művészeti galériába. &amp;#10;&amp;#10;A második rész a Képfelismerés. A Képfelismerés alatt azt kell eldöntenie, a bemutatott képeket látta-e a megelőző Galériaberendezés feladat során. &amp;#10;&amp;#10;A feladatokat 3 körre osztottuk, úgy, hogy egy Képfelismerés feladatot Önnek mindig a közvetlenül megelőző Galériaberendezés feladat alapján kell elvégeznie. &amp;#10;&amp;#10;Egy kör 8 percet vesz igénybe, a körök között rövid (maximum 2 perces) szünetet tud tartani. &amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="A feladatok két részből állnak.&amp;#10;&amp;#10;Az első rész a Galériaberendezés. A Galériaberendezés alatt képeket kell beválogatnia egy modern művészeti galériába. &amp;#10;&amp;#10;A második rész a Képfelismerés. A Képfelismerés alatt azt kell eldöntenie, a bemutatott képeket látta-e a megelőző Galériaberendezés feladat során. &amp;#10;&amp;#10;A feladatokat 3 körre osztottuk, úgy, hogy egy Képfelismerés feladatot Önnek mindig a közvetlenül megelőző Galériaberendezés feladat alapján kell elvégeznie. &amp;#10;&amp;#10;Egy kör 8 percet vesz igénybe, a körök között rövid (maximum 2 perces) szünetet tud tartani. &amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="height" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -2126,8 +2126,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="if expInfo['Session']=='1':&amp;#10;    rec_end = 0;&amp;#10;elif expInfo['Session']=='2':&amp;#10;    recend = 72;&amp;#10;else:&amp;#10;    rec_end = 0;&amp;#10;    psychopy.logging.log('Starting REC trials from 0', logging.CRITICAL)" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;Session&quot;] === &quot;1&quot;)) {&amp;#10;    rec_end = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;Session&quot;] === &quot;2&quot;)) {&amp;#10;        recend = 72;&amp;#10;    } else {&amp;#10;        rec_end = 0;&amp;#10;        psychopy.logging.log(&quot;Starting REC trials from 0&quot;, logging.CRITICAL);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="rec_start = rec_end;&amp;#10;rec_end = (rec_start + 4);&amp;#10;rec_selection = np.arange(rec_start, rec_end, step);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="rec_start = rec_end&amp;#10;rec_end = rec_start + 4&amp;#10;rec_selection = np.arange(rec_start,rec_end, step)&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="rec_start = rec_end;&amp;#10;rec_end = (rec_start + 24);&amp;#10;rec_selection = np.arange(rec_start, rec_end, step);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="rec_start = rec_end&amp;#10;rec_end = rec_start + 24&amp;#10;rec_selection = np.arange(rec_start,rec_end, step)&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -2137,6 +2137,23 @@
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="create_rec_block" valType="code"/>
+      </CodeComponent>
+      <CodeComponent name="create_enc_block">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="if expInfo['Session']=='1':&amp;#10;    enc_end = 0;&amp;#10;elif expInfo['Session']=='2':&amp;#10;    enc_end = 150;&amp;#10;else:&amp;#10;    enc_end = 0;&amp;#10;    psychopy.logging.log('Starting ENC trials from 0', logging.CRITICAL)" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;Session&quot;] === &quot;1&quot;)) {&amp;#10;    enc_end = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;Session&quot;] === &quot;2&quot;)) {&amp;#10;        enc_end = 150;&amp;#10;    } else {&amp;#10;        enc_end = 0;&amp;#10;        psychopy.logging.log(&quot;Starting ENC trials from 0&quot;, logging.CRITICAL);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="enc_start = enc_end;&amp;#10;enc_end = (enc_start + 50);&amp;#10;enc_selection = np.arange(enc_start, enc_end, step);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="enc_start = enc_end&amp;#10;enc_end = enc_start + 50&amp;#10;enc_selection = np.arange(enc_start, enc_end, step)&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="create_enc_block" valType="code"/>
       </CodeComponent>
       <TextComponent name="start_rec_block_text">
         <Param name="color" updates="constant" val="black" valType="str"/>
@@ -2162,23 +2179,6 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <CodeComponent name="create_enc_block">
-        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="if expInfo['Session']=='1':&amp;#10;    enc_end = 0;&amp;#10;elif expInfo['Session']=='2':&amp;#10;    enc_end = 150;&amp;#10;else:&amp;#10;    enc_end = 0;&amp;#10;    psychopy.logging.log('Starting ENC trials from 0', logging.CRITICAL)" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;Session&quot;] === &quot;1&quot;)) {&amp;#10;    enc_end = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;Session&quot;] === &quot;2&quot;)) {&amp;#10;        enc_end = 150;&amp;#10;    } else {&amp;#10;        enc_end = 0;&amp;#10;        psychopy.logging.log(&quot;Starting ENC trials from 0&quot;, logging.CRITICAL);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="enc_start = enc_end;&amp;#10;enc_end = (enc_start + 4);&amp;#10;enc_selection = np.arange(enc_start, enc_end, step);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="enc_start = enc_end&amp;#10;enc_end = enc_start + 4&amp;#10;enc_selection = np.arange(enc_start, enc_end, step)&amp;#10;" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="create_enc_block" valType="code"/>
-      </CodeComponent>
     </Routine>
     <Routine name="general_instructions_3">
       <TextComponent name="general_instructions_text_3">
@@ -2626,30 +2626,6 @@
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="logging_setup" valType="code"/>
       </CodeComponent>
-      <TextComponent name="welcome_text">
-        <Param name="color" updates="constant" val="black" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="60" valType="code"/>
-        <Param name="name" updates="None" val="welcome_text" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 400)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="3.0" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="TérKépÉsz Feladatok" valType="extendedStr"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
       <ImageComponent name="welcome_image">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -2661,9 +2637,9 @@
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="welcome_image" valType="code"/>
-        <Param name="opacity" updates="constant" val="0.2" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -150)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -100)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="size" updates="constant" val="(309,665)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -2675,6 +2651,30 @@
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
         <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
+      <TextComponent name="welcome_text">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="50" valType="code"/>
+        <Param name="name" updates="None" val="welcome_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 350)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="TérKépÉsz Feladatok" valType="extendedStr"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="enc_fx_practice">
       <CodeComponent name="get_screen_size_practice">
@@ -3413,6 +3413,32 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="[BAL MUTATÓUJJ - Régi]      [JOBB MUTATÓUJJ - Új]" valType="str"/>
         <Param name="units" updates="None" val="norm" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="trial">
+      <TextComponent name="text">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Any text&amp;#10;" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
     </Routine>
