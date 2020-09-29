@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4post1),
-    on Tue Sep 29 01:08:10 2020
+    on Tue Sep 29 00:56:45 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -55,7 +55,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['ID'],'pilot', exp
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='terkepesz_session1_lastrun.py',
+    originPath='terkepesz_session1.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -116,7 +116,7 @@ general_instructions_continue = visual.TextStim(win=win, name='general_instructi
 # Initialize components for Routine "choose_video"
 choose_videoClock = core.Clock()
 choose_video_text = visual.TextStim(win=win, name='choose_video_text',
-    text='Válasszon az alábbi videók közül.\n\nJobb mutatóujj: Vihar\nJobb hüvelykujj: Afrika szépségei\n\nBal mutatóujj: Skócia a levegőből\nBal hüvelykujj: Űr',
+    text='Válasszon az alábbi videók közül.\n\nJobb mutatóujj: Skócia a levegőből\nJobb hüvelykujj: Afrika szépségei\n\nBal mutatóujj: Vihar\nBal hüvelykujj: Űr',
     font='Arial',
     units='height', pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -463,7 +463,7 @@ while continueRoutine and routineTimer.getTime() > 0:
     
     # *choose_video_key* updates
     waitOnFlip = False
-    if choose_video_key.status == NOT_STARTED and tThisFlip >= 1.5-frameTolerance:
+    if choose_video_key.status == NOT_STARTED and tThisFlip >= 5.0-frameTolerance:
         # keep track of start time/frame for later
         choose_video_key.frameNStart = frameN  # exact frame index
         choose_video_key.tStart = t  # local t and not account for scr refresh
@@ -476,7 +476,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         win.callOnFlip(choose_video_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
     if choose_video_key.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > choose_video_key.tStartRefresh + 298.5-frameTolerance:
+        if tThisFlipGlobal > choose_video_key.tStartRefresh + 295.0-frameTolerance:
             # keep track of stop time/frame for later
             choose_video_key.tStop = t  # not accounting for scr refresh
             choose_video_key.frameNStop = frameN  # exact frame index
@@ -523,28 +523,18 @@ if choose_video_key.keys != None:  # we had a response
 thisExp.addData('choose_video_key.started', choose_video_key.tStartRefresh)
 thisExp.addData('choose_video_key.stopped', choose_video_key.tStopRefresh)
 thisExp.nextEntry()
-key_pressed=choose_video_key.keys
-selected_video='stimuli/eye_of_the_storm.mp4'
-if key_pressed=='d':
-    selected_video='stimuli/beauty_of_africa.mp4'
-elif key_pressed=='b':
-    selected_video='stimuli/scotland.mp4'
-elif key_pressed=='a':
-    selected_video='stimuli/hubble_final.mp4'
-elif key_pressed=='c':
-    selected_video='stimuli/eye_of_the_storm.mp4'
+selected_video='stimuli/scotland.mp4'
 
 # ------Prepare to start Routine "video"-------
 continueRoutine = True
 routineTimer.add(1200.000000)
 # update component parameters for each repeat
 video_file = visual.MovieStim3(
-    win=win, name='video_file',units='pix', 
+    win=win, name='video_file',
     noAudio = False,
     filename=selected_video,
     ori=0, pos=(0, 0), opacity=1,
     loop=False,
-    size=(1920,1080),
     depth=0.0,
     )
 end_video_key.keys = []
