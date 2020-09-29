@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2020.2.4post1">
+<PsychoPy2experiment encoding="utf-8" version="2020.2.3">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -2124,8 +2124,8 @@
       <CodeComponent name="create_rec_block">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="if expInfo['Session']=='1':&amp;#10;    rec_end = 0;&amp;#10;elif expInfo['Session']=='2':&amp;#10;    recend = 72;&amp;#10;else:&amp;#10;    rec_end = 0;&amp;#10;    psychopy.logging.log('Starting REC trials from 0', logging.CRITICAL)" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;Session&quot;] === &quot;1&quot;)) {&amp;#10;    rec_end = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;Session&quot;] === &quot;2&quot;)) {&amp;#10;        recend = 72;&amp;#10;    } else {&amp;#10;        rec_end = 0;&amp;#10;        psychopy.logging.log(&quot;Starting REC trials from 0&quot;, logging.CRITICAL);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="if expInfo['Session']=='1':&amp;#10;    rec_end = 0;&amp;#10;elif expInfo['Session']=='2':&amp;#10;    rec_end = 72;&amp;#10;else:&amp;#10;    rec_end = 0;&amp;#10;    psychopy.logging.log('Starting REC trials from 0', logging.CRITICAL)" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;Session&quot;] === &quot;1&quot;)) {&amp;#10;    rec_end = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;Session&quot;] === &quot;2&quot;)) {&amp;#10;        rec_end = 72;&amp;#10;    } else {&amp;#10;        rec_end = 0;&amp;#10;        psychopy.logging.log(&quot;Starting REC trials from 0&quot;, logging.CRITICAL);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="rec_start = rec_end;&amp;#10;rec_end = (rec_start + 24);&amp;#10;rec_selection = np.arange(rec_start, rec_end, step);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="rec_start = rec_end&amp;#10;rec_end = rec_start + 24&amp;#10;rec_selection = np.arange(rec_start,rec_end, step)&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>

@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4post1),
-    on Tue Sep 29 00:08:33 2020
+This experiment was created using PsychoPy3 Experiment Builder (v2020.2.3),
+    on September 29, 2020, at 11:09
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -39,7 +39,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-psychopyVersion = '2020.2.4post1'
+psychopyVersion = '2020.2.3'
 expName = 'TérKépÉsz'  # from the Builder filename that created this script
 expInfo = {'ID': '', 'Session': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sort_keys=False, title=expName)
@@ -55,7 +55,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['ID'],'pilot', exp
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='terkepesz_MR_lastrun.py',
+    originPath='C:\\Users\\Latlab\\Desktop\\TerKepEsz\\TerKepEsz\\terkepesz_MR_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -691,7 +691,7 @@ init_blocksClock = core.Clock()
 if expInfo['Session']=='1':
     rec_end = 0;
 elif expInfo['Session']=='2':
-    recend = 72;
+    rec_end = 72;
 else:
     rec_end = 0;
     psychopy.logging.log('Starting REC trials from 0', logging.CRITICAL)

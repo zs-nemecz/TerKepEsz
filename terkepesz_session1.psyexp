@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2020.2.4post1">
+<PsychoPy2experiment encoding="utf-8" version="2020.2.3">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -13,7 +13,7 @@
     <Param name="HTML path" updates="None" val="html" valType="str"/>
     <Param name="Incomplete URL" updates="None" val="" valType="str"/>
     <Param name="JS libs" updates="None" val="packaged" valType="str"/>
-    <Param name="Monitor" updates="None" val="Acer" valType="str"/>
+    <Param name="Monitor" updates="None" val="MR " valType="str"/>
     <Param name="Resources" updates="None" val="[]" valType="fileList"/>
     <Param name="Save csv file" updates="None" val="False" valType="bool"/>
     <Param name="Save excel file" updates="None" val="False" valType="bool"/>
@@ -25,7 +25,7 @@
     <Param name="Show mouse" updates="None" val="False" valType="bool"/>
     <Param name="Units" updates="None" val="height" valType="str"/>
     <Param name="Use version" updates="None" val="2020.2" valType="str"/>
-    <Param name="Window size (pixels)" updates="None" val="[3840, 1080]" valType="code"/>
+    <Param name="Window size (pixels)" updates="None" val="[1920, 1080]" valType="code"/>
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
     <Param name="color" updates="None" val="$[0.114,0.310,0.380]" valType="str"/>
     <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
