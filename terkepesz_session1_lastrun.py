@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2020.2.3),
-    on September 29, 2020, at 09:09
+This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4),
+    on October 01, 2020, at 15:20
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -39,7 +39,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-psychopyVersion = '2020.2.3'
+psychopyVersion = '2020.2.4'
 expName = 'TérKépÉsz'  # from the Builder filename that created this script
 expInfo = {'ID': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sort_keys=False, title=expName)
@@ -55,7 +55,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['ID'],'pilot', exp
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\Latlab\\Desktop\\TerKepEsz\\TerKepEsz\\terkepesz_session1_lastrun.py',
+    originPath='D:\\Zsuzsa\\HCCCL\\experiment\\computer_based_tasks\\terkepesz\\MR_version\\TerKepEsz\\terkepesz_session1_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -116,7 +116,7 @@ general_instructions_continue = visual.TextStim(win=win, name='general_instructi
 # Initialize components for Routine "choose_video"
 choose_videoClock = core.Clock()
 choose_video_text = visual.TextStim(win=win, name='choose_video_text',
-    text='Válasszon az alábbi videók közül.\n\nJobb mutatóujj: Vihar\nJobb hüvelykujj: Afrika szépségei\n\nBal mutatóujj: Skócia a levegőből\nBal hüvelykujj: Űr',
+    text='Válasszon az alábbi videók közül.\n\nJobb mutatóujj: Skócia a levegőből\nJobb hüvelykujj: Afrika szépségei\n\nBal mutatóujj: Vihar\nBal hüvelykujj: Űr',
     font='Arial',
     units='height', pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -174,11 +174,13 @@ routineTimer = core.CountdownTimer()  # to track time remaining of each (non-sli
 
 # ------Prepare to start Routine "welcome"-------
 continueRoutine = True
-routineTimer.add(480.000000)
 # update component parameters for each repeat
 key_resp.keys = []
 key_resp.rt = []
 _key_resp_allKeys = []
+win.mouseVisible = False
+print('Welcome message on screen. Hit SPACE or -> for anatomy sequnce information')
+
 # keep track of which components have finished
 welcomeComponents = [welcome_text, key_resp]
 for thisComponent in welcomeComponents:
@@ -195,7 +197,7 @@ welcomeClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
 frameN = -1
 
 # -------Run Routine "welcome"-------
-while continueRoutine and routineTimer.getTime() > 0:
+while continueRoutine:
     # get current time
     t = welcomeClock.getTime()
     tThisFlip = win.getFutureFlipTime(clock=welcomeClock)
@@ -211,18 +213,10 @@ while continueRoutine and routineTimer.getTime() > 0:
         welcome_text.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(welcome_text, 'tStartRefresh')  # time at next scr refresh
         welcome_text.setAutoDraw(True)
-    if welcome_text.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > welcome_text.tStartRefresh + 480.0-frameTolerance:
-            # keep track of stop time/frame for later
-            welcome_text.tStop = t  # not accounting for scr refresh
-            welcome_text.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(welcome_text, 'tStopRefresh')  # time at next scr refresh
-            welcome_text.setAutoDraw(False)
     
     # *key_resp* updates
     waitOnFlip = False
-    if key_resp.status == NOT_STARTED and tThisFlip >= 2.0-frameTolerance:
+    if key_resp.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
         # keep track of start time/frame for later
         key_resp.frameNStart = frameN  # exact frame index
         key_resp.tStart = t  # local t and not account for scr refresh
@@ -233,14 +227,6 @@ while continueRoutine and routineTimer.getTime() > 0:
         waitOnFlip = True
         win.callOnFlip(key_resp.clock.reset)  # t=0 on next screen flip
         win.callOnFlip(key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
-    if key_resp.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > key_resp.tStartRefresh + 478.0-frameTolerance:
-            # keep track of stop time/frame for later
-            key_resp.tStop = t  # not accounting for scr refresh
-            key_resp.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(key_resp, 'tStopRefresh')  # time at next scr refresh
-            key_resp.status = FINISHED
     if key_resp.status == STARTED and not waitOnFlip:
         theseKeys = key_resp.getKeys(keyList=['right', 'space'], waitRelease=False)
         _key_resp_allKeys.extend(theseKeys)
@@ -282,6 +268,8 @@ if key_resp.keys != None:  # we had a response
 thisExp.addData('key_resp.started', key_resp.tStartRefresh)
 thisExp.addData('key_resp.stopped', key_resp.tStopRefresh)
 thisExp.nextEntry()
+# the Routine "welcome" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
 
 # ------Prepare to start Routine "anatomy"-------
 continueRoutine = True
@@ -290,6 +278,8 @@ routineTimer.add(300.000000)
 general_instructions_key.keys = []
 general_instructions_key.rt = []
 _general_instructions_key_allKeys = []
+print('Anatómiai felvételek következnek.\nA felvételek közben videót vetítünk le Önnek.')
+print('\n\nWaiting for participant response.\n\n')
 # keep track of which components have finished
 anatomyComponents = [anatomy_text, general_instructions_key, general_instructions_continue]
 for thisComponent in anatomyComponents:
@@ -420,6 +410,7 @@ routineTimer.add(300.000000)
 choose_video_key.keys = []
 choose_video_key.rt = []
 _choose_video_key_allKeys = []
+print('Participant chooses video.')
 # keep track of which components have finished
 choose_videoComponents = [choose_video_text, choose_video_key]
 for thisComponent in choose_videoComponents:
@@ -533,23 +524,26 @@ elif key_pressed=='a':
     selected_video='stimuli/hubble_final.mp4'
 elif key_pressed=='c':
     selected_video='stimuli/eye_of_the_storm.mp4'
+    
+print('Video selected: ', selected_video)
 
 # ------Prepare to start Routine "video"-------
 continueRoutine = True
-routineTimer.add(1200.000000)
+routineTimer.add(2700.000000)
 # update component parameters for each repeat
 video_file = visual.MovieStim3(
     win=win, name='video_file',units='pix', 
     noAudio = False,
     filename=selected_video,
     ori=0, pos=(0, 0), opacity=1,
-    loop=False,
+    loop=True,
     size=(1920,1080),
     depth=0.0,
     )
 end_video_key.keys = []
 end_video_key.rt = []
 _end_video_key_allKeys = []
+print('Video playing...\nHit SPACE to end video and prepare for resting state.')
 # keep track of which components have finished
 videoComponents = [video_file, end_video_key]
 for thisComponent in videoComponents:
@@ -584,7 +578,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         video_file.setAutoDraw(True)
     if video_file.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > video_file.tStartRefresh + 1200.0-frameTolerance:
+        if tThisFlipGlobal > video_file.tStartRefresh + 2700.0-frameTolerance:
             # keep track of stop time/frame for later
             video_file.tStop = t  # not accounting for scr refresh
             video_file.frameNStop = frameN  # exact frame index
@@ -606,7 +600,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         win.callOnFlip(end_video_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
     if end_video_key.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > end_video_key.tStartRefresh + 1195.0-frameTolerance:
+        if tThisFlipGlobal > end_video_key.tStartRefresh + 2695.0-frameTolerance:
             # keep track of stop time/frame for later
             end_video_key.tStop = t  # not accounting for scr refresh
             end_video_key.frameNStop = frameN  # exact frame index
@@ -660,6 +654,12 @@ routineTimer.add(300.000000)
 rest_instructions_key.keys = []
 rest_instructions_key.rt = []
 _rest_instructions_key_allKeys = []
+print('Most a nyugalmi mérés következik.\n')
+print('A mérés közben egy fixációs keresztet lát majd a képernyőn.')
+print('Nézze ezt a keresztet. Gondolatait hagyja kalandozni.\n')
+print('Kérjük, közben maradjon ébren. A nyugalmi mérés 8 percig tart.')
+print('\n\nWaiting for participant response...')
+
 # keep track of which components have finished
 resting_state_instructionComponents = [rest_instructions_text, rest_instructions_key, rest_instructions_continue]
 for thisComponent in resting_state_instructionComponents:
@@ -790,6 +790,7 @@ routineTimer.add(540.000000)
 rest_end_key.keys = []
 rest_end_key.rt = []
 _rest_end_key_allKeys = []
+print('\n\nFixation cross on screen. Press SPACE or -> to end resting state.')
 # keep track of which components have finished
 resting_stateComponents = [fx_cross, rest_end_key]
 for thisComponent in resting_stateComponents:
@@ -901,6 +902,10 @@ routineTimer.add(300.000000)
 prepare_task_key.keys = []
 prepare_task_key.rt = []
 _prepare_task_key_allKeys = []
+print('\nMessage on screen:\nMost a feladatok következnek.Ha minden rendben, nyomja le a gombot a jobb hüvelykujjával.')
+print('Waiting for participant response...')
+
+
 # keep track of which components have finished
 prepare_taskComponents = [prepare_task_text, prepare_task_key]
 for thisComponent in prepare_taskComponents:

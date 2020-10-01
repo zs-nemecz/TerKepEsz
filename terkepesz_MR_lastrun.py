@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4post1),
-    on Wed Sep 30 19:39:03 2020
+This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4),
+    on October 01, 2020, at 10:47
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -39,7 +39,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-psychopyVersion = '2020.2.4post1'
+psychopyVersion = '2020.2.4'
 expName = 'TérKépÉsz'  # from the Builder filename that created this script
 expInfo = {'ID': '', 'Session': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sort_keys=False, title=expName)
@@ -55,7 +55,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['ID'],'pilot', exp
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='terkepesz_MR_lastrun.py',
+    originPath='D:\\Zsuzsa\\HCCCL\\experiment\\computer_based_tasks\\terkepesz\\MR_version\\TerKepEsz\\terkepesz_MR_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info

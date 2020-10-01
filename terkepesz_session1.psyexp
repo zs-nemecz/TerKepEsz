@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2020.2.3">
+<PsychoPy2experiment encoding="utf-8" version="2020.2.4">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -53,7 +53,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="480.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="Üdvözüljük a TTK Agyi Képalkotó Központjában!" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
@@ -70,13 +70,30 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="2.0" valType="code"/>
+        <Param name="startVal" updates="None" val="1.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="478.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="disable_mouse">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="win.mouseVisible = false;&amp;#10;console.log(&quot;Welcome message on screen. Hit SPACE or -&gt; for anatomy sequnce information&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="win.mouseVisible = False&amp;#10;print('Welcome message on screen. Hit SPACE or -&gt; for anatomy sequnce information')&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="disable_mouse" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="anatomy">
       <TextComponent name="anatomy_text">
@@ -145,6 +162,23 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
+      <CodeComponent name="experimenter_message_anatomy">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="console.log(&quot;Anat\u00f3miai felv\u00e9telek k\u00f6vetkeznek.\nA felv\u00e9telek k\u00f6zben vide\u00f3t vet\u00edt\u00fcnk le \u00d6nnek.&quot;);&amp;#10;console.log(&quot;\n\nWaiting for participant response.\n\n&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="print('Anatómiai felvételek következnek.\nA felvételek közben videót vetítünk le Önnek.')&amp;#10;print('\n\nWaiting for participant response.\n\n')" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="experimenter_message_anatomy" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="choose_video">
       <TextComponent name="choose_video_text">
@@ -167,7 +201,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Válasszon az alábbi videók közül.&amp;#10;&amp;#10;Jobb mutatóujj: Vihar&amp;#10;Jobb hüvelykujj: Afrika szépségei&amp;#10;&amp;#10;Bal mutatóujj: Skócia a levegőből&amp;#10;Bal hüvelykujj: Űr" valType="str"/>
+        <Param name="text" updates="constant" val="Válasszon az alábbi videók közül.&amp;#10;&amp;#10;Jobb mutatóujj: Skócia a levegőből&amp;#10;Jobb hüvelykujj: Afrika szépségei&amp;#10;&amp;#10;Bal mutatóujj: Vihar&amp;#10;Bal hüvelykujj: Űr" valType="str"/>
         <Param name="units" updates="None" val="height" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -194,15 +228,15 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="console.log(&quot;Participant chooses video.&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="print('Participant chooses video.')" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="key_pressed = choose_video_key.keys;&amp;#10;selected_video = &quot;stimuli/eye_of_the_storm.mp4&quot;;&amp;#10;if ((key_pressed === &quot;d&quot;)) {&amp;#10;    selected_video = &quot;stimuli/beauty_of_africa.mp4&quot;;&amp;#10;} else {&amp;#10;    if ((key_pressed === &quot;b&quot;)) {&amp;#10;        selected_video = &quot;stimuli/scotland.mp4&quot;;&amp;#10;    } else {&amp;#10;        if ((key_pressed === &quot;a&quot;)) {&amp;#10;            selected_video = &quot;stimuli/hubble_final.mp4&quot;;&amp;#10;        } else {&amp;#10;            if ((key_pressed === &quot;c&quot;)) {&amp;#10;                selected_video = &quot;stimuli/eye_of_the_storm.mp4&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="key_pressed=choose_video_key.keys&amp;#10;selected_video='stimuli/eye_of_the_storm.mp4'&amp;#10;if key_pressed=='d':&amp;#10;    selected_video='stimuli/beauty_of_africa.mp4'&amp;#10;elif key_pressed=='b':&amp;#10;    selected_video='stimuli/scotland.mp4'&amp;#10;elif key_pressed=='a':&amp;#10;    selected_video='stimuli/hubble_final.mp4'&amp;#10;elif key_pressed=='c':&amp;#10;    selected_video='stimuli/eye_of_the_storm.mp4'" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="key_pressed = choose_video_key.keys;&amp;#10;selected_video = &quot;stimuli/eye_of_the_storm.mp4&quot;;&amp;#10;if ((key_pressed === &quot;d&quot;)) {&amp;#10;    selected_video = &quot;stimuli/beauty_of_africa.mp4&quot;;&amp;#10;} else {&amp;#10;    if ((key_pressed === &quot;b&quot;)) {&amp;#10;        selected_video = &quot;stimuli/scotland.mp4&quot;;&amp;#10;    } else {&amp;#10;        if ((key_pressed === &quot;a&quot;)) {&amp;#10;            selected_video = &quot;stimuli/hubble_final.mp4&quot;;&amp;#10;        } else {&amp;#10;            if ((key_pressed === &quot;c&quot;)) {&amp;#10;                selected_video = &quot;stimuli/eye_of_the_storm.mp4&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;console.log(&quot;Video selected: &quot;, selected_video);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="key_pressed=choose_video_key.keys&amp;#10;selected_video='stimuli/eye_of_the_storm.mp4'&amp;#10;if key_pressed=='d':&amp;#10;    selected_video='stimuli/beauty_of_africa.mp4'&amp;#10;elif key_pressed=='b':&amp;#10;    selected_video='stimuli/scotland.mp4'&amp;#10;elif key_pressed=='a':&amp;#10;    selected_video='stimuli/hubble_final.mp4'&amp;#10;elif key_pressed=='c':&amp;#10;    selected_video='stimuli/eye_of_the_storm.mp4'&amp;#10;    &amp;#10;print('Video selected: ', selected_video)" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="select_video" valType="code"/>
       </CodeComponent>
@@ -214,7 +248,7 @@
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
-        <Param name="loop" updates="None" val="False" valType="bool"/>
+        <Param name="loop" updates="None" val="True" valType="bool"/>
         <Param name="movie" updates="set every repeat" val="$selected_video" valType="str"/>
         <Param name="name" updates="None" val="video_file" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
@@ -226,7 +260,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1200.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="2700.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="units" updates="None" val="pix" valType="str"/>
       </MovieComponent>
@@ -243,11 +277,28 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="5.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1195.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="2695.0" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="experimenter_message_video">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="console.log(&quot;Video playing...\nHit SPACE to end video and prepare for resting state.&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="print('Video playing...\nHit SPACE to end video and prepare for resting state.')" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="experimenter_message_video" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="resting_state_instruction">
       <TextComponent name="rest_instructions_text">
@@ -316,6 +367,23 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
+      <CodeComponent name="experimenter_message_resting_info">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="console.log(&quot;Most a nyugalmi m\u00e9r\u00e9s k\u00f6vetkezik.\n&quot;);&amp;#10;console.log(&quot;A m\u00e9r\u00e9s k\u00f6zben egy fix\u00e1ci\u00f3s keresztet l\u00e1t majd a k\u00e9perny\u0151n.&quot;);&amp;#10;console.log(&quot;N\u00e9zze ezt a keresztet. Gondolatait hagyja kalandozni.\n&quot;);&amp;#10;console.log(&quot;K\u00e9rj\u00fck, k\u00f6zben maradjon \u00e9bren. A nyugalmi m\u00e9r\u00e9s 8 percig tart.&quot;);&amp;#10;console.log(&quot;\n\nWaiting for participant response...&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="print('Most a nyugalmi mérés következik.\n')&amp;#10;print('A mérés közben egy fixációs keresztet lát majd a képernyőn.')&amp;#10;print('Nézze ezt a keresztet. Gondolatait hagyja kalandozni.\n')&amp;#10;print('Kérjük, közben maradjon ébren. A nyugalmi mérés 8 percig tart.')&amp;#10;print('\n\nWaiting for participant response...')&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="experimenter_message_resting_info" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="resting_state">
       <TextComponent name="fx_cross">
@@ -360,6 +428,23 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="experimenter_message_resting_sate">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="console.log(&quot;\n\nFixation cross on screen. Press SPACE or -&gt; to end resting state.&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="print('\n\nFixation cross on screen. Press SPACE or -&gt; to end resting state.')" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="experimenter_message_resting_sate" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="prepare_task">
       <TextComponent name="prepare_task_text">
@@ -404,6 +489,23 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="console.log(&quot;\nMessage on screen:\nMost a feladatok k\u00f6vetkeznek.Ha minden rendben, nyomja le a gombot a jobb h\u00fcvelykujj\u00e1val.&quot;);&amp;#10;console.log(&quot;Waiting for participant response...&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="print('\nMessage on screen:\nMost a feladatok következnek.Ha minden rendben, nyomja le a gombot a jobb hüvelykujjával.')&amp;#10;print('Waiting for participant response...')&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code" valType="code"/>
+      </CodeComponent>
     </Routine>
   </Routines>
   <Flow>
