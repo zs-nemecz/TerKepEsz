@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2020.2.3">
+<PsychoPy2experiment encoding="utf-8" version="2020.2.4post1">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -1863,7 +1863,7 @@
         <Param name="Begin Experiment" updates="constant" val="practice_end = 0&amp;#10;step = 1&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="practice_end = 0;&amp;#10;step = 1;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="practice_start = practice_end;&amp;#10;practice_end = (practice_start + 3);&amp;#10;practice_selection = Array.from({length: practice_end - practice_start}, (_, index) =&gt; index + practice_start);&amp;#10;block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9p&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Hely&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="practice_start = practice_end&amp;#10;practice_end = practice_start + 3&amp;#10;practice_selection = np.arange(practice_start, practice_end, step)&amp;#10;&amp;#10;block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Kép'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Hely'&amp;#10;else:&amp;#10;    block_name='Block Unknown'&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="practice_start = practice_end&amp;#10;practice_end = practice_start + 1&amp;#10;practice_selection = np.arange(practice_start, practice_end, step)&amp;#10;&amp;#10;block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Kép'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Hely'&amp;#10;else:&amp;#10;    block_name='Block Unknown'&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -2558,8 +2558,8 @@
       <CodeComponent name="start_MR_timer">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="trigger_key = 's'&amp;#10;def get_trigger_time(*args):&amp;#10;    trigger = globalClock.getTime() - args[0]&amp;#10;    thisExp.addData('trigger', trigger)&amp;#10;    thisExp.nextEntry()" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="trigger_key = &quot;s&quot;;&amp;#10;function get_trigger_time(...args) {&amp;#10;    var trigger;&amp;#10;    trigger = (globalClock.getTime() - args[0]);&amp;#10;    thisExp.addData(&quot;trigger&quot;, trigger);&amp;#10;    thisExp.nextEntry();&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="console.log(&quot;Experimenter: Waiting for trigger. Start scanning...&quot;);&amp;#10;sys.stdout.flush();&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="print('Experimenter: Waiting for trigger. Start scanning...')&amp;#10;sys.stdout.flush()" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -2567,8 +2567,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="trigger_time = globalClock.getTime();&amp;#10;thisExp.addData(&quot;trigger_time&quot;, trigger_time);&amp;#10;console.log(&quot;Trigger recieved.&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="trigger_time = globalClock.getTime()&amp;#10;thisExp.addData('trigger_time', trigger_time)&amp;#10;print('Trigger recieved.')" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="trigger_time = globalClock.getTime();&amp;#10;thisExp.addData(&quot;trigger_time&quot;, trigger_time);&amp;#10;event.globalKeys.add({&quot;key&quot;: trigger_key, &quot;func&quot;: get_trigger_time, &quot;func_args&quot;: [trigger_time]});&amp;#10;console.log(&quot;Trigger recieved.&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="trigger_time = globalClock.getTime()&amp;#10;thisExp.addData('trigger_time', trigger_time)&amp;#10;event.globalKeys.add(key=trigger_key, &amp;#10;                                       func=get_trigger_time, &amp;#10;                                       func_args=[trigger_time])&amp;#10;print('Trigger recieved.')" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="start_MR_timer" valType="code"/>
       </CodeComponent>
@@ -2596,21 +2596,21 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp">
+      <KeyboardComponent name="MR_trigger">
         <Param name="allowedKeys" updates="constant" val="'s'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp" valType="code"/>
+        <Param name="name" updates="None" val="MR_trigger" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="1200.0" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="store" updates="constant" val="first key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
@@ -3601,8 +3601,6 @@
   <Flow>
     <Routine name="experiment_setup"/>
     <Routine name="general_instructions_1"/>
-    <Routine name="general_instructions_2"/>
-    <Routine name="general_instructions_3"/>
     <Routine name="general_instructions_4"/>
     <Routine name="start_practice"/>
     <LoopInitiator loopType="TrialHandler" name="full_practce">
