@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.3),
-    on October 01, 2020, at 11:59
+    on October 01, 2020, at 11:27
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -55,7 +55,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['ID'],'pilot', exp
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\Latlab\\Desktop\\TerKepEsz\\TerKepEsz\\terkepesz_MR_lastrun.py',
+    originPath='C:\\Users\\Latlab\\Desktop\\TerKepEsz\\TerKepEsz\\terkepesz_MR.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -70,7 +70,7 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 # Setup the Window
 win = visual.Window(
     size=[1920, 1080], fullscr=True, screen=1, 
-    winType='pyglet', allowGUI=True, allowStencil=False,
+    winType='pyglet', allowGUI=False, allowStencil=False,
     monitor='NLL LCD', color=[0.114,0.310,0.380], colorSpace='rgb',
     blendMode='avg', useFBO=True, 
     units='height')
@@ -86,12 +86,10 @@ defaultKeyboard = keyboard.Keyboard()
 
 # Initialize components for Routine "experiment_setup"
 experiment_setupClock = core.Clock()
-win.mouseVisible = False
-print('Mouse disabled on screen. Keep CMD window active!')
 tables = [0]
 shuffle(tables)
 trial_table = tables.pop()
-print('Selected trial table: {}'.format(trial_table))
+print('Trial table: {}'.format(trial_table))
 trial_table = str(trial_table)
 
 enc_table = 'stimuli_tables/encoding_trials_'+ trial_table + '.csv'
@@ -100,17 +98,17 @@ rec_table = 'stimuli_tables/recognition_trials_'+ trial_table + '.csv'
 if expInfo['Session']=='1':
     block_name_selection=[1,51,101]
     end_text = 'Vége a feladatnak. Most kivesszük Önt a szkennerből.'
-    print('First session starting...')
+    psychopy.logging.info('Set to second session')
 elif expInfo['Session']=='2':
     block_name_selection=[151,201,251]
     end_text = 'Vége a feladatnak. Nyugalmi mérés következik.'
-    print('Second session starting...')
+    psychopy.logging.info('Set to second session')
 else:
     block_name_selection=[1,51,101]
     end_text = 'Vége a feladatnak. '
-    print('Invalid Session Number!')
- 
-sys.stdout.flush()
+    psychopy.logging.warning('Invalid Session Number')
+win.mouseVisible = False
+print('mouse disabled')
 welcome_image = visual.ImageStim(
     win=win,
     name='welcome_image', units='pix', 
@@ -2933,8 +2931,6 @@ for thisRun in run:
     wait_for_last_scan_continue.keys = []
     wait_for_last_scan_continue.rt = []
     _wait_for_last_scan_continue_allKeys = []
-    print('Experimenter: Ready for scanning? Hit SPACE or -> to continue.')
-    sys.stdout.flush()
     # keep track of which components have finished
     wait_for_last_scanComponents = [wait_for_last_scan_text, wait_for_last_scan_continue]
     for thisComponent in wait_for_last_scanComponents:
@@ -3042,8 +3038,6 @@ for thisRun in run:
     continueRoutine = True
     routineTimer.add(1200.000000)
     # update component parameters for each repeat
-    print('Experimenter: Waiting for trigger. Start scanning...')
-    sys.stdout.flush()
     key_resp.keys = []
     key_resp.rt = []
     _key_resp_allKeys = []
@@ -3141,7 +3135,6 @@ for thisRun in run:
             thisComponent.setAutoDraw(False)
     trigger_time = globalClock.getTime()
     thisExp.addData('trigger_time', trigger_time)
-    print('Trigger recieved.')
     run.addData('start_MR_text.started', start_MR_text.tStartRefresh)
     run.addData('start_MR_text.stopped', start_MR_text.tStopRefresh)
     # check responses

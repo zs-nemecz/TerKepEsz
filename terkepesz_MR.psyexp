@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2020.2.4post1">
+<PsychoPy2experiment encoding="utf-8" version="2020.2.3">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -13,7 +13,7 @@
     <Param name="HTML path" updates="None" val="html" valType="str"/>
     <Param name="Incomplete URL" updates="None" val="" valType="str"/>
     <Param name="JS libs" updates="None" val="packaged" valType="str"/>
-    <Param name="Monitor" updates="None" val="Acer" valType="str"/>
+    <Param name="Monitor" updates="None" val="NLL LCD" valType="str"/>
     <Param name="Resources" updates="None" val="[]" valType="fileList"/>
     <Param name="Save csv file" updates="None" val="False" valType="bool"/>
     <Param name="Save excel file" updates="None" val="False" valType="bool"/>
@@ -22,10 +22,10 @@
     <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
     <Param name="Screen" updates="None" val="2" valType="num"/>
     <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
-    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="True" valType="bool"/>
     <Param name="Units" updates="None" val="height" valType="str"/>
     <Param name="Use version" updates="None" val="2020.2" valType="str"/>
-    <Param name="Window size (pixels)" updates="None" val="[3840, 1080]" valType="code"/>
+    <Param name="Window size (pixels)" updates="None" val="[1920, 1080]" valType="code"/>
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
     <Param name="color" updates="None" val="$[0.114,0.310,0.380]" valType="str"/>
     <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
@@ -2536,6 +2536,23 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="prepare_MR_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="console.log(&quot;Experimenter: Ready for scanning? Hit SPACE or -&gt; to continue.&quot;);&amp;#10;sys.stdout.flush();&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="print('Experimenter: Ready for scanning? Hit SPACE or -&gt; to continue.')&amp;#10;sys.stdout.flush()" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="prepare_MR_code" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="start_MR">
       <CodeComponent name="start_MR_timer">
@@ -2543,15 +2560,15 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="console.log(&quot;Experimenter: Waiting for trigger. Start scanning...&quot;);&amp;#10;sys.stdout.flush();&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="print('Experimenter: Waiting for trigger. Start scanning...')&amp;#10;sys.stdout.flush()" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="trigger_time = globalClock.getTime();&amp;#10;thisExp.addData(&quot;trigger_time&quot;, trigger_time);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="trigger_time = globalClock.getTime()&amp;#10;thisExp.addData('trigger_time', trigger_time)" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="trigger_time = globalClock.getTime();&amp;#10;thisExp.addData(&quot;trigger_time&quot;, trigger_time);&amp;#10;console.log(&quot;Trigger recieved.&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="trigger_time = globalClock.getTime()&amp;#10;thisExp.addData('trigger_time', trigger_time)&amp;#10;print('Trigger recieved.')" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="start_MR_timer" valType="code"/>
       </CodeComponent>
@@ -2599,10 +2616,27 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="experiment_setup">
+      <CodeComponent name="logging_setup">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="win.mouseVisible = False&amp;#10;print('Mouse disabled on screen. Keep CMD window active!')" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="win.mouseVisible = false;&amp;#10;console.log(&quot;Mouse disabled on screen. Keep CMD window active!&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="logging.setDefaultClock(globalClock);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="logging.setDefaultClock(globalClock)" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="logging_setup" valType="code"/>
+      </CodeComponent>
       <CodeComponent name="select_files">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="tables = [0]&amp;#10;shuffle(tables)&amp;#10;trial_table = tables.pop()&amp;#10;print('Trial table: {}'.format(trial_table))&amp;#10;trial_table = str(trial_table)&amp;#10;&amp;#10;enc_table = 'stimuli_tables/encoding_trials_'+ trial_table + '.csv'&amp;#10;rec_table = 'stimuli_tables/recognition_trials_'+ trial_table + '.csv'&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="tables = [0]&amp;#10;shuffle(tables)&amp;#10;trial_table = tables.pop()&amp;#10;print('Selected trial table: {}'.format(trial_table))&amp;#10;trial_table = str(trial_table)&amp;#10;&amp;#10;enc_table = 'stimuli_tables/encoding_trials_'+ trial_table + '.csv'&amp;#10;rec_table = 'stimuli_tables/recognition_trials_'+ trial_table + '.csv'&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="tables = [&quot;0&quot;,&quot;1&quot;,&quot;2&quot;];&amp;#10;trial_table = tables[Math.floor(Math.random() * tables.length)];&amp;#10;&amp;#10;enc_table = ((&quot;stimuli_tables/encoding_trials_&quot; + trial_table) + &quot;.csv&quot;);&amp;#10;rec_table = ((&quot;stimuli_tables/recognition_trials_&quot; + trial_table) + &quot;.csv&quot;);" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
@@ -2619,8 +2653,8 @@
       <CodeComponent name="block_names">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="if expInfo['Session']=='1':&amp;#10;    block_name_selection=[1,51,101]&amp;#10;    end_text = 'Vége a feladatnak. Most kivesszük Önt a szkennerből.'&amp;#10;elif expInfo['Session']=='2':&amp;#10;    block_name_selection=[151,201,251]&amp;#10;    end_text = 'Vége a feladatnak. Nyugalmi mérés következik.'&amp;#10;else:&amp;#10;    block_name_selection=[1,51,101]&amp;#10;    end_text = 'Vége a feladatnak. '&amp;#10;    psychopy.logging.warning('Invalid Session Number')" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;Session&quot;] === &quot;1&quot;)) {&amp;#10;    block_name_selection = [1, 51, 101];&amp;#10;    end_text = &quot;V\u00e9ge a feladatnak. Most kivessz\u00fck \u00d6nt a szkennerb\u0151l.&quot;;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;Session&quot;] === &quot;2&quot;)) {&amp;#10;        block_name_selection = [151, 201, 251];&amp;#10;        end_text = &quot;V\u00e9ge a feladatnak. Nyugalmi m\u00e9r\u00e9s k\u00f6vetkezik.&quot;;&amp;#10;    } else {&amp;#10;        block_name_selection = [1, 51, 101];&amp;#10;        end_text = &quot;V\u00e9ge a feladatnak. &quot;;&amp;#10;        psychopy.logging.warning(&quot;Invalid Session Number&quot;);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="if expInfo['Session']=='1':&amp;#10;    block_name_selection=[1,51,101]&amp;#10;    end_text = 'Vége a feladatnak. Most kivesszük Önt a szkennerből.'&amp;#10;    print('First session starting...')&amp;#10;elif expInfo['Session']=='2':&amp;#10;    block_name_selection=[151,201,251]&amp;#10;    end_text = 'Vége a feladatnak. Nyugalmi mérés következik.'&amp;#10;    print('Second session starting...')&amp;#10;else:&amp;#10;    block_name_selection=[1,51,101]&amp;#10;    end_text = 'Vége a feladatnak. '&amp;#10;    print('Invalid Session Number!')&amp;#10; &amp;#10;sys.stdout.flush()" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;Session&quot;] === &quot;1&quot;)) {&amp;#10;    block_name_selection = [1, 51, 101];&amp;#10;    end_text = &quot;V\u00e9ge a feladatnak. Most kivessz\u00fck \u00d6nt a szkennerb\u0151l.&quot;;&amp;#10;    console.log(&quot;First session starting...&quot;);&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;Session&quot;] === &quot;2&quot;)) {&amp;#10;        block_name_selection = [151, 201, 251];&amp;#10;        end_text = &quot;V\u00e9ge a feladatnak. Nyugalmi m\u00e9r\u00e9s k\u00f6vetkezik.&quot;;&amp;#10;        console.log(&quot;Second session starting...&quot;);&amp;#10;    } else {&amp;#10;        block_name_selection = [1, 51, 101];&amp;#10;        end_text = &quot;V\u00e9ge a feladatnak. &quot;;&amp;#10;        console.log(&quot;Invalid Session Number!&quot;);&amp;#10;    }&amp;#10;}&amp;#10;sys.stdout.flush();&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -2632,23 +2666,6 @@
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="block_names" valType="code"/>
-      </CodeComponent>
-      <CodeComponent name="logging_setup">
-        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="a=1&amp;#10;b=2&amp;#10;print('Compile the experiment PLEASE')" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="a = 1;&amp;#10;b = 2;&amp;#10;console.log(&quot;Compile the experiment PLEASE&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="logging.setDefaultClock(globalClock);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="logging.setDefaultClock(globalClock)" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="logging_setup" valType="code"/>
       </CodeComponent>
       <ImageComponent name="welcome_image">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
