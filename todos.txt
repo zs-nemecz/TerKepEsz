@@ -1,0 +1,5 @@
+- 10-30 seconds baseline perior
+- figure out timing issues
+- shorter practice
+- separate practice outside scanner, with real buttons
+- messages to experimenter
