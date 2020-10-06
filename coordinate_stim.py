@@ -9,7 +9,8 @@ class Trial ():
         self.trialnum = num #the number of the trial
         self.target_x = combo[0] #Trial() takes a list as arguement that give it the two target coordinates, x and y
         self.target_y = combo[1]
-        self.lures = [1] #you can specify the distances a lure can get
+        self.lure_foil_dist = 4
+        self.lures = [1,2] #you can specify the distances a lure can get
         self.foils = self.foil_calc() #it calculates possible foil distances based on target x and y
         self.lure1_coord_x, self.lure1_coord_y, self.lure2_coord_x, self.lure2_coord_y, self.foil_coord_x, self.foil_coord_y = self.lure_foil_coords()
 
@@ -72,24 +73,41 @@ class Trial ():
 
         return possibilities
 
+
     def lure_foil_coords (self):
-        # making lures and foils
-        lure1_coord_x, lure1_coord_y = self.destination_maker(self.lures)
-        lure2_coord_x, lure2_coord_y = self.destination_maker(self.lures)
-        while lure1_coord_x == lure2_coord_x and lure1_coord_y == lure2_coord_y:
-            lure2_coord_x, lure2_coord_y = self.destination_maker(self.lures)
+        # making foils
         foil_coord_x, foil_coord_y = self.destination_maker(self.foils)
+        
+        lure1_coord_x, lure1_coord_y = self.destination_maker(self.lures)
+        
+        dist = abs(lure1_coord_x-foil_coord_x) + abs(lure1_coord_y-foil_coord_y)
+        while dist < self.lure_foil_dist:
+            print('Finding new lure 1')
+            lure1_coord_x, lure1_coord_y = self.destination_maker(self.lures)
+            dist = abs(lure1_coord_x-foil_coord_x) + abs(lure1_coord_y-foil_coord_y)
+
+        lure2_coord_x, lure2_coord_y = self.destination_maker(self.lures)
+        
+        lure_conflict = abs(lure2_coord_x-foil_coord_x) + abs(lure2_coord_y-foil_coord_y) < 2
+        while lure_conflict: 
+            print('Lure 2 dist: ', dist)
+            print('Lure conflict: ', lure_conflict)
+            print('Finding new lure 2')
+            lure2_coord_x, lure2_coord_y = self.destination_maker(self.lures)
+            lure_conflict = abs(lure2_coord_x-foil_coord_x) + abs(lure2_coord_y-foil_coord_y) < 2
+            dist = abs(lure2_coord_x-foil_coord_x) + abs(lure2_coord_y-foil_coord_y)
 
         return lure1_coord_x, lure1_coord_y, lure2_coord_x, lure2_coord_y, foil_coord_x, foil_coord_y
 
 #makes pixel-wise coordinate from a value that signifies the location in the grid
 def coordinate_maker (base, grid_len, coord, coord_type):
     coordinate = base + coord*grid_len
-
     if coord_type == "x":
         coordinate -= grid_whole_x//2
     elif coord_type == "y":
         coordinate -= grid_whole_y//2
+
+    #jitter = int(r.uniform(-grid_len/2, grid_len/2)) #for continous lures
 
     return coordinate
 
