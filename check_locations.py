@@ -8,7 +8,7 @@ plt.plot(stim_table['Xcoordinate'], stim_table['Ycoordinate'], alpha=0.5)
 colors = ['r', 'g', 'k', 'gold', 'fuchsia', 'brown']
 c=0
 
-for i in [1]: # plot few locations
+for i in [3]: # plot few locations
     c+=1
     plt.scatter(stim_table['Xcoordinate'][i], stim_table['Ycoordinate'][i], s=s, color=colors[c]) # original coordinates
     plt.scatter(stim_table['Xcoordinate_lure1'][i], stim_table['Ycoordinate_lure1'][i], marker = 'x', s=s, color=colors[c]) # lure 1 coordinates

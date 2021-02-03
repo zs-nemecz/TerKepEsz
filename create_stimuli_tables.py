@@ -82,11 +82,11 @@ for bt in block_order:
             trial_order_array = np.append(trial_order_array, order)
 
 # Step 2: read existing stimuli file and edit contents
-encoding_fname = 'StimuliTable-Encoding-6-blocks_48-pairs_grid-loc_123456-delays.xlsx'
+encoding_fname = 'StimuliTable-Encoding_6-blocks_48-pairs_cont-loc_12345-delays.xlsx'
 encoding_table = pd.read_excel(encoding_fname)
 encoding_table['StimType'] = stimtype_array
 encoding_table['Delay'] = delay_array
 encoding_table['TrialType'] = trial_type_array
 encoding_table['Order'] = trial_order_array
-fname_out = 'StimuliTable-Encoding-6-blocks_48-pairs_grid-loc_123456-delays.xlsx'
+fname_out = 'StimuliTable-Encoding_6-blocks_48-pairs_cont-loc_12345-delays.xlsx'
 encoding_table.to_excel(fname_out, index=False)

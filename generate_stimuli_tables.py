@@ -7,15 +7,16 @@ import trk_module as trk
 import os.path as op
 
 n_files = 3 # define number of stimuli files to be created
-encoding_fname = 'StimuliTable-Encoding-6-blocks_48-pairs_grid-loc_123456-delays.xlsx'
-recognition_fname = 'StimuliTable-Recognition_6-blocks_48-pairs_grid-loc_123456-delays.xlsx'
+home = '~/Documents/TRK/experiment/MR_version/TerKepEsz'
+encoding_fname = op.join(home, 'StimuliTable-Encoding_6-blocks_48-pairs_cont-loc_12345-delays.xlsx')
+recognition_fname = op.join(home,'StimuliTable-Recognition_6-blocks_48-pairs_cont-loc_12345-delays.xlsx')
 encoding_table = pd.read_excel(encoding_fname)
 recognition_table = pd.read_excel(recognition_fname)
 
 n_encoding_images, n_all_images = trk.get_exp_parameters(encoding_table, recognition_table)
 
 for i in range(n_files):
-    outpath = 'stimuli_tables'
+    outpath = op.join(home,'stimuli_tables')
     encoding_trials_fname = 'encoding_trials_{}.csv'.format(str(i))
     regognition_trials_fname = 'recognition_trials_{}.csv'.format(str(i))
     images, foil_images = trk.select_images(n_encoding_images, n_all_images)
