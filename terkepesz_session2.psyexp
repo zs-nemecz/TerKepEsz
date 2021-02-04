@@ -513,8 +513,6 @@
     <Routine name="anatomy"/>
     <Routine name="choose_video"/>
     <Routine name="video"/>
-    <Routine name="resting_state_instruction"/>
-    <Routine name="resting_state"/>
     <Routine name="prepare_task"/>
   </Flow>
 </PsychoPy2experiment>

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.9),
-    on February 03, 2021, at 19:30
+    on February 04, 2021, at 10:16
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -69,7 +69,7 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # Setup the Window
 win = visual.Window(
-    size=[1920, 1080], fullscr=True, screen=0, 
+    size=[1920, 1200], fullscr=True, screen=1, 
     winType='pyglet', allowGUI=True, allowStencil=False,
     monitor='NLL LCD', color=[0.114,0.310,0.380], colorSpace='rgb',
     blendMode='avg', useFBO=True, 
