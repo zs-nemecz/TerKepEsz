@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2020.2.3">
+<PsychoPy2experiment encoding="utf-8" version="2020.2.10">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -7,7 +7,7 @@
     <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
     <Param name="Data filename" updates="None" val="u'data/%s_%s_%s_%s' % (expInfo['ID'],'pilot', expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
-    <Param name="Experiment info" updates="None" val="{'ID': '', 'Session': '', 'Stimuli Table': '0', 'Practice': '1'}" valType="code"/>
+    <Param name="Experiment info" updates="None" val="{'ID': '', 'Session': 'OBJ/LOC', 'Stimuli Table': '0', 'Practice': '1'}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
     <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="html" valType="str"/>
@@ -25,7 +25,7 @@
     <Param name="Show mouse" updates="None" val="True" valType="bool"/>
     <Param name="Units" updates="None" val="height" valType="str"/>
     <Param name="Use version" updates="None" val="2020.2" valType="str"/>
-    <Param name="Window size (pixels)" updates="None" val="[1920, 1200]" valType="code"/>
+    <Param name="Window size (pixels)" updates="None" val="[1920, 1080]" valType="code"/>
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
     <Param name="color" updates="None" val="$[0.114,0.310,0.380]" valType="str"/>
     <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
@@ -1934,7 +1934,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="2.5" valType="code"/>
+        <Param name="stopVal" updates="constant" val="3.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="Képfelismerés" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
@@ -1945,10 +1945,10 @@
       <CodeComponent name="create_practice_block">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="practice_end = 0&amp;#10;step = 1&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="practice_start = 0&amp;#10;if session == 2:&amp;#10;    practice_start = 3&amp;#10;step = 1&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="practice_end = 0;&amp;#10;step = 1;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="practice_start = practice_end;&amp;#10;practice_end = (practice_start + 3);&amp;#10;practice_selection = Array.from({length: practice_end - practice_start}, (_, index) =&gt; index + practice_start);&amp;#10;block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9p&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Hely&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="practice_start = practice_end&amp;#10;practice_end = practice_start + 2&amp;#10;practice_selection = np.arange(practice_start, practice_end, step)&amp;#10;&amp;#10;block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Kép'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Hely'&amp;#10;else:&amp;#10;    block_name='Block Unknown'&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="practice_end = practice_start + 2&amp;#10;practice_selection = np.arange(practice_start, practice_end, step)&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -1959,7 +1959,7 @@
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="create_practice_block" valType="code"/>
       </CodeComponent>
-      <TextComponent name="start_practice_block">
+      <TextComponent name="practice_block_text">
         <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -1968,7 +1968,7 @@
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-        <Param name="name" updates="None" val="start_practice_block" valType="code"/>
+        <Param name="name" updates="None" val="practice_block_text" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
@@ -1977,9 +1977,9 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
+        <Param name="stopVal" updates="constant" val="3.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="$block_name" valType="str"/>
+        <Param name="text" updates="constant" val="Galériaberendezés" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -2119,7 +2119,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A Galériaberendezés és Képfelismerés feladatok következnek. &amp;#10;&amp;#10;A feladatokat 'Hely' és 'Kép' körökre osztottuk. &amp;#10;&amp;#10;A 'Kép' körök alatt a képek részleteire, a 'Hely' körök alatt pedig a képek pozíciójára figyeljen. &amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="A Képválogatás és Képfelismerés feladatok következnek. &amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="height" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -2189,8 +2189,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="if expInfo['Session']=='1':&amp;#10;    rec_end = 0;&amp;#10;elif expInfo['Session']=='2':&amp;#10;    rec_end = 72;&amp;#10;else:&amp;#10;    rec_end = 0;&amp;#10;    psychopy.logging.log('Starting REC trials from 0', logging.CRITICAL)" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;Session&quot;] === &quot;1&quot;)) {&amp;#10;    rec_end = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;Session&quot;] === &quot;2&quot;)) {&amp;#10;        rec_end = 72;&amp;#10;    } else {&amp;#10;        rec_end = 0;&amp;#10;        psychopy.logging.log(&quot;Starting REC trials from 0&quot;, logging.CRITICAL);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="rec_start = rec_end;&amp;#10;rec_end = (rec_start + 24);&amp;#10;rec_selection = np.arange(rec_start, rec_end, step);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="rec_start = rec_end&amp;#10;rec_end = rec_start + 24&amp;#10;rec_selection = np.arange(rec_start,rec_end, step)&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="rec_start = rec_end;&amp;#10;rec_end = (rec_start + 36);&amp;#10;rec_selection = np.arange(rec_start, rec_end, step);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="rec_start = rec_end&amp;#10;rec_end = rec_start + 36&amp;#10;rec_selection = np.arange(rec_start,rec_end, step)&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -2204,10 +2204,10 @@
       <CodeComponent name="create_enc_block">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="if expInfo['Session']=='1':&amp;#10;    enc_end = 0;&amp;#10;elif expInfo['Session']=='2':&amp;#10;    enc_end = 150;&amp;#10;else:&amp;#10;    enc_end = 0;&amp;#10;    psychopy.logging.log('Starting ENC trials from 0', logging.CRITICAL)" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;Session&quot;] === &quot;1&quot;)) {&amp;#10;    enc_end = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;Session&quot;] === &quot;2&quot;)) {&amp;#10;        enc_end = 150;&amp;#10;    } else {&amp;#10;        enc_end = 0;&amp;#10;        psychopy.logging.log(&quot;Starting ENC trials from 0&quot;, logging.CRITICAL);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="enc_start = enc_end;&amp;#10;enc_end = (enc_start + 50);&amp;#10;enc_selection = np.arange(enc_start, enc_end, step);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="enc_start = enc_end&amp;#10;enc_end = enc_start + 50&amp;#10;enc_selection = np.arange(enc_start, enc_end, step)&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="if expInfo['Session']=='1':&amp;#10;    enc_end = 0;&amp;#10;elif expInfo['Session']=='2':&amp;#10;    enc_end = 152;&amp;#10;else:&amp;#10;    enc_end = 0;&amp;#10;    psychopy.logging.log('Starting ENC trials from 0', logging.CRITICAL)" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;Session&quot;] === &quot;1&quot;)) {&amp;#10;    enc_end = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;Session&quot;] === &quot;2&quot;)) {&amp;#10;        enc_end = 152;&amp;#10;    } else {&amp;#10;        enc_end = 0;&amp;#10;        psychopy.logging.log(&quot;Starting ENC trials from 0&quot;, logging.CRITICAL);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="enc_start = enc_end;&amp;#10;enc_end = (enc_start + 76);&amp;#10;enc_selection = np.arange(enc_start, enc_end, step);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="enc_start = enc_end&amp;#10;enc_end = enc_start + 76&amp;#10;enc_selection = np.arange(enc_start, enc_end, step)&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -2218,30 +2218,6 @@
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="create_enc_block" valType="code"/>
       </CodeComponent>
-      <TextComponent name="start_rec_block_text">
-        <Param name="color" updates="constant" val="black" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-        <Param name="name" updates="None" val="start_rec_block_text" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="$block_name" valType="str"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
     </Routine>
     <Routine name="general_instructions_3">
       <KeyboardComponent name="general_instructions_key_3">
@@ -2721,8 +2697,8 @@
       <CodeComponent name="block_names">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="if expInfo['Session']=='1':&amp;#10;    block_name_selection=[1,51,101]&amp;#10;    end_text = 'Vége a feladatnak. Most kivesszük Önt a szkennerből.'&amp;#10;    print('First session starting...')&amp;#10;elif expInfo['Session']=='2':&amp;#10;    block_name_selection=[151,201,251]&amp;#10;    end_text = 'Vége a  mérésnek. Most kivesszük Önt a szkennerből.'&amp;#10;    print('Second session starting...')&amp;#10;else:&amp;#10;    block_name_selection=[1,51,101]&amp;#10;    end_text = 'Vége a feladatnak. '&amp;#10;    print('Invalid Session Number!')&amp;#10; &amp;#10;sys.stdout.flush()" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;Session&quot;] === &quot;1&quot;)) {&amp;#10;    block_name_selection = [1, 51, 101];&amp;#10;    end_text = &quot;V\u00e9ge a feladatnak. Most kivessz\u00fck \u00d6nt a szkennerb\u0151l.&quot;;&amp;#10;    console.log(&quot;First session starting...&quot;);&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;Session&quot;] === &quot;2&quot;)) {&amp;#10;        block_name_selection = [151, 201, 251];&amp;#10;        end_text = &quot;V\u00e9ge a  m\u00e9r\u00e9snek. Most kivessz\u00fck \u00d6nt a szkennerb\u0151l.&quot;;&amp;#10;        console.log(&quot;Second session starting...&quot;);&amp;#10;    } else {&amp;#10;        block_name_selection = [1, 51, 101];&amp;#10;        end_text = &quot;V\u00e9ge a feladatnak. &quot;;&amp;#10;        console.log(&quot;Invalid Session Number!&quot;);&amp;#10;    }&amp;#10;}&amp;#10;sys.stdout.flush();&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="session = expInfo['Session']&amp;#10;if session == 'OBJ':&amp;#10;    block_name_selection=[1, 76]&amp;#10;    end_text = 'Vége a feladatnak. Most kivesszük Önt a szkennerből.'&amp;#10;    print('First session starting...')&amp;#10;elif session == 'LOC':&amp;#10;    block_name_selection=[152,228]&amp;#10;    end_text = 'Vége a  mérésnek. Most kivesszük Önt a szkennerből.'&amp;#10;    print('Second session starting...')&amp;#10;else:&amp;#10;    block_name_selection=[1,76]&amp;#10;    end_text = 'Vége a feladatnak. '&amp;#10;    print('Invalid Session Number!')&amp;#10; &amp;#10;sys.stdout.flush()" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="session = expInfo[&quot;Session&quot;];&amp;#10;if ((session === &quot;OBJ&quot;)) {&amp;#10;    block_name_selection = [1, 76];&amp;#10;    end_text = &quot;V\u00e9ge a feladatnak. Most kivessz\u00fck \u00d6nt a szkennerb\u0151l.&quot;;&amp;#10;    console.log(&quot;First session starting...&quot;);&amp;#10;} else {&amp;#10;    if ((session === &quot;LOC&quot;)) {&amp;#10;        block_name_selection = [152, 228];&amp;#10;        end_text = &quot;V\u00e9ge a  m\u00e9r\u00e9snek. Most kivessz\u00fck \u00d6nt a szkennerb\u0151l.&quot;;&amp;#10;        console.log(&quot;Second session starting...&quot;);&amp;#10;    } else {&amp;#10;        block_name_selection = [1, 76];&amp;#10;        end_text = &quot;V\u00e9ge a feladatnak. &quot;;&amp;#10;        console.log(&quot;Invalid Session Number!&quot;);&amp;#10;    }&amp;#10;}&amp;#10;sys.stdout.flush();&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -2784,6 +2760,23 @@
         <Param name="units" updates="None" val="pix" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
+      <CodeComponent name="set_instruction_text">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="instruction_text = ''&amp;#10;if session == 'OBJ':&amp;#10;    instruction_text = &quot;A Galériaberendezés alatt azt döntse el, beválogatja-e a képet a kiállításra.\&amp;#10;                        \n\n\t\tJobb mutatóujj - Igen\n\t\tBal mutatóujj - Nem\&amp;#10;                        \n-----------------------------------------------------------------------\&amp;#10;                        \nA Képfelismerés allatt azt döntse el, látta-e már pontosan ugyanezt a képet a Galériaberendezés alatt.\&amp;#10;                        \n\n\t\tJobb mutatóujj - Új\&amp;#10;                        \n\t\tBal mutatóujj - Régi&quot;&amp;#10;elif session == 'LOC':&amp;#10;    instruction_text = &quot;A Galériaberendezés alatt azt döntse el, maradhat-e a kép a bemutatott helyen.\&amp;#10;                        \n\n\t\tJobb mutatóujj - Igen\n\t\tBal mutatóujj - Nem\&amp;#10;                        \n-----------------------------------------------------------------------\&amp;#10;                        \nA Helyfelismerés allatt azt döntse el, pontosan ezen a helyen látta-e a képet.\&amp;#10;                        \n\n\t\tJobb mutatóujj - Új\n\t\tBal mutatóujj - Régi&quot;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="instruction_text = &quot;&quot;;&amp;#10;if ((session === &quot;OBJ&quot;)) {&amp;#10;    instruction_text = &quot;A Gal\u00e9riaberendez\u00e9s alatt azt d\u00f6ntse el, bev\u00e1logatja-e a k\u00e9pet a ki\u00e1ll\u00edt\u00e1sra.                        \n\n\t\tJobb mutat\u00f3ujj - Igen\n\t\tBal mutat\u00f3ujj - Nem                        \n-----------------------------------------------------------------------                        \nA K\u00e9pfelismer\u00e9s allatt azt d\u00f6ntse el, l\u00e1tta-e m\u00e1r pontosan ugyanezt a k\u00e9pet a Gal\u00e9riaberendez\u00e9s alatt.                        \n\n\t\tJobb mutat\u00f3ujj - \u00daj                        \n\t\tBal mutat\u00f3ujj - R\u00e9gi&quot;;&amp;#10;} else {&amp;#10;    if ((session === &quot;LOC&quot;)) {&amp;#10;        instruction_text = &quot;A Gal\u00e9riaberendez\u00e9s alatt azt d\u00f6ntse el, maradhat-e a k\u00e9p a bemutatott helyen.                        \n\n\t\tJobb mutat\u00f3ujj - Igen\n\t\tBal mutat\u00f3ujj - Nem                        \n-----------------------------------------------------------------------                        \nA Helyfelismer\u00e9s allatt azt d\u00f6ntse el, pontosan ezen a helyen l\u00e1tta-e a k\u00e9pet.                        \n\n\t\tJobb mutat\u00f3ujj - \u00daj\n\t\tBal mutat\u00f3ujj - R\u00e9gi&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="set_instruction_text" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="enc_fx_practice">
       <CodeComponent name="get_screen_size_practice">
@@ -2791,8 +2784,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="w_size = win.size&amp;#10;&amp;#10;x_size = w_size[0]&amp;#10;y_size = w_size[1]&amp;#10;&amp;#10;scr_resolution = x_size/y_size" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="w_size = psychoJS.window.size;&amp;#10;&amp;#10;x_size = w_size[0];&amp;#10;y_size = w_size[1];&amp;#10;&amp;#10;scr_resolution = (x_size / y_size);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="w_size = psychoJS.window.size;&amp;#10;&amp;#10;x_size = w_size[0];&amp;#10;y_size = w_size[1];&amp;#10;&amp;#10;scr_resolution = (x_size / y_size);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="w_size = win.size&amp;#10;&amp;#10;x_size = w_size[0]&amp;#10;y_size = w_size[1]&amp;#10;&amp;#10;scr_resolution = x_size/y_size" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9p&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Hely&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Kép'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Hely'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -3551,74 +3544,6 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
     </Routine>
-    <Routine name="general_instructions_4">
-      <KeyboardComponent name="general_instructions_4_key">
-        <Param name="allowedKeys" updates="constant" val="'d'" valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="general_instructions_4_key" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="1.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="299.0" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
-      <TextComponent name="general_instructions_4_continue">
-        <Param name="color" updates="constant" val="black" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
-        <Param name="name" updates="None" val="general_instructions_4_continue" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0,-0.4)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="1.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="299.0" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A gyakorláshoz nyomja le a gombot a jobb hüvelykujjával. " valType="str"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
-      <TextComponent name="general_instructions_4_text">
-        <Param name="color" updates="constant" val="black" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
-        <Param name="name" updates="None" val="general_instructions_4_text" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -0.01)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A Galériaberendezés alatt azt döntse el, beválogatja-e a képet a kiállításra ('Kép' kör) / maradhat-e a kép a bemutatott helyen ('Hely' kör).&amp;#10;&amp;#10;Jobb mutatóujj - Igen&amp;#10;Bal mutatóujj - Nem&amp;#10;&amp;#10;-----------------------------------------------------------------------&amp;#10;&amp;#10;A Képfelismerés allatt azt döntse el, látta-e már pontosan ugyanezt a képet a Galériaberendezés alatt ('Kép' kör) / pontosan ezen a helyen látta-e a képet ('Hely' kör).&amp;#10;&amp;#10;Jobb mutatóujj - Új&amp;#10;Bal mutatóujj - Régi" valType="extendedStr"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
-    </Routine>
     <Routine name="encoding_baseline">
       <CodeComponent name="get_screen_size_2">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -3657,7 +3582,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="10" valType="code"/>
+        <Param name="stopVal" updates="constant" val="30" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
         <Param name="units" updates="None" val="norm" valType="str"/>
@@ -3680,7 +3605,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="10" valType="code"/>
+        <Param name="stopVal" updates="constant" val="30" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="set every repeat" val="$block_name" valType="str"/>
         <Param name="units" updates="None" val="norm" valType="str"/>
@@ -3704,7 +3629,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="10" valType="code"/>
+        <Param name="stopVal" updates="constant" val="30" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="[BAL MUTATÓUJJ - Nem marad]      [JOBB MUTATÓUJJ - Marad]" valType="str"/>
         <Param name="units" updates="None" val="norm" valType="str"/>
@@ -3803,23 +3728,79 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
     </Routine>
+    <Routine name="general_instructions">
+      <KeyboardComponent name="general_instructions_4_key">
+        <Param name="allowedKeys" updates="constant" val="'d'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="general_instructions_4_key" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="299.0" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="general_instructions_4_continue">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="general_instructions_4_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0,-0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="299.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="A gyakorláshoz nyomja le a gombot a jobb hüvelykujjával. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="general_instructions_4_text">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="general_instructions_4_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.01)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$instruction_text" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="experiment_setup"/>
-    <Routine name="general_instructions_1"/>
-    <Routine name="general_instructions_4"/>
+    <Routine name="general_instructions"/>
     <Routine name="start_practice"/>
-    <LoopInitiator loopType="TrialHandler" name="full_practce">
-      <Param name="Selected rows" updates="None" val="1, 4" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('TrialIndex', 1), ('Jitter', 800), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'LURE'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/177c.jpg'), ('CurrentX', 0.078125), ('CurrentY', -0.13888888900000002), ('TripletMemberA', 'stimuli/fractals/170a.jpg'), ('TripletMemberB', 'stimuli/fractals/170b.jpg'), ('TripletMemberC', 'stimuli/fractals/170c.jpg'), ('Xcoordinate', 0.078125), ('Ycoordinate', -0.41666666700000005), ('Xcoordinate_lure1', -0.078125), ('Ycoordinate_lure1', -0.41666666700000005), ('Xcoordinate_lure2', 0.234375), ('Ycoordinate_lure2', -0.41666666700000005), ('Xcoordinate_foil', -0.390625), ('Ycoordinate_foil', 0.13888888900000002)]), OrderedDict([('TrialIndex', 2), ('Jitter', 4000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'TARGET'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/178a.jpg'), ('CurrentX', 0.390625), ('CurrentY', 0.41666666700000005), ('TripletMemberA', 'stimuli/fractals/171a.jpg'), ('TripletMemberB', 'stimuli/fractals/171b.jpg'), ('TripletMemberC', 'stimuli/fractals/171c.jpg'), ('Xcoordinate', 0.390625), ('Ycoordinate', 0.41666666700000005), ('Xcoordinate_lure1', 0.234375), ('Ycoordinate_lure1', 0.41666666700000005), ('Xcoordinate_lure2', 0.390625), ('Ycoordinate_lure2', 0.13888888900000002), ('Xcoordinate_foil', -0.234375), ('Ycoordinate_foil', 0.13888888900000002)]), OrderedDict([('TrialIndex', 3), ('Jitter', 2000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'LURE'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/179c.jpg'), ('CurrentX', 0.234375), ('CurrentY', 0.13888888900000002), ('TripletMemberA', 'stimuli/fractals/172a.jpg'), ('TripletMemberB', 'stimuli/fractals/172b.jpg'), ('TripletMemberC', 'stimuli/fractals/172c.jpg'), ('Xcoordinate', -0.390625), ('Ycoordinate', -0.41666666700000005), ('Xcoordinate_lure1', -0.390625), ('Ycoordinate_lure1', -0.13888888900000002), ('Xcoordinate_lure2', -0.234375), ('Ycoordinate_lure2', -0.41666666700000005), ('Xcoordinate_foil', 0.390625), ('Ycoordinate_foil', 0.41666666700000005)]), OrderedDict([('TrialIndex', 4), ('Jitter', 1000), ('ScannerRun', 1), ('BlockNr', 2), ('TrialType', 'LOC'), ('StimType', 'LURE'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/180a.jpg'), ('CurrentX', -0.078125), ('CurrentY', 0.13888888900000002), ('TripletMemberA', 'stimuli/fractals/173a.jpg'), ('TripletMemberB', 'stimuli/fractals/173b.jpg'), ('TripletMemberC', 'stimuli/fractals/173c.jpg'), ('Xcoordinate', -0.078125), ('Ycoordinate', 0.41666666700000005), ('Xcoordinate_lure1', 0.078125), ('Ycoordinate_lure1', 0.41666666700000005), ('Xcoordinate_lure2', -0.078125), ('Ycoordinate_lure2', 0.13888888900000002), ('Xcoordinate_foil', 0.390625), ('Ycoordinate_foil', -0.41666666700000005)]), OrderedDict([('TrialIndex', 5), ('Jitter', 900), ('ScannerRun', 1), ('BlockNr', 2), ('TrialType', 'LOC'), ('StimType', 'TARGET'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/181.jpg'), ('CurrentX', -0.390625), ('CurrentY', -0.13888888900000002), ('TripletMemberA', 'stimuli/fractals/174a.jpg'), ('TripletMemberB', 'stimuli/fractals/174b.jpg'), ('TripletMemberC', 'stimuli/fractals/174c.jpg'), ('Xcoordinate', -0.390625), ('Ycoordinate', -0.13888888900000002), ('Xcoordinate_lure1', -0.234375), ('Ycoordinate_lure1', -0.13888888900000002), ('Xcoordinate_lure2', -0.390625), ('Ycoordinate_lure2', 0.13888888900000002), ('Xcoordinate_foil', 0.234375), ('Ycoordinate_foil', 0.13888888900000002)]), OrderedDict([('TrialIndex', 6), ('Jitter', 3000), ('ScannerRun', 1), ('BlockNr', 2), ('TrialType', 'LOC'), ('StimType', 'FOIL'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/176a.jpg'), ('CurrentX', -0.390625), ('CurrentY', -0.41666666700000005), ('TripletMemberA', 'stimuli/fractals/175a.jpg'), ('TripletMemberB', 'stimuli/fractals/175b.jpg'), ('TripletMemberC', 'stimuli/fractals/175c.jpg'), ('Xcoordinate', 0.234375), ('Ycoordinate', 0.13888888900000002), ('Xcoordinate_lure1', 0.234375), ('Ycoordinate_lure1', 0.41666666700000005), ('Xcoordinate_lure2', 0.078125), ('Ycoordinate_lure2', 0.41666666700000005), ('Xcoordinate_foil', -0.390625), ('Ycoordinate_foil', -0.41666666700000005)])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="stimuli_tables/recognition_full_practice_trials.csv" valType="str"/>
-      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="True" valType="bool"/>
-      <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="practice" valType="code"/>
-      <Param name="name" updates="None" val="full_practce" valType="code"/>
-      <Param name="random seed" updates="None" val="" valType="code"/>
-    </LoopInitiator>
     <Routine name="practice_block_start"/>
     <LoopInitiator loopType="TrialHandler" name="enc_full_practice">
       <Param name="Selected rows" updates="None" val="$practice_selection" valType="str"/>
@@ -3837,7 +3818,6 @@
     <Routine name="enc_practice_feedback"/>
     <LoopTerminator name="enc_full_practice"/>
     <Routine name="recognition_title"/>
-    <Routine name="block_title"/>
     <LoopInitiator loopType="TrialHandler" name="rec_full_practice">
       <Param name="Selected rows" updates="None" val="$practice_selection" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('TrialIndex', 1), ('Jitter', 800), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'LURE'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/177c.jpg'), ('CurrentX', 0.078125), ('CurrentY', -0.13888888900000002), ('TripletMemberA', 'stimuli/fractals/170a.jpg'), ('TripletMemberB', 'stimuli/fractals/170b.jpg'), ('TripletMemberC', 'stimuli/fractals/170c.jpg'), ('Xcoordinate', 0.078125), ('Ycoordinate', -0.41666666700000005), ('Xcoordinate_lure1', -0.078125), ('Ycoordinate_lure1', -0.41666666700000005), ('Xcoordinate_lure2', 0.234375), ('Ycoordinate_lure2', -0.41666666700000005), ('Xcoordinate_foil', -0.390625), ('Ycoordinate_foil', 0.13888888900000002)]), OrderedDict([('TrialIndex', 2), ('Jitter', 4000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'TARGET'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/178a.jpg'), ('CurrentX', 0.390625), ('CurrentY', 0.41666666700000005), ('TripletMemberA', 'stimuli/fractals/171a.jpg'), ('TripletMemberB', 'stimuli/fractals/171b.jpg'), ('TripletMemberC', 'stimuli/fractals/171c.jpg'), ('Xcoordinate', 0.390625), ('Ycoordinate', 0.41666666700000005), ('Xcoordinate_lure1', 0.234375), ('Ycoordinate_lure1', 0.41666666700000005), ('Xcoordinate_lure2', 0.390625), ('Ycoordinate_lure2', 0.13888888900000002), ('Xcoordinate_foil', -0.234375), ('Ycoordinate_foil', 0.13888888900000002)]), OrderedDict([('TrialIndex', 3), ('Jitter', 2000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'LURE'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/179c.jpg'), ('CurrentX', 0.234375), ('CurrentY', 0.13888888900000002), ('TripletMemberA', 'stimuli/fractals/172a.jpg'), ('TripletMemberB', 'stimuli/fractals/172b.jpg'), ('TripletMemberC', 'stimuli/fractals/172c.jpg'), ('Xcoordinate', -0.390625), ('Ycoordinate', -0.41666666700000005), ('Xcoordinate_lure1', -0.390625), ('Ycoordinate_lure1', -0.13888888900000002), ('Xcoordinate_lure2', -0.234375), ('Ycoordinate_lure2', -0.41666666700000005), ('Xcoordinate_foil', 0.390625), ('Ycoordinate_foil', 0.41666666700000005)]), OrderedDict([('TrialIndex', 4), ('Jitter', 1000), ('ScannerRun', 1), ('BlockNr', 2), ('TrialType', 'LOC'), ('StimType', 'LURE'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/180a.jpg'), ('CurrentX', -0.078125), ('CurrentY', 0.13888888900000002), ('TripletMemberA', 'stimuli/fractals/173a.jpg'), ('TripletMemberB', 'stimuli/fractals/173b.jpg'), ('TripletMemberC', 'stimuli/fractals/173c.jpg'), ('Xcoordinate', -0.078125), ('Ycoordinate', 0.41666666700000005), ('Xcoordinate_lure1', 0.078125), ('Ycoordinate_lure1', 0.41666666700000005), ('Xcoordinate_lure2', -0.078125), ('Ycoordinate_lure2', 0.13888888900000002), ('Xcoordinate_foil', 0.390625), ('Ycoordinate_foil', -0.41666666700000005)]), OrderedDict([('TrialIndex', 5), ('Jitter', 900), ('ScannerRun', 1), ('BlockNr', 2), ('TrialType', 'LOC'), ('StimType', 'TARGET'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/181.jpg'), ('CurrentX', -0.390625), ('CurrentY', -0.13888888900000002), ('TripletMemberA', 'stimuli/fractals/174a.jpg'), ('TripletMemberB', 'stimuli/fractals/174b.jpg'), ('TripletMemberC', 'stimuli/fractals/174c.jpg'), ('Xcoordinate', -0.390625), ('Ycoordinate', -0.13888888900000002), ('Xcoordinate_lure1', -0.234375), ('Ycoordinate_lure1', -0.13888888900000002), ('Xcoordinate_lure2', -0.390625), ('Ycoordinate_lure2', 0.13888888900000002), ('Xcoordinate_foil', 0.234375), ('Ycoordinate_foil', 0.13888888900000002)]), OrderedDict([('TrialIndex', 6), ('Jitter', 3000), ('ScannerRun', 1), ('BlockNr', 2), ('TrialType', 'LOC'), ('StimType', 'FOIL'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/176a.jpg'), ('CurrentX', -0.390625), ('CurrentY', -0.41666666700000005), ('TripletMemberA', 'stimuli/fractals/175a.jpg'), ('TripletMemberB', 'stimuli/fractals/175b.jpg'), ('TripletMemberC', 'stimuli/fractals/175c.jpg'), ('Xcoordinate', 0.234375), ('Ycoordinate', 0.13888888900000002), ('Xcoordinate_lure1', 0.234375), ('Ycoordinate_lure1', 0.41666666700000005), ('Xcoordinate_lure2', 0.078125), ('Ycoordinate_lure2', 0.41666666700000005), ('Xcoordinate_foil', -0.390625), ('Ycoordinate_foil', -0.41666666700000005)])]" valType="str"/>
@@ -3853,7 +3833,6 @@
     <Routine name="rec_trial_practice"/>
     <Routine name="rec_practice_feedback"/>
     <LoopTerminator name="rec_full_practice"/>
-    <LoopTerminator name="full_practce"/>
     <Routine name="end_practice"/>
     <LoopInitiator loopType="TrialHandler" name="run">
       <Param name="Selected rows" updates="None" val="$block_name_selection" valType="str"/>

@@ -11,8 +11,8 @@ class Trial ():
 
     def __init__(self, num):
         self.trialnum = num #the number of the trial
-        self.lures = [150, 350] #you can specify the distances a lure can get
-        self.foils = [435, None] #it calculates possible foil distances based on target x and y
+        self.lures = [200, 350] #you can specify the distances a lure can get
+        self.foils = [450, None] #it calculates possible foil distances based on target x and y
         self.target_x, self.target_y, self.lure1_coord_x, self.lure1_coord_y, self.lure2_coord_x, self.lure2_coord_y, self.foil_coord_x, self.foil_coord_y = self.coord_maker()
 
     #destination_maker selects an x and a y coordinate based on a distance randomly chosen from the possible distances (lures or foils)
@@ -78,7 +78,7 @@ screen_len = 1920
 TrialNum = 249 #trials + 1 baseline
 
 #preparing stimulus list
-stim_fname = "StimuliTable-Encoding-6-blocks_48-pairs_grid-loc_123456-delays.xlsx"
+stim_fname = "StimuliTable-Encoding_4-blocks_48-pairs_cont-loc_12345-delays.xlsx"
 stim_table = pd.read_excel(stim_fname)
 
 #making BL trial

@@ -8,10 +8,10 @@ import os.path as op
 import numpy as np
 from numpy.random import randint, shuffle
 
-n_baseline = 12
+n_baseline = 16
 max_n_trials = (16 * 2 * 3 * 3) + n_baseline # 16*2 images in each 3 types (ERP, LLP, OLP) in 3 blocks
 print(max_n_trials)
-n_blocks = 6
+n_blocks = 4
 n_block_trials = int(max_n_trials/n_blocks)
 n_OLP = (max_n_trials - n_baseline)/3 # a third of the trials excluding BL are OLP
 n_LLP = n_OLP # number of trials per trial type should be the same
@@ -19,10 +19,8 @@ n_ERP = n_OLP
 print(n_OLP, n_LLP, n_ERP)
 n_bl_per_block = int(n_baseline/n_blocks)
 delay_types = [1,2,3,4,5,6] # number of delay types must be divisible by the (total number of trials/block) - (BL/block)
-block_types = ['OBJ', 'LOC']
 lure_types = ['OLP', 'LLP']
-n_blocks_per_type = int(n_blocks/len(block_types))
-block_order = block_types * n_blocks_per_type
+block_order = ['OBJ', 'OBJ', 'LOC', 'LOC']
 
 n_lures_per_block = int(((n_OLP + n_LLP)/n_blocks)/2)
 print(n_lures_per_block)
@@ -82,11 +80,11 @@ for bt in block_order:
             trial_order_array = np.append(trial_order_array, order)
 
 # Step 2: read existing stimuli file and edit contents
-encoding_fname = 'StimuliTable-Encoding_6-blocks_48-pairs_cont-loc_12345-delays.xlsx'
+encoding_fname = 'StimuliTable-Encoding_4-blocks_48-pairs_cont-loc_12345-delays.xlsx'
 encoding_table = pd.read_excel(encoding_fname)
 encoding_table['StimType'] = stimtype_array
 encoding_table['Delay'] = delay_array
 encoding_table['TrialType'] = trial_type_array
 encoding_table['Order'] = trial_order_array
-fname_out = 'StimuliTable-Encoding_6-blocks_48-pairs_cont-loc_12345-delays.xlsx'
+fname_out = 'StimuliTable-Encoding_4-blocks_48-pairs_cont-loc_12345-delays.xlsx'
 encoding_table.to_excel(fname_out, index=False)
