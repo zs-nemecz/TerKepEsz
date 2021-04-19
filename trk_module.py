@@ -188,9 +188,9 @@ def set_recognition_trials(recognition_table, encoding_trials, foils):
     # loop through recog table and complete rows
     i_foil = 0 #index for looping through foil image names
     block_start = 0
-    block_len = 50
+    block_len = 76
     block_end = block_start + block_len
-    for bl in range(6):
+    for bl in range(4):
         #take OLP, LLP and ERP trials from the first block
         block = encoding_trials.iloc[block_start:block_end, :]
         # get OLP stimuli
