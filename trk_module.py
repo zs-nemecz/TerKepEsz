@@ -172,7 +172,6 @@ def set_recognition_row(recognition_trials, i, trial_type, recognition_type,\
     return recognition_trials
 
 def set_recognition_trials(recognition_table, encoding_trials, foils):
-
     # OLP foil coordinates - obtain from encoding trials and shuffle together
     foilx = encoding_trials['Xcoordinate_foil']
     foily = encoding_trials['Ycoordinate_foil']
@@ -206,9 +205,7 @@ def set_recognition_trials(recognition_table, encoding_trials, foils):
         erp.sample(frac=1).reset_index(drop=True)
         i_erp = 0  # index, for looping through ERPs
         recognition_block = recognition_trials[recognition_trials["BlockNr"] == (bl+1)]
-        print(len(llp.index))
         for i, row in recognition_block.iterrows():
-            print(i)
             if row['StimType'] == 'FOIL' and row['TrialType'] == 'OBJ':
                     recognition_trials = set_recognition_row(recognition_trials, i, 'OBJ', 'FOIL', foils, i_foil, foilx, foily)
                     i_foil += 1
