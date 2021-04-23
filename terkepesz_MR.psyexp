@@ -106,7 +106,7 @@
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
         <Param name="name" updates="None" val="filler_task_resp" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -3624,7 +3624,6 @@
     <Routine name="start_MR_rec"/>
     <Routine name="start_rec_run"/>
     <Routine name="recognition_title"/>
-    <Routine name="block_title"/>
     <Routine name="recognition_baseline"/>
     <LoopInitiator loopType="TrialHandler" name="rec_trials">
       <Param name="Selected rows" updates="None" val="$rec_selection" valType="str"/>
