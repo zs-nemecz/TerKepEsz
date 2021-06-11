@@ -289,7 +289,7 @@
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="response=enc_trial_key.keys&amp;#10;&amp;#10;if response == 'b':&amp;#10;    info_text = 'Nem marad.'&amp;#10;elif response == 'c':&amp;#10;    info_text = 'Marad.'&amp;#10;else:&amp;#10;    info_text = 'Nem adott választ.'&amp;#10;    enc_missing = enc_missing + 1&amp;#10;print('Button pressed: {}. {}'. format(response, info_text))" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="response=enc_trial_key.keys&amp;#10;&amp;#10;if response == 'b':&amp;#10;    info_text = 'Nem marad.'&amp;#10;elif response == 'c':&amp;#10;    info_text = 'Marad.'&amp;#10;else:&amp;#10;    response='-'&amp;#10;    info_text = 'Nem adott választ.'&amp;#10;    enc_missing = enc_missing + 1&amp;#10;print('Button pressed: {}. {}'. format(response, info_text))" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="exp_info_encoding" valType="code"/>
       </CodeComponent>
@@ -693,15 +693,15 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="console.log(&quot;On screen: End of practice.&quot;);&amp;#10;cprint(&quot;Waiting for participant's response (d)&quot;, &quot;yellow&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="print('On screen: End of practice.')&amp;#10;cprint('Waiting for participant\'s response (d)', 'yellow')" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="cprint(&quot;On screen: End of practice.&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;Waiting for participant's response (d)&quot;, &quot;yellow&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="cprint('On screen: End of practice.', 'blue', 'on_white')&amp;#10;cprint('Waiting for participant\'s response (d)', 'yellow')" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="cprint((&quot;key pressed: &quot; + end_practice_key.keys), &quot;green&quot;);&amp;#10;console.log(&quot;Run loop starting with following parameters:&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="cprint('key pressed: '+ end_practice_key.keys, 'green')&amp;#10;print('Run loop starting with following parameters:')" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="cprint((&quot;key pressed: &quot; + end_practice_key.keys), &quot;green&quot;);&amp;#10;console.log(&quot;Scanner Run loop starting with following parameters:&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="cprint('key pressed: '+ end_practice_key.keys, 'green')&amp;#10;print('Scanner Run loop starting with following parameters:')" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="exp_info_end_practice" valType="code"/>
       </CodeComponent>
@@ -1698,8 +1698,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="trigger_time = globalClock.getTime();&amp;#10;thisExp.addData(&quot;trigger_time&quot;, trigger_time);&amp;#10;if (((enc_end === 0) || (enc_end === 152))) {&amp;#10;    event.globalKeys.add({&quot;key&quot;: trigger_key, &quot;func&quot;: get_trigger_time, &quot;func_args&quot;: [trigger_time]});&amp;#10;}&amp;#10;console.log(&quot;Trigger recieved.&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="trigger_time = globalClock.getTime()&amp;#10;thisExp.addData('trigger_time', trigger_time)&amp;#10;if enc_end==0 or enc_end==152:&amp;#10;    event.globalKeys.add(key=trigger_key, &amp;#10;                                           func=get_trigger_time, &amp;#10;                                           func_args=[trigger_time])&amp;#10;print('Trigger recieved.')" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="trigger_time = globalClock.getTime();&amp;#10;thisExp.addData(&quot;trigger_time&quot;, trigger_time);&amp;#10;if (((enc_end === 0) || (enc_end === 152))) {&amp;#10;    event.globalKeys.add({&quot;key&quot;: trigger_key, &quot;func&quot;: get_trigger_time, &quot;func_args&quot;: [trigger_time]});&amp;#10;}&amp;#10;cprint(&quot;Trigger recieved.&quot;, &quot;green&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="trigger_time = globalClock.getTime()&amp;#10;thisExp.addData('trigger_time', trigger_time)&amp;#10;if enc_end==0 or enc_end==152:&amp;#10;    event.globalKeys.add(key=trigger_key, &amp;#10;                                           func=get_trigger_time, &amp;#10;                                           func_args=[trigger_time])&amp;#10;cprint('Trigger recieved.', 'green')" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="start_MR_timer" valType="code"/>
       </CodeComponent>
@@ -3265,8 +3265,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="trigger_time = globalClock.getTime();&amp;#10;thisExp.addData(&quot;trigger_time&quot;, trigger_time);&amp;#10;console.log(&quot;Trigger recieved.&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="trigger_time = globalClock.getTime()&amp;#10;thisExp.addData('trigger_time', trigger_time)&amp;#10;print('Trigger recieved.')" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="trigger_time = globalClock.getTime();&amp;#10;thisExp.addData(&quot;trigger_time&quot;, trigger_time);&amp;#10;cprint(&quot;Trigger recieved.&quot;, &quot;green&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="trigger_time = globalClock.getTime()&amp;#10;thisExp.addData('trigger_time', trigger_time)&amp;#10;cprint('Trigger recieved.', 'green')" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="start_MR_timer_2" valType="code"/>
       </CodeComponent>

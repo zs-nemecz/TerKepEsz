@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.10),
-    on June 11, 2021, at 19:14
+    on June 11, 2021, at 19:59
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -2264,7 +2264,7 @@ for thisRec_full_practice in rec_full_practice:
 continueRoutine = True
 routineTimer.add(600.000000)
 # update component parameters for each repeat
-print('On screen: End of practice.')
+cprint('On screen: End of practice.', 'blue', 'on_white')
 cprint('Waiting for participant\'s response (d)', 'yellow')
 block_counter = 0
 end_practice_key.keys = []
@@ -2398,7 +2398,7 @@ for thisComponent in end_practiceComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
 cprint('key pressed: '+ end_practice_key.keys, 'green')
-print('Run loop starting with following parameters:')
+print('Scanner Run loop starting with following parameters:')
 thisExp.addData('end_practice_text.started', end_practice_text.tStartRefresh)
 thisExp.addData('end_practice_text.stopped', end_practice_text.tStopRefresh)
 # check responses
@@ -2652,7 +2652,7 @@ for thisRun in run:
         event.globalKeys.add(key=trigger_key, 
                                                func=get_trigger_time, 
                                                func_args=[trigger_time])
-    print('Trigger recieved.')
+    cprint('Trigger recieved.', 'green')
     run.addData('start_MR_text.started', start_MR_text.tStartRefresh)
     run.addData('start_MR_text.stopped', start_MR_text.tStopRefresh)
     # check responses
@@ -3375,6 +3375,7 @@ for thisRun in run:
         elif response == 'c':
             info_text = 'Marad.'
         else:
+            response='-'
             info_text = 'Nem adott választ.'
             enc_missing = enc_missing + 1
         print('Button pressed: {}. {}'. format(response, info_text))
@@ -3884,7 +3885,7 @@ for thisRun in run:
             thisComponent.setAutoDraw(False)
     trigger_time = globalClock.getTime()
     thisExp.addData('trigger_time', trigger_time)
-    print('Trigger recieved.')
+    cprint('Trigger recieved.', 'green')
     run.addData('start_MR_text_2.started', start_MR_text_2.tStartRefresh)
     run.addData('start_MR_text_2.stopped', start_MR_text_2.tStopRefresh)
     # check responses
