@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2020.2.9),
-    on Fri Apr 23 07:46:41 2021
+This experiment was created using PsychoPy3 Experiment Builder (v2020.2.10),
+    on June 11, 2021, at 17:23
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -39,7 +39,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-psychopyVersion = '2020.2.9'
+psychopyVersion = '2020.2.10'
 expName = 'TérKépÉsz'  # from the Builder filename that created this script
 expInfo = {'ID': '', 'Session': 'OBJ/LOC', 'Stimuli Table': '0', 'Practice': '1'}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
@@ -55,7 +55,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['ID'],'pilot', exp
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='terkepesz_MR_lastrun.py',
+    originPath='D:\\Zsuzsa\\HCCCL\\experiment\\computer_based_tasks\\mTRK\\TerKepEsz\\terkepesz_MR_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -86,13 +86,15 @@ defaultKeyboard = keyboard.Keyboard()
 
 # Initialize components for Routine "experiment_setup"
 experiment_setupClock = core.Clock()
+import os
+os.system('color')
+from termcolor import colored, cprint
 win.mouseVisible = False
+cprint('State: Experiment Setup', 'blue')
 print('Mouse disabled on screen. Keep CMD window active!')
 practice = int(expInfo['Practice'])
 if practice ==0:
     print('Skipping Practice')
-else:
-    print('Practice ON')
 trial_table = expInfo['Stimuli Table']
 
 enc_table = 'stimuli_tables/encoding_trials_'+ trial_table + '.csv'
@@ -100,34 +102,20 @@ rec_table = 'stimuli_tables/recognition_trials_'+ trial_table + '.csv'
 
 session = expInfo['Session']
 if session == 'OBJ':
+    task_name='Képszemle'
     block_name_selection=[0, 76]
     end_text = 'Vége a feladatnak. Most kivesszük Önt a szkennerből.'
-    print('First session starting...')
+    print('Session selected: OBJ')
 elif session == 'LOC':
+    task_name='Berendezés'
     block_name_selection=[152,228]
     end_text = 'Vége a  mérésnek. Most kivesszük Önt a szkennerből.'
-    print('Second session starting...')
+    print('Session selected: LOC')
 else:
-    block_name_selection=[1,76]
+    block_name_selection=[0,76]
     end_text = 'Vége a feladatnak. '
-    print('Invalid Session Number!')
+    print('Invalid Session! Will use OBJ.')
  
-sys.stdout.flush()
-welcome_image = visual.ImageStim(
-    win=win,
-    name='welcome_image', units='pix', 
-    image='stimuli/terkepesz.png', mask=None,
-    ori=0, pos=(0, -100), size=(309,665),
-    color=[1,1,1], colorSpace='rgb', opacity=1,
-    flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-3.0)
-welcome_text = visual.TextStim(win=win, name='welcome_text',
-    text='TérKépÉsz Feladatok',
-    font='Arial',
-    units='pix', pos=(0, 350), height=50, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-4.0);
 instruction_text = ''
 if session == 'OBJ':
     instruction_text = "A Galériaberendezés alatt azt döntse el, beválogatja-e a képet a kiállításra.\
@@ -142,6 +130,21 @@ elif session == 'LOC':
                         \n-----------------------------------------------------------------------\
                         \nA Helyfelismerés allatt azt döntse el, pontosan ezen a helyen látta-e a képet.\
                         \n\n\t\tJobb mutatóujj - Új\n\t\tBal mutatóujj - Régi"
+welcome_image = visual.ImageStim(
+    win=win,
+    name='welcome_image', units='pix', 
+    image='stimuli/terkepesz.png', mask=None,
+    ori=0, pos=(0, -100), size=(309,665),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-4.0)
+welcome_text = visual.TextStim(win=win, name='welcome_text',
+    text='TérKépÉsz Feladatok',
+    font='Arial',
+    units='pix', pos=(0, 350), height=50, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-5.0);
 
 # Initialize components for Routine "general_instructions"
 general_instructionsClock = core.Clock()
@@ -173,13 +176,17 @@ start_practice_text = visual.TextStim(win=win, name='start_practice_text',
 
 # Initialize components for Routine "practice_block_start"
 practice_block_startClock = core.Clock()
-practice_start = 0
-if session == 2:
+if session == 'OBJ':
+    practice_start = 0
+elif session == 'LOC':
     practice_start = 3
+else:
+    print('Invalid session! Will go with OBJ')
+    practice_start = 0
 step = 1
 
 practice_block_text = visual.TextStim(win=win, name='practice_block_text',
-    text='Galériaberendezés',
+    text='default text',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -424,7 +431,7 @@ wait_for_last_scan_text = visual.TextStim(win=win, name='wait_for_last_scan_text
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=0.0);
+    depth=-1.0);
 wait_for_last_scan_continue = keyboard.Keyboard()
 
 # Initialize components for Routine "start_MR"
@@ -661,14 +668,13 @@ correct5= 'b'
 problem6 = '105 / 5 = ?'
 solution6 = 'Bal mutatóujj: 21                Jobb mutatóujj: 28'
 correct6= 'c'
-print('problems created')
 
 math_problems = [problem1, problem2, problem3, problem4, problem5, problem6]
-print('problem list ok')
+
 math_solutions = [solution1,solution2,solution3,solution4,solution5, solution6]
-print('solution list list ok')
+
 math_correct = [correct1,correct2,correct3,correct4,correct5,correct6]
-print('corr list ok')
+
 
 i = 0
 math_problem = visual.TextStim(win=win, name='math_problem',
@@ -700,8 +706,6 @@ wait_for_last_scan_continue_2 = keyboard.Keyboard()
 
 # Initialize components for Routine "start_MR_rec"
 start_MR_recClock = core.Clock()
-
-
 start_MR_text_2 = visual.TextStim(win=win, name='start_MR_text_2',
     text='A vizsgálatvezető indítja a szkennert.',
     font='Arial',
@@ -1010,6 +1014,8 @@ general_instructions_4_key.keys = []
 general_instructions_4_key.rt = []
 _general_instructions_4_key_allKeys = []
 general_instructions_4_text.setText(instruction_text)
+print('On Screen: General instructions...')
+print('Waiting for participant\'s response (d)')
 # keep track of which components have finished
 general_instructionsComponents = [general_instructions_4_key, general_instructions_4_continue, general_instructions_4_text]
 for thisComponent in general_instructionsComponents:
@@ -1137,8 +1143,6 @@ thisExp.addData('general_instructions_4_text.stopped', general_instructions_4_te
 continueRoutine = True
 routineTimer.add(1.000000)
 # update component parameters for each repeat
-practice_start = 0
-practice_end = 0
 # keep track of which components have finished
 start_practiceComponents = [start_practice_text]
 for thisComponent in start_practiceComponents:
@@ -1215,6 +1219,7 @@ practice_selection = np.arange(practice_start, practice_end, step)
 
 
 
+practice_block_text.setText(task_name)
 # keep track of which components have finished
 practice_block_startComponents = [practice_block_text]
 for thisComponent in practice_block_startComponents:
@@ -1304,9 +1309,9 @@ for thisEnc_full_practice in enc_full_practice:
     # update component parameters for each repeat
     block_name = ''
     if TrialType=='OBJ':
-        block_name='Kép'
+        block_name='Képválasztás'
     elif TrialType=='LOC':
-        block_name='Hely'
+        block_name='Helyválasztás'
     else:
         block_name='Block Unknown'
     enc_fx_cross_practice.setPos((CurrentX, CurrentY))
@@ -2488,11 +2493,10 @@ for thisRun in run:
     continueRoutine = True
     routineTimer.add(600.000000)
     # update component parameters for each repeat
+    cprint('Experimenter: Ready for scanning? Hit SPACE or -> to continue.', 'red')
     wait_for_last_scan_continue.keys = []
     wait_for_last_scan_continue.rt = []
     _wait_for_last_scan_continue_allKeys = []
-    print('Experimenter: Ready for scanning? Hit SPACE or -> to continue.')
-    sys.stdout.flush()
     # keep track of which components have finished
     wait_for_last_scanComponents = [wait_for_last_scan_text, wait_for_last_scan_continue]
     for thisComponent in wait_for_last_scanComponents:
@@ -2600,8 +2604,7 @@ for thisRun in run:
     continueRoutine = True
     routineTimer.add(1200.000000)
     # update component parameters for each repeat
-    print('Experimenter: Waiting for trigger. Start scanning...')
-    sys.stdout.flush()
+    cprint('Experimenter: Waiting for trigger. Start scanning...', 'yellow')
     MR_trigger.keys = []
     MR_trigger.rt = []
     _MR_trigger_allKeys = []
@@ -3735,8 +3738,7 @@ for thisRun in run:
     wait_for_last_scan_continue_2.keys = []
     wait_for_last_scan_continue_2.rt = []
     _wait_for_last_scan_continue_2_allKeys = []
-    print('Experimenter: Ready for scanning? Hit SPACE or -> to continue.')
-    sys.stdout.flush()
+    cprint('Experimenter: Ready for scanning? Hit SPACE or -> to continue.', 'red')
     # keep track of which components have finished
     wait_for_last_scan_recComponents = [wait_for_last_scan_text_2, wait_for_last_scan_continue_2]
     for thisComponent in wait_for_last_scan_recComponents:
@@ -3844,8 +3846,7 @@ for thisRun in run:
     continueRoutine = True
     routineTimer.add(1200.000000)
     # update component parameters for each repeat
-    print('Experimenter: Waiting for trigger. Start scanning...')
-    sys.stdout.flush()
+    cprint('Experimenter: Waiting for trigger. Start scanning...', 'yellow')
     MR_trigger_2.keys = []
     MR_trigger_2.rt = []
     _MR_trigger_2_allKeys = []
