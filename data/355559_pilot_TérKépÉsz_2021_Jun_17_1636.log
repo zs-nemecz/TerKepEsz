@@ -1,0 +1,55 @@
+38.5797 	WARNING 	Monitor specification not found. Creating a temporary one...
+38.5803 	WARNING 	Requested an unavailable screen number - using first available.
+39.3777 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0.114, 0.31 , 0.38 ]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000000001C7BE9E8>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000000001C7FD518>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=1, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+39.3778 	EXP 	window1: mouseVisible = True
+39.3779 	EXP 	window1: recordFrameIntervals = False
+39.5440 	EXP 	window1: recordFrameIntervals = True
+39.7287 	EXP 	window1: recordFrameIntervals = False
+39.8709 	EXP 	Created welcome_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='welcome_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Üdvözüljük a TTK Agyi Képalkotó Központjában!', units='height', win=Window(...), wrapWidth=1)
+39.8845 	EXP 	Created anatomy_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='anatomy_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+39.8923 	EXP 	Created general_instructions_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='general_instructions_continue', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+39.9072 	EXP 	Created choose_video_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='choose_video_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+39.9132 	EXP 	Created prepare_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='prepare_task_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=0.52)
+39.9133 	EXP 	window1: mouseVisible = False
+39.9442 	EXP 	welcome_text: autoDraw = True
+202.5761 	DATA 	Keypress: b
+202.9930 	DATA 	Keypress: c
+203.7760 	DATA 	Keypress: b
+205.4431 	DATA 	Keypress: d
+205.4931 	DATA 	Keypress: a
+206.2592 	DATA 	Keypress: b
+206.7262 	DATA 	Keypress: c
+211.7924 	DATA 	Keypress: c
+218.1257 	DATA 	Keypress: a
+218.4757 	DATA 	Keypress: d
+218.4758 	DATA 	Keypress: c
+218.8427 	DATA 	Keypress: b
+219.8257 	DATA 	Keypress: b
+220.2757 	DATA 	Keypress: c
+220.3428 	DATA 	Keypress: d
+222.3929 	DATA 	Keypress: b
+222.4758 	DATA 	Keypress: c
+330.5577 	DATA 	Keypress: space
+330.5887 	EXP 	welcome_text: autoDraw = False
+330.5887 	EXP 	anatomy_text: autoDraw = True
+335.5720 	EXP 	general_instructions_continue: autoDraw = True
+339.8250 	DATA 	Keypress: d
+339.8386 	EXP 	anatomy_text: autoDraw = False
+339.8386 	EXP 	general_instructions_continue: autoDraw = False
+339.8386 	EXP 	choose_video_text: autoDraw = True
+349.0847 	EXP 	Created video_file = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='stimuli/hubble_final.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=True, name='video_file', noAudio=False, opacity=1.0, ori=method-wrapper(...), pos=array([0., 0.]), size=method-wrapper(...), units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+353.2342 	EXP 	Sound  started
+353.3437 	DATA 	Keypress: a
+353.3551 	EXP 	choose_video_text: autoDraw = False
+353.3551 	EXP 	video_file: autoLog = True
+353.3551 	EXP 	video_file: movie = 'stimuli/hubble_final.mp4'
+353.3551 	EXP 	video_file: size = array([1920., 1080.])
+353.3551 	EXP 	video_file: ori = 0
+353.3551 	EXP 	video_file: autoDraw = True
+776.8264 	EXP 	Sound  stopped
+776.8282 	DATA 	Keypress: space
+776.8475 	EXP 	video_file: autoDraw = False
+776.8475 	EXP 	prepare_task_text: autoDraw = True
+783.8820 	DATA 	Keypress: d
+783.8974 	EXP 	prepare_task_text: autoDraw = False
+783.9947 	EXP 	window1: mouseVisible = True

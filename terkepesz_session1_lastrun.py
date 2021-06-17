@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.9),
-    on February 04, 2021, at 09:11
+    on June 17, 2021, at 15:28
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -785,7 +785,6 @@ thisExp.addData('rest_instructions_continue.stopped', rest_instructions_continue
 
 # ------Prepare to start Routine "resting_state"-------
 continueRoutine = True
-routineTimer.add(540.000000)
 # update component parameters for each repeat
 rest_end_key.keys = []
 rest_end_key.rt = []
@@ -807,7 +806,7 @@ resting_stateClock.reset(-_timeToFirstFrame)  # t0 is time of first possible fli
 frameN = -1
 
 # -------Run Routine "resting_state"-------
-while continueRoutine and routineTimer.getTime() > 0:
+while continueRoutine:
     # get current time
     t = resting_stateClock.getTime()
     tThisFlip = win.getFutureFlipTime(clock=resting_stateClock)
@@ -823,18 +822,10 @@ while continueRoutine and routineTimer.getTime() > 0:
         fx_cross.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(fx_cross, 'tStartRefresh')  # time at next scr refresh
         fx_cross.setAutoDraw(True)
-    if fx_cross.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > fx_cross.tStartRefresh + 540.0-frameTolerance:
-            # keep track of stop time/frame for later
-            fx_cross.tStop = t  # not accounting for scr refresh
-            fx_cross.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(fx_cross, 'tStopRefresh')  # time at next scr refresh
-            fx_cross.setAutoDraw(False)
     
     # *rest_end_key* updates
     waitOnFlip = False
-    if rest_end_key.status == NOT_STARTED and tThisFlip >= 5.0-frameTolerance:
+    if rest_end_key.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
         # keep track of start time/frame for later
         rest_end_key.frameNStart = frameN  # exact frame index
         rest_end_key.tStart = t  # local t and not account for scr refresh
@@ -845,14 +836,6 @@ while continueRoutine and routineTimer.getTime() > 0:
         waitOnFlip = True
         win.callOnFlip(rest_end_key.clock.reset)  # t=0 on next screen flip
         win.callOnFlip(rest_end_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
-    if rest_end_key.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > rest_end_key.tStartRefresh + 535-frameTolerance:
-            # keep track of stop time/frame for later
-            rest_end_key.tStop = t  # not accounting for scr refresh
-            rest_end_key.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(rest_end_key, 'tStopRefresh')  # time at next scr refresh
-            rest_end_key.status = FINISHED
     if rest_end_key.status == STARTED and not waitOnFlip:
         theseKeys = rest_end_key.getKeys(keyList=['right', 'space'], waitRelease=False)
         _rest_end_key_allKeys.extend(theseKeys)
@@ -894,6 +877,8 @@ if rest_end_key.keys != None:  # we had a response
 thisExp.addData('rest_end_key.started', rest_end_key.tStartRefresh)
 thisExp.addData('rest_end_key.stopped', rest_end_key.tStopRefresh)
 thisExp.nextEntry()
+# the Routine "resting_state" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
 
 # ------Prepare to start Routine "prepare_task"-------
 continueRoutine = True
