@@ -218,7 +218,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.06" valType="code"/>
         <Param name="name" updates="None" val="enc_trial_text_block" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -279,8 +279,8 @@
       <CodeComponent name="exp_info_encoding">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="enc_missing = 0" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="enc_missing = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -289,12 +289,29 @@
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="response=enc_trial_key.keys&amp;#10;&amp;#10;if response == 'b':&amp;#10;    info_text = 'Nem marad.'&amp;#10;elif response == 'c':&amp;#10;    info_text = 'Marad.'&amp;#10;else:&amp;#10;    response='-'&amp;#10;    info_text = 'Nem adott választ.'&amp;#10;    enc_missing = enc_missing + 1&amp;#10;print('Button pressed: {}. {}'. format(response, info_text))" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="response=enc_trial_key.keys&amp;#10;if response == 'b':&amp;#10;    info_text = 'Nem marad.'&amp;#10;elif response == 'c':&amp;#10;    info_text = 'Marad.'&amp;#10;else:&amp;#10;    response='-'&amp;#10;    info_text = 'Nem adott választ.'&amp;#10;    enc_missing = enc_missing + 1&amp;#10;&amp;#10;print('Button pressed: {}. {}'.format(response, info_text))" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="exp_info_encoding" valType="code"/>
       </CodeComponent>
     </Routine>
     <Routine name="enc_fx">
+      <CodeComponent name="name_block_enc">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9pv\u00e1logat\u00e1s&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Helyv\u00e1laszt\u00e1s&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Képválogatás'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Helyválasztás'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="name_block_enc" valType="code"/>
+      </CodeComponent>
       <ImageComponent name="enc_fx_interior">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -373,7 +390,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.06" valType="code"/>
         <Param name="name" updates="None" val="enc_fx_text_block" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -601,7 +618,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.06" valType="code"/>
         <Param name="name" updates="None" val="rec_trial_text_block" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -658,6 +675,23 @@
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="rec_trial_timer" valType="code"/>
+      </CodeComponent>
+      <CodeComponent name="exp_info_rec_trial">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="response = rec_trial_key.keys&amp;#10;if response == 'b':&amp;#10;    response_text = 'B - OLD'&amp;#10;    if StimType == 'TARGET':&amp;#10;        hits = hits + 1&amp;#10;elif response == 'c':&amp;#10;    response_text = 'C - NEW'&amp;#10;else:&amp;#10;    response_text = 'Missing'&amp;#10;    rec_missing = rec_missing + 1&amp;#10;    &amp;#10;info_text = 'Stimulus Type: {}. Response: {}'.format(StimType, response_text)&amp;#10;print(info_text)&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="exp_info_rec_trial" valType="code"/>
       </CodeComponent>
     </Routine>
     <Routine name="start_practice">
@@ -920,7 +954,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.06" valType="code"/>
         <Param name="name" updates="None" val="enc_practice_feedback_block" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -1184,7 +1218,7 @@
       </TextComponent>
     </Routine>
     <Routine name="end_run">
-      <TextComponent name="end_enc_run_text">
+      <TextComponent name="end_run_text_comp">
         <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="contrast" updates="constant" val="1" valType="num"/>
@@ -1194,7 +1228,7 @@
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.06" valType="code"/>
-        <Param name="name" updates="None" val="end_enc_run_text" valType="code"/>
+        <Param name="name" updates="None" val="end_run_text_comp" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
@@ -1209,14 +1243,14 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="enc_run_end_key">
+      <KeyboardComponent name="end_run_key">
         <Param name="allowedKeys" updates="constant" val="'d'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="enc_run_end_key" valType="code"/>
+        <Param name="name" updates="None" val="end_run_key" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -1361,23 +1395,6 @@
       </TextComponent>
     </Routine>
     <Routine name="init_blocks">
-      <CodeComponent name="name_block">
-        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9p&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Hely&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Kép'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Hely'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="name_block" valType="code"/>
-      </CodeComponent>
       <CodeComponent name="create_rec_block">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -1891,8 +1908,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9pv\u00e1laszt\u00e1s&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Helyv\u00e1laszt\u00e1s&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Képválasztás'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Helyválasztás'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9pszemle&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Berendez\u00e9s&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Képszemle'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Berendezés'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -1981,7 +1998,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.06" valType="code"/>
         <Param name="name" updates="None" val="enc_fx_text_block_practice" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -2103,7 +2120,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.06" valType="code"/>
         <Param name="name" updates="None" val="enc_trial_text_block_practice" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -2146,13 +2163,13 @@
       </TextComponent>
     </Routine>
     <Routine name="rec_fx">
-      <CodeComponent name="screen_size">
+      <CodeComponent name="block_name_rec">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="w_size = win.size&amp;#10;&amp;#10;x_size = w_size[0]&amp;#10;y_size = w_size[1]&amp;#10;&amp;#10;scr_resolution = x_size/y_size" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="w_size = psychoJS.window.size;&amp;#10;&amp;#10;x_size = w_size[0];&amp;#10;y_size = w_size[1];&amp;#10;&amp;#10;scr_resolution = (x_size / y_size);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="w_size = psychoJS.window.size;&amp;#10;&amp;#10;x_size = w_size[0];&amp;#10;y_size = w_size[1];&amp;#10;&amp;#10;scr_resolution = (x_size / y_size);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="w_size = win.size&amp;#10;&amp;#10;x_size = w_size[0]&amp;#10;y_size = w_size[1]&amp;#10;&amp;#10;scr_resolution = x_size/y_size" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9pfelismer\u00e9s&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Helyfelismer\u00e9s&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Képfelismerés'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Helyfelismerés'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -2161,7 +2178,7 @@
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="screen_size" valType="code"/>
+        <Param name="name" updates="None" val="block_name_rec" valType="code"/>
       </CodeComponent>
       <ImageComponent name="rec_fx_interior">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -2241,7 +2258,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.06" valType="code"/>
         <Param name="name" updates="None" val="rec_fx_text_block" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -2379,7 +2396,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.06" valType="code"/>
         <Param name="name" updates="None" val="rec_fx_text_block_practice" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -2425,8 +2442,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9pfelismer\u00e9s&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Helyfelsimer\u00e9s&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Képfelismerés'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Helyfelsimerés'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9pfelismer\u00e9s&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Helyfelismer\u00e9s&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Képfelismerés'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Helyfelismerés'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -2588,7 +2605,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.06" valType="code"/>
         <Param name="name" updates="None" val="rec_trial_text_block_practice" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -2658,6 +2675,23 @@
       </TextComponent>
     </Routine>
     <Routine name="encoding_baseline">
+      <CodeComponent name="name_block_enc_bl">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9pv\u00e1logat\u00e1s&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Helyv\u00e1laszt\u00e1s&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Képválogatás'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Helyválasztás'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="name_block_enc_bl" valType="code"/>
+      </CodeComponent>
       <ImageComponent name="encoding_baseline_interior">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -2693,7 +2727,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.06" valType="code"/>
         <Param name="name" updates="None" val="encoding_baseline_text_block" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -2764,8 +2798,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="cprint(&quot;On Screen: Encoding baseline - Start&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="cprint('On Screen: Encoding baseline - Start', 'blue', 'on_white')" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="cprint(&quot;On Screen: Encoding baseline - Start&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;enc_missing = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="cprint('On Screen: Encoding baseline - Start', 'blue', 'on_white')&amp;#10;enc_missing = 0" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -2778,6 +2812,23 @@
       </CodeComponent>
     </Routine>
     <Routine name="recognition_baseline">
+      <CodeComponent name="name_block_rec_bl">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9pfelismer\u00e9s&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Helyfelismer\u00e9s&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Képfelismerés'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Helyfelismerés'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="name_block_rec_bl" valType="code"/>
+      </CodeComponent>
       <ImageComponent name="recognition_baseline_interior">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -2813,7 +2864,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.06" valType="code"/>
         <Param name="name" updates="None" val="recognition_baseline_text_block" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -2879,6 +2930,23 @@
         <Param name="units" updates="None" val="norm" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
+      <CodeComponent name="exp_info_rec_baseline">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="cprint(&quot;On Screen: Recognition baseline - Start&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;rec_missing = 0;&amp;#10;hits = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="cprint('On Screen: Recognition baseline - Start', 'blue', 'on_white')&amp;#10;rec_missing = 0&amp;#10;hits = 0" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="console.log(&quot;Recognition loop starting with parameters:&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="print('Recognition loop starting with parameters:')" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="exp_info_rec_baseline" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="general_instructions">
       <KeyboardComponent name="general_instructions_key">
@@ -3003,7 +3071,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.06" valType="code"/>
         <Param name="name" updates="None" val="encoding_baseline_text_block_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -3074,8 +3142,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="cprint((&quot;# missed: &quot; + enc_missing), &quot;yelow&quot;);&amp;#10;cprint((&quot;% missed: &quot; + ((enc_missing / (enc_selection[1] - enc_selection[0])) * 100)), &quot;yellow&quot;);&amp;#10;cprint(&quot;On Screen: Encoding Baseline - End&quot;, &quot;blue&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="cprint('# missed: ' + enc_missing, 'yelow')&amp;#10;cprint('% missed: '+ (enc_missing/(enc_selection[1]-enc_selection[0]))*100, 'yellow')&amp;#10;cprint('On Screen: Encoding Baseline - End', 'blue')" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="cprint('# missed: {}'.format(enc_missing), 'yellow')&amp;#10;miss = (enc_missing/76)*100&amp;#10;cprint('% missed: {}'.format(miss), 'yellow')&amp;#10;cprint('On Screen: Encoding Baseline - End', 'blue', 'on_white')" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -3123,7 +3191,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.08" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.06" valType="code"/>
         <Param name="name" updates="None" val="recognition_baseline_text_block_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -3189,6 +3257,23 @@
         <Param name="units" updates="None" val="norm" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
+      <CodeComponent name="exp_info_rec_baseline_end">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="cprint('# missed: {}'.format(rec_missing), 'yellow')&amp;#10;miss = (rec_missing/36)*100&amp;#10;cprint('% missed: {}'.format(miss), 'yellow')&amp;#10;cprint('# hits: {}'.format(hits), 'yellow')&amp;#10;hr = (hits/12)*100&amp;#10;cprint('hit rate: {}'.format(hr), 'yellow')&amp;#10;cprint('\n On Screen: Recognition Baseline - End', 'blue', 'on_white')" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="exp_info_rec_baseline_end" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="wait_for_last_scan_rec">
       <TextComponent name="wait_for_last_scan_text_2">

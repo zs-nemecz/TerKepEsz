@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.10),
-    on June 11, 2021, at 19:59
+    on June 17, 2021, at 14:29
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -217,7 +217,7 @@ enc_fx_key_practice = keyboard.Keyboard()
 enc_fx_text_block_practice = visual.TextStim(win=win, name='enc_fx_text_block_practice',
     text='default text',
     font='Arial',
-    units='norm', pos=(0, 0.87), height=0.08, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
@@ -251,7 +251,7 @@ enc_trial_key_practice = keyboard.Keyboard()
 enc_trial_text_block_practice = visual.TextStim(win=win, name='enc_trial_text_block_practice',
     text='default text',
     font='Arial',
-    units='norm', pos=(0, 0.87), height=0.08, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -291,7 +291,7 @@ enc_practice_feedback_text = visual.TextStim(win=win, name='enc_practice_feedbac
 enc_practice_feedback_block = visual.TextStim(win=win, name='enc_practice_feedback_block',
     text='default text',
     font='Arial',
-    units='norm', pos=(0, 0.87), height=0.08, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
@@ -327,7 +327,7 @@ rec_fx_key_practice = keyboard.Keyboard()
 rec_fx_text_block_practice = visual.TextStim(win=win, name='rec_fx_text_block_practice',
     text='default text',
     font='Arial',
-    units='norm', pos=(0, 0.87), height=0.08, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -361,7 +361,7 @@ rec_trial_key_practice = keyboard.Keyboard()
 rec_trial_text_block_practice = visual.TextStim(win=win, name='rec_trial_text_block_practice',
     text='default text',
     font='Arial',
-    units='norm', pos=(0, 0.87), height=0.08, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -480,28 +480,28 @@ encoding_baseline_interior = visual.ImageStim(
     ori=0, pos=(0, -0), size=(2.0, 2.0),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=0.0)
+    texRes=128, interpolate=True, depth=-1.0)
 encoding_baseline_text_block = visual.TextStim(win=win, name='encoding_baseline_text_block',
     text='default text',
     font='Arial',
-    units='norm', pos=(0, 0.87), height=0.08, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-1.0);
+    depth=-2.0);
 encoding_baseline_instructions_text = visual.TextStim(win=win, name='encoding_baseline_instructions_text',
     text='[BAL MUTATÓUJJ - Nem marad]      [JOBB MUTATÓUJJ - Marad]',
     font='Arial',
     units='norm', pos=(0, -0.833), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-2.0);
+    depth=-3.0);
 baseline_enc_fx_cross = visual.TextStim(win=win, name='baseline_enc_fx_cross',
     text='+',
     font='Arial',
     units='norm', pos=[0,0], height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-3.0);
+    depth=-4.0);
 
 # Initialize components for Routine "enc_fx"
 enc_fxClock = core.Clock()
@@ -512,29 +512,29 @@ enc_fx_interior = visual.ImageStim(
     ori=0, pos=(0, -0), size=(2.0, 2.0),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=0.0)
+    texRes=128, interpolate=True, depth=-1.0)
 enc_fx_cross = visual.TextStim(win=win, name='enc_fx_cross',
     text='+',
     font='Arial',
     units='norm', pos=[0,0], height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-1.0);
+    depth=-2.0);
 enc_fx_key = keyboard.Keyboard()
 enc_fx_text_block = visual.TextStim(win=win, name='enc_fx_text_block',
     text='default text',
     font='Arial',
-    units='norm', pos=(0, 0.87), height=0.08, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-3.0);
+    depth=-4.0);
 enc_fx_instructions_text = visual.TextStim(win=win, name='enc_fx_instructions_text',
     text='[BAL MUTATÓUJJ - Nem marad]      [JOBB MUTATÓUJJ - Marad]',
     font='Arial',
     units='norm', pos=(0, -0.833), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-4.0);
+    depth=-5.0);
 
 # Initialize components for Routine "enc_trial"
 enc_trialClock = core.Clock()
@@ -558,7 +558,7 @@ enc_trial_key = keyboard.Keyboard()
 enc_trial_text_block = visual.TextStim(win=win, name='enc_trial_text_block',
     text='default text',
     font='Arial',
-    units='norm', pos=(0, 0.87), height=0.08, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -569,7 +569,6 @@ enc_trial_instructions_text = visual.TextStim(win=win, name='enc_trial_instructi
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
-enc_missing = 0
 
 # Initialize components for Routine "encoding_baseline_end"
 encoding_baseline_endClock = core.Clock()
@@ -584,7 +583,7 @@ encoding_baseline_interior_2 = visual.ImageStim(
 encoding_baseline_text_block_2 = visual.TextStim(win=win, name='encoding_baseline_text_block_2',
     text='default text',
     font='Arial',
-    units='norm', pos=(0, 0.87), height=0.08, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
@@ -704,37 +703,31 @@ recognition_baseline_interior = visual.ImageStim(
     ori=0, pos=(0,0), size=(2.0, 2.0),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=0.0)
+    texRes=128, interpolate=True, depth=-1.0)
 recognition_baseline_text_block = visual.TextStim(win=win, name='recognition_baseline_text_block',
     text='default text',
     font='Arial',
-    units='norm', pos=(0, 0.87), height=0.08, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-1.0);
+    depth=-2.0);
 recognition_baseline_instructions_text = visual.TextStim(win=win, name='recognition_baseline_instructions_text',
     text='[BAL MUTATÓUJJ - Régi]      [JOBB MUTATÓUJJ - Új]',
     font='Arial',
     units='norm', pos=(0, -0.833), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-2.0);
+    depth=-3.0);
 baseline_rec_fx_cross = visual.TextStim(win=win, name='baseline_rec_fx_cross',
     text='+',
     font='Arial',
     units='norm', pos=[0,0], height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-3.0);
+    depth=-4.0);
 
 # Initialize components for Routine "rec_fx"
 rec_fxClock = core.Clock()
-w_size = win.size
-
-x_size = w_size[0]
-y_size = w_size[1]
-
-scr_resolution = x_size/y_size
 rec_fx_interior = visual.ImageStim(
     win=win,
     name='rec_fx_interior', units='norm', 
@@ -754,7 +747,7 @@ rec_fx_key = keyboard.Keyboard()
 rec_fx_text_block = visual.TextStim(win=win, name='rec_fx_text_block',
     text='default text',
     font='Arial',
-    units='norm', pos=(0, 0.87), height=0.08, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
@@ -788,7 +781,7 @@ rec_trial_key = keyboard.Keyboard()
 rec_trial_text_block = visual.TextStim(win=win, name='rec_trial_text_block',
     text='default text',
     font='Arial',
-    units='norm', pos=(0, 0.87), height=0.08, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -813,7 +806,7 @@ recognition_baseline_interior_2 = visual.ImageStim(
 recognition_baseline_text_block_2 = visual.TextStim(win=win, name='recognition_baseline_text_block_2',
     text='default text',
     font='Arial',
-    units='norm', pos=(0, 0.87), height=0.08, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
@@ -834,14 +827,14 @@ baseline_rec_fx_cross_2 = visual.TextStim(win=win, name='baseline_rec_fx_cross_2
 
 # Initialize components for Routine "end_run"
 end_runClock = core.Clock()
-end_enc_run_text = visual.TextStim(win=win, name='end_enc_run_text',
+end_run_text_comp = visual.TextStim(win=win, name='end_run_text_comp',
     text='default text',
     font='Arial',
     pos=(0, 0), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
-enc_run_end_key = keyboard.Keyboard()
+end_run_key = keyboard.Keyboard()
 
 # Initialize components for Routine "end_session"
 end_sessionClock = core.Clock()
@@ -1254,9 +1247,9 @@ for thisEnc_full_practice in enc_full_practice:
     # update component parameters for each repeat
     block_name = ''
     if TrialType=='OBJ':
-        block_name='Képválasztás'
+        block_name='Képszemle'
     elif TrialType=='LOC':
-        block_name='Helyválasztás'
+        block_name='Berendezés'
     else:
         block_name='Block Unknown'
     enc_fx_cross_practice.setPos((CurrentX, CurrentY))
@@ -1838,7 +1831,7 @@ for thisRec_full_practice in rec_full_practice:
     if TrialType=='OBJ':
         block_name='Képfelismerés'
     elif TrialType=='LOC':
-        block_name='Helyfelsimerés'
+        block_name='Helyfelismerés'
     else:
         block_name='Block Unknown'
     # keep track of which components have finished
@@ -2806,13 +2799,6 @@ for thisRun in run:
     # ------Prepare to start Routine "init_blocks"-------
     continueRoutine = True
     # update component parameters for each repeat
-    block_name = ''
-    if TrialType=='OBJ':
-        block_name='Kép'
-    elif TrialType=='LOC':
-        block_name='Hely'
-    else:
-        block_name='Block Unknown'
     rec_start = rec_end
     rec_end = rec_start + 36
     rec_selection = np.arange(rec_start,rec_end, step)
@@ -2871,9 +2857,17 @@ for thisRun in run:
     continueRoutine = True
     routineTimer.add(25.000000)
     # update component parameters for each repeat
+    block_name = ''
+    if TrialType=='OBJ':
+        block_name='Képválogatás'
+    elif TrialType=='LOC':
+        block_name='Helyválasztás'
+    else:
+        block_name='Block Unknown'
     encoding_baseline_text_block.setText(block_name)
     baseline_enc_fx_cross.setPos((CurrentX, CurrentY))
     cprint('On Screen: Encoding baseline - Start', 'blue', 'on_white')
+    enc_missing = 0
     # keep track of which components have finished
     encoding_baselineComponents = [encoding_baseline_interior, encoding_baseline_text_block, encoding_baseline_instructions_text, baseline_enc_fx_cross]
     for thisComponent in encoding_baselineComponents:
@@ -3019,6 +3013,13 @@ for thisRun in run:
         # ------Prepare to start Routine "enc_fx"-------
         continueRoutine = True
         # update component parameters for each repeat
+        block_name = ''
+        if TrialType=='OBJ':
+            block_name='Képválogatás'
+        elif TrialType=='LOC':
+            block_name='Helyválasztás'
+        else:
+            block_name='Block Unknown'
         enc_fx_cross.setPos((CurrentX, CurrentY))
         enc_fx_key.keys = []
         enc_fx_key.rt = []
@@ -3369,7 +3370,6 @@ for thisRun in run:
         enc_trials.addData('enc_trial_instructions_text.started', enc_trial_instructions_text.tStartRefresh)
         enc_trials.addData('enc_trial_instructions_text.stopped', enc_trial_instructions_text.tStopRefresh)
         response=enc_trial_key.keys
-        
         if response == 'b':
             info_text = 'Nem marad.'
         elif response == 'c':
@@ -3378,7 +3378,8 @@ for thisRun in run:
             response='-'
             info_text = 'Nem adott választ.'
             enc_missing = enc_missing + 1
-        print('Button pressed: {}. {}'. format(response, info_text))
+        
+        print('Button pressed: {}. {}'.format(response, info_text))
         thisExp.nextEntry()
         
     # completed 1 repeats of 'enc_trials'
@@ -3390,9 +3391,10 @@ for thisRun in run:
     # update component parameters for each repeat
     encoding_baseline_text_block_2.setText(block_name)
     baseline_end_cross.setPos((CurrentX, CurrentY))
-    cprint('# missed: ' + enc_missing, 'yelow')
-    cprint('% missed: '+ (enc_missing/(enc_selection[1]-enc_selection[0]))*100, 'yellow')
-    cprint('On Screen: Encoding Baseline - End', 'blue')
+    cprint('# missed: {}'.format(enc_missing), 'yellow')
+    miss = (enc_missing/76)*100
+    cprint('% missed: {}'.format(miss), 'yellow')
+    cprint('On Screen: Encoding Baseline - End', 'blue', 'on_white')
     # keep track of which components have finished
     encoding_baseline_endComponents = [encoding_baseline_interior_2, encoding_baseline_text_block_2, encoding_baseline_instructions_text_2, baseline_end_cross]
     for thisComponent in encoding_baseline_endComponents:
@@ -4046,9 +4048,19 @@ for thisRun in run:
     continueRoutine = True
     routineTimer.add(25.000000)
     # update component parameters for each repeat
+    block_name = ''
+    if TrialType=='OBJ':
+        block_name='Képfelismerés'
+    elif TrialType=='LOC':
+        block_name='Helyfelismerés'
+    else:
+        block_name='Block Unknown'
     recognition_baseline_text_block.setText(block_name
 )
     baseline_rec_fx_cross.setPos((CurrentX, CurrentY))
+    cprint('On Screen: Recognition baseline - Start', 'blue', 'on_white')
+    rec_missing = 0
+    hits = 0
     # keep track of which components have finished
     recognition_baselineComponents = [recognition_baseline_interior, recognition_baseline_text_block, recognition_baseline_instructions_text, baseline_rec_fx_cross]
     for thisComponent in recognition_baselineComponents:
@@ -4170,6 +4182,7 @@ for thisRun in run:
     run.addData('recognition_baseline_instructions_text.stopped', recognition_baseline_instructions_text.tStopRefresh)
     run.addData('baseline_rec_fx_cross.started', baseline_rec_fx_cross.tStartRefresh)
     run.addData('baseline_rec_fx_cross.stopped', baseline_rec_fx_cross.tStopRefresh)
+    print('Recognition loop starting with parameters:')
     
     # set up handler to look after randomisation of conditions etc
     rec_trials = data.TrialHandler(nReps=1, method='sequential', 
@@ -4193,12 +4206,13 @@ for thisRun in run:
         # ------Prepare to start Routine "rec_fx"-------
         continueRoutine = True
         # update component parameters for each repeat
-        w_size = win.size
-        
-        x_size = w_size[0]
-        y_size = w_size[1]
-        
-        scr_resolution = x_size/y_size
+        block_name = ''
+        if TrialType=='OBJ':
+            block_name='Képfelismerés'
+        elif TrialType=='LOC':
+            block_name='Helyfelismerés'
+        else:
+            block_name='Block Unknown'
         rec_fx_cross.setPos((CurrentX, CurrentY))
         rec_fx_key.keys = []
         rec_fx_key.rt = []
@@ -4549,6 +4563,22 @@ for thisRun in run:
         rec_trials.addData('rec_trial_text_block.stopped', rec_trial_text_block.tStopRefresh)
         rec_trials.addData('rec_trial_instructions_text.started', rec_trial_instructions_text.tStartRefresh)
         rec_trials.addData('rec_trial_instructions_text.stopped', rec_trial_instructions_text.tStopRefresh)
+        response = rec_trial_key.keys
+        if response == 'b':
+            response_text = 'B - OLD'
+            if StimType == 'TARGET':
+                hits = hits + 1
+        elif response == 'c':
+            response_text = 'C - NEW'
+        else:
+            response_text = 'Missing'
+            rec_missing = rec_missing + 1
+            
+        info_text = 'Stimulus Type: {}. Response: {}'.format(StimType, response_text)
+        print(info_text)
+        
+        
+        
         thisExp.nextEntry()
         
     # completed 1 repeats of 'rec_trials'
@@ -4561,6 +4591,13 @@ for thisRun in run:
     recognition_baseline_text_block_2.setText(block_name
 )
     baseline_rec_fx_cross_2.setPos((CurrentX, CurrentY))
+    cprint('# missed: {}'.format(rec_missing), 'yellow')
+    miss = (rec_missing/36)*100
+    cprint('% missed: {}'.format(miss), 'yellow')
+    cprint('# hits: {}'.format(hits), 'yellow')
+    hr = (hits/12)*100
+    cprint('hit rate: {}'.format(hr), 'yellow')
+    cprint('\n On Screen: Recognition Baseline - End', 'blue', 'on_white')
     # keep track of which components have finished
     recognition_baseline_endComponents = [recognition_baseline_interior_2, recognition_baseline_text_block_2, recognition_baseline_instructions_text_2, baseline_rec_fx_cross_2]
     for thisComponent in recognition_baseline_endComponents:
@@ -4687,15 +4724,15 @@ for thisRun in run:
     continueRoutine = True
     routineTimer.add(1201.000000)
     # update component parameters for each repeat
-    end_enc_run_text.setText(end_run_text)
-    enc_run_end_key.keys = []
-    enc_run_end_key.rt = []
-    _enc_run_end_key_allKeys = []
+    end_run_text_comp.setText(end_run_text)
+    end_run_key.keys = []
+    end_run_key.rt = []
+    _end_run_key_allKeys = []
     print('\nOn screen: End run. Text:')
     print(end_run_text)
     cprint('Waiting for participant\'s response (d)', 'yellow')
     # keep track of which components have finished
-    end_runComponents = [end_enc_run_text, enc_run_end_key]
+    end_runComponents = [end_run_text_comp, end_run_key]
     for thisComponent in end_runComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -4718,50 +4755,50 @@ for thisRun in run:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *end_enc_run_text* updates
-        if end_enc_run_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *end_run_text_comp* updates
+        if end_run_text_comp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            end_enc_run_text.frameNStart = frameN  # exact frame index
-            end_enc_run_text.tStart = t  # local t and not account for scr refresh
-            end_enc_run_text.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(end_enc_run_text, 'tStartRefresh')  # time at next scr refresh
-            end_enc_run_text.setAutoDraw(True)
-        if end_enc_run_text.status == STARTED:
+            end_run_text_comp.frameNStart = frameN  # exact frame index
+            end_run_text_comp.tStart = t  # local t and not account for scr refresh
+            end_run_text_comp.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(end_run_text_comp, 'tStartRefresh')  # time at next scr refresh
+            end_run_text_comp.setAutoDraw(True)
+        if end_run_text_comp.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > end_enc_run_text.tStartRefresh + 1200-frameTolerance:
+            if tThisFlipGlobal > end_run_text_comp.tStartRefresh + 1200-frameTolerance:
                 # keep track of stop time/frame for later
-                end_enc_run_text.tStop = t  # not accounting for scr refresh
-                end_enc_run_text.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(end_enc_run_text, 'tStopRefresh')  # time at next scr refresh
-                end_enc_run_text.setAutoDraw(False)
+                end_run_text_comp.tStop = t  # not accounting for scr refresh
+                end_run_text_comp.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(end_run_text_comp, 'tStopRefresh')  # time at next scr refresh
+                end_run_text_comp.setAutoDraw(False)
         
-        # *enc_run_end_key* updates
+        # *end_run_key* updates
         waitOnFlip = False
-        if enc_run_end_key.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
+        if end_run_key.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
             # keep track of start time/frame for later
-            enc_run_end_key.frameNStart = frameN  # exact frame index
-            enc_run_end_key.tStart = t  # local t and not account for scr refresh
-            enc_run_end_key.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(enc_run_end_key, 'tStartRefresh')  # time at next scr refresh
-            enc_run_end_key.status = STARTED
+            end_run_key.frameNStart = frameN  # exact frame index
+            end_run_key.tStart = t  # local t and not account for scr refresh
+            end_run_key.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(end_run_key, 'tStartRefresh')  # time at next scr refresh
+            end_run_key.status = STARTED
             # keyboard checking is just starting
             waitOnFlip = True
-            win.callOnFlip(enc_run_end_key.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(enc_run_end_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
-        if enc_run_end_key.status == STARTED:
+            win.callOnFlip(end_run_key.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(end_run_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if end_run_key.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > enc_run_end_key.tStartRefresh + 1200-frameTolerance:
+            if tThisFlipGlobal > end_run_key.tStartRefresh + 1200-frameTolerance:
                 # keep track of stop time/frame for later
-                enc_run_end_key.tStop = t  # not accounting for scr refresh
-                enc_run_end_key.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(enc_run_end_key, 'tStopRefresh')  # time at next scr refresh
-                enc_run_end_key.status = FINISHED
-        if enc_run_end_key.status == STARTED and not waitOnFlip:
-            theseKeys = enc_run_end_key.getKeys(keyList=['d'], waitRelease=False)
-            _enc_run_end_key_allKeys.extend(theseKeys)
-            if len(_enc_run_end_key_allKeys):
-                enc_run_end_key.keys = _enc_run_end_key_allKeys[-1].name  # just the last key pressed
-                enc_run_end_key.rt = _enc_run_end_key_allKeys[-1].rt
+                end_run_key.tStop = t  # not accounting for scr refresh
+                end_run_key.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(end_run_key, 'tStopRefresh')  # time at next scr refresh
+                end_run_key.status = FINISHED
+        if end_run_key.status == STARTED and not waitOnFlip:
+            theseKeys = end_run_key.getKeys(keyList=['d'], waitRelease=False)
+            _end_run_key_allKeys.extend(theseKeys)
+            if len(_end_run_key_allKeys):
+                end_run_key.keys = _end_run_key_allKeys[-1].name  # just the last key pressed
+                end_run_key.rt = _end_run_key_allKeys[-1].rt
                 # a response ends the routine
                 continueRoutine = False
         
@@ -4786,16 +4823,16 @@ for thisRun in run:
     for thisComponent in end_runComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    run.addData('end_enc_run_text.started', end_enc_run_text.tStartRefresh)
-    run.addData('end_enc_run_text.stopped', end_enc_run_text.tStopRefresh)
+    run.addData('end_run_text_comp.started', end_run_text_comp.tStartRefresh)
+    run.addData('end_run_text_comp.stopped', end_run_text_comp.tStopRefresh)
     # check responses
-    if enc_run_end_key.keys in ['', [], None]:  # No response was made
-        enc_run_end_key.keys = None
-    run.addData('enc_run_end_key.keys',enc_run_end_key.keys)
-    if enc_run_end_key.keys != None:  # we had a response
-        run.addData('enc_run_end_key.rt', enc_run_end_key.rt)
-    run.addData('enc_run_end_key.started', enc_run_end_key.tStartRefresh)
-    run.addData('enc_run_end_key.stopped', enc_run_end_key.tStopRefresh)
+    if end_run_key.keys in ['', [], None]:  # No response was made
+        end_run_key.keys = None
+    run.addData('end_run_key.keys',end_run_key.keys)
+    if end_run_key.keys != None:  # we had a response
+        run.addData('end_run_key.rt', end_run_key.rt)
+    run.addData('end_run_key.started', end_run_key.tStartRefresh)
+    run.addData('end_run_key.stopped', end_run_key.tStopRefresh)
     cprint('key pressed: '+ end_run_key.keys, 'green')
 # completed 1 repeats of 'run'
 
