@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2020.2.9),
-    on June 18, 2021, at 14:10
+This experiment was created using PsychoPy3 Experiment Builder (v2021.1.4),
+    on June 18, 2021, at 14:27
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -14,19 +14,19 @@ If you publish work using this script the most relevant publication is:
 from __future__ import absolute_import, division
 
 import psychopy
-psychopy.useVersion('2020.2')
+psychopy.useVersion('latest')
 
 
 from psychopy import locale_setup
 from psychopy import prefs
-from psychopy import sound, gui, visual, core, data, event, logging, clock
+from psychopy import sound, gui, visual, core, data, event, logging, clock, colors
 from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
                                 STOPPED, FINISHED, PRESSED, RELEASED, FOREVER)
 
 import numpy as np  # whole numpy lib is available, prepend 'np.'
 from numpy import (sin, cos, tan, log, log10, pi, average,
                    sqrt, std, deg2rad, rad2deg, linspace, asarray)
-from numpy.random import random, randint, normal, shuffle
+from numpy.random import random, randint, normal, shuffle, choice as randchoice
 import os  # handy system and path functions
 import sys  # to get file system encoding
 
@@ -39,7 +39,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-psychopyVersion = '2020.2.9'
+psychopyVersion = '2021.1.4'
 expName = 'TérKépÉsz'  # from the Builder filename that created this script
 expInfo = {'ID': '', 'Session': 'OBJ/LOC', 'Stimuli Table': '0'}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
@@ -55,7 +55,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['ID'],'pilot', exp
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\Latlab\\Desktop\\TerKepEsz\\TerKepEsz\\terkepesz_MR.py',
+    originPath='D:\\Zsuzsa\\HCCCL\\experiment\\computer_based_tasks\\mTRK\\TerKepEsz\\terkepesz_MR.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -109,16 +109,13 @@ session = expInfo['Session']
 if session == 'OBJ':
     task_name='Képszemle'
     block_name_selection=[0, 76]
-    end_text = 'Vége a feladatnak. Most kivesszük Önt a szkennerből.'
     print('Session selected: OBJ')
 elif session == 'LOC':
     task_name='Berendezés'
     block_name_selection=[152,228]
-    end_text = 'Vége a  mérésnek. Most kivesszük Önt a szkennerből.'
     print('Session selected: LOC')
 else:
     block_name_selection=[0,76]
-    end_text = 'Vége a feladatnak. '
     print('Invalid Session! Will use OBJ.')
  
 instruction_text = ''
@@ -162,7 +159,7 @@ general_instructions_4_continue = visual.TextStim(win=win, name='general_instruc
     languageStyle='LTR',
     depth=-1.0);
 general_instructions_text = visual.TextStim(win=win, name='general_instructions_text',
-    text='default text',
+    text='',
     font='Arial',
     pos=(0, -0.01), height=0.03, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -191,7 +188,7 @@ else:
 step = 1
 
 practice_block_text = visual.TextStim(win=win, name='practice_block_text',
-    text='default text',
+    text='',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -217,7 +214,7 @@ enc_fx_cross_practice = visual.TextStim(win=win, name='enc_fx_cross_practice',
     depth=-2.0);
 enc_fx_key_practice = keyboard.Keyboard()
 enc_fx_text_block_practice = visual.TextStim(win=win, name='enc_fx_text_block_practice',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -251,7 +248,7 @@ enc_trial_main_image_practice = visual.ImageStim(
     texRes=128, interpolate=True, depth=-1.0)
 enc_trial_key_practice = keyboard.Keyboard()
 enc_trial_text_block_practice = visual.TextStim(win=win, name='enc_trial_text_block_practice',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -284,14 +281,14 @@ enc_practice_feedback_image = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
 enc_practice_feedback_text = visual.TextStim(win=win, name='enc_practice_feedback_text',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=[0,0], height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 enc_practice_feedback_block = visual.TextStim(win=win, name='enc_practice_feedback_block',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -306,7 +303,7 @@ start_recognition_text = visual.TextStim(win=win, name='start_recognition_text',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=0.0);
+    depth=-1.0);
 
 # Initialize components for Routine "rec_fx_practice"
 rec_fx_practiceClock = core.Clock()
@@ -327,7 +324,7 @@ rec_fx_cross_practice = visual.TextStim(win=win, name='rec_fx_cross_practice',
     depth=-1.0);
 rec_fx_key_practice = keyboard.Keyboard()
 rec_fx_text_block_practice = visual.TextStim(win=win, name='rec_fx_text_block_practice',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -361,7 +358,7 @@ rec_trial_main_image_practice = visual.ImageStim(
     texRes=128, interpolate=True, depth=-1.0)
 rec_trial_key_practice = keyboard.Keyboard()
 rec_trial_text_block_practice = visual.TextStim(win=win, name='rec_trial_text_block_practice',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -378,7 +375,7 @@ rec_trial_instructions_text_practice = visual.TextStim(win=win, name='rec_trial_
 # Initialize components for Routine "rec_practice_feedback"
 rec_practice_feedbackClock = core.Clock()
 rec_practice_feedback_text = visual.TextStim(win=win, name='rec_practice_feedback_text',
-    text='default text',
+    text='',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -403,7 +400,7 @@ end_practice_continue = visual.TextStim(win=win, name='end_practice_continue',
     languageStyle='LTR',
     depth=-4.0);
 coming_up_next_text = visual.TextStim(win=win, name='coming_up_next_text',
-    text='default text',
+    text='',
     font='Arial',
     pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -451,12 +448,12 @@ start_enc_run_text = visual.TextStim(win=win, name='start_enc_run_text',
 # Initialize components for Routine "encoding_title"
 encoding_titleClock = core.Clock()
 encoding_title_text = visual.TextStim(win=win, name='encoding_title_text',
-    text='Galéria berendezés',
+    text='',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=0.0);
+    depth=-1.0);
 
 # Initialize components for Routine "init_blocks"
 init_blocksClock = core.Clock()
@@ -484,7 +481,7 @@ encoding_baseline_interior = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
 encoding_baseline_text_block = visual.TextStim(win=win, name='encoding_baseline_text_block',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -524,7 +521,7 @@ enc_fx_cross = visual.TextStim(win=win, name='enc_fx_cross',
     depth=-2.0);
 enc_fx_key = keyboard.Keyboard()
 enc_fx_text_block = visual.TextStim(win=win, name='enc_fx_text_block',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -558,7 +555,7 @@ enc_trial_main_image = visual.ImageStim(
     texRes=128, interpolate=True, depth=-1.0)
 enc_trial_key = keyboard.Keyboard()
 enc_trial_text_block = visual.TextStim(win=win, name='enc_trial_text_block',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -583,7 +580,7 @@ encoding_baseline_interior_2 = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
 encoding_baseline_text_block_2 = visual.TextStim(win=win, name='encoding_baseline_text_block_2',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -639,14 +636,14 @@ math_correct = [correct1,correct2,correct3,correct4,correct5,correct6]
 
 i = 0
 math_problem = visual.TextStim(win=win, name='math_problem',
-    text='default text',
+    text='',
     font='Arial',
     pos=(0, 0.1), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 math_solution = visual.TextStim(win=win, name='math_solution',
-    text='default text',
+    text='',
     font='Arial',
     pos=(0, -0.1), height=0.03, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -694,7 +691,7 @@ start_recognition_text = visual.TextStim(win=win, name='start_recognition_text',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=0.0);
+    depth=-1.0);
 
 # Initialize components for Routine "recognition_baseline"
 recognition_baselineClock = core.Clock()
@@ -707,7 +704,7 @@ recognition_baseline_interior = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
 recognition_baseline_text_block = visual.TextStim(win=win, name='recognition_baseline_text_block',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -747,7 +744,7 @@ rec_fx_cross = visual.TextStim(win=win, name='rec_fx_cross',
     depth=-2.0);
 rec_fx_key = keyboard.Keyboard()
 rec_fx_text_block = visual.TextStim(win=win, name='rec_fx_text_block',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -781,7 +778,7 @@ rec_trial_main_image = visual.ImageStim(
     texRes=128, interpolate=True, depth=-1.0)
 rec_trial_key = keyboard.Keyboard()
 rec_trial_text_block = visual.TextStim(win=win, name='rec_trial_text_block',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -806,7 +803,7 @@ recognition_baseline_interior_2 = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
 recognition_baseline_text_block_2 = visual.TextStim(win=win, name='recognition_baseline_text_block_2',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -830,7 +827,7 @@ baseline_rec_fx_cross_2 = visual.TextStim(win=win, name='baseline_rec_fx_cross_2
 # Initialize components for Routine "end_run"
 end_runClock = core.Clock()
 end_run_text_comp = visual.TextStim(win=win, name='end_run_text_comp',
-    text='default text',
+    text='',
     font='Arial',
     pos=(0, 0), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -840,20 +837,13 @@ end_run_key = keyboard.Keyboard()
 
 # Initialize components for Routine "end_session"
 end_sessionClock = core.Clock()
-inter_task_break_continue = visual.TextStim(win=win, name='inter_task_break_continue',
-    text='A folytatáshoz nyomja le a gombot a jobb hüvelykujjával.',
-    font='Arial',
-    pos=(0,-0.4), height=0.03, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=0.0);
 inter_task_break_text = visual.TextStim(win=win, name='inter_task_break_text',
-    text='default text',
+    text='Vége a feladatnak. Most kivesszük Önt a scannerből.',
     font='Arial',
     pos=(0, 0), height=0.08, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-1.0);
+    depth=0.0);
 inter_task_break_key = keyboard.Keyboard()
 
 # Create some handy timers
@@ -1735,6 +1725,13 @@ for thisEnc_full_practice in enc_full_practice:
 continueRoutine = True
 routineTimer.add(3.000000)
 # update component parameters for each repeat
+block_name = ''
+if TrialType=='OBJ':
+    block_name='Képfelismerés'
+elif TrialType=='LOC':
+    block_name='Helyfelismerés'
+else:
+    block_name='Block Unknown'
 # keep track of which components have finished
 recognition_titleComponents = [start_recognition_text]
 for thisComponent in recognition_titleComponents:
@@ -2733,6 +2730,14 @@ for thisRun in run:
     continueRoutine = True
     routineTimer.add(2.000000)
     # update component parameters for each repeat
+    block_name = ''
+    if TrialType=='OBJ':
+        block_name='Képválasztás'
+    elif TrialType=='LOC':
+        block_name='Helyválasztás'
+    else:
+        block_name='Block Unknown'
+    encoding_title_text.setText(block_name)
     # keep track of which components have finished
     encoding_titleComponents = [encoding_title_text]
     for thisComponent in encoding_titleComponents:
@@ -3017,7 +3022,7 @@ for thisRun in run:
         # update component parameters for each repeat
         block_name = ''
         if TrialType=='OBJ':
-            block_name='Képválogatás'
+            block_name='Képválasztás'
         elif TrialType=='LOC':
             block_name='Helyválasztás'
         else:
@@ -3980,6 +3985,13 @@ for thisRun in run:
     continueRoutine = True
     routineTimer.add(3.000000)
     # update component parameters for each repeat
+    block_name = ''
+    if TrialType=='OBJ':
+        block_name='Képfelismerés'
+    elif TrialType=='LOC':
+        block_name='Helyfelismerés'
+    else:
+        block_name='Block Unknown'
     # keep track of which components have finished
     recognition_titleComponents = [start_recognition_text]
     for thisComponent in recognition_titleComponents:
@@ -4843,12 +4855,15 @@ for thisRun in run:
 continueRoutine = True
 routineTimer.add(1200.000000)
 # update component parameters for each repeat
-inter_task_break_text.setText(end_text)
 inter_task_break_key.keys = []
 inter_task_break_key.rt = []
 _inter_task_break_key_allKeys = []
+end_text = 'Vége a feladatnak. Most kivesszük Önt a scannerből.'
+cprint('\nOn screen: End.')
+print('Text: ' + end_text)
+cprint('Hit SPACE or RIGHT.', 'red')
 # keep track of which components have finished
-end_sessionComponents = [inter_task_break_continue, inter_task_break_text, inter_task_break_key]
+end_sessionComponents = [inter_task_break_text, inter_task_break_key]
 for thisComponent in end_sessionComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -4870,23 +4885,6 @@ while continueRoutine and routineTimer.getTime() > 0:
     tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
-    
-    # *inter_task_break_continue* updates
-    if inter_task_break_continue.status == NOT_STARTED and tThisFlip >= 5.0-frameTolerance:
-        # keep track of start time/frame for later
-        inter_task_break_continue.frameNStart = frameN  # exact frame index
-        inter_task_break_continue.tStart = t  # local t and not account for scr refresh
-        inter_task_break_continue.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(inter_task_break_continue, 'tStartRefresh')  # time at next scr refresh
-        inter_task_break_continue.setAutoDraw(True)
-    if inter_task_break_continue.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > inter_task_break_continue.tStartRefresh + 1195.0-frameTolerance:
-            # keep track of stop time/frame for later
-            inter_task_break_continue.tStop = t  # not accounting for scr refresh
-            inter_task_break_continue.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(inter_task_break_continue, 'tStopRefresh')  # time at next scr refresh
-            inter_task_break_continue.setAutoDraw(False)
     
     # *inter_task_break_text* updates
     if inter_task_break_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -4927,7 +4925,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             win.timeOnFlip(inter_task_break_key, 'tStopRefresh')  # time at next scr refresh
             inter_task_break_key.status = FINISHED
     if inter_task_break_key.status == STARTED and not waitOnFlip:
-        theseKeys = inter_task_break_key.getKeys(keyList=['d'], waitRelease=False)
+        theseKeys = inter_task_break_key.getKeys(keyList=['space', 'right'], waitRelease=False)
         _inter_task_break_key_allKeys.extend(theseKeys)
         if len(_inter_task_break_key_allKeys):
             inter_task_break_key.keys = _inter_task_break_key_allKeys[-1].name  # just the last key pressed
@@ -4956,8 +4954,6 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in end_sessionComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('inter_task_break_continue.started', inter_task_break_continue.tStartRefresh)
-thisExp.addData('inter_task_break_continue.stopped', inter_task_break_continue.tStopRefresh)
 thisExp.addData('inter_task_break_text.started', inter_task_break_text.tStartRefresh)
 thisExp.addData('inter_task_break_text.stopped', inter_task_break_text.tStopRefresh)
 # check responses
