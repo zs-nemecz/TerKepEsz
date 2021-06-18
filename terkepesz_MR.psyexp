@@ -300,8 +300,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9pv\u00e1logat\u00e1s&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Helyv\u00e1laszt\u00e1s&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Képválogatás'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Helyválasztás'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9pv\u00e1laszt\u00e1s&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Helyv\u00e1laszt\u00e1s&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Képválasztás'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Helyválasztás'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -1280,6 +1280,23 @@
       </CodeComponent>
     </Routine>
     <Routine name="encoding_title">
+      <CodeComponent name="set_task_name">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9pv\u00e1laszt\u00e1s&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Helyv\u00e1laszt\u00e1s&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Képválasztás'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Helyválasztás'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="set_task_name" valType="code"/>
+      </CodeComponent>
       <TextComponent name="encoding_title_text">
         <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -1301,12 +1318,29 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="2.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Galéria berendezés" valType="str"/>
+        <Param name="text" updates="set every repeat" val="$block_name" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
     </Routine>
     <Routine name="recognition_title">
+      <CodeComponent name="set_task_name_rec">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9pfelismer\u00e9s&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Helyfelismer\u00e9s&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Képfelismerés'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Helyfelismerés'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="set_task_name_rec" valType="code"/>
+      </CodeComponent>
       <TextComponent name="start_recognition_text">
         <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -1819,8 +1853,8 @@
       <CodeComponent name="block_names">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="session = expInfo['Session']&amp;#10;if session == 'OBJ':&amp;#10;    task_name='Képszemle'&amp;#10;    block_name_selection=[0, 76]&amp;#10;    end_text = 'Vége a feladatnak. Most kivesszük Önt a szkennerből.'&amp;#10;    print('Session selected: OBJ')&amp;#10;elif session == 'LOC':&amp;#10;    task_name='Berendezés'&amp;#10;    block_name_selection=[152,228]&amp;#10;    end_text = 'Vége a  mérésnek. Most kivesszük Önt a szkennerből.'&amp;#10;    print('Session selected: LOC')&amp;#10;else:&amp;#10;    block_name_selection=[0,76]&amp;#10;    end_text = 'Vége a feladatnak. '&amp;#10;    print('Invalid Session! Will use OBJ.')&amp;#10; " valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="session = expInfo[&quot;Session&quot;];&amp;#10;if ((session === &quot;OBJ&quot;)) {&amp;#10;    task_name = &quot;K\u00e9pszemle&quot;;&amp;#10;    block_name_selection = [0, 76];&amp;#10;    end_text = &quot;V\u00e9ge a feladatnak. Most kivessz\u00fck \u00d6nt a szkennerb\u0151l.&quot;;&amp;#10;    console.log(&quot;Session selected: OBJ&quot;);&amp;#10;} else {&amp;#10;    if ((session === &quot;LOC&quot;)) {&amp;#10;        task_name = &quot;Berendez\u00e9s&quot;;&amp;#10;        block_name_selection = [152, 228];&amp;#10;        end_text = &quot;V\u00e9ge a  m\u00e9r\u00e9snek. Most kivessz\u00fck \u00d6nt a szkennerb\u0151l.&quot;;&amp;#10;        console.log(&quot;Session selected: LOC&quot;);&amp;#10;    } else {&amp;#10;        block_name_selection = [0, 76];&amp;#10;        end_text = &quot;V\u00e9ge a feladatnak. &quot;;&amp;#10;        console.log(&quot;Invalid Session! Will use OBJ.&quot;);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="session = expInfo['Session']&amp;#10;if session == 'OBJ':&amp;#10;    task_name='Képszemle'&amp;#10;    block_name_selection=[0, 76]&amp;#10;    print('Session selected: OBJ')&amp;#10;elif session == 'LOC':&amp;#10;    task_name='Berendezés'&amp;#10;    block_name_selection=[152,228]&amp;#10;    print('Session selected: LOC')&amp;#10;else:&amp;#10;    block_name_selection=[0,76]&amp;#10;    print('Invalid Session! Will use OBJ.')&amp;#10; " valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="session = expInfo[&quot;Session&quot;];&amp;#10;if ((session === &quot;OBJ&quot;)) {&amp;#10;    task_name = &quot;K\u00e9pszemle&quot;;&amp;#10;    block_name_selection = [0, 76];&amp;#10;    console.log(&quot;Session selected: OBJ&quot;);&amp;#10;} else {&amp;#10;    if ((session === &quot;LOC&quot;)) {&amp;#10;        task_name = &quot;Berendez\u00e9s&quot;;&amp;#10;        block_name_selection = [152, 228];&amp;#10;        console.log(&quot;Session selected: LOC&quot;);&amp;#10;    } else {&amp;#10;        block_name_selection = [0, 76];&amp;#10;        console.log(&quot;Invalid Session! Will use OBJ.&quot;);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -2456,31 +2490,6 @@
       </CodeComponent>
     </Routine>
     <Routine name="end_session">
-      <TextComponent name="inter_task_break_continue">
-        <Param name="color" updates="constant" val="black" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="contrast" updates="constant" val="1" valType="num"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
-        <Param name="name" updates="None" val="inter_task_break_continue" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0,-0.4)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="5.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1195.0" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A folytatáshoz nyomja le a gombot a jobb hüvelykujjával." valType="str"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
       <TextComponent name="inter_task_break_text">
         <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -2502,12 +2511,12 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="1200.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="$end_text" valType="str"/>
+        <Param name="text" updates="constant" val="Vége a feladatnak. Most kivesszük Önt a scannerből." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="inter_task_break_key">
-        <Param name="allowedKeys" updates="constant" val="'d'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'space', 'right'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -2524,6 +2533,23 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="exp_info_end">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="end_text = &quot;V\u00e9ge a feladatnak. Most kivessz\u00fck \u00d6nt a scannerb\u0151l.&quot;;&amp;#10;cprint(&quot;\nOn screen: End.&quot;);&amp;#10;console.log((&quot;Text: &quot; + end_text));&amp;#10;cprint(&quot;Hit SPACE or RIGHT.&quot;, &quot;red&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="end_text = 'Vége a feladatnak. Most kivesszük Önt a scannerből.'&amp;#10;cprint('\nOn screen: End.')&amp;#10;print('Text: ' + end_text)&amp;#10;cprint('Hit SPACE or RIGHT.', 'red')" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="exp_info_end" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="rec_trial_practice">
       <ImageComponent name="rec_trial_interior_practice">

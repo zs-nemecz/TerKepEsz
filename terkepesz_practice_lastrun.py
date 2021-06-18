@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on September 18, 2020, at 12:50
+This experiment was created using PsychoPy3 Experiment Builder (v2021.1.4),
+    on June 17, 2021, at 14:33
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -15,14 +15,14 @@ from __future__ import absolute_import, division
 
 from psychopy import locale_setup
 from psychopy import prefs
-from psychopy import sound, gui, visual, core, data, event, logging, clock
+from psychopy import sound, gui, visual, core, data, event, logging, clock, colors
 from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
                                 STOPPED, FINISHED, PRESSED, RELEASED, FOREVER)
 
 import numpy as np  # whole numpy lib is available, prepend 'np.'
 from numpy import (sin, cos, tan, log, log10, pi, average,
                    sqrt, std, deg2rad, rad2deg, linspace, asarray)
-from numpy.random import random, randint, normal, shuffle
+from numpy.random import random, randint, normal, shuffle, choice as randchoice
 import os  # handy system and path functions
 import sys  # to get file system encoding
 
@@ -35,7 +35,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-psychopyVersion = '2020.1.3'
+psychopyVersion = '2021.1.4'
 expName = 'TRK-online'  # from the Builder filename that created this script
 expInfo = {'ID': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['ID'],'PRACTICE', 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='D:\\Zsuzsa\\HCCCL\\experiment\\computer_based_tasks\\terkepesz\\MR_version\\TerKepEsz\\terkepesz_practice_lastrun.py',
+    originPath='D:\\Zsuzsa\\HCCCL\\experiment\\computer_based_tasks\\mTRK\\TerKepEsz\\terkepesz_practice_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -61,7 +61,7 @@ logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a f
 endExpNow = False  # flag for 'escape' or other condition => quit the exp
 frameTolerance = 0.001  # how close to onset before 'same' frame
 
-# Start Code - component code to be run before the window creation
+# Start Code - component code to be run after the window creation
 
 # Setup the Window
 win = visual.Window(
@@ -266,7 +266,7 @@ practice_end = 0
 step = 1
 
 start_practice_block = visual.TextStim(win=win, name='start_practice_block',
-    text='default text',
+    text='',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -298,7 +298,7 @@ enc_fx_cross_practice = visual.TextStim(win=win, name='enc_fx_cross_practice',
     depth=-2.0);
 enc_fx_key_practice = keyboard.Keyboard()
 enc_fx_text_block_practice = visual.TextStim(win=win, name='enc_fx_text_block_practice',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -338,7 +338,7 @@ enc_trial_main_image_practice = visual.ImageStim(
     texRes=128, interpolate=True, depth=-2.0)
 enc_trial_key_practice = keyboard.Keyboard()
 enc_trial_text_block_practice = visual.TextStim(win=win, name='enc_trial_text_block_practice',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -371,14 +371,14 @@ enc_practice_feedback_image = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
 enc_practice_feedback_text = visual.TextStim(win=win, name='enc_practice_feedback_text',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=[0,0], height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 enc_practice_feedback_block = visual.TextStim(win=win, name='enc_practice_feedback_block',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -403,7 +403,7 @@ end_practice_continue = visual.TextStim(win=win, name='end_practice_continue',
     languageStyle='LTR',
     depth=-3.0);
 coming_up_next_text = visual.TextStim(win=win, name='coming_up_next_text',
-    text='default text',
+    text='',
     font='Arial',
     pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -543,7 +543,7 @@ demo_image = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
 demo_text = visual.TextStim(win=win, name='demo_text',
-    text='default text',
+    text='',
     font='Arial',
     pos=(-0.025, 0.45), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -592,7 +592,7 @@ practice_end = 0
 step = 1
 
 start_practice_block = visual.TextStim(win=win, name='start_practice_block',
-    text='default text',
+    text='',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -624,7 +624,7 @@ rec_fx_cross_practice = visual.TextStim(win=win, name='rec_fx_cross_practice',
     depth=-2.0);
 rec_fx_key_practice = keyboard.Keyboard()
 rec_fx_text_block_practice = visual.TextStim(win=win, name='rec_fx_text_block_practice',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -641,7 +641,7 @@ rec_fx_instructions_text_practice = visual.TextStim(win=win, name='rec_fx_instru
 # Initialize components for Routine "rec_practice_feedback"
 rec_practice_feedbackClock = core.Clock()
 rec_practice_feedback_text = visual.TextStim(win=win, name='rec_practice_feedback_text',
-    text='default text',
+    text='',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -666,7 +666,7 @@ end_practice_continue = visual.TextStim(win=win, name='end_practice_continue',
     languageStyle='LTR',
     depth=-3.0);
 coming_up_next_text = visual.TextStim(win=win, name='coming_up_next_text',
-    text='default text',
+    text='',
     font='Arial',
     pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -689,7 +689,7 @@ practice_end = 0
 step = 1
 
 start_practice_block = visual.TextStim(win=win, name='start_practice_block',
-    text='default text',
+    text='',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -721,7 +721,7 @@ enc_fx_cross_practice = visual.TextStim(win=win, name='enc_fx_cross_practice',
     depth=-2.0);
 enc_fx_key_practice = keyboard.Keyboard()
 enc_fx_text_block_practice = visual.TextStim(win=win, name='enc_fx_text_block_practice',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -761,7 +761,7 @@ enc_trial_main_image_practice = visual.ImageStim(
     texRes=128, interpolate=True, depth=-2.0)
 enc_trial_key_practice = keyboard.Keyboard()
 enc_trial_text_block_practice = visual.TextStim(win=win, name='enc_trial_text_block_practice',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -794,14 +794,14 @@ enc_practice_feedback_image = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
 enc_practice_feedback_text = visual.TextStim(win=win, name='enc_practice_feedback_text',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=[0,0], height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 enc_practice_feedback_block = visual.TextStim(win=win, name='enc_practice_feedback_block',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -821,7 +821,7 @@ start_recognition_text = visual.TextStim(win=win, name='start_recognition_text',
 # Initialize components for Routine "block_title"
 block_titleClock = core.Clock()
 block_title_text = visual.TextStim(win=win, name='block_title_text',
-    text='default text',
+    text='',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -853,7 +853,7 @@ rec_fx_cross_practice = visual.TextStim(win=win, name='rec_fx_cross_practice',
     depth=-2.0);
 rec_fx_key_practice = keyboard.Keyboard()
 rec_fx_text_block_practice = visual.TextStim(win=win, name='rec_fx_text_block_practice',
-    text='default text',
+    text='',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -870,7 +870,7 @@ rec_fx_instructions_text_practice = visual.TextStim(win=win, name='rec_fx_instru
 # Initialize components for Routine "rec_practice_feedback"
 rec_practice_feedbackClock = core.Clock()
 rec_practice_feedback_text = visual.TextStim(win=win, name='rec_practice_feedback_text',
-    text='default text',
+    text='',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -895,7 +895,7 @@ end_practice_continue = visual.TextStim(win=win, name='end_practice_continue',
     languageStyle='LTR',
     depth=-3.0);
 coming_up_next_text = visual.TextStim(win=win, name='coming_up_next_text',
-    text='default text',
+    text='',
     font='Arial',
     pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -5772,7 +5772,7 @@ thisExp.addData('coming_up_next_text.stopped', coming_up_next_text.tStopRefresh)
 win.flip()
 
 # these shouldn't be strictly necessary (should auto-save)
-thisExp.saveAsWideText(filename+'.csv')
+thisExp.saveAsWideText(filename+'.csv', delim='auto')
 thisExp.saveAsPickle(filename)
 logging.flush()
 # make sure everything is closed down
