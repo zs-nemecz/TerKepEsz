@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2021.1.4">
+<PsychoPy2experiment encoding="utf-8" version="2020.2.3">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -24,7 +24,7 @@
     <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
     <Param name="Show mouse" updates="None" val="True" valType="bool"/>
     <Param name="Units" updates="None" val="height" valType="str"/>
-    <Param name="Use version" updates="None" val="2020.2" valType="str"/>
+    <Param name="Use version" updates="None" val="2021.1" valType="str"/>
     <Param name="Window size (pixels)" updates="None" val="[1920, 1080]" valType="code"/>
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
     <Param name="color" updates="None" val="$[0.114,0.310,0.380]" valType="str"/>
@@ -1785,8 +1785,8 @@
       <CodeComponent name="logging_setup">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="import os&amp;#10;os.system('color')&amp;#10;from termcolor import colored, cprint&amp;#10;win.mouseVisible = False&amp;#10;cprint('State: Experiment Setup', 'blue', 'on_white')&amp;#10;print('Mouse disabled on screen. Keep CMD window active!')" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="import * as os from 'os';&amp;#10;import {colored, cprint} from 'termcolor';&amp;#10;os.system(&quot;color&quot;);&amp;#10;win.mouseVisible = false;&amp;#10;cprint(&quot;State: Experiment Setup&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;console.log(&quot;Mouse disabled on screen. Keep CMD window active!&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="import os&amp;#10;os.system('color')&amp;#10;from termcolor import colored, cprint&amp;#10;import colorama&amp;#10;colorama.init()&amp;#10;win.mouseVisible = False&amp;#10;cprint('State: Experiment Setup', 'blue', 'on_white')&amp;#10;print('Mouse disabled on screen. Keep CMD window active!')" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="import * as os from 'os';&amp;#10;import {colored, cprint} from 'termcolor';&amp;#10;import * as colorama from 'colorama';&amp;#10;os.system(&quot;color&quot;);&amp;#10;colorama.init();&amp;#10;win.mouseVisible = false;&amp;#10;cprint(&quot;State: Experiment Setup&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;console.log(&quot;Mouse disabled on screen. Keep CMD window active!&quot;);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="logging.setDefaultClock(globalClock);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="logging.setDefaultClock(globalClock)" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
