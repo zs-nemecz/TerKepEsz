@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.9),
-    on June 17, 2021, at 15:28
+    on Tue Jun 22 11:11:02 2021
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -55,7 +55,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['ID'],'pilot', exp
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\Latlab\\Desktop\\TerKepEsz\\TerKepEsz\\terkepesz_session1_lastrun.py',
+    originPath='/home/zsuzsanna/Documents/TRK/experiment/MR_version/TerKepEsz/terkepesz_session1_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -87,13 +87,20 @@ defaultKeyboard = keyboard.Keyboard()
 # Initialize components for Routine "welcome"
 welcomeClock = core.Clock()
 welcome_text = visual.TextStim(win=win, name='welcome_text',
-    text='Üdvözüljük a TTK Agyi Képalkotó Központjában!',
+    text='Üdvözöljük a TTK Agyi Képalkotó Központjában!',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 key_resp = keyboard.Keyboard()
+import os
+os.system('color')
+from termcolor import colored, cprint
+import colorama
+colorama.init()
+win.mouseVisible = False
+
 
 # Initialize components for Routine "anatomy"
 anatomyClock = core.Clock()
@@ -178,9 +185,9 @@ continueRoutine = True
 key_resp.keys = []
 key_resp.rt = []
 _key_resp_allKeys = []
-win.mouseVisible = False
-print('Welcome message on screen. Hit SPACE or -> for anatomy sequnce information')
-
+cprint('On Screen: Welcome Message', 'blue', 'on_white')
+print('Mouse disabled on screen. Keep CMD window active!')
+cprint('Hit SPACE or -> to continue.', 'red')
 # keep track of which components have finished
 welcomeComponents = [welcome_text, key_resp]
 for thisComponent in welcomeComponents:
@@ -278,8 +285,9 @@ routineTimer.add(300.000000)
 general_instructions_key.keys = []
 general_instructions_key.rt = []
 _general_instructions_key_allKeys = []
-print('Anatómiai felvételek következnek.\nA felvételek közben videót vetítünk le Önnek.')
-print('\n\nWaiting for participant response.\n\n')
+info_text = 'Anatómiai felvételek következnek.\nA felvételek közben videót vetítünk le Önnek.'
+cprint(info_text, 'blue', 'on_white')
+cprint('\n\nWaiting for participant response.\n\n', 'yellow')
 # keep track of which components have finished
 anatomyComponents = [anatomy_text, general_instructions_key, general_instructions_continue]
 for thisComponent in anatomyComponents:
@@ -518,11 +526,11 @@ key_pressed=choose_video_key.keys
 selected_video='stimuli/eye_of_the_storm.mp4'
 if key_pressed=='d':
     selected_video='stimuli/beauty_of_africa.mp4'
-elif key_pressed=='b':
+elif key_pressed=='c':
     selected_video='stimuli/scotland.mp4'
 elif key_pressed=='a':
     selected_video='stimuli/hubble_final.mp4'
-elif key_pressed=='c':
+elif key_pressed=='b':
     selected_video='stimuli/eye_of_the_storm.mp4'
     
 print('Video selected: ', selected_video)
@@ -654,11 +662,12 @@ routineTimer.add(300.000000)
 rest_instructions_key.keys = []
 rest_instructions_key.rt = []
 _rest_instructions_key_allKeys = []
-print('Most a nyugalmi mérés következik.\n')
-print('A mérés közben egy fixációs keresztet lát majd a képernyőn.')
-print('Nézze ezt a keresztet. Gondolatait hagyja kalandozni.\n')
-print('Kérjük, közben maradjon ébren. A nyugalmi mérés 8 percig tart.')
-print('\n\nWaiting for participant response...')
+cprint('On Screen', 'blue', 'on_white')
+cprint('Most a nyugalmi mérés következik.\n', 'blue', 'on_white')
+cprint('A mérés közben egy fixációs keresztet lát majd a képernyőn.', 'blue', 'on_white')
+cprint('Nézze ezt a keresztet. Gondolatait hagyja kalandozni.\n',  'blue', 'on_white')
+cprint('Kérjük, közben maradjon ébren. A nyugalmi mérés 8 percig tart.',  'blue', 'on_white')
+cprint('\n\nWaiting for participant response...', 'yellow')
 
 # keep track of which components have finished
 resting_state_instructionComponents = [rest_instructions_text, rest_instructions_key, rest_instructions_continue]
@@ -789,7 +798,8 @@ continueRoutine = True
 rest_end_key.keys = []
 rest_end_key.rt = []
 _rest_end_key_allKeys = []
-print('\n\nFixation cross on screen. Press SPACE or -> to end resting state.')
+cprint('\n\nFixation cross on screen.', 'blue', 'on_white') 
+cprint('Press SPACE or -> to end resting state.', 'red')
 # keep track of which components have finished
 resting_stateComponents = [fx_cross, rest_end_key]
 for thisComponent in resting_stateComponents:
@@ -887,8 +897,8 @@ routineTimer.add(300.000000)
 prepare_task_key.keys = []
 prepare_task_key.rt = []
 _prepare_task_key_allKeys = []
-print('\nMessage on screen:\nMost a feladatok következnek.Ha minden rendben, nyomja le a gombot a jobb hüvelykujjával.')
-print('Waiting for participant response...')
+cprint('On Screen: \nMessage on screen:\nMost a feladatok következnek.Ha minden rendben, nyomja le a gombot a jobb hüvelykujjával.',  'blue', 'on_white')
+cprint('Waiting for participant response...', 'yellow')
 
 
 # keep track of which components have finished
