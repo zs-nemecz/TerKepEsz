@@ -5,9 +5,9 @@
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
     <Param name="Completed URL" updates="None" val="https://docs.google.com/forms/d/e/1FAIpQLSe-JyQOJB2rcwl0jYrK_pOr_J8RNK4YRzq_I4WmRa4Pfox_aA/viewform?usp=sf_link" valType="str"/>
     <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
-    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s_%s' % (expInfo['ID'],'pilot', expName, expInfo['date'])" valType="code"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s_%s_%s' % (expInfo['online ID'],'APS', expInfo['Session'], expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
-    <Param name="Experiment info" updates="None" val="{'ID': '', 'Session': 'OBJ/LOC', 'Stimuli Table': '0'}" valType="code"/>
+    <Param name="Experiment info" updates="None" val="{'online ID': '', 'MR ID': '', 'Session': 'OBJ/LOC', 'Stimuli Table': '0'}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
     <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="html" valType="str"/>
@@ -29,7 +29,7 @@
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
     <Param name="color" updates="None" val="$[0.114,0.310,0.380]" valType="str"/>
     <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
-    <Param name="expName" updates="None" val="TérKépÉsz" valType="str"/>
+    <Param name="expName" updates="None" val="miniTRK" valType="str"/>
     <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
     <Param name="logging level" updates="None" val="exp" valType="code"/>
   </Settings>
@@ -1870,8 +1870,8 @@
       <CodeComponent name="set_instruction_text">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="instruction_text = ''&amp;#10;if session == 'OBJ':&amp;#10;    instruction_text = &quot;A Galériaberendezés alatt azt döntse el, beválogatja-e a képet a kiállításra.\&amp;#10;                        \n\n\t\tJobb mutatóujj - Igen\n\t\tBal mutatóujj - Nem\&amp;#10;                        \n-----------------------------------------------------------------------\&amp;#10;                        \nA Képfelismerés allatt azt döntse el, látta-e már pontosan ugyanezt a képet a Galériaberendezés alatt.\&amp;#10;                        \n\n\t\tJobb mutatóujj - Új\&amp;#10;                        \n\t\tBal mutatóujj - Régi&quot;&amp;#10;elif session == 'LOC':&amp;#10;    instruction_text = &quot;A Galériaberendezés alatt azt döntse el, maradhat-e a kép a bemutatott helyen.\&amp;#10;                        \n\n\t\tJobb mutatóujj - Igen\n\t\tBal mutatóujj - Nem\&amp;#10;                        \n-----------------------------------------------------------------------\&amp;#10;                        \nA Helyfelismerés allatt azt döntse el, pontosan ezen a helyen látta-e a képet.\&amp;#10;                        \n\n\t\tJobb mutatóujj - Új\n\t\tBal mutatóujj - Régi&quot;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="instruction_text = &quot;&quot;;&amp;#10;if ((session === &quot;OBJ&quot;)) {&amp;#10;    instruction_text = &quot;A Gal\u00e9riaberendez\u00e9s alatt azt d\u00f6ntse el, bev\u00e1logatja-e a k\u00e9pet a ki\u00e1ll\u00edt\u00e1sra.                        \n\n\t\tJobb mutat\u00f3ujj - Igen\n\t\tBal mutat\u00f3ujj - Nem                        \n-----------------------------------------------------------------------                        \nA K\u00e9pfelismer\u00e9s allatt azt d\u00f6ntse el, l\u00e1tta-e m\u00e1r pontosan ugyanezt a k\u00e9pet a Gal\u00e9riaberendez\u00e9s alatt.                        \n\n\t\tJobb mutat\u00f3ujj - \u00daj                        \n\t\tBal mutat\u00f3ujj - R\u00e9gi&quot;;&amp;#10;} else {&amp;#10;    if ((session === &quot;LOC&quot;)) {&amp;#10;        instruction_text = &quot;A Gal\u00e9riaberendez\u00e9s alatt azt d\u00f6ntse el, maradhat-e a k\u00e9p a bemutatott helyen.                        \n\n\t\tJobb mutat\u00f3ujj - Igen\n\t\tBal mutat\u00f3ujj - Nem                        \n-----------------------------------------------------------------------                        \nA Helyfelismer\u00e9s allatt azt d\u00f6ntse el, pontosan ezen a helyen l\u00e1tta-e a k\u00e9pet.                        \n\n\t\tJobb mutat\u00f3ujj - \u00daj\n\t\tBal mutat\u00f3ujj - R\u00e9gi&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="instruction_text = ''&amp;#10;if session == 'OBJ':&amp;#10;    instruction_text = &quot;A Képválogatás alatt azt döntse el, beválogatja-e a képet a kiállításra.\&amp;#10;                        \n\n\t\tJobb mutatóujj - Igen\n\t\tBal mutatóujj - Nem\&amp;#10;                        \n-----------------------------------------------------------------------\&amp;#10;                        \nA Képfelismerés allatt azt döntse el, látta-e már pontosan ugyanezt a képet a Galériaberendezés alatt.\&amp;#10;                        \n\n\t\tJobb mutatóujj - Új\&amp;#10;                        \n\t\tBal mutatóujj - Régi&quot;&amp;#10;elif session == 'LOC':&amp;#10;    instruction_text = &quot;A Helyválasztás alatt azt döntse el, maradhat-e a kép a bemutatott helyen.\&amp;#10;                        \n\n\t\tJobb mutatóujj - Igen\n\t\tBal mutatóujj - Nem\&amp;#10;                        \n-----------------------------------------------------------------------\&amp;#10;                        \nA Helyfelismerés allatt azt döntse el, pontosan ezen a helyen látta-e a képet.\&amp;#10;                        \n\n\t\tJobb mutatóujj - Új\n\t\tBal mutatóujj - Régi&quot;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="instruction_text = &quot;&quot;;&amp;#10;if ((session === &quot;OBJ&quot;)) {&amp;#10;    instruction_text = &quot;A K\u00e9pv\u00e1logat\u00e1s alatt azt d\u00f6ntse el, bev\u00e1logatja-e a k\u00e9pet a ki\u00e1ll\u00edt\u00e1sra.                        \n\n\t\tJobb mutat\u00f3ujj - Igen\n\t\tBal mutat\u00f3ujj - Nem                        \n-----------------------------------------------------------------------                        \nA K\u00e9pfelismer\u00e9s allatt azt d\u00f6ntse el, l\u00e1tta-e m\u00e1r pontosan ugyanezt a k\u00e9pet a Gal\u00e9riaberendez\u00e9s alatt.                        \n\n\t\tJobb mutat\u00f3ujj - \u00daj                        \n\t\tBal mutat\u00f3ujj - R\u00e9gi&quot;;&amp;#10;} else {&amp;#10;    if ((session === &quot;LOC&quot;)) {&amp;#10;        instruction_text = &quot;A Helyv\u00e1laszt\u00e1s alatt azt d\u00f6ntse el, maradhat-e a k\u00e9p a bemutatott helyen.                        \n\n\t\tJobb mutat\u00f3ujj - Igen\n\t\tBal mutat\u00f3ujj - Nem                        \n-----------------------------------------------------------------------                        \nA Helyfelismer\u00e9s allatt azt d\u00f6ntse el, pontosan ezen a helyen l\u00e1tta-e a k\u00e9pet.                        \n\n\t\tJobb mutat\u00f3ujj - \u00daj\n\t\tBal mutat\u00f3ujj - R\u00e9gi&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -1942,8 +1942,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9pszemle&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Berendez\u00e9s&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Képszemle'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Berendezés'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9pv\u00e1logat\u00e1s&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Helyv\u00e1laszt\u00e1s&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Képválogatás'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Helyválasztás'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -2352,6 +2352,23 @@
       </CodeComponent>
     </Routine>
     <Routine name="rec_fx_practice">
+      <CodeComponent name="name_rec_practice_block">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9pfelismer\u00e9s&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Helyfelismer\u00e9s&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Képfelismerés'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Helyfelismerés'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="name_rec_practice_block" valType="code"/>
+      </CodeComponent>
       <ImageComponent name="rec_fx_interior_practice">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -2471,23 +2488,6 @@
         <Param name="units" updates="None" val="norm" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <CodeComponent name="name_rec_practice_block">
-        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="block_name = &quot;&quot;;&amp;#10;if ((TrialType === &quot;OBJ&quot;)) {&amp;#10;    block_name = &quot;K\u00e9pfelismer\u00e9s&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Helyfelismer\u00e9s&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Block Unknown&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="block_name = ''&amp;#10;if TrialType=='OBJ':&amp;#10;    block_name='Képfelismerés'&amp;#10;elif TrialType=='LOC':&amp;#10;    block_name='Helyfelismerés'&amp;#10;else:&amp;#10;    block_name='Block Unknown'" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="name_rec_practice_block" valType="code"/>
-      </CodeComponent>
     </Routine>
     <Routine name="end_session">
       <TextComponent name="inter_task_break_text">
@@ -3481,7 +3481,7 @@
       <Param name="conditionsFile" updates="None" val="stimuli_tables/encoding_full_practice_trials.csv" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
-      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
       <Param name="nReps" updates="None" val="1" valType="code"/>
       <Param name="name" updates="None" val="enc_full_practice" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
@@ -3497,7 +3497,7 @@
       <Param name="conditionsFile" updates="None" val="stimuli_tables/recognition_full_practice_trials.csv" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
-      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
       <Param name="nReps" updates="None" val="1" valType="code"/>
       <Param name="name" updates="None" val="rec_full_practice" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>

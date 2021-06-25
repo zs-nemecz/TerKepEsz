@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.1.4),
-    on June 18, 2021, at 14:27
+    on June 25, 2021, at 13:50
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -40,8 +40,8 @@ os.chdir(_thisDir)
 
 # Store info about the experiment session
 psychopyVersion = '2021.1.4'
-expName = 'TérKépÉsz'  # from the Builder filename that created this script
-expInfo = {'ID': '', 'Session': 'OBJ/LOC', 'Stimuli Table': '0'}
+expName = 'miniTRK'  # from the Builder filename that created this script
+expInfo = {'online ID': '', 'MR ID': '', 'Session': 'OBJ/LOC', 'Stimuli Table': '0'}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -50,7 +50,7 @@ expInfo['expName'] = expName
 expInfo['psychopyVersion'] = psychopyVersion
 
 # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
-filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['ID'],'pilot', expName, expInfo['date'])
+filename = _thisDir + os.sep + u'data/%s_%s_%s_%s_%s' % (expInfo['online ID'],'APS', expInfo['Session'], expName, expInfo['date'])
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
@@ -120,14 +120,14 @@ else:
  
 instruction_text = ''
 if session == 'OBJ':
-    instruction_text = "A Galériaberendezés alatt azt döntse el, beválogatja-e a képet a kiállításra.\
+    instruction_text = "A Képválogatás alatt azt döntse el, beválogatja-e a képet a kiállításra.\
                         \n\n\t\tJobb mutatóujj - Igen\n\t\tBal mutatóujj - Nem\
                         \n-----------------------------------------------------------------------\
                         \nA Képfelismerés allatt azt döntse el, látta-e már pontosan ugyanezt a képet a Galériaberendezés alatt.\
                         \n\n\t\tJobb mutatóujj - Új\
                         \n\t\tBal mutatóujj - Régi"
 elif session == 'LOC':
-    instruction_text = "A Galériaberendezés alatt azt döntse el, maradhat-e a kép a bemutatott helyen.\
+    instruction_text = "A Helyválasztás alatt azt döntse el, maradhat-e a kép a bemutatott helyen.\
                         \n\n\t\tJobb mutatóujj - Igen\n\t\tBal mutatóujj - Nem\
                         \n-----------------------------------------------------------------------\
                         \nA Helyfelismerés allatt azt döntse el, pontosan ezen a helyen látta-e a képet.\
@@ -314,14 +314,14 @@ rec_fx_interior_practice = visual.ImageStim(
     ori=0, pos=(0,0), size=(2.0, 2.0),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=0.0)
+    texRes=128, interpolate=True, depth=-1.0)
 rec_fx_cross_practice = visual.TextStim(win=win, name='rec_fx_cross_practice',
     text='+',
     font='Arial',
     units='norm', pos=[0,0], height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-1.0);
+    depth=-2.0);
 rec_fx_key_practice = keyboard.Keyboard()
 rec_fx_text_block_practice = visual.TextStim(win=win, name='rec_fx_text_block_practice',
     text='',
@@ -329,14 +329,14 @@ rec_fx_text_block_practice = visual.TextStim(win=win, name='rec_fx_text_block_pr
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-3.0);
+    depth=-4.0);
 rec_fx_instructions_text_practice = visual.TextStim(win=win, name='rec_fx_instructions_text_practice',
     text='[BAL MUTATÓUJJ - Régi]      [JOBB MUTATÓUJJ - Új]',
     font='Arial',
     units='norm', pos=(0, -0.833), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-4.0);
+    depth=-5.0);
 
 # Initialize components for Routine "rec_trial_practice"
 rec_trial_practiceClock = core.Clock()
@@ -1216,7 +1216,7 @@ thisExp.addData('practice_block_text.started', practice_block_text.tStartRefresh
 thisExp.addData('practice_block_text.stopped', practice_block_text.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-enc_full_practice = data.TrialHandler(nReps=1, method='random', 
+enc_full_practice = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('stimuli_tables/encoding_full_practice_trials.csv', selection=practice_selection),
     seed=None, name='enc_full_practice')
@@ -1239,9 +1239,9 @@ for thisEnc_full_practice in enc_full_practice:
     # update component parameters for each repeat
     block_name = ''
     if TrialType=='OBJ':
-        block_name='Képszemle'
+        block_name='Képválogatás'
     elif TrialType=='LOC':
-        block_name='Berendezés'
+        block_name='Helyválasztás'
     else:
         block_name='Block Unknown'
     enc_fx_cross_practice.setPos((CurrentX, CurrentY))
@@ -1799,7 +1799,7 @@ thisExp.addData('start_recognition_text.stopped', start_recognition_text.tStopRe
 print('Recognition practice loop starting with following parameters:')
 
 # set up handler to look after randomisation of conditions etc
-rec_full_practice = data.TrialHandler(nReps=1, method='random', 
+rec_full_practice = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('stimuli_tables/recognition_full_practice_trials.csv', selection=practice_selection),
     seed=None, name='rec_full_practice')
@@ -1820,12 +1820,6 @@ for thisRec_full_practice in rec_full_practice:
     # ------Prepare to start Routine "rec_fx_practice"-------
     continueRoutine = True
     # update component parameters for each repeat
-    rec_fx_cross_practice.setPos((CurrentX, CurrentY))
-    rec_fx_key_practice.keys = []
-    rec_fx_key_practice.rt = []
-    _rec_fx_key_practice_allKeys = []
-    rec_fx_text_block_practice.setText(block_name
-)
     block_name = ''
     if TrialType=='OBJ':
         block_name='Képfelismerés'
@@ -1833,6 +1827,12 @@ for thisRec_full_practice in rec_full_practice:
         block_name='Helyfelismerés'
     else:
         block_name='Block Unknown'
+    rec_fx_cross_practice.setPos((CurrentX, CurrentY))
+    rec_fx_key_practice.keys = []
+    rec_fx_key_practice.rt = []
+    _rec_fx_key_practice_allKeys = []
+    rec_fx_text_block_practice.setText(block_name
+)
     # keep track of which components have finished
     rec_fx_practiceComponents = [rec_fx_interior_practice, rec_fx_cross_practice, rec_fx_key_practice, rec_fx_text_block_practice, rec_fx_instructions_text_practice]
     for thisComponent in rec_fx_practiceComponents:
