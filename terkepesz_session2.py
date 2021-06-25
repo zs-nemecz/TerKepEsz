@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.1.4),
-    on June 25, 2021, at 13:53
+    on June 25, 2021, at 19:28
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -84,16 +84,8 @@ else:
 # create a default keyboard (e.g. to check for escape)
 defaultKeyboard = keyboard.Keyboard()
 
-# Initialize components for Routine "welcome"
-welcomeClock = core.Clock()
-welcome_text = visual.TextStim(win=win, name='welcome_text',
-    text='Üdvözöljük a TTK Agyi Képalkotó Központjában!',
-    font='Arial',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=0.0);
-key_resp = keyboard.Keyboard()
+# Initialize components for Routine "setup"
+setupClock = core.Clock()
 import os
 os.system('color')
 from termcolor import colored, cprint
@@ -131,6 +123,17 @@ choose_video_text = visual.TextStim(win=win, name='choose_video_text',
     depth=0.0);
 choose_video_key = keyboard.Keyboard()
 
+# Initialize components for Routine "loading_video"
+loading_videoClock = core.Clock()
+loading = clock.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='loading')
+loading_text = visual.TextStim(win=win, name='loading_text',
+    text='A videó betölt...',
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='black', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
+
 # Initialize components for Routine "video"
 videoClock = core.Clock()
 end_video_key = keyboard.Keyboard()
@@ -138,18 +141,18 @@ end_video_key = keyboard.Keyboard()
 # Initialize components for Routine "prepare_task"
 prepare_taskClock = core.Clock()
 prepare_task_text = visual.TextStim(win=win, name='prepare_task_text',
-    text='Most a feladatok következnek.',
+    text='Vége az anatómiai mérésnek.',
     font='Arial',
     pos=(0.0, 0), height=0.05, wrapWidth=0.52, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 prepare_task_key = keyboard.Keyboard()
-text = visual.TextStim(win=win, name='text',
+end_anatomy_text = visual.TextStim(win=win, name='end_anatomy_text',
     text='Ha minden rendben, nyomja le a gombot a jobb hüvelykujjával. ',
     font='Open Sans',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
+    pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
+    color='black', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-3.0);
 
@@ -157,18 +160,15 @@ text = visual.TextStim(win=win, name='text',
 globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
 
-# ------Prepare to start Routine "welcome"-------
+# ------Prepare to start Routine "setup"-------
 continueRoutine = True
 # update component parameters for each repeat
-key_resp.keys = []
-key_resp.rt = []
-_key_resp_allKeys = []
 cprint('On Screen: Welcome Message', 'blue', 'on_white')
 print('Mouse disabled on screen. Keep CMD window active!')
 cprint('Hit SPACE or -> to continue.', 'red')
 # keep track of which components have finished
-welcomeComponents = [welcome_text, key_resp]
-for thisComponent in welcomeComponents:
+setupComponents = []
+for thisComponent in setupComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
     thisComponent.tStartRefresh = None
@@ -178,48 +178,17 @@ for thisComponent in welcomeComponents:
 # reset timers
 t = 0
 _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-welcomeClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+setupClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
 frameN = -1
 
-# -------Run Routine "welcome"-------
+# -------Run Routine "setup"-------
 while continueRoutine:
     # get current time
-    t = welcomeClock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=welcomeClock)
+    t = setupClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=setupClock)
     tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
-    
-    # *welcome_text* updates
-    if welcome_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        welcome_text.frameNStart = frameN  # exact frame index
-        welcome_text.tStart = t  # local t and not account for scr refresh
-        welcome_text.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(welcome_text, 'tStartRefresh')  # time at next scr refresh
-        welcome_text.setAutoDraw(True)
-    
-    # *key_resp* updates
-    waitOnFlip = False
-    if key_resp.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
-        # keep track of start time/frame for later
-        key_resp.frameNStart = frameN  # exact frame index
-        key_resp.tStart = t  # local t and not account for scr refresh
-        key_resp.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(key_resp, 'tStartRefresh')  # time at next scr refresh
-        key_resp.status = STARTED
-        # keyboard checking is just starting
-        waitOnFlip = True
-        win.callOnFlip(key_resp.clock.reset)  # t=0 on next screen flip
-        win.callOnFlip(key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
-    if key_resp.status == STARTED and not waitOnFlip:
-        theseKeys = key_resp.getKeys(keyList=['right', 'space'], waitRelease=False)
-        _key_resp_allKeys.extend(theseKeys)
-        if len(_key_resp_allKeys):
-            key_resp.keys = _key_resp_allKeys[-1].name  # just the last key pressed
-            key_resp.rt = _key_resp_allKeys[-1].rt
-            # a response ends the routine
-            continueRoutine = False
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -229,7 +198,7 @@ while continueRoutine:
     if not continueRoutine:  # a component has requested a forced-end of Routine
         break
     continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in welcomeComponents:
+    for thisComponent in setupComponents:
         if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
             continueRoutine = True
             break  # at least one component has not yet finished
@@ -238,22 +207,11 @@ while continueRoutine:
     if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
         win.flip()
 
-# -------Ending Routine "welcome"-------
-for thisComponent in welcomeComponents:
+# -------Ending Routine "setup"-------
+for thisComponent in setupComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('welcome_text.started', welcome_text.tStartRefresh)
-thisExp.addData('welcome_text.stopped', welcome_text.tStopRefresh)
-# check responses
-if key_resp.keys in ['', [], None]:  # No response was made
-    key_resp.keys = None
-thisExp.addData('key_resp.keys',key_resp.keys)
-if key_resp.keys != None:  # we had a response
-    thisExp.addData('key_resp.rt', key_resp.rt)
-thisExp.addData('key_resp.started', key_resp.tStartRefresh)
-thisExp.addData('key_resp.stopped', key_resp.tStopRefresh)
-thisExp.nextEntry()
-# the Routine "welcome" was not non-slip safe, so reset the non-slip timer
+# the Routine "setup" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # ------Prepare to start Routine "anatomy"-------
@@ -513,6 +471,89 @@ elif key_pressed=='b':
     
 print('Video selected: ', selected_video)
 
+# ------Prepare to start Routine "loading_video"-------
+continueRoutine = True
+routineTimer.add(3.000000)
+# update component parameters for each repeat
+cprint('On Screen: A videó betölt...', 'blue', 'on_white')
+# keep track of which components have finished
+loading_videoComponents = [loading, loading_text]
+for thisComponent in loading_videoComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+loading_videoClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "loading_video"-------
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = loading_videoClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=loading_videoClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *loading_text* updates
+    if loading_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        loading_text.frameNStart = frameN  # exact frame index
+        loading_text.tStart = t  # local t and not account for scr refresh
+        loading_text.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(loading_text, 'tStartRefresh')  # time at next scr refresh
+        loading_text.setAutoDraw(True)
+    if loading_text.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > loading_text.tStartRefresh + 3.0-frameTolerance:
+            # keep track of stop time/frame for later
+            loading_text.tStop = t  # not accounting for scr refresh
+            loading_text.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(loading_text, 'tStopRefresh')  # time at next scr refresh
+            loading_text.setAutoDraw(False)
+    # *loading* period
+    if loading.status == NOT_STARTED and t >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        loading.frameNStart = frameN  # exact frame index
+        loading.tStart = t  # local t and not account for scr refresh
+        loading.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(loading, 'tStartRefresh')  # time at next scr refresh
+        loading.start(3.0)
+    elif loading.status == STARTED:  # one frame should pass before updating params and completing
+        loading.complete()  # finish the static period
+        loading.tStop = loading.tStart + 3.0  # record stop time
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in loading_videoComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "loading_video"-------
+for thisComponent in loading_videoComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('loading.started', loading.tStart)
+thisExp.addData('loading.stopped', loading.tStop)
+thisExp.addData('loading_text.started', loading_text.tStartRefresh)
+thisExp.addData('loading_text.stopped', loading_text.tStopRefresh)
+
 # ------Prepare to start Routine "video"-------
 continueRoutine = True
 routineTimer.add(2700.000000)
@@ -529,7 +570,9 @@ video_file = visual.MovieStim3(
 end_video_key.keys = []
 end_video_key.rt = []
 _end_video_key_allKeys = []
-print('Video playing...\nHit SPACE to end video and prepare for resting state.')
+cprint('Video playing...', 'blue', 'on_white')
+n_frame=0
+
 # keep track of which components have finished
 videoComponents = [video_file, end_video_key]
 for thisComponent in videoComponents:
@@ -600,6 +643,9 @@ while continueRoutine and routineTimer.getTime() > 0:
             end_video_key.rt = _end_video_key_allKeys[-1].rt
             # a response ends the routine
             continueRoutine = False
+    n_frame+=1
+    if n_frame==200:
+        cprint('Hit SPACE to END VIDEO.', 'red')
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -639,12 +685,12 @@ continueRoutine = True
 prepare_task_key.keys = []
 prepare_task_key.rt = []
 _prepare_task_key_allKeys = []
-cprint('On Screen: \nMessage on screen:\nMost a feladatok következnek.Ha minden rendben, nyomja le a gombot a jobb hüvelykujjával.',  'blue', 'on_white')
+cprint('On Screen: \nMost a feladatok következnek.Ha minden rendben, nyomja le a gombot a jobb hüvelykujjával.',  'blue', 'on_white')
 cprint('Waiting for participant response...', 'yellow')
 
 
 # keep track of which components have finished
-prepare_taskComponents = [prepare_task_text, prepare_task_key, text]
+prepare_taskComponents = [prepare_task_text, prepare_task_key, end_anatomy_text]
 for thisComponent in prepare_taskComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -698,14 +744,14 @@ while continueRoutine:
             # a response ends the routine
             continueRoutine = False
     
-    # *text* updates
-    if text.status == NOT_STARTED and tThisFlip >= 5.0-frameTolerance:
+    # *end_anatomy_text* updates
+    if end_anatomy_text.status == NOT_STARTED and tThisFlip >= 5.0-frameTolerance:
         # keep track of start time/frame for later
-        text.frameNStart = frameN  # exact frame index
-        text.tStart = t  # local t and not account for scr refresh
-        text.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(text, 'tStartRefresh')  # time at next scr refresh
-        text.setAutoDraw(True)
+        end_anatomy_text.frameNStart = frameN  # exact frame index
+        end_anatomy_text.tStart = t  # local t and not account for scr refresh
+        end_anatomy_text.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(end_anatomy_text, 'tStartRefresh')  # time at next scr refresh
+        end_anatomy_text.setAutoDraw(True)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -739,8 +785,8 @@ if prepare_task_key.keys != None:  # we had a response
 thisExp.addData('prepare_task_key.started', prepare_task_key.tStartRefresh)
 thisExp.addData('prepare_task_key.stopped', prepare_task_key.tStopRefresh)
 thisExp.nextEntry()
-thisExp.addData('text.started', text.tStartRefresh)
-thisExp.addData('text.stopped', text.tStopRefresh)
+thisExp.addData('end_anatomy_text.started', end_anatomy_text.tStartRefresh)
+thisExp.addData('end_anatomy_text.stopped', end_anatomy_text.tStopRefresh)
 # the Routine "prepare_task" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 

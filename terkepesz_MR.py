@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.1.4),
-    on June 25, 2021, at 13:50
+    on June 25, 2021, at 19:24
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -838,7 +838,7 @@ end_run_key = keyboard.Keyboard()
 # Initialize components for Routine "end_session"
 end_sessionClock = core.Clock()
 inter_task_break_text = visual.TextStim(win=win, name='inter_task_break_text',
-    text='Vége a feladatnak. Most kivesszük Önt a scannerből.',
+    text='Vége a feladatnak.',
     font='Arial',
     pos=(0, 0), height=0.08, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
