@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.1.4),
-    on June 25, 2021, at 19:24
+    on July 02, 2021, at 14:30
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -55,7 +55,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s_%s_%s' % (expInfo['online ID'],'A
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='D:\\Zsuzsa\\HCCCL\\experiment\\computer_based_tasks\\mTRK\\TerKepEsz\\terkepesz_MR.py',
+    originPath='C:\\Users\\Latlab\\Desktop\\TerKepEsz\\miniTRK\\terkepesz_MR.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -843,7 +843,7 @@ inter_task_break_text = visual.TextStim(win=win, name='inter_task_break_text',
     pos=(0, 0), height=0.08, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=0.0);
+    depth=-1.0);
 inter_task_break_key = keyboard.Keyboard()
 
 # Create some handy timers
@@ -4855,13 +4855,12 @@ for thisRun in run:
 continueRoutine = True
 routineTimer.add(1200.000000)
 # update component parameters for each repeat
+cprint('\nOn screen: End.', 'blue', 'on_white')
+print('Text: Vége a feladatnak.')
+cprint('Hit SPACE or -> to exit.', 'red')
 inter_task_break_key.keys = []
 inter_task_break_key.rt = []
 _inter_task_break_key_allKeys = []
-end_text = 'Vége a feladatnak. Most kivesszük Önt a scannerből.'
-cprint('\nOn screen: End.')
-print('Text: ' + end_text)
-cprint('Hit SPACE or RIGHT.', 'red')
 # keep track of which components have finished
 end_sessionComponents = [inter_task_break_text, inter_task_break_key]
 for thisComponent in end_sessionComponents:

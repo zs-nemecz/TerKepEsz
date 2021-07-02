@@ -1,0 +1,312 @@
+15.9447 	WARNING 	Monitor specification not found. Creating a temporary one...
+16.5977 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0.114, 0.31 , 0.38 ]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000000001E966EB8>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000000001E841780>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=1, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+16.5978 	EXP 	window1: mouseVisible = True
+16.5978 	EXP 	window1: recordFrameIntervals = False
+16.7639 	EXP 	window1: recordFrameIntervals = True
+16.9489 	EXP 	window1: recordFrameIntervals = False
+17.1125 	EXP 	Created welcome_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='welcome_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='Üdvözöljük a TTK Agyi Képalkotó Központjában!', units='height', win=Window(...), wrapWidth=1)
+17.1192 	EXP 	window1: mouseVisible = False
+17.1307 	EXP 	Created anatomy_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='anatomy_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+17.1386 	EXP 	Created general_instructions_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='general_instructions_continue', opacity=1, ori=0, pos=array([ 0. , -0.4]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+17.1520 	EXP 	Created choose_video_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='choose_video_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+17.1638 	EXP 	Created loading_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='loading_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='A videó betölt...', units='height', win=Window(...), wrapWidth=1)
+17.1865 	EXP 	Created rest_instructions_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='rest_instructions_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+17.1900 	EXP 	Created rest_instructions_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='rest_instructions_continue', opacity=1, ori=0, pos=array([ 0. , -0.4]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+17.1923 	EXP 	Created fx_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fx_cross', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=0.65)
+17.2067 	EXP 	Created prepare_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='prepare_task_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=0.52)
+17.2421 	EXP 	welcome_text: autoDraw = True
+27.7011 	DATA 	Keypress: space
+27.7134 	EXP 	welcome_text: autoDraw = False
+27.7134 	EXP 	anatomy_text: autoDraw = True
+32.6969 	EXP 	general_instructions_continue: autoDraw = True
+37.0836 	DATA 	Keypress: d
+37.0969 	EXP 	anatomy_text: autoDraw = False
+37.0969 	EXP 	general_instructions_continue: autoDraw = False
+37.0969 	EXP 	choose_video_text: autoDraw = True
+47.3825 	EXP 	window1: recordFrameIntervals = False
+47.3841 	DATA 	Keypress: d
+47.3965 	EXP 	choose_video_text: autoDraw = False
+47.3965 	EXP 	loading_text: autoDraw = True
+47.3966 	EXP 	window1: recordFrameIntervals = False
+50.4640 	EXP 	Created video_file = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='stimuli/beauty_of_africa.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=True, name='video_file', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=method-wrapper(...), units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+53.1657 	EXP 	Sound  started
+53.1770 	EXP 	loading_text: autoDraw = False
+53.1770 	EXP 	loading_text: autoDraw = False
+53.1770 	EXP 	video_file: autoLog = True
+53.1770 	EXP 	video_file: movie = 'stimuli/beauty_of_africa.mp4'
+53.1770 	EXP 	video_file: size = array([1920., 1080.])
+53.1770 	EXP 	video_file: ori = 0
+53.1770 	EXP 	video_file: autoDraw = True
+437.0782 	EXP 	Sound  reached end of file
+438.9846 	EXP 	Sound  started
+439.0411 	EXP 	Set video_file finished
+543.9656 	EXP 	Sound  stopped
+543.9705 	DATA 	Keypress: space
+543.9738 	EXP 	video_file: autoDraw = False
+543.9738 	EXP 	rest_instructions_text: autoDraw = True
+553.9754 	EXP 	rest_instructions_continue: autoDraw = True
+565.8164 	DATA 	Keypress: d
+565.8284 	EXP 	rest_instructions_text: autoDraw = False
+565.8284 	EXP 	rest_instructions_continue: autoDraw = False
+565.8284 	EXP 	fx_cross: autoDraw = True
+663.3102 	DATA 	Keypress: s
+665.1463 	DATA 	Keypress: s
+666.9794 	DATA 	Keypress: s
+668.8265 	DATA 	Keypress: s
+670.6601 	DATA 	Keypress: s
+672.5096 	DATA 	Keypress: s
+674.3427 	DATA 	Keypress: s
+676.1928 	DATA 	Keypress: s
+678.0269 	DATA 	Keypress: s
+679.8600 	DATA 	Keypress: s
+681.7101 	DATA 	Keypress: s
+683.5432 	DATA 	Keypress: s
+685.3793 	DATA 	Keypress: s
+687.2294 	DATA 	Keypress: s
+689.0595 	DATA 	Keypress: s
+690.9096 	DATA 	Keypress: s
+692.7427 	DATA 	Keypress: s
+694.5928 	DATA 	Keypress: s
+696.4259 	DATA 	Keypress: s
+698.2600 	DATA 	Keypress: s
+700.1100 	DATA 	Keypress: s
+701.9431 	DATA 	Keypress: s
+703.7932 	DATA 	Keypress: s
+705.6293 	DATA 	Keypress: s
+707.4624 	DATA 	Keypress: s
+709.3095 	DATA 	Keypress: s
+711.1427 	DATA 	Keypress: s
+712.9927 	DATA 	Keypress: s
+714.8258 	DATA 	Keypress: s
+716.6599 	DATA 	Keypress: s
+718.5090 	DATA 	Keypress: s
+720.3431 	DATA 	Keypress: s
+722.1932 	DATA 	Keypress: s
+724.0262 	DATA 	Keypress: s
+725.8624 	DATA 	Keypress: s
+727.7125 	DATA 	Keypress: s
+729.5425 	DATA 	Keypress: s
+731.3927 	DATA 	Keypress: s
+733.2257 	DATA 	Keypress: s
+735.0588 	DATA 	Keypress: s
+736.9089 	DATA 	Keypress: s
+738.7431 	DATA 	Keypress: s
+740.5921 	DATA 	Keypress: s
+742.4262 	DATA 	Keypress: s
+744.2593 	DATA 	Keypress: s
+746.1124 	DATA 	Keypress: s
+747.9455 	DATA 	Keypress: s
+749.7926 	DATA 	Keypress: s
+751.6257 	DATA 	Keypress: s
+753.4588 	DATA 	Keypress: s
+755.3088 	DATA 	Keypress: s
+757.1419 	DATA 	Keypress: s
+758.9920 	DATA 	Keypress: s
+760.8261 	DATA 	Keypress: s
+762.6592 	DATA 	Keypress: s
+764.5093 	DATA 	Keypress: s
+766.3454 	DATA 	Keypress: s
+768.1785 	DATA 	Keypress: s
+770.0256 	DATA 	Keypress: s
+771.8587 	DATA 	Keypress: s
+773.7088 	DATA 	Keypress: s
+775.5419 	DATA 	Keypress: s
+777.3920 	DATA 	Keypress: s
+779.2251 	DATA 	Keypress: s
+781.0591 	DATA 	Keypress: s
+782.9093 	DATA 	Keypress: s
+784.7423 	DATA 	Keypress: s
+786.5785 	DATA 	Keypress: s
+788.4285 	DATA 	Keypress: s
+790.2586 	DATA 	Keypress: s
+792.1087 	DATA 	Keypress: s
+793.9418 	DATA 	Keypress: s
+795.7919 	DATA 	Keypress: s
+797.6250 	DATA 	Keypress: s
+799.4591 	DATA 	Keypress: s
+801.3082 	DATA 	Keypress: s
+803.1423 	DATA 	Keypress: s
+804.9924 	DATA 	Keypress: s
+806.8286 	DATA 	Keypress: s
+808.6587 	DATA 	Keypress: s
+810.5086 	DATA 	Keypress: s
+812.3417 	DATA 	Keypress: s
+814.1918 	DATA 	Keypress: s
+816.0249 	DATA 	Keypress: s
+817.8580 	DATA 	Keypress: s
+819.7081 	DATA 	Keypress: s
+821.5422 	DATA 	Keypress: s
+823.3913 	DATA 	Keypress: s
+825.2254 	DATA 	Keypress: s
+827.0615 	DATA 	Keypress: s
+828.9086 	DATA 	Keypress: s
+830.7417 	DATA 	Keypress: s
+832.5918 	DATA 	Keypress: s
+834.4249 	DATA 	Keypress: s
+836.2580 	DATA 	Keypress: s
+838.1081 	DATA 	Keypress: s
+839.9411 	DATA 	Keypress: s
+841.7912 	DATA 	Keypress: s
+843.6253 	DATA 	Keypress: s
+845.4584 	DATA 	Keypress: s
+847.3115 	DATA 	Keypress: s
+849.1416 	DATA 	Keypress: s
+850.9917 	DATA 	Keypress: s
+852.8248 	DATA 	Keypress: s
+854.6579 	DATA 	Keypress: s
+856.5080 	DATA 	Keypress: s
+858.3411 	DATA 	Keypress: s
+860.1912 	DATA 	Keypress: s
+862.0243 	DATA 	Keypress: s
+863.8584 	DATA 	Keypress: s
+865.7114 	DATA 	Keypress: s
+867.5445 	DATA 	Keypress: s
+869.3906 	DATA 	Keypress: s
+871.2247 	DATA 	Keypress: s
+873.0579 	DATA 	Keypress: s
+874.9079 	DATA 	Keypress: s
+876.7410 	DATA 	Keypress: s
+878.5911 	DATA 	Keypress: s
+880.4242 	DATA 	Keypress: s
+882.2583 	DATA 	Keypress: s
+884.1074 	DATA 	Keypress: s
+885.9445 	DATA 	Keypress: s
+887.7776 	DATA 	Keypress: s
+889.6247 	DATA 	Keypress: s
+891.4578 	DATA 	Keypress: s
+893.3079 	DATA 	Keypress: s
+895.1409 	DATA 	Keypress: s
+896.9910 	DATA 	Keypress: s
+898.8241 	DATA 	Keypress: s
+900.6573 	DATA 	Keypress: s
+902.5073 	DATA 	Keypress: s
+904.3414 	DATA 	Keypress: s
+906.1775 	DATA 	Keypress: s
+908.0276 	DATA 	Keypress: s
+909.8577 	DATA 	Keypress: s
+911.7077 	DATA 	Keypress: s
+913.5409 	DATA 	Keypress: s
+915.3910 	DATA 	Keypress: s
+917.2241 	DATA 	Keypress: s
+919.0571 	DATA 	Keypress: s
+920.9073 	DATA 	Keypress: s
+922.7403 	DATA 	Keypress: s
+924.5904 	DATA 	Keypress: s
+926.4275 	DATA 	Keypress: s
+928.2606 	DATA 	Keypress: s
+930.1067 	DATA 	Keypress: s
+931.9409 	DATA 	Keypress: s
+933.7905 	DATA 	Keypress: s
+935.6240 	DATA 	Keypress: s
+937.4571 	DATA 	Keypress: s
+939.3072 	DATA 	Keypress: s
+941.1403 	DATA 	Keypress: s
+942.9903 	DATA 	Keypress: s
+944.8235 	DATA 	Keypress: s
+946.6605 	DATA 	Keypress: s
+948.5107 	DATA 	Keypress: s
+950.3407 	DATA 	Keypress: s
+952.1898 	DATA 	Keypress: s
+954.0240 	DATA 	Keypress: s
+955.8570 	DATA 	Keypress: s
+957.7071 	DATA 	Keypress: s
+959.5402 	DATA 	Keypress: s
+961.3903 	DATA 	Keypress: s
+963.2234 	DATA 	Keypress: s
+965.0575 	DATA 	Keypress: s
+966.9106 	DATA 	Keypress: s
+968.7437 	DATA 	Keypress: s
+970.5898 	DATA 	Keypress: s
+972.4229 	DATA 	Keypress: s
+974.2570 	DATA 	Keypress: s
+976.1071 	DATA 	Keypress: s
+977.9571 	DATA 	Keypress: s
+979.7902 	DATA 	Keypress: s
+981.6233 	DATA 	Keypress: s
+983.4565 	DATA 	Keypress: s
+985.3065 	DATA 	Keypress: s
+987.1436 	DATA 	Keypress: s
+988.9767 	DATA 	Keypress: s
+990.8228 	DATA 	Keypress: s
+992.6569 	DATA 	Keypress: s
+994.5070 	DATA 	Keypress: s
+996.3402 	DATA 	Keypress: s
+998.1902 	DATA 	Keypress: s
+1000.0239 	DATA 	Keypress: s
+1001.8565 	DATA 	Keypress: s
+1003.7064 	DATA 	Keypress: s
+1005.5395 	DATA 	Keypress: s
+1007.3767 	DATA 	Keypress: s
+1009.2268 	DATA 	Keypress: s
+1011.0728 	DATA 	Keypress: s
+1012.9059 	DATA 	Keypress: s
+1014.7400 	DATA 	Keypress: s
+1016.5901 	DATA 	Keypress: s
+1018.4232 	DATA 	Keypress: s
+1020.2564 	DATA 	Keypress: s
+1022.1064 	DATA 	Keypress: s
+1023.9395 	DATA 	Keypress: s
+1025.7896 	DATA 	Keypress: s
+1027.6267 	DATA 	Keypress: s
+1029.4728 	DATA 	Keypress: s
+1031.3058 	DATA 	Keypress: s
+1033.1389 	DATA 	Keypress: s
+1034.9900 	DATA 	Keypress: s
+1036.8231 	DATA 	Keypress: s
+1038.6563 	DATA 	Keypress: s
+1040.5063 	DATA 	Keypress: s
+1042.3394 	DATA 	Keypress: s
+1044.1895 	DATA 	Keypress: s
+1046.0226 	DATA 	Keypress: s
+1047.8597 	DATA 	Keypress: s
+1049.7058 	DATA 	Keypress: s
+1051.5390 	DATA 	Keypress: s
+1053.3890 	DATA 	Keypress: s
+1055.2231 	DATA 	Keypress: s
+1057.0562 	DATA 	Keypress: s
+1058.9063 	DATA 	Keypress: s
+1060.7394 	DATA 	Keypress: s
+1062.5895 	DATA 	Keypress: s
+1064.4225 	DATA 	Keypress: s
+1066.2597 	DATA 	Keypress: s
+1068.1097 	DATA 	Keypress: s
+1069.9388 	DATA 	Keypress: s
+1071.7890 	DATA 	Keypress: s
+1073.6220 	DATA 	Keypress: s
+1075.4562 	DATA 	Keypress: s
+1077.3062 	DATA 	Keypress: s
+1079.1393 	DATA 	Keypress: s
+1080.9894 	DATA 	Keypress: s
+1082.8395 	DATA 	Keypress: s
+1084.6725 	DATA 	Keypress: s
+1086.5086 	DATA 	Keypress: s
+1088.3588 	DATA 	Keypress: s
+1090.1888 	DATA 	Keypress: s
+1092.0390 	DATA 	Keypress: s
+1093.8721 	DATA 	Keypress: s
+1095.7061 	DATA 	Keypress: s
+1097.5562 	DATA 	Keypress: s
+1099.3893 	DATA 	Keypress: s
+1101.2394 	DATA 	Keypress: s
+1103.0725 	DATA 	Keypress: s
+1104.9056 	DATA 	Keypress: s
+1106.7587 	DATA 	Keypress: s
+1108.5918 	DATA 	Keypress: s
+1110.4219 	DATA 	Keypress: s
+1112.2720 	DATA 	Keypress: s
+1114.1051 	DATA 	Keypress: s
+1115.9391 	DATA 	Keypress: s
+1117.7892 	DATA 	Keypress: s
+1119.6224 	DATA 	Keypress: s
+1121.4555 	DATA 	Keypress: s
+1123.3055 	DATA 	Keypress: s
+1125.1386 	DATA 	Keypress: s
+1126.9758 	DATA 	Keypress: s
+1128.8258 	DATA 	Keypress: s
+1130.6719 	DATA 	Keypress: s
+1148.1450 	DATA 	Keypress: space
+1148.1564 	EXP 	fx_cross: autoDraw = False
+1148.1564 	EXP 	prepare_task_text: autoDraw = True
+1153.5716 	DATA 	Keypress: d
+1153.5860 	EXP 	prepare_task_text: autoDraw = False
+1153.5949 	EXP 	window1: mouseVisible = True

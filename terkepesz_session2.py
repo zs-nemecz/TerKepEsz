@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.1.4),
-    on June 25, 2021, at 19:28
+    on July 02, 2021, at 14:25
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -55,7 +55,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['online ID'],'sess
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='D:\\Zsuzsa\\HCCCL\\experiment\\computer_based_tasks\\mTRK\\TerKepEsz\\terkepesz_session2.py',
+    originPath='C:\\Users\\Latlab\\Desktop\\TerKepEsz\\miniTRK\\terkepesz_session2.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -148,13 +148,6 @@ prepare_task_text = visual.TextStim(win=win, name='prepare_task_text',
     languageStyle='LTR',
     depth=0.0);
 prepare_task_key = keyboard.Keyboard()
-end_anatomy_text = visual.TextStim(win=win, name='end_anatomy_text',
-    text='Ha minden rendben, nyomja le a gombot a jobb hüvelykujjával. ',
-    font='Open Sans',
-    pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
-    color='black', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-3.0);
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
@@ -163,9 +156,8 @@ routineTimer = core.CountdownTimer()  # to track time remaining of each (non-sli
 # ------Prepare to start Routine "setup"-------
 continueRoutine = True
 # update component parameters for each repeat
-cprint('On Screen: Welcome Message', 'blue', 'on_white')
+print('State: Setup')
 print('Mouse disabled on screen. Keep CMD window active!')
-cprint('Hit SPACE or -> to continue.', 'red')
 # keep track of which components have finished
 setupComponents = []
 for thisComponent in setupComponents:
@@ -223,7 +215,7 @@ general_instructions_key.rt = []
 _general_instructions_key_allKeys = []
 info_text = 'Anatómiai felvételek következnek.\nA felvételek közben videót vetítünk le Önnek.'
 cprint(info_text, 'blue', 'on_white')
-cprint('\n\nWaiting for participant response.\n\n', 'yellow')
+cprint('\n\nWaiting for participant response.', 'yellow')
 # keep track of which components have finished
 anatomyComponents = [anatomy_text, general_instructions_key, general_instructions_continue]
 for thisComponent in anatomyComponents:
@@ -346,6 +338,7 @@ thisExp.addData('general_instructions_key.stopped', general_instructions_key.tSt
 thisExp.nextEntry()
 thisExp.addData('general_instructions_continue.started', general_instructions_continue.tStartRefresh)
 thisExp.addData('general_instructions_continue.stopped', general_instructions_continue.tStopRefresh)
+cprint('Button pressed: d', 'green')
 
 # ------Prepare to start Routine "choose_video"-------
 continueRoutine = True
@@ -571,8 +564,8 @@ end_video_key.keys = []
 end_video_key.rt = []
 _end_video_key_allKeys = []
 cprint('Video playing...', 'blue', 'on_white')
-n_frame=0
-
+cprint('Wait until the end of anatomical and DTI sequences', 'red', 'on_white')
+cprint('Press SPACE or -> to end video', 'red')
 # keep track of which components have finished
 videoComponents = [video_file, end_video_key]
 for thisComponent in videoComponents:
@@ -643,9 +636,6 @@ while continueRoutine and routineTimer.getTime() > 0:
             end_video_key.rt = _end_video_key_allKeys[-1].rt
             # a response ends the routine
             continueRoutine = False
-    n_frame+=1
-    if n_frame==200:
-        cprint('Hit SPACE to END VIDEO.', 'red')
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -685,12 +675,10 @@ continueRoutine = True
 prepare_task_key.keys = []
 prepare_task_key.rt = []
 _prepare_task_key_allKeys = []
-cprint('On Screen: \nMost a feladatok következnek.Ha minden rendben, nyomja le a gombot a jobb hüvelykujjával.',  'blue', 'on_white')
-cprint('Waiting for participant response...', 'yellow')
-
-
+cprint('On Screen: \nVége az anatómiai mérésnek.',  'blue', 'on_white')
+cprint('Press SPACE to exit.', 'red')
 # keep track of which components have finished
-prepare_taskComponents = [prepare_task_text, prepare_task_key, end_anatomy_text]
+prepare_taskComponents = [prepare_task_text, prepare_task_key]
 for thisComponent in prepare_taskComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -736,22 +724,13 @@ while continueRoutine:
         win.callOnFlip(prepare_task_key.clock.reset)  # t=0 on next screen flip
         win.callOnFlip(prepare_task_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
     if prepare_task_key.status == STARTED and not waitOnFlip:
-        theseKeys = prepare_task_key.getKeys(keyList=['d'], waitRelease=False)
+        theseKeys = prepare_task_key.getKeys(keyList=['d', 'space', 'right'], waitRelease=False)
         _prepare_task_key_allKeys.extend(theseKeys)
         if len(_prepare_task_key_allKeys):
             prepare_task_key.keys = _prepare_task_key_allKeys[-1].name  # just the last key pressed
             prepare_task_key.rt = _prepare_task_key_allKeys[-1].rt
             # a response ends the routine
             continueRoutine = False
-    
-    # *end_anatomy_text* updates
-    if end_anatomy_text.status == NOT_STARTED and tThisFlip >= 5.0-frameTolerance:
-        # keep track of start time/frame for later
-        end_anatomy_text.frameNStart = frameN  # exact frame index
-        end_anatomy_text.tStart = t  # local t and not account for scr refresh
-        end_anatomy_text.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(end_anatomy_text, 'tStartRefresh')  # time at next scr refresh
-        end_anatomy_text.setAutoDraw(True)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -785,8 +764,6 @@ if prepare_task_key.keys != None:  # we had a response
 thisExp.addData('prepare_task_key.started', prepare_task_key.tStartRefresh)
 thisExp.addData('prepare_task_key.stopped', prepare_task_key.tStopRefresh)
 thisExp.nextEntry()
-thisExp.addData('end_anatomy_text.started', end_anatomy_text.tStartRefresh)
-thisExp.addData('end_anatomy_text.stopped', end_anatomy_text.tStopRefresh)
 # the Routine "prepare_task" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 

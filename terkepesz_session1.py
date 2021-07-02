@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.1.4),
-    on June 25, 2021, at 19:18
+    on July 02, 2021, at 14:13
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -55,7 +55,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['online ID'],'sess
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='D:\\Zsuzsa\\HCCCL\\experiment\\computer_based_tasks\\mTRK\\TerKepEsz\\terkepesz_session1.py',
+    originPath='C:\\Users\\Latlab\\Desktop\\TerKepEsz\\miniTRK\\terkepesz_session1.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -185,6 +185,13 @@ prepare_task_text = visual.TextStim(win=win, name='prepare_task_text',
     languageStyle='LTR',
     depth=0.0);
 prepare_task_key = keyboard.Keyboard()
+prepare_task_button_text = visual.TextStim(win=win, name='prepare_task_button_text',
+    text='Ha minden rendben, nyomja le a gombot a jobb hüvelykujjával. ',
+    font='Arial',
+    pos=(0.0, -0.2), height=0.05, wrapWidth=0.52, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-3.0);
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
@@ -421,6 +428,7 @@ thisExp.addData('general_instructions_key.stopped', general_instructions_key.tSt
 thisExp.nextEntry()
 thisExp.addData('general_instructions_continue.started', general_instructions_continue.tStartRefresh)
 thisExp.addData('general_instructions_continue.stopped', general_instructions_continue.tStopRefresh)
+cprint('Button pressed: d', 'green')
 
 # ------Prepare to start Routine "choose_video"-------
 continueRoutine = True
@@ -645,8 +653,9 @@ video_file = visual.MovieStim3(
 end_video_key.keys = []
 end_video_key.rt = []
 _end_video_key_allKeys = []
-n_frame=0
 cprint('Video playing...', 'blue', 'on_white')
+cprint('Wait until the end of the anatomical sequences.', 'red', 'on_white')
+cprint('Press SPACE or -> to end video.', 'red')
 # keep track of which components have finished
 videoComponents = [video_file, end_video_key]
 for thisComponent in videoComponents:
@@ -717,10 +726,6 @@ while continueRoutine and routineTimer.getTime() > 0:
             end_video_key.rt = _end_video_key_allKeys[-1].rt
             # a response ends the routine
             continueRoutine = False
-    n_frame=+1
-    if n_frame==100:
-        cprint('Hit SPACE to END VIDEO and prepare for resting state.', 'red')
-        
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -766,7 +771,7 @@ cprint('Most a nyugalmi mérés következik.', 'blue', 'on_white')
 cprint('A mérés közben egy fixációs keresztet lát majd a képernyőn.', 'blue', 'on_white')
 cprint('Nézze ezt a keresztet. Gondolatait hagyja kalandozni.',  'blue', 'on_white')
 cprint('Kérjük, közben maradjon ébren. A nyugalmi mérés 8 percig tart.',  'blue', 'on_white')
-cprint('\n\nWaiting for participant response...', 'yellow')
+cprint('Waiting for participant response...', 'yellow')
 
 # keep track of which components have finished
 resting_state_instructionComponents = [rest_instructions_text, rest_instructions_key, rest_instructions_continue]
@@ -890,6 +895,7 @@ thisExp.addData('rest_instructions_key.stopped', rest_instructions_key.tStopRefr
 thisExp.nextEntry()
 thisExp.addData('rest_instructions_continue.started', rest_instructions_continue.tStartRefresh)
 thisExp.addData('rest_instructions_continue.stopped', rest_instructions_continue.tStopRefresh)
+cprint('Button pressed: d', 'green')
 
 # ------Prepare to start Routine "resting_state"-------
 continueRoutine = True
@@ -898,7 +904,8 @@ rest_end_key.keys = []
 rest_end_key.rt = []
 _rest_end_key_allKeys = []
 cprint('\n\nFixation cross on screen.', 'blue', 'on_white') 
-n_frame=0
+cprint('Wait until end of resting state sequence.', 'red', 'on_white')
+cprint('Press SPACE or -> to end resting state.', 'red')
 # keep track of which components have finished
 resting_stateComponents = [fx_cross, rest_end_key]
 for thisComponent in resting_stateComponents:
@@ -953,9 +960,6 @@ while continueRoutine:
             rest_end_key.rt = _rest_end_key_allKeys[-1].rt
             # a response ends the routine
             continueRoutine = False
-    n_frame=+1
-    if n_frame==100:
-        cprint('Press SPACE or -> to end resting state.', 'red')
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1004,7 +1008,7 @@ cprint('Waiting for participant response...', 'yellow')
 
 
 # keep track of which components have finished
-prepare_taskComponents = [prepare_task_text, prepare_task_key]
+prepare_taskComponents = [prepare_task_text, prepare_task_key, prepare_task_button_text]
 for thisComponent in prepare_taskComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -1046,7 +1050,7 @@ while continueRoutine and routineTimer.getTime() > 0:
     
     # *prepare_task_key* updates
     waitOnFlip = False
-    if prepare_task_key.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
+    if prepare_task_key.status == NOT_STARTED and tThisFlip >= 5.0-frameTolerance:
         # keep track of start time/frame for later
         prepare_task_key.frameNStart = frameN  # exact frame index
         prepare_task_key.tStart = t  # local t and not account for scr refresh
@@ -1059,7 +1063,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         win.callOnFlip(prepare_task_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
     if prepare_task_key.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > prepare_task_key.tStartRefresh + 299.0-frameTolerance:
+        if tThisFlipGlobal > prepare_task_key.tStartRefresh + 295-frameTolerance:
             # keep track of stop time/frame for later
             prepare_task_key.tStop = t  # not accounting for scr refresh
             prepare_task_key.frameNStop = frameN  # exact frame index
@@ -1073,6 +1077,23 @@ while continueRoutine and routineTimer.getTime() > 0:
             prepare_task_key.rt = _prepare_task_key_allKeys[-1].rt
             # a response ends the routine
             continueRoutine = False
+    
+    # *prepare_task_button_text* updates
+    if prepare_task_button_text.status == NOT_STARTED and tThisFlip >= 5.0-frameTolerance:
+        # keep track of start time/frame for later
+        prepare_task_button_text.frameNStart = frameN  # exact frame index
+        prepare_task_button_text.tStart = t  # local t and not account for scr refresh
+        prepare_task_button_text.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(prepare_task_button_text, 'tStartRefresh')  # time at next scr refresh
+        prepare_task_button_text.setAutoDraw(True)
+    if prepare_task_button_text.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > prepare_task_button_text.tStartRefresh + 295-frameTolerance:
+            # keep track of stop time/frame for later
+            prepare_task_button_text.tStop = t  # not accounting for scr refresh
+            prepare_task_button_text.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(prepare_task_button_text, 'tStopRefresh')  # time at next scr refresh
+            prepare_task_button_text.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1106,6 +1127,9 @@ if prepare_task_key.keys != None:  # we had a response
 thisExp.addData('prepare_task_key.started', prepare_task_key.tStartRefresh)
 thisExp.addData('prepare_task_key.stopped', prepare_task_key.tStopRefresh)
 thisExp.nextEntry()
+cprint('Button pressed: d', 'green')
+thisExp.addData('prepare_task_button_text.started', prepare_task_button_text.tStartRefresh)
+thisExp.addData('prepare_task_button_text.stopped', prepare_task_button_text.tStopRefresh)
 
 # Flip one final time so any remaining win.callOnFlip() 
 # and win.timeOnFlip() tasks get executed before quitting

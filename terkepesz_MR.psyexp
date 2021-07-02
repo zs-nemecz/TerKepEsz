@@ -2490,6 +2490,23 @@
       </TextComponent>
     </Routine>
     <Routine name="end_session">
+      <CodeComponent name="exp_info_end">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="cprint(&quot;\nOn screen: End.&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;console.log(&quot;Text: V\u00e9ge a feladatnak.&quot;);&amp;#10;cprint(&quot;Hit SPACE or -&gt; to exit.&quot;, &quot;red&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="cprint('\nOn screen: End.', 'blue', 'on_white')&amp;#10;print('Text: Vége a feladatnak.')&amp;#10;cprint('Hit SPACE or -&gt; to exit.', 'red')" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="exp_info_end" valType="code"/>
+      </CodeComponent>
       <TextComponent name="inter_task_break_text">
         <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -2533,23 +2550,6 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
-      <CodeComponent name="exp_info_end">
-        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="end_text = &quot;V\u00e9ge a feladatnak. Most kivessz\u00fck \u00d6nt a scannerb\u0151l.&quot;;&amp;#10;cprint(&quot;\nOn screen: End.&quot;);&amp;#10;console.log((&quot;Text: &quot; + end_text));&amp;#10;cprint(&quot;Hit SPACE or RIGHT.&quot;, &quot;red&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="end_text = 'Vége a feladatnak. Most kivesszük Önt a scannerből.'&amp;#10;cprint('\nOn screen: End.')&amp;#10;print('Text: ' + end_text)&amp;#10;cprint('Hit SPACE or RIGHT.', 'red')" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="exp_info_end" valType="code"/>
-      </CodeComponent>
     </Routine>
     <Routine name="rec_trial_practice">
       <ImageComponent name="rec_trial_interior_practice">

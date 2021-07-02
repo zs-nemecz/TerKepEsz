@@ -177,8 +177,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="cprint(&quot;Button pressed: d&quot;, &quot;green&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="cprint('Button pressed: d', 'green')" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="experimenter_message_anatomy" valType="code"/>
       </CodeComponent>
@@ -292,11 +292,11 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="n_frame = 0;&amp;#10;cprint(&quot;Video playing...&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="n_frame=0&amp;#10;cprint('Video playing...', 'blue', 'on_white')" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="cprint(&quot;Video playing...&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;Wait until the end of the anatomical sequences.&quot;, &quot;red&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;Press SPACE or -&gt; to end video.&quot;, &quot;red&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="cprint('Video playing...', 'blue', 'on_white')&amp;#10;cprint('Wait until the end of the anatomical sequences.', 'red', 'on_white')&amp;#10;cprint('Press SPACE or -&gt; to end video.', 'red')" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="n_frame=+1&amp;#10;if n_frame==100:&amp;#10;    cprint('Hit SPACE to END VIDEO and prepare for resting state.', 'red')&amp;#10;    " valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
@@ -379,15 +379,15 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="cprint(&quot;On Screen&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;Most a nyugalmi m\u00e9r\u00e9s k\u00f6vetkezik.&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;A m\u00e9r\u00e9s k\u00f6zben egy fix\u00e1ci\u00f3s keresztet l\u00e1t majd a k\u00e9perny\u0151n.&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;N\u00e9zze ezt a keresztet. Gondolatait hagyja kalandozni.&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;K\u00e9rj\u00fck, k\u00f6zben maradjon \u00e9bren. A nyugalmi m\u00e9r\u00e9s 8 percig tart.&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;\n\nWaiting for participant response...&quot;, &quot;yellow&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="cprint('On Screen', 'blue', 'on_white')&amp;#10;cprint('Most a nyugalmi mérés következik.', 'blue', 'on_white')&amp;#10;cprint('A mérés közben egy fixációs keresztet lát majd a képernyőn.', 'blue', 'on_white')&amp;#10;cprint('Nézze ezt a keresztet. Gondolatait hagyja kalandozni.',  'blue', 'on_white')&amp;#10;cprint('Kérjük, közben maradjon ébren. A nyugalmi mérés 8 percig tart.',  'blue', 'on_white')&amp;#10;cprint('\n\nWaiting for participant response...', 'yellow')&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="cprint(&quot;On Screen&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;Most a nyugalmi m\u00e9r\u00e9s k\u00f6vetkezik.&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;A m\u00e9r\u00e9s k\u00f6zben egy fix\u00e1ci\u00f3s keresztet l\u00e1t majd a k\u00e9perny\u0151n.&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;N\u00e9zze ezt a keresztet. Gondolatait hagyja kalandozni.&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;K\u00e9rj\u00fck, k\u00f6zben maradjon \u00e9bren. A nyugalmi m\u00e9r\u00e9s 8 percig tart.&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;Waiting for participant response...&quot;, &quot;yellow&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="cprint('On Screen', 'blue', 'on_white')&amp;#10;cprint('Most a nyugalmi mérés következik.', 'blue', 'on_white')&amp;#10;cprint('A mérés közben egy fixációs keresztet lát majd a képernyőn.', 'blue', 'on_white')&amp;#10;cprint('Nézze ezt a keresztet. Gondolatait hagyja kalandozni.',  'blue', 'on_white')&amp;#10;cprint('Kérjük, közben maradjon ébren. A nyugalmi mérés 8 percig tart.',  'blue', 'on_white')&amp;#10;cprint('Waiting for participant response...', 'yellow')&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="cprint(&quot;Button pressed: d&quot;, &quot;green&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="cprint('Button pressed: d', 'green')" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="experimenter_message_resting_info" valType="code"/>
       </CodeComponent>
@@ -441,11 +441,11 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="cprint(&quot;\n\nFixation cross on screen.&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;n_frame = 0;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="cprint('\n\nFixation cross on screen.', 'blue', 'on_white') &amp;#10;n_frame=0" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="cprint(&quot;\n\nFixation cross on screen.&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;Wait until end of resting state sequence.&quot;, &quot;red&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;Press SPACE or -&gt; to end resting state.&quot;, &quot;red&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="cprint('\n\nFixation cross on screen.', 'blue', 'on_white') &amp;#10;cprint('Wait until end of resting state sequence.', 'red', 'on_white')&amp;#10;cprint('Press SPACE or -&gt; to end resting state.', 'red')" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="n_frame=+1&amp;#10;if n_frame==100:&amp;#10;    cprint('Press SPACE or -&gt; to end resting state.', 'red')" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
@@ -491,9 +491,9 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="1.0" valType="code"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="299.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="295" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -510,11 +510,36 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="cprint(&quot;Button pressed: d&quot;, &quot;green&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="cprint('Button pressed: d', 'green')" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="experimenter_message_end" valType="code"/>
       </CodeComponent>
+      <TextComponent name="prepare_task_button_text">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="prepare_task_button_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.0, -0.2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="295" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Ha minden rendben, nyomja le a gombot a jobb hüvelykujjával. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="0.52" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="loading">
       <StaticComponent name="loading_video">
