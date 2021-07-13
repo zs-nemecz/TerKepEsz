@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.1.4),
-    on July 02, 2021, at 14:13
+    on July 13, 2021, at 17:17
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -178,12 +178,12 @@ rest_end_key = keyboard.Keyboard()
 # Initialize components for Routine "prepare_task"
 prepare_taskClock = core.Clock()
 prepare_task_text = visual.TextStim(win=win, name='prepare_task_text',
-    text='Most a feladatok következnek.\n\nHa minden rendben, nyomja le a gombot a jobb hüvelykujjával. ',
+    text='Most a feladatok következnek.',
     font='Arial',
     pos=(0.0, 0), height=0.05, wrapWidth=0.52, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=0.0);
+    depth=-1.0);
 prepare_task_key = keyboard.Keyboard()
 prepare_task_button_text = visual.TextStim(win=win, name='prepare_task_button_text',
     text='Ha minden rendben, nyomja le a gombot a jobb hüvelykujjával. ',
@@ -1000,13 +1000,13 @@ routineTimer.reset()
 continueRoutine = True
 routineTimer.add(300.000000)
 # update component parameters for each repeat
-prepare_task_key.keys = []
-prepare_task_key.rt = []
-_prepare_task_key_allKeys = []
 cprint('On Screen: \nMessage on screen:\nMost a feladatok következnek.Ha minden rendben, nyomja le a gombot a jobb hüvelykujjával.',  'blue', 'on_white')
 cprint('Waiting for participant response...', 'yellow')
 
 
+prepare_task_key.keys = []
+prepare_task_key.rt = []
+_prepare_task_key_allKeys = []
 # keep track of which components have finished
 prepare_taskComponents = [prepare_task_text, prepare_task_key, prepare_task_button_text]
 for thisComponent in prepare_taskComponents:
@@ -1116,6 +1116,7 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in prepare_taskComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
+cprint('Button pressed: d', 'green')
 thisExp.addData('prepare_task_text.started', prepare_task_text.tStartRefresh)
 thisExp.addData('prepare_task_text.stopped', prepare_task_text.tStopRefresh)
 # check responses
@@ -1127,7 +1128,6 @@ if prepare_task_key.keys != None:  # we had a response
 thisExp.addData('prepare_task_key.started', prepare_task_key.tStartRefresh)
 thisExp.addData('prepare_task_key.stopped', prepare_task_key.tStopRefresh)
 thisExp.nextEntry()
-cprint('Button pressed: d', 'green')
 thisExp.addData('prepare_task_button_text.started', prepare_task_button_text.tStartRefresh)
 thisExp.addData('prepare_task_button_text.stopped', prepare_task_button_text.tStopRefresh)
 
