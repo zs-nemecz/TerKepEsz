@@ -1,0 +1,885 @@
+29.4786 	WARNING 	Monitor specification not found. Creating a temporary one...
+30.1299 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0.114, 0.31 , 0.38 ]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000000001CB44C50>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000000001CB1D4E0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=1, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+30.1299 	EXP 	window1: mouseVisible = True
+30.1300 	EXP 	window1: recordFrameIntervals = False
+30.2961 	EXP 	window1: recordFrameIntervals = True
+30.4810 	EXP 	window1: recordFrameIntervals = False
+30.5875 	EXP 	window1: mouseVisible = False
+30.6351 	EXP 	Created welcome_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, image='stimuli/terkepesz.png', interpolate=True, mask=None, maskParams=None, name='welcome_image', opacity=1, ori=0.0, pos=array([   0., -100.]), size=array([309., 665.]), texRes=128, units='pix', win=Window(...))
+30.6888 	EXP 	Created welcome_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=50, italic=False, languageStyle='LTR', name='welcome_text', opacity=1, ori=0, pos=array([  0., 350.]), rgb=UNKNOWN, text='TérKépÉsz Feladatok', units='pix', win=Window(...), wrapWidth=500)
+30.6987 	EXP 	Created general_instructions_4_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='general_instructions_4_continue', opacity=1, ori=0, pos=array([ 0. , -0.4]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+30.6992 	EXP 	Created general_instructions_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='general_instructions_text', opacity=1, ori=0, pos=array([ 0.  , -0.01]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+30.7103 	EXP 	Created start_practice_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='start_practice_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='Kezdődik a gyakorlás...', units='height', win=Window(...), wrapWidth=1)
+30.7108 	EXP 	Created practice_block_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='practice_block_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+30.9099 	EXP 	Created enc_fx_interior_practice = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='enc_fx_interior_practice', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+30.9128 	EXP 	Created enc_fx_cross_practice = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='enc_fx_cross_practice', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='norm', win=Window(...), wrapWidth=1)
+30.9134 	EXP 	Created enc_fx_text_block_practice = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='enc_fx_text_block_practice', opacity=1, ori=0, pos=array([0.  , 0.87]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1)
+30.9233 	EXP 	Created enc_fx_instructions_text_practice = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='enc_fx_instructions_text_practice', opacity=1, ori=0, pos=array([ 0.   , -0.833]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1)
+31.0832 	EXP 	Created enc_trial_interior_practice = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='enc_trial_interior_practice', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+31.0860 	EXP 	Created enc_trial_main_image_practice = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='enc_trial_main_image_practice', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128, units='norm', win=Window(...))
+31.0865 	EXP 	Created enc_trial_text_block_practice = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='enc_trial_text_block_practice', opacity=1, ori=0, pos=array([0.  , 0.87]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1)
+31.0897 	EXP 	Created enc_trial_instructions_text_practice = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='enc_trial_instructions_text_practice', opacity=1, ori=0, pos=array([ 0.   , -0.833]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1)
+31.2490 	EXP 	Created enc_practice_feedback_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='enc_practice_feedback_interior', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+31.2526 	EXP 	Created enc_practice_feedback_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='enc_practice_feedback_image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128, units='norm', win=Window(...))
+31.2531 	EXP 	Created enc_practice_feedback_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='enc_practice_feedback_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1)
+31.2537 	EXP 	Created enc_practice_feedback_block = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='enc_practice_feedback_block', opacity=1, ori=0, pos=array([0.  , 0.87]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1)
+31.2606 	EXP 	Created start_recognition_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='start_recognition_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='Képfelismerés', units='height', win=Window(...), wrapWidth=1)
+31.4194 	EXP 	Created rec_fx_interior_practice = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='rec_fx_interior_practice', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+31.4223 	EXP 	Created rec_fx_cross_practice = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='rec_fx_cross_practice', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='norm', win=Window(...), wrapWidth=1)
+31.4228 	EXP 	Created rec_fx_text_block_practice = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='rec_fx_text_block_practice', opacity=1, ori=0, pos=array([0.  , 0.87]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1)
+31.4277 	EXP 	Created rec_fx_instructions_text_practice = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='rec_fx_instructions_text_practice', opacity=1, ori=0, pos=array([ 0.   , -0.833]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1)
+31.5861 	EXP 	Created rec_trial_interior_practice = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='rec_trial_interior_practice', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+31.5890 	EXP 	Created rec_trial_main_image_practice = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='rec_trial_main_image_practice', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128, units='norm', win=Window(...))
+31.5895 	EXP 	Created rec_trial_text_block_practice = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='rec_trial_text_block_practice', opacity=1, ori=0, pos=array([0.  , 0.87]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1)
+31.5925 	EXP 	Created rec_trial_instructions_text_practice = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='rec_trial_instructions_text_practice', opacity=1, ori=0, pos=array([ 0.   , -0.833]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1)
+31.5930 	EXP 	Created rec_practice_feedback_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='rec_practice_feedback_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+31.5998 	EXP 	Created end_practice_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='end_practice_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='Ez volt a gyakorlás.', units='height', win=Window(...), wrapWidth=0.8)
+31.6066 	EXP 	Created end_practice_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='end_practice_continue', opacity=1, ori=0, pos=array([ 0. , -0.4]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+31.6071 	EXP 	Created coming_up_next_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='coming_up_next_text', opacity=1, ori=0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+31.6139 	EXP 	Created wait_for_last_scan_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='wait_for_last_scan_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='A vizsgálatvezető előkészíti a szkennert.', units='height', win=Window(...), wrapWidth=1)
+31.6228 	EXP 	Created start_MR_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='start_MR_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='A vizsgálatvezető indítja a szkennert.', units='height', win=Window(...), wrapWidth=1)
+31.6290 	EXP 	Created start_enc_run_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='start_enc_run_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='Kezdődik a feladat...', units='height', win=Window(...), wrapWidth=1)
+31.6295 	EXP 	Created encoding_title_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='encoding_title_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+31.7882 	EXP 	Created encoding_baseline_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='encoding_baseline_interior', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+31.7889 	EXP 	Created encoding_baseline_text_block = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='encoding_baseline_text_block', opacity=1, ori=0, pos=array([0.  , 0.87]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1)
+31.7968 	EXP 	Created encoding_baseline_instructions_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='encoding_baseline_instructions_text', opacity=1, ori=0, pos=array([ 0.   , -0.833]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1)
+31.7988 	EXP 	Created baseline_enc_fx_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='baseline_enc_fx_cross', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='norm', win=Window(...), wrapWidth=1)
+31.9571 	EXP 	Created enc_fx_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='enc_fx_interior', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+31.9597 	EXP 	Created enc_fx_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='enc_fx_cross', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='norm', win=Window(...), wrapWidth=1)
+31.9602 	EXP 	Created enc_fx_text_block = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='enc_fx_text_block', opacity=1, ori=0, pos=array([0.  , 0.87]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1)
+31.9657 	EXP 	Created enc_fx_instructions_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='enc_fx_instructions_text', opacity=1, ori=0, pos=array([ 0.   , -0.833]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1)
+32.1238 	EXP 	Created enc_trial_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='enc_trial_interior', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+32.1269 	EXP 	Created enc_trial_main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='enc_trial_main_image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128, units='norm', win=Window(...))
+32.1274 	EXP 	Created enc_trial_text_block = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='enc_trial_text_block', opacity=1, ori=0, pos=array([0.  , 0.87]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1)
+32.1305 	EXP 	Created enc_trial_instructions_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='enc_trial_instructions_text', opacity=1, ori=0, pos=array([ 0.   , -0.833]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1)
+32.2896 	EXP 	Created encoding_baseline_interior_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='encoding_baseline_interior_2', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+32.2902 	EXP 	Created encoding_baseline_text_block_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='encoding_baseline_text_block_2', opacity=1, ori=0, pos=array([0.  , 0.87]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1)
+32.2934 	EXP 	Created encoding_baseline_instructions_text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='encoding_baseline_instructions_text_2', opacity=1, ori=0, pos=array([ 0.   , -0.833]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1)
+32.2946 	EXP 	Created baseline_end_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='baseline_end_cross', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='norm', win=Window(...), wrapWidth=1)
+32.2951 	EXP 	Created math_problem = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='math_problem', opacity=1, ori=0, pos=array([0. , 0.1]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+32.2956 	EXP 	Created math_solution = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='math_solution', opacity=1, ori=0, pos=array([ 0. , -0.1]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+32.3049 	EXP 	Created wait_for_last_scan_text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='wait_for_last_scan_text_2', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+32.3151 	EXP 	Created start_MR_text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='start_MR_text_2', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='A vizsgálatvezető indítja a szkennert.', units='height', win=Window(...), wrapWidth=1)
+32.3203 	EXP 	Created start_rec_run_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='start_rec_run_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='Kezdődik a feladat...', units='height', win=Window(...), wrapWidth=1)
+32.3245 	EXP 	Created start_recognition_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='start_recognition_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='Képfelismerés', units='height', win=Window(...), wrapWidth=1)
+32.4831 	EXP 	Created recognition_baseline_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='recognition_baseline_interior', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+32.4837 	EXP 	Created recognition_baseline_text_block = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='recognition_baseline_text_block', opacity=1, ori=0, pos=array([0.  , 0.87]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1)
+32.4905 	EXP 	Created recognition_baseline_instructions_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='recognition_baseline_instructions_text', opacity=1, ori=0, pos=array([ 0.   , -0.833]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1)
+32.4923 	EXP 	Created baseline_rec_fx_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='baseline_rec_fx_cross', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='norm', win=Window(...), wrapWidth=1)
+32.6524 	EXP 	Created rec_fx_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='rec_fx_interior', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+32.6550 	EXP 	Created rec_fx_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='rec_fx_cross', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='norm', win=Window(...), wrapWidth=1)
+32.6556 	EXP 	Created rec_fx_text_block = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='rec_fx_text_block', opacity=1, ori=0, pos=array([0.  , 0.87]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1)
+32.6620 	EXP 	Created rec_fx_instructions_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='rec_fx_instructions_text', opacity=1, ori=0, pos=array([ 0.   , -0.833]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1)
+32.8186 	EXP 	Created rec_trial_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='rec_trial_interior', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+32.8211 	EXP 	Created rec_trial_main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='rec_trial_main_image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128, units='norm', win=Window(...))
+32.8217 	EXP 	Created rec_trial_text_block = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='rec_trial_text_block', opacity=1, ori=0, pos=array([0.  , 0.87]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1)
+32.8249 	EXP 	Created rec_trial_instructions_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='rec_trial_instructions_text', opacity=1, ori=0, pos=array([ 0.   , -0.833]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1)
+32.9826 	EXP 	Created recognition_baseline_interior_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='recognition_baseline_interior_2', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+32.9832 	EXP 	Created recognition_baseline_text_block_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='recognition_baseline_text_block_2', opacity=1, ori=0, pos=array([0.  , 0.87]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1)
+32.9867 	EXP 	Created recognition_baseline_instructions_text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='recognition_baseline_instructions_text_2', opacity=1, ori=0, pos=array([ 0.   , -0.833]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1)
+32.9883 	EXP 	Created baseline_rec_fx_cross_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='baseline_rec_fx_cross_2', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='norm', win=Window(...), wrapWidth=1)
+32.9888 	EXP 	Created end_run_text_comp = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='end_run_text_comp', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+32.9966 	EXP 	Created inter_task_break_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='inter_task_break_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='Vége a feladatnak.', units='height', win=Window(...), wrapWidth=1)
+0.0335 	EXP 	welcome_image: autoDraw = True
+0.0335 	EXP 	welcome_text: autoDraw = True
+3.0476 	EXP 	welcome_image: autoDraw = False
+3.0476 	EXP 	welcome_text: autoDraw = False
+3.0476 	EXP 	general_instructions_text: text = 'A Képválogatás alatt azt döntse el, beválogatja-e a képet a kiállításra.                        \n\n\t\tJobb mutatóujj - Igen\n\t\tBal mutatóujj - Nem                        \n-----------------------------------------------------------------------                        \nA Képfelismerés allatt azt döntse el, látta-e már pontosan ugyanezt a képet a Galériaberendezés alatt.                        \n\n\t\tJobb mutatóujj - Új                        \n\t\tBal mutatóujj - Régi'
+3.0476 	EXP 	general_instructions_text: autoDraw = True
+4.0354 	EXP 	general_instructions_4_continue: autoDraw = True
+14.7531 	DATA 	Keypress: d
+14.7657 	EXP 	general_instructions_4_continue: autoDraw = False
+14.7657 	EXP 	general_instructions_text: autoDraw = False
+14.7657 	EXP 	start_practice_text: autoDraw = True
+15.7654 	EXP 	start_practice_text: autoDraw = False
+15.7654 	EXP 	start_practice_text: autoDraw = False
+15.7654 	EXP 	practice_block_text: text = 'Képszemle'
+15.7654 	EXP 	practice_block_text: autoDraw = True
+18.7690 	EXP 	Imported stimuli_tables/encoding_full_practice_trials.csv as conditions, 2 conditions, 22 params
+18.7693 	EXP 	Created sequence: sequential, trialTypes=2, nReps=1, seed=None
+18.7697 	EXP 	New trial (rep=0, index=0): OrderedDict([('TrialIndex', 1), ('Jitter', 800), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'LURE'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/177a.jpg'), ('CurrentX', 0.078125), ('CurrentY', -0.41666666700000005), ('TripletMemberA', 'stimuli/fractals/170a.jpg'), ('TripletMemberB', 'stimuli/fractals/170b.jpg'), ('TripletMemberC', 'stimuli/fractals/170c.jpg'), ('Xcoordinate', 0.078125), ('Ycoordinate', -0.41666666700000005), ('Xcoordinate_lure1', -0.078125), ('Ycoordinate_lure1', -0.41666666700000005), ('Xcoordinate_lure2', 0.234375), ('Ycoordinate_lure2', -0.41666666700000005), ('Xcoordinate_foil', -0.390625), ('Ycoordinate_foil', 0.13888888900000002)])
+18.7871 	EXP 	practice_block_text: autoDraw = False
+18.7871 	EXP 	practice_block_text: autoDraw = False
+18.7871 	EXP 	enc_fx_cross_practice: pos = array([ 0.078125  , -0.41666667])
+18.7871 	EXP 	enc_fx_text_block_practice: text = 'Képválogatás'
+18.7871 	EXP 	enc_fx_interior_practice: autoDraw = True
+18.7871 	EXP 	enc_fx_cross_practice: autoDraw = True
+18.7871 	EXP 	enc_fx_text_block_practice: autoDraw = True
+18.7871 	EXP 	enc_fx_instructions_text_practice: autoDraw = True
+19.6276 	EXP 	enc_fx_interior_practice: autoDraw = False
+19.6276 	EXP 	enc_fx_cross_practice: autoDraw = False
+19.6276 	EXP 	enc_fx_text_block_practice: autoDraw = False
+19.6276 	EXP 	enc_fx_instructions_text_practice: autoDraw = False
+19.6276 	EXP 	enc_fx_interior_practice: autoDraw = False
+19.6276 	EXP 	enc_fx_cross_practice: autoDraw = False
+19.6276 	EXP 	enc_fx_text_block_practice: autoDraw = False
+19.6276 	EXP 	enc_fx_instructions_text_practice: autoDraw = False
+19.6276 	EXP 	enc_trial_main_image_practice: pos = array([ 0.078125  , -0.41666667])
+19.6276 	EXP 	enc_trial_main_image_practice: size = array([0.3125    , 0.55555556])
+19.6276 	EXP 	enc_trial_main_image_practice: image = 'stimuli/fractals/177a.jpg'
+19.6276 	EXP 	enc_trial_text_block_practice: text = 'Képválogatás'
+19.6276 	EXP 	enc_trial_interior_practice: autoDraw = True
+19.6276 	EXP 	enc_trial_main_image_practice: autoDraw = True
+19.6276 	EXP 	enc_trial_text_block_practice: autoDraw = True
+19.6276 	EXP 	enc_trial_instructions_text_practice: autoDraw = True
+21.3350 	DATA 	Keypress: a
+22.6453 	EXP 	enc_trial_interior_practice: autoDraw = False
+22.6453 	EXP 	enc_trial_main_image_practice: autoDraw = False
+22.6453 	EXP 	enc_trial_text_block_practice: autoDraw = False
+22.6453 	EXP 	enc_trial_instructions_text_practice: autoDraw = False
+22.6453 	EXP 	enc_practice_feedback_image: pos = array([ 0.078125  , -0.41666667])
+22.6453 	EXP 	enc_practice_feedback_image: size = array([0.3125    , 0.55555556])
+22.6453 	EXP 	enc_practice_feedback_image: image = 'stimuli/fractals/177a.jpg'
+22.6453 	EXP 	enc_practice_feedback_text: pos = array([ 0.078125  , -0.81666667])
+22.6453 	EXP 	enc_practice_feedback_text: text = 'Nem adott választ.'
+22.6453 	EXP 	enc_practice_feedback_block: text = 'Képválogatás'
+22.6453 	EXP 	enc_practice_feedback_interior: autoDraw = True
+22.6453 	EXP 	enc_practice_feedback_image: autoDraw = True
+22.6453 	EXP 	enc_practice_feedback_text: autoDraw = True
+22.6453 	EXP 	enc_practice_feedback_block: autoDraw = True
+23.5993 	EXP 	New trial (rep=0, index=1): OrderedDict([('TrialIndex', 2), ('Jitter', 4000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'TARGET'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/178a.jpg'), ('CurrentX', 0.390625), ('CurrentY', 0.41666666700000005), ('TripletMemberA', 'stimuli/fractals/171a.jpg'), ('TripletMemberB', 'stimuli/fractals/171b.jpg'), ('TripletMemberC', 'stimuli/fractals/171c.jpg'), ('Xcoordinate', 0.390625), ('Ycoordinate', 0.41666666700000005), ('Xcoordinate_lure1', 0.234375), ('Ycoordinate_lure1', 0.41666666700000005), ('Xcoordinate_lure2', 0.390625), ('Ycoordinate_lure2', 0.13888888900000002), ('Xcoordinate_foil', -0.234375), ('Ycoordinate_foil', 0.13888888900000002)])
+23.6150 	EXP 	enc_practice_feedback_interior: autoDraw = False
+23.6150 	EXP 	enc_practice_feedback_image: autoDraw = False
+23.6150 	EXP 	enc_practice_feedback_text: autoDraw = False
+23.6150 	EXP 	enc_practice_feedback_block: autoDraw = False
+23.6150 	EXP 	enc_fx_cross_practice: pos = array([0.390625  , 0.41666667])
+23.6150 	EXP 	enc_fx_text_block_practice: text = 'Képválogatás'
+23.6150 	EXP 	enc_fx_interior_practice: autoDraw = True
+23.6150 	EXP 	enc_fx_cross_practice: autoDraw = True
+23.6150 	EXP 	enc_fx_text_block_practice: autoDraw = True
+23.6150 	EXP 	enc_fx_instructions_text_practice: autoDraw = True
+27.6150 	EXP 	enc_fx_interior_practice: autoDraw = False
+27.6150 	EXP 	enc_fx_cross_practice: autoDraw = False
+27.6150 	EXP 	enc_fx_text_block_practice: autoDraw = False
+27.6150 	EXP 	enc_fx_instructions_text_practice: autoDraw = False
+27.6150 	EXP 	enc_fx_interior_practice: autoDraw = False
+27.6150 	EXP 	enc_fx_cross_practice: autoDraw = False
+27.6150 	EXP 	enc_fx_text_block_practice: autoDraw = False
+27.6150 	EXP 	enc_fx_instructions_text_practice: autoDraw = False
+27.6150 	EXP 	enc_trial_main_image_practice: pos = array([0.390625  , 0.41666667])
+27.6150 	EXP 	enc_trial_main_image_practice: size = array([0.3125    , 0.55555556])
+27.6150 	EXP 	enc_trial_main_image_practice: image = 'stimuli/fractals/178a.jpg'
+27.6150 	EXP 	enc_trial_text_block_practice: text = 'Képválogatás'
+27.6150 	EXP 	enc_trial_interior_practice: autoDraw = True
+27.6150 	EXP 	enc_trial_main_image_practice: autoDraw = True
+27.6150 	EXP 	enc_trial_text_block_practice: autoDraw = True
+27.6150 	EXP 	enc_trial_instructions_text_practice: autoDraw = True
+29.7844 	DATA 	Keypress: a
+30.6149 	EXP 	enc_trial_interior_practice: autoDraw = False
+30.6149 	EXP 	enc_trial_main_image_practice: autoDraw = False
+30.6149 	EXP 	enc_trial_text_block_practice: autoDraw = False
+30.6149 	EXP 	enc_trial_instructions_text_practice: autoDraw = False
+30.6149 	EXP 	enc_trial_interior_practice: autoDraw = False
+30.6149 	EXP 	enc_trial_main_image_practice: autoDraw = False
+30.6149 	EXP 	enc_trial_text_block_practice: autoDraw = False
+30.6149 	EXP 	enc_trial_instructions_text_practice: autoDraw = False
+30.6149 	EXP 	enc_practice_feedback_image: pos = array([0.390625  , 0.41666667])
+30.6149 	EXP 	enc_practice_feedback_image: size = array([0.3125    , 0.55555556])
+30.6149 	EXP 	enc_practice_feedback_image: image = 'stimuli/fractals/178a.jpg'
+30.6149 	EXP 	enc_practice_feedback_text: pos = array([0.390625  , 0.01666667])
+30.6149 	EXP 	enc_practice_feedback_text: text = 'Nem adott választ.'
+30.6149 	EXP 	enc_practice_feedback_block: text = 'Képválogatás'
+30.6149 	EXP 	enc_practice_feedback_interior: autoDraw = True
+30.6149 	EXP 	enc_practice_feedback_image: autoDraw = True
+30.6149 	EXP 	enc_practice_feedback_text: autoDraw = True
+30.6149 	EXP 	enc_practice_feedback_block: autoDraw = True
+31.6148 	EXP 	enc_practice_feedback_interior: autoDraw = False
+31.6148 	EXP 	enc_practice_feedback_image: autoDraw = False
+31.6148 	EXP 	enc_practice_feedback_text: autoDraw = False
+31.6148 	EXP 	enc_practice_feedback_block: autoDraw = False
+31.6148 	EXP 	enc_practice_feedback_interior: autoDraw = False
+31.6148 	EXP 	enc_practice_feedback_image: autoDraw = False
+31.6148 	EXP 	enc_practice_feedback_text: autoDraw = False
+31.6148 	EXP 	enc_practice_feedback_block: autoDraw = False
+31.6148 	EXP 	start_recognition_text: autoDraw = True
+34.6059 	EXP 	Imported stimuli_tables/recognition_full_practice_trials.csv as conditions, 2 conditions, 22 params
+34.6062 	EXP 	Created sequence: sequential, trialTypes=2, nReps=1, seed=None
+34.6066 	EXP 	New trial (rep=0, index=0): OrderedDict([('TrialIndex', 1), ('Jitter', 800), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'LURE'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/177c.jpg'), ('CurrentX', 0.078125), ('CurrentY', -0.41666666700000005), ('TripletMemberA', 'stimuli/fractals/170a.jpg'), ('TripletMemberB', 'stimuli/fractals/170b.jpg'), ('TripletMemberC', 'stimuli/fractals/170c.jpg'), ('Xcoordinate', 0.078125), ('Ycoordinate', -0.41666666700000005), ('Xcoordinate_lure1', -0.078125), ('Ycoordinate_lure1', -0.41666666700000005), ('Xcoordinate_lure2', 0.234375), ('Ycoordinate_lure2', -0.41666666700000005), ('Xcoordinate_foil', -0.390625), ('Ycoordinate_foil', 0.13888888900000002)])
+34.6158 	EXP 	start_recognition_text: autoDraw = False
+34.6158 	EXP 	start_recognition_text: autoDraw = False
+34.6158 	EXP 	rec_fx_cross_practice: pos = array([ 0.078125  , -0.41666667])
+34.6158 	EXP 	rec_fx_text_block_practice: text = 'Képfelismerés'
+34.6158 	EXP 	rec_fx_interior_practice: autoDraw = True
+34.6158 	EXP 	rec_fx_cross_practice: autoDraw = True
+34.6158 	EXP 	rec_fx_text_block_practice: autoDraw = True
+34.6158 	EXP 	rec_fx_instructions_text_practice: autoDraw = True
+35.4605 	EXP 	rec_fx_interior_practice: autoDraw = False
+35.4605 	EXP 	rec_fx_cross_practice: autoDraw = False
+35.4605 	EXP 	rec_fx_text_block_practice: autoDraw = False
+35.4605 	EXP 	rec_fx_instructions_text_practice: autoDraw = False
+35.4605 	EXP 	rec_fx_interior_practice: autoDraw = False
+35.4605 	EXP 	rec_fx_cross_practice: autoDraw = False
+35.4605 	EXP 	rec_fx_text_block_practice: autoDraw = False
+35.4605 	EXP 	rec_fx_instructions_text_practice: autoDraw = False
+35.4605 	EXP 	rec_trial_main_image_practice: pos = array([ 0.078125  , -0.41666667])
+35.4605 	EXP 	rec_trial_main_image_practice: size = array([0.3125    , 0.55555556])
+35.4605 	EXP 	rec_trial_main_image_practice: image = 'stimuli/fractals/177c.jpg'
+35.4605 	EXP 	rec_trial_text_block_practice: text = 'Képfelismerés'
+35.4605 	EXP 	rec_trial_interior_practice: autoDraw = True
+35.4605 	EXP 	rec_trial_main_image_practice: autoDraw = True
+35.4605 	EXP 	rec_trial_text_block_practice: autoDraw = True
+35.4605 	EXP 	rec_trial_instructions_text_practice: autoDraw = True
+36.9676 	DATA 	Keypress: d
+37.4676 	DATA 	Keypress: a
+39.4480 	EXP 	rec_trial_interior_practice: autoDraw = False
+39.4480 	EXP 	rec_trial_main_image_practice: autoDraw = False
+39.4480 	EXP 	rec_trial_text_block_practice: autoDraw = False
+39.4480 	EXP 	rec_trial_instructions_text_practice: autoDraw = False
+39.4480 	EXP 	rec_practice_feedback_text: text = 'A helyes válasz: Új\n'
+39.4480 	EXP 	rec_practice_feedback_text: autoDraw = True
+41.4319 	EXP 	New trial (rep=0, index=1): OrderedDict([('TrialIndex', 2), ('Jitter', 4000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'TARGET'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/178a.jpg'), ('CurrentX', 0.390625), ('CurrentY', 0.41666666700000005), ('TripletMemberA', 'stimuli/fractals/171a.jpg'), ('TripletMemberB', 'stimuli/fractals/171b.jpg'), ('TripletMemberC', 'stimuli/fractals/171c.jpg'), ('Xcoordinate', 0.390625), ('Ycoordinate', 0.41666666700000005), ('Xcoordinate_lure1', 0.234375), ('Ycoordinate_lure1', 0.41666666700000005), ('Xcoordinate_lure2', 0.390625), ('Ycoordinate_lure2', 0.13888888900000002), ('Xcoordinate_foil', -0.234375), ('Ycoordinate_foil', 0.13888888900000002)])
+41.4481 	EXP 	rec_practice_feedback_text: autoDraw = False
+41.4481 	EXP 	rec_fx_cross_practice: pos = array([0.390625  , 0.41666667])
+41.4481 	EXP 	rec_fx_text_block_practice: text = 'Képfelismerés'
+41.4481 	EXP 	rec_fx_interior_practice: autoDraw = True
+41.4481 	EXP 	rec_fx_cross_practice: autoDraw = True
+41.4481 	EXP 	rec_fx_text_block_practice: autoDraw = True
+41.4481 	EXP 	rec_fx_instructions_text_practice: autoDraw = True
+45.4479 	EXP 	rec_fx_interior_practice: autoDraw = False
+45.4479 	EXP 	rec_fx_cross_practice: autoDraw = False
+45.4479 	EXP 	rec_fx_text_block_practice: autoDraw = False
+45.4479 	EXP 	rec_fx_instructions_text_practice: autoDraw = False
+45.4479 	EXP 	rec_fx_interior_practice: autoDraw = False
+45.4479 	EXP 	rec_fx_cross_practice: autoDraw = False
+45.4479 	EXP 	rec_fx_text_block_practice: autoDraw = False
+45.4479 	EXP 	rec_fx_instructions_text_practice: autoDraw = False
+45.4479 	EXP 	rec_trial_main_image_practice: pos = array([0.390625  , 0.41666667])
+45.4479 	EXP 	rec_trial_main_image_practice: size = array([0.3125    , 0.55555556])
+45.4479 	EXP 	rec_trial_main_image_practice: image = 'stimuli/fractals/178a.jpg'
+45.4479 	EXP 	rec_trial_text_block_practice: text = 'Képfelismerés'
+45.4479 	EXP 	rec_trial_interior_practice: autoDraw = True
+45.4479 	EXP 	rec_trial_main_image_practice: autoDraw = True
+45.4479 	EXP 	rec_trial_text_block_practice: autoDraw = True
+45.4479 	EXP 	rec_trial_instructions_text_practice: autoDraw = True
+47.8671 	DATA 	Keypress: d
+49.4479 	EXP 	rec_trial_interior_practice: autoDraw = False
+49.4479 	EXP 	rec_trial_main_image_practice: autoDraw = False
+49.4479 	EXP 	rec_trial_text_block_practice: autoDraw = False
+49.4479 	EXP 	rec_trial_instructions_text_practice: autoDraw = False
+49.4479 	EXP 	rec_trial_interior_practice: autoDraw = False
+49.4479 	EXP 	rec_trial_main_image_practice: autoDraw = False
+49.4479 	EXP 	rec_trial_text_block_practice: autoDraw = False
+49.4479 	EXP 	rec_trial_instructions_text_practice: autoDraw = False
+49.4479 	EXP 	rec_practice_feedback_text: text = 'A helyes válasz: Régi\n'
+49.4479 	EXP 	rec_practice_feedback_text: autoDraw = True
+51.4478 	EXP 	rec_practice_feedback_text: autoDraw = False
+51.4478 	EXP 	rec_practice_feedback_text: autoDraw = False
+51.4478 	EXP 	coming_up_next_text: text = 'A feladat következik. A feladat során már nem kap visszajelzést. '
+51.4478 	EXP 	end_practice_text: autoDraw = True
+51.4478 	EXP 	coming_up_next_text: autoDraw = True
+52.4478 	EXP 	end_practice_continue: autoDraw = True
+57.9096 	EXP 	Imported stimuli_tables/encoding_trials_0.csv as conditions, 2 conditions, 23 params
+57.9101 	EXP 	Created sequence: sequential, trialTypes=2, nReps=1, seed=None
+57.9105 	EXP 	New trial (rep=0, index=0): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 1), ('Jitter', 500), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'ERP'), ('Order', 1), ('Delay', 6), ('CurrentImage', 'stimuli/fractals/21b.jpg'), ('CurrentX', 0.376897355721593), ('CurrentY', 0.0513077905058119), ('TripletMemberA', 'stimuli/fractals/21b.jpg'), ('TripletMemberB', 'stimuli/fractals/21a.jpg'), ('TripletMemberC', 'stimuli/fractals/21c.jpg'), ('Xcoordinate', 0.376897355721593), ('Ycoordinate', 0.0513077905058119), ('Xcoordinate_lure1', 0.182213392677702), ('Ycoordinate_lure1', -0.36440205954632393), ('Xcoordinate_lure2', 0.30363366638760303), ('Ycoordinate_lure2', -0.37654943267435104), ('Xcoordinate_foil', -0.21385133123199201), ('Ycoordinate_foil', 0.34437961361303193)])
+57.9131 	DATA 	Keypress: d
+57.9177 	EXP 	end_practice_text: autoDraw = False
+57.9177 	EXP 	end_practice_continue: autoDraw = False
+57.9177 	EXP 	coming_up_next_text: autoDraw = False
+57.9177 	EXP 	wait_for_last_scan_text: autoDraw = True
+69.8686 	DATA 	Keypress: space
+69.8812 	EXP 	wait_for_last_scan_text: autoDraw = False
+69.8812 	EXP 	start_MR_text: autoDraw = True
+83.4834 	EXP 	Added new global key event: get_trigger_time
+83.4861 	DATA 	Keypress: s
+83.4861 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+83.4978 	EXP 	start_MR_text: autoDraw = False
+83.4978 	EXP 	start_enc_run_text: autoDraw = True
+85.3191 	DATA 	Keypress: s
+85.3191 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+85.5010 	EXP 	start_enc_run_text: autoDraw = False
+85.5010 	EXP 	start_enc_run_text: autoDraw = False
+85.5010 	EXP 	encoding_title_text: text = 'Képválasztás'
+85.5010 	EXP 	encoding_title_text: autoDraw = True
+87.1692 	DATA 	Keypress: s
+87.1692 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+87.5042 	EXP 	encoding_title_text: autoDraw = False
+87.5042 	EXP 	encoding_title_text: autoDraw = False
+87.5042 	EXP 	encoding_baseline_text_block: text = 'Képválogatás'
+87.5042 	EXP 	baseline_enc_fx_cross: pos = array([0.37689736, 0.05130779])
+87.5042 	EXP 	encoding_baseline_interior: autoDraw = True
+87.5042 	EXP 	encoding_baseline_text_block: autoDraw = True
+87.5042 	EXP 	encoding_baseline_instructions_text: autoDraw = True
+87.5042 	EXP 	baseline_enc_fx_cross: autoDraw = True
+88.9994 	DATA 	Keypress: s
+88.9994 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+90.8494 	DATA 	Keypress: s
+90.8495 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+92.6826 	DATA 	Keypress: s
+92.6826 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+94.5327 	DATA 	Keypress: s
+94.5327 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+96.3666 	DATA 	Keypress: s
+96.3666 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+98.1997 	DATA 	Keypress: s
+98.1997 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+100.0497 	DATA 	Keypress: s
+100.0498 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+101.8830 	DATA 	Keypress: s
+101.8831 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+103.7330 	DATA 	Keypress: s
+103.7331 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+105.5660 	DATA 	Keypress: s
+105.5661 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+107.3992 	DATA 	Keypress: s
+107.3992 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+109.2492 	DATA 	Keypress: s
+109.2492 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+111.0824 	DATA 	Keypress: s
+111.0824 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+112.5410 	EXP 	Imported stimuli_tables/encoding_trials_0.csv as conditions, 76 conditions, 23 params
+112.5416 	EXP 	Created sequence: sequential, trialTypes=76, nReps=1, seed=None
+112.5419 	EXP 	New trial (rep=0, index=0): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 1), ('Jitter', 500), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'ERP'), ('Order', 1), ('Delay', 6), ('CurrentImage', 'stimuli/fractals/21b.jpg'), ('CurrentX', 0.376897355721593), ('CurrentY', 0.0513077905058119), ('TripletMemberA', 'stimuli/fractals/21b.jpg'), ('TripletMemberB', 'stimuli/fractals/21a.jpg'), ('TripletMemberC', 'stimuli/fractals/21c.jpg'), ('Xcoordinate', 0.376897355721593), ('Ycoordinate', 0.0513077905058119), ('Xcoordinate_lure1', 0.182213392677702), ('Ycoordinate_lure1', -0.36440205954632393), ('Xcoordinate_lure2', 0.30363366638760303), ('Ycoordinate_lure2', -0.37654943267435104), ('Xcoordinate_foil', -0.21385133123199201), ('Ycoordinate_foil', 0.34437961361303193)])
+112.5592 	EXP 	encoding_baseline_interior: autoDraw = False
+112.5592 	EXP 	encoding_baseline_text_block: autoDraw = False
+112.5592 	EXP 	encoding_baseline_instructions_text: autoDraw = False
+112.5592 	EXP 	baseline_enc_fx_cross: autoDraw = False
+112.5592 	EXP 	enc_fx_cross: pos = array([0.37689736, 0.05130779])
+112.5592 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+112.5592 	EXP 	enc_fx_interior: autoDraw = True
+112.5592 	EXP 	enc_fx_cross: autoDraw = True
+112.5592 	EXP 	enc_fx_text_block: autoDraw = True
+112.5592 	EXP 	enc_fx_instructions_text: autoDraw = True
+112.9335 	DATA 	Keypress: s
+112.9336 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+113.1123 	EXP 	enc_fx_interior: autoDraw = False
+113.1123 	EXP 	enc_fx_cross: autoDraw = False
+113.1123 	EXP 	enc_fx_text_block: autoDraw = False
+113.1123 	EXP 	enc_fx_instructions_text: autoDraw = False
+113.1123 	EXP 	enc_fx_interior: autoDraw = False
+113.1123 	EXP 	enc_fx_cross: autoDraw = False
+113.1123 	EXP 	enc_fx_text_block: autoDraw = False
+113.1123 	EXP 	enc_fx_instructions_text: autoDraw = False
+113.1123 	EXP 	enc_trial_main_image: pos = array([0.37689736, 0.05130779])
+113.1123 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+113.1123 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/21b.jpg'
+113.1123 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+113.1123 	EXP 	enc_trial_interior: autoDraw = True
+113.1123 	EXP 	enc_trial_main_image: autoDraw = True
+113.1123 	EXP 	enc_trial_text_block: autoDraw = True
+113.1123 	EXP 	enc_trial_instructions_text: autoDraw = True
+114.6660 	DATA 	Keypress: d
+114.7660 	DATA 	Keypress: s
+114.7660 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+116.0652 	EXP 	New trial (rep=0, index=1): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 2), ('Jitter', 3000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'OLP'), ('Order', 1), ('Delay', 4), ('CurrentImage', 'stimuli/fractals/152a.jpg'), ('CurrentX', 0.0846478024186574), ('CurrentY', 0.176247697779993), ('TripletMemberA', 'stimuli/fractals/152a.jpg'), ('TripletMemberB', 'stimuli/fractals/152b.jpg'), ('TripletMemberC', 'stimuli/fractals/152c.jpg'), ('Xcoordinate', 0.0846478024186574), ('Ycoordinate', 0.176247697779993), ('Xcoordinate_lure1', 0.27881536208095503), ('Ycoordinate_lure1', 0.0111399149554564), ('Xcoordinate_lure2', 0.282515861559336), ('Ycoordinate_lure2', -0.19795591034362198), ('Xcoordinate_foil', -0.382647246154026), ('Ycoordinate_foil', -0.161403316080168)])
+116.0801 	EXP 	enc_trial_interior: autoDraw = False
+116.0801 	EXP 	enc_trial_main_image: autoDraw = False
+116.0801 	EXP 	enc_trial_text_block: autoDraw = False
+116.0801 	EXP 	enc_trial_instructions_text: autoDraw = False
+116.0801 	EXP 	enc_fx_cross: pos = array([0.0846478, 0.1762477])
+116.0801 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+116.0801 	EXP 	enc_fx_interior: autoDraw = True
+116.0801 	EXP 	enc_fx_cross: autoDraw = True
+116.0801 	EXP 	enc_fx_text_block: autoDraw = True
+116.0801 	EXP 	enc_fx_instructions_text: autoDraw = True
+116.6005 	DATA 	Keypress: s
+116.6005 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+118.4505 	DATA 	Keypress: s
+118.4506 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+119.0924 	EXP 	enc_fx_interior: autoDraw = False
+119.0924 	EXP 	enc_fx_cross: autoDraw = False
+119.0924 	EXP 	enc_fx_text_block: autoDraw = False
+119.0924 	EXP 	enc_fx_instructions_text: autoDraw = False
+119.0924 	EXP 	enc_fx_interior: autoDraw = False
+119.0924 	EXP 	enc_fx_cross: autoDraw = False
+119.0924 	EXP 	enc_fx_text_block: autoDraw = False
+119.0924 	EXP 	enc_fx_instructions_text: autoDraw = False
+119.0924 	EXP 	enc_trial_main_image: pos = array([0.0846478, 0.1762477])
+119.0924 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+119.0924 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/152a.jpg'
+119.0924 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+119.0924 	EXP 	enc_trial_interior: autoDraw = True
+119.0924 	EXP 	enc_trial_main_image: autoDraw = True
+119.0924 	EXP 	enc_trial_text_block: autoDraw = True
+119.0924 	EXP 	enc_trial_instructions_text: autoDraw = True
+120.2834 	DATA 	Keypress: s
+120.2834 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+120.5162 	DATA 	Keypress: d
+122.0813 	EXP 	New trial (rep=0, index=2): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 3), ('Jitter', 3000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'ERP'), ('Order', 1), ('Delay', 5), ('CurrentImage', 'stimuli/fractals/37a.jpg'), ('CurrentX', -0.20591339026794103), ('CurrentY', 0.156377605633925), ('TripletMemberA', 'stimuli/fractals/37a.jpg'), ('TripletMemberB', 'stimuli/fractals/37b.jpg'), ('TripletMemberC', 'stimuli/fractals/37c.jpg'), ('Xcoordinate', -0.20591339026794103), ('Ycoordinate', 0.156377605633925), ('Xcoordinate_lure1', -0.36194841734001504), ('Ycoordinate_lure1', -0.338630657507241), ('Xcoordinate_lure2', -0.128003571669689), ('Ycoordinate_lure2', -0.35038629997911797), ('Xcoordinate_foil', 0.330339150084164), ('Ycoordinate_foil', 0.0561419981062496)])
+122.0967 	EXP 	enc_trial_interior: autoDraw = False
+122.0967 	EXP 	enc_trial_main_image: autoDraw = False
+122.0967 	EXP 	enc_trial_text_block: autoDraw = False
+122.0967 	EXP 	enc_trial_instructions_text: autoDraw = False
+122.0967 	EXP 	enc_fx_cross: pos = array([-0.20591339,  0.15637761])
+122.0967 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+122.0967 	EXP 	enc_fx_interior: autoDraw = True
+122.0967 	EXP 	enc_fx_cross: autoDraw = True
+122.0967 	EXP 	enc_fx_text_block: autoDraw = True
+122.0967 	EXP 	enc_fx_instructions_text: autoDraw = True
+122.1338 	DATA 	Keypress: s
+122.1338 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+123.9668 	DATA 	Keypress: s
+123.9668 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+125.1256 	EXP 	enc_fx_interior: autoDraw = False
+125.1256 	EXP 	enc_fx_cross: autoDraw = False
+125.1256 	EXP 	enc_fx_text_block: autoDraw = False
+125.1256 	EXP 	enc_fx_instructions_text: autoDraw = False
+125.1256 	EXP 	enc_fx_interior: autoDraw = False
+125.1256 	EXP 	enc_fx_cross: autoDraw = False
+125.1256 	EXP 	enc_fx_text_block: autoDraw = False
+125.1256 	EXP 	enc_fx_instructions_text: autoDraw = False
+125.1256 	EXP 	enc_trial_main_image: pos = array([-0.20591339,  0.15637761])
+125.1256 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+125.1256 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/37a.jpg'
+125.1256 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+125.1256 	EXP 	enc_trial_interior: autoDraw = True
+125.1256 	EXP 	enc_trial_main_image: autoDraw = True
+125.1256 	EXP 	enc_trial_text_block: autoDraw = True
+125.1256 	EXP 	enc_trial_instructions_text: autoDraw = True
+125.7995 	DATA 	Keypress: s
+125.7995 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+126.3326 	DATA 	Keypress: d
+127.6495 	DATA 	Keypress: s
+127.6496 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+128.0979 	EXP 	New trial (rep=0, index=3): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 4), ('Jitter', 2000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'OLP'), ('Order', 1), ('Delay', 6), ('CurrentImage', 'stimuli/fractals/68c.jpg'), ('CurrentX', 0.269051094819113), ('CurrentY', 0.000287426531222408), ('TripletMemberA', 'stimuli/fractals/68c.jpg'), ('TripletMemberB', 'stimuli/fractals/68b.jpg'), ('TripletMemberC', 'stimuli/fractals/68a.jpg'), ('Xcoordinate', 0.269051094819113), ('Ycoordinate', 0.000287426531222408), ('Xcoordinate_lure1', 0.307804810253768), ('Ycoordinate_lure1', -0.406703573446646), ('Xcoordinate_lure2', -0.0386388400685433), ('Ycoordinate_lure2', -0.0295717635171729), ('Xcoordinate_foil', -0.37977273723814203), ('Ycoordinate_foil', -0.29785786265235303)])
+128.1132 	EXP 	enc_trial_interior: autoDraw = False
+128.1132 	EXP 	enc_trial_main_image: autoDraw = False
+128.1132 	EXP 	enc_trial_text_block: autoDraw = False
+128.1132 	EXP 	enc_trial_instructions_text: autoDraw = False
+128.1132 	EXP 	enc_fx_cross: pos = array([0.26905109, 0.00028743])
+128.1132 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+128.1132 	EXP 	enc_fx_interior: autoDraw = True
+128.1132 	EXP 	enc_fx_cross: autoDraw = True
+128.1132 	EXP 	enc_fx_text_block: autoDraw = True
+128.1132 	EXP 	enc_fx_instructions_text: autoDraw = True
+129.4831 	DATA 	Keypress: s
+129.4831 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+130.1320 	EXP 	enc_fx_interior: autoDraw = False
+130.1320 	EXP 	enc_fx_cross: autoDraw = False
+130.1320 	EXP 	enc_fx_text_block: autoDraw = False
+130.1320 	EXP 	enc_fx_instructions_text: autoDraw = False
+130.1320 	EXP 	enc_fx_interior: autoDraw = False
+130.1320 	EXP 	enc_fx_cross: autoDraw = False
+130.1320 	EXP 	enc_fx_text_block: autoDraw = False
+130.1320 	EXP 	enc_fx_instructions_text: autoDraw = False
+130.1320 	EXP 	enc_trial_main_image: pos = array([0.26905109, 0.00028743])
+130.1320 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+130.1320 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/68c.jpg'
+130.1320 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+130.1320 	EXP 	enc_trial_interior: autoDraw = True
+130.1320 	EXP 	enc_trial_main_image: autoDraw = True
+130.1320 	EXP 	enc_trial_text_block: autoDraw = True
+130.1320 	EXP 	enc_trial_instructions_text: autoDraw = True
+130.9829 	DATA 	Keypress: a
+131.3329 	DATA 	Keypress: s
+131.3329 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+133.1145 	EXP 	New trial (rep=0, index=4): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 5), ('Jitter', 6000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'BL'), ('Order', 0), ('Delay', 0), ('CurrentImage', 'stimuli/fractals/150b.jpg'), ('CurrentX', -0.152049014540115), ('CurrentY', 0.402125424974986), ('TripletMemberA', 'stimuli/fractals/150b.jpg'), ('TripletMemberB', 'stimuli/fractals/150a.jpg'), ('TripletMemberC', 'stimuli/fractals/150c.jpg'), ('Xcoordinate', -0.152049014540115), ('Ycoordinate', 0.402125424974986), ('Xcoordinate_lure1', 0.150226824551833), ('Ycoordinate_lure1', 0.0446873918841893), ('Xcoordinate_lure2', 0.0689434507199906), ('Ycoordinate_lure2', 0.294584530699605), ('Xcoordinate_foil', -0.316850799689957), ('Ycoordinate_foil', -0.395129957365075)])
+133.1297 	EXP 	enc_trial_interior: autoDraw = False
+133.1297 	EXP 	enc_trial_main_image: autoDraw = False
+133.1297 	EXP 	enc_trial_text_block: autoDraw = False
+133.1297 	EXP 	enc_trial_instructions_text: autoDraw = False
+133.1297 	EXP 	enc_fx_cross: pos = array([-0.15204901,  0.40212542])
+133.1297 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+133.1297 	EXP 	enc_fx_interior: autoDraw = True
+133.1297 	EXP 	enc_fx_cross: autoDraw = True
+133.1297 	EXP 	enc_fx_text_block: autoDraw = True
+133.1297 	EXP 	enc_fx_instructions_text: autoDraw = True
+133.1662 	DATA 	Keypress: s
+133.1662 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+134.9993 	DATA 	Keypress: s
+134.9993 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+136.8493 	DATA 	Keypress: s
+136.8494 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+138.6835 	DATA 	Keypress: s
+138.6836 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+139.1588 	EXP 	enc_fx_interior: autoDraw = False
+139.1588 	EXP 	enc_fx_cross: autoDraw = False
+139.1588 	EXP 	enc_fx_text_block: autoDraw = False
+139.1588 	EXP 	enc_fx_instructions_text: autoDraw = False
+139.1588 	EXP 	enc_fx_interior: autoDraw = False
+139.1588 	EXP 	enc_fx_cross: autoDraw = False
+139.1588 	EXP 	enc_fx_text_block: autoDraw = False
+139.1588 	EXP 	enc_fx_instructions_text: autoDraw = False
+139.1588 	EXP 	enc_trial_main_image: pos = array([-0.15204901,  0.40212542])
+139.1588 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+139.1588 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/150b.jpg'
+139.1588 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+139.1588 	EXP 	enc_trial_interior: autoDraw = True
+139.1588 	EXP 	enc_trial_main_image: autoDraw = True
+139.1588 	EXP 	enc_trial_text_block: autoDraw = True
+139.1588 	EXP 	enc_trial_instructions_text: autoDraw = True
+140.2162 	DATA 	Keypress: a
+140.5332 	DATA 	Keypress: s
+140.5333 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+142.1310 	EXP 	New trial (rep=0, index=5): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 6), ('Jitter', 1000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'OLP'), ('Order', 1), ('Delay', 3), ('CurrentImage', 'stimuli/fractals/123a.jpg'), ('CurrentX', -0.171501696761146), ('CurrentY', -0.234477489583464), ('TripletMemberA', 'stimuli/fractals/123a.jpg'), ('TripletMemberB', 'stimuli/fractals/123c.jpg'), ('TripletMemberC', 'stimuli/fractals/123b.jpg'), ('Xcoordinate', -0.171501696761146), ('Ycoordinate', -0.234477489583464), ('Xcoordinate_lure1', -0.38370149765821004), ('Ycoordinate_lure1', -0.2789553365142), ('Xcoordinate_lure2', -0.0838737682204294), ('Ycoordinate_lure2', 0.302835284626838), ('Xcoordinate_foil', 0.356007650522016), ('Ycoordinate_foil', 0.364581944091473)])
+142.1463 	EXP 	enc_trial_interior: autoDraw = False
+142.1463 	EXP 	enc_trial_main_image: autoDraw = False
+142.1463 	EXP 	enc_trial_text_block: autoDraw = False
+142.1463 	EXP 	enc_trial_instructions_text: autoDraw = False
+142.1463 	EXP 	enc_fx_cross: pos = array([-0.1715017 , -0.23447749])
+142.1463 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+142.1463 	EXP 	enc_fx_interior: autoDraw = True
+142.1463 	EXP 	enc_fx_cross: autoDraw = True
+142.1463 	EXP 	enc_fx_text_block: autoDraw = True
+142.1463 	EXP 	enc_fx_instructions_text: autoDraw = True
+142.3666 	DATA 	Keypress: s
+142.3666 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+143.1754 	EXP 	enc_fx_interior: autoDraw = False
+143.1754 	EXP 	enc_fx_cross: autoDraw = False
+143.1754 	EXP 	enc_fx_text_block: autoDraw = False
+143.1754 	EXP 	enc_fx_instructions_text: autoDraw = False
+143.1754 	EXP 	enc_fx_interior: autoDraw = False
+143.1754 	EXP 	enc_fx_cross: autoDraw = False
+143.1754 	EXP 	enc_fx_text_block: autoDraw = False
+143.1754 	EXP 	enc_fx_instructions_text: autoDraw = False
+143.1754 	EXP 	enc_trial_main_image: pos = array([-0.1715017 , -0.23447749])
+143.1754 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+143.1754 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/123a.jpg'
+143.1754 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+143.1754 	EXP 	enc_trial_interior: autoDraw = True
+143.1754 	EXP 	enc_trial_main_image: autoDraw = True
+143.1754 	EXP 	enc_trial_text_block: autoDraw = True
+143.1754 	EXP 	enc_trial_instructions_text: autoDraw = True
+144.1993 	DATA 	Keypress: s
+144.1993 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+144.4323 	DATA 	Keypress: a
+146.0494 	DATA 	Keypress: s
+146.0494 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+146.1475 	EXP 	New trial (rep=0, index=6): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 7), ('Jitter', 2000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'OLP'), ('Order', 2), ('Delay', 0), ('CurrentImage', 'stimuli/fractals/152b.jpg'), ('CurrentX', 0.0846478024186574), ('CurrentY', 0.176247697779993), ('TripletMemberA', 'stimuli/fractals/152a.jpg'), ('TripletMemberB', 'stimuli/fractals/152b.jpg'), ('TripletMemberC', 'stimuli/fractals/152c.jpg'), ('Xcoordinate', 0.0846478024186574), ('Ycoordinate', 0.176247697779993), ('Xcoordinate_lure1', 0.27881536208095503), ('Ycoordinate_lure1', 0.0111399149554564), ('Xcoordinate_lure2', 0.282515861559336), ('Ycoordinate_lure2', -0.19795591034362198), ('Xcoordinate_foil', -0.382647246154026), ('Ycoordinate_foil', -0.161403316080168)])
+146.1629 	EXP 	enc_trial_interior: autoDraw = False
+146.1629 	EXP 	enc_trial_main_image: autoDraw = False
+146.1629 	EXP 	enc_trial_text_block: autoDraw = False
+146.1629 	EXP 	enc_trial_instructions_text: autoDraw = False
+146.1629 	EXP 	enc_fx_cross: pos = array([0.0846478, 0.1762477])
+146.1629 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+146.1629 	EXP 	enc_fx_interior: autoDraw = True
+146.1629 	EXP 	enc_fx_cross: autoDraw = True
+146.1629 	EXP 	enc_fx_text_block: autoDraw = True
+146.1629 	EXP 	enc_fx_instructions_text: autoDraw = True
+147.8828 	DATA 	Keypress: s
+147.8828 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+148.1919 	EXP 	enc_fx_interior: autoDraw = False
+148.1919 	EXP 	enc_fx_cross: autoDraw = False
+148.1919 	EXP 	enc_fx_text_block: autoDraw = False
+148.1919 	EXP 	enc_fx_instructions_text: autoDraw = False
+148.1919 	EXP 	enc_fx_interior: autoDraw = False
+148.1919 	EXP 	enc_fx_cross: autoDraw = False
+148.1919 	EXP 	enc_fx_text_block: autoDraw = False
+148.1919 	EXP 	enc_fx_instructions_text: autoDraw = False
+148.1919 	EXP 	enc_trial_main_image: pos = array([0.0846478, 0.1762477])
+148.1919 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+148.1919 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/152b.jpg'
+148.1919 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+148.1919 	EXP 	enc_trial_interior: autoDraw = True
+148.1919 	EXP 	enc_trial_main_image: autoDraw = True
+148.1919 	EXP 	enc_trial_text_block: autoDraw = True
+148.1919 	EXP 	enc_trial_instructions_text: autoDraw = True
+149.0155 	DATA 	Keypress: d
+149.7325 	DATA 	Keypress: s
+149.7325 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+151.1641 	EXP 	New trial (rep=0, index=7): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 8), ('Jitter', 4000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'ERP'), ('Order', 2), ('Delay', 0), ('CurrentImage', 'stimuli/fractals/21b.jpg'), ('CurrentX', 0.376897355721593), ('CurrentY', 0.0513077905058119), ('TripletMemberA', 'stimuli/fractals/21b.jpg'), ('TripletMemberB', 'stimuli/fractals/21a.jpg'), ('TripletMemberC', 'stimuli/fractals/21c.jpg'), ('Xcoordinate', 0.376897355721593), ('Ycoordinate', 0.0513077905058119), ('Xcoordinate_lure1', 0.182213392677702), ('Ycoordinate_lure1', -0.36440205954632393), ('Xcoordinate_lure2', 0.30363366638760303), ('Ycoordinate_lure2', -0.37654943267435104), ('Xcoordinate_foil', -0.21385133123199201), ('Ycoordinate_foil', 0.34437961361303193)])
+151.1795 	EXP 	enc_trial_interior: autoDraw = False
+151.1795 	EXP 	enc_trial_main_image: autoDraw = False
+151.1795 	EXP 	enc_trial_text_block: autoDraw = False
+151.1795 	EXP 	enc_trial_instructions_text: autoDraw = False
+151.1795 	EXP 	enc_fx_cross: pos = array([0.37689736, 0.05130779])
+151.1795 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+151.1795 	EXP 	enc_fx_interior: autoDraw = True
+151.1795 	EXP 	enc_fx_cross: autoDraw = True
+151.1795 	EXP 	enc_fx_text_block: autoDraw = True
+151.1795 	EXP 	enc_fx_instructions_text: autoDraw = True
+151.5660 	DATA 	Keypress: s
+151.5660 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+153.3991 	DATA 	Keypress: s
+153.3991 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+155.1794 	EXP 	enc_fx_interior: autoDraw = False
+155.1794 	EXP 	enc_fx_cross: autoDraw = False
+155.1794 	EXP 	enc_fx_text_block: autoDraw = False
+155.1794 	EXP 	enc_fx_instructions_text: autoDraw = False
+155.1794 	EXP 	enc_fx_interior: autoDraw = False
+155.1794 	EXP 	enc_fx_cross: autoDraw = False
+155.1794 	EXP 	enc_fx_text_block: autoDraw = False
+155.1794 	EXP 	enc_fx_instructions_text: autoDraw = False
+155.1794 	EXP 	enc_trial_main_image: pos = array([0.37689736, 0.05130779])
+155.1794 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+155.1794 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/21b.jpg'
+155.1794 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+155.1794 	EXP 	enc_trial_interior: autoDraw = True
+155.1794 	EXP 	enc_trial_main_image: autoDraw = True
+155.1794 	EXP 	enc_trial_text_block: autoDraw = True
+155.1794 	EXP 	enc_trial_instructions_text: autoDraw = True
+155.2488 	DATA 	Keypress: s
+155.2488 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+156.0158 	DATA 	Keypress: d
+157.0990 	DATA 	Keypress: s
+157.0990 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+158.1648 	EXP 	New trial (rep=0, index=8): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 9), ('Jitter', 2000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'ERP'), ('Order', 2), ('Delay', 0), ('CurrentImage', 'stimuli/fractals/37a.jpg'), ('CurrentX', -0.20591339026794103), ('CurrentY', 0.156377605633925), ('TripletMemberA', 'stimuli/fractals/37a.jpg'), ('TripletMemberB', 'stimuli/fractals/37b.jpg'), ('TripletMemberC', 'stimuli/fractals/37c.jpg'), ('Xcoordinate', -0.20591339026794103), ('Ycoordinate', 0.156377605633925), ('Xcoordinate_lure1', -0.36194841734001504), ('Ycoordinate_lure1', -0.338630657507241), ('Xcoordinate_lure2', -0.128003571669689), ('Ycoordinate_lure2', -0.35038629997911797), ('Xcoordinate_foil', 0.330339150084164), ('Ycoordinate_foil', 0.0561419981062496)])
+158.1793 	EXP 	enc_trial_interior: autoDraw = False
+158.1793 	EXP 	enc_trial_main_image: autoDraw = False
+158.1793 	EXP 	enc_trial_text_block: autoDraw = False
+158.1793 	EXP 	enc_trial_instructions_text: autoDraw = False
+158.1793 	EXP 	enc_trial_interior: autoDraw = False
+158.1793 	EXP 	enc_trial_main_image: autoDraw = False
+158.1793 	EXP 	enc_trial_text_block: autoDraw = False
+158.1793 	EXP 	enc_trial_instructions_text: autoDraw = False
+158.1793 	EXP 	enc_fx_cross: pos = array([-0.20591339,  0.15637761])
+158.1793 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+158.1793 	EXP 	enc_fx_interior: autoDraw = True
+158.1793 	EXP 	enc_fx_cross: autoDraw = True
+158.1793 	EXP 	enc_fx_text_block: autoDraw = True
+158.1793 	EXP 	enc_fx_instructions_text: autoDraw = True
+158.9323 	DATA 	Keypress: s
+158.9323 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+160.1793 	EXP 	enc_fx_interior: autoDraw = False
+160.1793 	EXP 	enc_fx_cross: autoDraw = False
+160.1793 	EXP 	enc_fx_text_block: autoDraw = False
+160.1793 	EXP 	enc_fx_instructions_text: autoDraw = False
+160.1793 	EXP 	enc_fx_interior: autoDraw = False
+160.1793 	EXP 	enc_fx_cross: autoDraw = False
+160.1793 	EXP 	enc_fx_text_block: autoDraw = False
+160.1793 	EXP 	enc_fx_instructions_text: autoDraw = False
+160.1793 	EXP 	enc_trial_main_image: pos = array([-0.20591339,  0.15637761])
+160.1793 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+160.1793 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/37a.jpg'
+160.1793 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+160.1793 	EXP 	enc_trial_interior: autoDraw = True
+160.1793 	EXP 	enc_trial_main_image: autoDraw = True
+160.1793 	EXP 	enc_trial_text_block: autoDraw = True
+160.1793 	EXP 	enc_trial_instructions_text: autoDraw = True
+160.7660 	DATA 	Keypress: s
+160.7660 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+161.1490 	DATA 	Keypress: d
+162.5991 	DATA 	Keypress: s
+162.5992 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+163.1650 	EXP 	New trial (rep=0, index=9): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 10), ('Jitter', 6000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'OLP'), ('Order', 2), ('Delay', 0), ('CurrentImage', 'stimuli/fractals/123c.jpg'), ('CurrentX', -0.171501696761146), ('CurrentY', -0.234477489583464), ('TripletMemberA', 'stimuli/fractals/123a.jpg'), ('TripletMemberB', 'stimuli/fractals/123c.jpg'), ('TripletMemberC', 'stimuli/fractals/123b.jpg'), ('Xcoordinate', -0.171501696761146), ('Ycoordinate', -0.234477489583464), ('Xcoordinate_lure1', -0.38370149765821004), ('Ycoordinate_lure1', -0.2789553365142), ('Xcoordinate_lure2', -0.0838737682204294), ('Ycoordinate_lure2', 0.302835284626838), ('Xcoordinate_foil', 0.356007650522016), ('Ycoordinate_foil', 0.364581944091473)])
+163.1793 	EXP 	enc_trial_interior: autoDraw = False
+163.1793 	EXP 	enc_trial_main_image: autoDraw = False
+163.1793 	EXP 	enc_trial_text_block: autoDraw = False
+163.1793 	EXP 	enc_trial_instructions_text: autoDraw = False
+163.1793 	EXP 	enc_trial_interior: autoDraw = False
+163.1793 	EXP 	enc_trial_main_image: autoDraw = False
+163.1793 	EXP 	enc_trial_text_block: autoDraw = False
+163.1793 	EXP 	enc_trial_instructions_text: autoDraw = False
+163.1793 	EXP 	enc_fx_cross: pos = array([-0.1715017 , -0.23447749])
+163.1793 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+163.1793 	EXP 	enc_fx_interior: autoDraw = True
+163.1793 	EXP 	enc_fx_cross: autoDraw = True
+163.1793 	EXP 	enc_fx_text_block: autoDraw = True
+163.1793 	EXP 	enc_fx_instructions_text: autoDraw = True
+164.4495 	DATA 	Keypress: s
+164.4496 	EXP 	Global key event: get_trigger_time. Calling <function get_trigger_time at 0x0000000020B46378>.
+169.1792 	EXP 	enc_fx_interior: autoDraw = False
+169.1792 	EXP 	enc_fx_cross: autoDraw = False
+169.1792 	EXP 	enc_fx_text_block: autoDraw = False
+169.1792 	EXP 	enc_fx_instructions_text: autoDraw = False
+169.1792 	EXP 	enc_fx_interior: autoDraw = False
+169.1792 	EXP 	enc_fx_cross: autoDraw = False
+169.1792 	EXP 	enc_fx_text_block: autoDraw = False
+169.1792 	EXP 	enc_fx_instructions_text: autoDraw = False
+169.1792 	EXP 	enc_trial_main_image: pos = array([-0.1715017 , -0.23447749])
+169.1792 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+169.1792 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/123c.jpg'
+169.1792 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+169.1792 	EXP 	enc_trial_interior: autoDraw = True
+169.1792 	EXP 	enc_trial_main_image: autoDraw = True
+169.1792 	EXP 	enc_trial_text_block: autoDraw = True
+169.1792 	EXP 	enc_trial_instructions_text: autoDraw = True
+170.4985 	DATA 	Keypress: a
+172.1644 	EXP 	New trial (rep=0, index=10): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 11), ('Jitter', 3000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'OLP'), ('Order', 2), ('Delay', 0), ('CurrentImage', 'stimuli/fractals/68b.jpg'), ('CurrentX', 0.269051094819113), ('CurrentY', 0.000287426531222408), ('TripletMemberA', 'stimuli/fractals/68c.jpg'), ('TripletMemberB', 'stimuli/fractals/68b.jpg'), ('TripletMemberC', 'stimuli/fractals/68a.jpg'), ('Xcoordinate', 0.269051094819113), ('Ycoordinate', 0.000287426531222408), ('Xcoordinate_lure1', 0.307804810253768), ('Ycoordinate_lure1', -0.406703573446646), ('Xcoordinate_lure2', -0.0386388400685433), ('Ycoordinate_lure2', -0.0295717635171729), ('Xcoordinate_foil', -0.37977273723814203), ('Ycoordinate_foil', -0.29785786265235303)])
+172.1791 	EXP 	enc_trial_interior: autoDraw = False
+172.1791 	EXP 	enc_trial_main_image: autoDraw = False
+172.1791 	EXP 	enc_trial_text_block: autoDraw = False
+172.1791 	EXP 	enc_trial_instructions_text: autoDraw = False
+172.1791 	EXP 	enc_trial_interior: autoDraw = False
+172.1791 	EXP 	enc_trial_main_image: autoDraw = False
+172.1791 	EXP 	enc_trial_text_block: autoDraw = False
+172.1791 	EXP 	enc_trial_instructions_text: autoDraw = False
+172.1791 	EXP 	enc_fx_cross: pos = array([0.26905109, 0.00028743])
+172.1791 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+172.1791 	EXP 	enc_fx_interior: autoDraw = True
+172.1791 	EXP 	enc_fx_cross: autoDraw = True
+172.1791 	EXP 	enc_fx_text_block: autoDraw = True
+172.1791 	EXP 	enc_fx_instructions_text: autoDraw = True
+175.1790 	EXP 	enc_fx_interior: autoDraw = False
+175.1790 	EXP 	enc_fx_cross: autoDraw = False
+175.1790 	EXP 	enc_fx_text_block: autoDraw = False
+175.1790 	EXP 	enc_fx_instructions_text: autoDraw = False
+175.1790 	EXP 	enc_fx_interior: autoDraw = False
+175.1790 	EXP 	enc_fx_cross: autoDraw = False
+175.1790 	EXP 	enc_fx_text_block: autoDraw = False
+175.1790 	EXP 	enc_fx_instructions_text: autoDraw = False
+175.1790 	EXP 	enc_trial_main_image: pos = array([0.26905109, 0.00028743])
+175.1790 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+175.1790 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/68b.jpg'
+175.1790 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+175.1790 	EXP 	enc_trial_interior: autoDraw = True
+175.1790 	EXP 	enc_trial_main_image: autoDraw = True
+175.1790 	EXP 	enc_trial_text_block: autoDraw = True
+175.1790 	EXP 	enc_trial_instructions_text: autoDraw = True
+176.6487 	DATA 	Keypress: a
+178.1647 	EXP 	New trial (rep=0, index=11): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 12), ('Jitter', 2000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'ERP'), ('Order', 1), ('Delay', 4), ('CurrentImage', 'stimuli/fractals/92a.jpg'), ('CurrentX', -0.38041157120891794), ('CurrentY', -0.0346713547780233), ('TripletMemberA', 'stimuli/fractals/92a.jpg'), ('TripletMemberB', 'stimuli/fractals/92b.jpg'), ('TripletMemberC', 'stimuli/fractals/92c.jpg'), ('Xcoordinate', -0.38041157120891794), ('Ycoordinate', -0.0346713547780233), ('Xcoordinate_lure1', -0.125804258327099), ('Ycoordinate_lure1', -0.19425055276826697), ('Xcoordinate_lure2', -0.0612254088749184), ('Ycoordinate_lure2', 0.0707338448656324), ('Xcoordinate_foil', 0.302672407064961), ('Ycoordinate_foil', 0.39678615142758794)])
+178.1790 	EXP 	enc_trial_interior: autoDraw = False
+178.1790 	EXP 	enc_trial_main_image: autoDraw = False
+178.1790 	EXP 	enc_trial_text_block: autoDraw = False
+178.1790 	EXP 	enc_trial_instructions_text: autoDraw = False
+178.1790 	EXP 	enc_trial_interior: autoDraw = False
+178.1790 	EXP 	enc_trial_main_image: autoDraw = False
+178.1790 	EXP 	enc_trial_text_block: autoDraw = False
+178.1790 	EXP 	enc_trial_instructions_text: autoDraw = False
+178.1790 	EXP 	enc_fx_cross: pos = array([-0.38041157, -0.03467135])
+178.1790 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+178.1790 	EXP 	enc_fx_interior: autoDraw = True
+178.1790 	EXP 	enc_fx_cross: autoDraw = True
+178.1790 	EXP 	enc_fx_text_block: autoDraw = True
+178.1790 	EXP 	enc_fx_instructions_text: autoDraw = True
+180.1932 	EXP 	enc_fx_interior: autoDraw = False
+180.1932 	EXP 	enc_fx_cross: autoDraw = False
+180.1932 	EXP 	enc_fx_text_block: autoDraw = False
+180.1932 	EXP 	enc_fx_instructions_text: autoDraw = False
+180.1932 	EXP 	enc_fx_interior: autoDraw = False
+180.1932 	EXP 	enc_fx_cross: autoDraw = False
+180.1932 	EXP 	enc_fx_text_block: autoDraw = False
+180.1932 	EXP 	enc_fx_instructions_text: autoDraw = False
+180.1932 	EXP 	enc_trial_main_image: pos = array([-0.38041157, -0.03467135])
+180.1932 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+180.1932 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/92a.jpg'
+180.1932 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+180.1932 	EXP 	enc_trial_interior: autoDraw = True
+180.1932 	EXP 	enc_trial_main_image: autoDraw = True
+180.1932 	EXP 	enc_trial_text_block: autoDraw = True
+180.1932 	EXP 	enc_trial_instructions_text: autoDraw = True
+181.6989 	DATA 	Keypress: d
+183.1803 	EXP 	New trial (rep=0, index=12): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 13), ('Jitter', 3000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'OLP'), ('Order', 1), ('Delay', 2), ('CurrentImage', 'stimuli/fractals/125a.jpg'), ('CurrentX', 0.0055760276359743295), ('CurrentY', 0.408717785705827), ('TripletMemberA', 'stimuli/fractals/125a.jpg'), ('TripletMemberB', 'stimuli/fractals/125b.jpg'), ('TripletMemberC', 'stimuli/fractals/125c.jpg'), ('Xcoordinate', 0.0055760276359743295), ('Ycoordinate', 0.408717785705827), ('Xcoordinate_lure1', -0.21528856086430803), ('Ycoordinate_lure1', 0.0671398857376904), ('Xcoordinate_lure2', 0.20940797832040303), ('Ycoordinate_lure2', 0.00958268889866081), ('Xcoordinate_foil', 0.23801143420985502), ('Ycoordinate_foil', -0.358024705676253)])
+183.1956 	EXP 	enc_trial_interior: autoDraw = False
+183.1956 	EXP 	enc_trial_main_image: autoDraw = False
+183.1956 	EXP 	enc_trial_text_block: autoDraw = False
+183.1956 	EXP 	enc_trial_instructions_text: autoDraw = False
+183.1956 	EXP 	enc_fx_cross: pos = array([0.00557603, 0.40871779])
+183.1956 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+183.1956 	EXP 	enc_fx_interior: autoDraw = True
+183.1956 	EXP 	enc_fx_cross: autoDraw = True
+183.1956 	EXP 	enc_fx_text_block: autoDraw = True
+183.1956 	EXP 	enc_fx_instructions_text: autoDraw = True
+186.2079 	EXP 	enc_fx_interior: autoDraw = False
+186.2079 	EXP 	enc_fx_cross: autoDraw = False
+186.2079 	EXP 	enc_fx_text_block: autoDraw = False
+186.2079 	EXP 	enc_fx_instructions_text: autoDraw = False
+186.2079 	EXP 	enc_fx_interior: autoDraw = False
+186.2079 	EXP 	enc_fx_cross: autoDraw = False
+186.2079 	EXP 	enc_fx_text_block: autoDraw = False
+186.2079 	EXP 	enc_fx_instructions_text: autoDraw = False
+186.2079 	EXP 	enc_trial_main_image: pos = array([0.00557603, 0.40871779])
+186.2079 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+186.2079 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/125a.jpg'
+186.2079 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+186.2079 	EXP 	enc_trial_interior: autoDraw = True
+186.2079 	EXP 	enc_trial_main_image: autoDraw = True
+186.2079 	EXP 	enc_trial_text_block: autoDraw = True
+186.2079 	EXP 	enc_trial_instructions_text: autoDraw = True
+189.1969 	EXP 	New trial (rep=0, index=13): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 14), ('Jitter', 1000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'ERP'), ('Order', 1), ('Delay', 3), ('CurrentImage', 'stimuli/fractals/45a.jpg'), ('CurrentX', 0.0140701477216217), ('CurrentY', -0.03292996494954201), ('TripletMemberA', 'stimuli/fractals/45a.jpg'), ('TripletMemberB', 'stimuli/fractals/45c.jpg'), ('TripletMemberC', 'stimuli/fractals/45b.jpg'), ('Xcoordinate', 0.0140701477216217), ('Ycoordinate', -0.03292996494954201), ('Xcoordinate_lure1', 0.20815430673080604), ('Ycoordinate_lure1', 0.258327804033483), ('Xcoordinate_lure2', -0.24956510104059196), ('Ycoordinate_lure2', 0.165151776159607), ('Xcoordinate_foil', -0.38619344631357394), ('Ycoordinate_foil', 0.40605783914732)])
+189.2121 	EXP 	enc_trial_interior: autoDraw = False
+189.2121 	EXP 	enc_trial_main_image: autoDraw = False
+189.2121 	EXP 	enc_trial_text_block: autoDraw = False
+189.2121 	EXP 	enc_trial_instructions_text: autoDraw = False
+189.2121 	EXP 	enc_fx_cross: pos = array([ 0.01407015, -0.03292996])
+189.2121 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+189.2121 	EXP 	enc_fx_interior: autoDraw = True
+189.2121 	EXP 	enc_fx_cross: autoDraw = True
+189.2121 	EXP 	enc_fx_text_block: autoDraw = True
+189.2121 	EXP 	enc_fx_instructions_text: autoDraw = True
+190.2121 	EXP 	enc_fx_interior: autoDraw = False
+190.2121 	EXP 	enc_fx_cross: autoDraw = False
+190.2121 	EXP 	enc_fx_text_block: autoDraw = False
+190.2121 	EXP 	enc_fx_instructions_text: autoDraw = False
+190.2121 	EXP 	enc_fx_interior: autoDraw = False
+190.2121 	EXP 	enc_fx_cross: autoDraw = False
+190.2121 	EXP 	enc_fx_text_block: autoDraw = False
+190.2121 	EXP 	enc_fx_instructions_text: autoDraw = False
+190.2121 	EXP 	enc_trial_main_image: pos = array([ 0.01407015, -0.03292996])
+190.2121 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+190.2121 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/45a.jpg'
+190.2121 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+190.2121 	EXP 	enc_trial_interior: autoDraw = True
+190.2121 	EXP 	enc_trial_main_image: autoDraw = True
+190.2121 	EXP 	enc_trial_text_block: autoDraw = True
+190.2121 	EXP 	enc_trial_instructions_text: autoDraw = True
+193.1973 	EXP 	New trial (rep=0, index=14): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 15), ('Jitter', 2000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'OLP'), ('Order', 1), ('Delay', 4), ('CurrentImage', 'stimuli/fractals/133a.jpg'), ('CurrentX', -0.238022544470912), ('CurrentY', 0.0788151826229348), ('TripletMemberA', 'stimuli/fractals/133a.jpg'), ('TripletMemberB', 'stimuli/fractals/133b.jpg'), ('TripletMemberC', 'stimuli/fractals/133c.jpg'), ('Xcoordinate', -0.238022544470912), ('Ycoordinate', 0.0788151826229348), ('Xcoordinate_lure1', -0.347788732149459), ('Ycoordinate_lure1', -0.339472141206795), ('Xcoordinate_lure2', -0.36646970032316706), ('Ycoordinate_lure2', -0.341527108858412), ('Xcoordinate_foil', 0.317561497525634), ('Ycoordinate_foil', 0.22832762009158203)])
+193.2120 	EXP 	enc_trial_interior: autoDraw = False
+193.2120 	EXP 	enc_trial_main_image: autoDraw = False
+193.2120 	EXP 	enc_trial_text_block: autoDraw = False
+193.2120 	EXP 	enc_trial_instructions_text: autoDraw = False
+193.2120 	EXP 	enc_trial_interior: autoDraw = False
+193.2120 	EXP 	enc_trial_main_image: autoDraw = False
+193.2120 	EXP 	enc_trial_text_block: autoDraw = False
+193.2120 	EXP 	enc_trial_instructions_text: autoDraw = False
+193.2120 	EXP 	enc_fx_cross: pos = array([-0.23802254,  0.07881518])
+193.2120 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+193.2120 	EXP 	enc_fx_interior: autoDraw = True
+193.2120 	EXP 	enc_fx_cross: autoDraw = True
+193.2120 	EXP 	enc_fx_text_block: autoDraw = True
+193.2120 	EXP 	enc_fx_instructions_text: autoDraw = True
+195.2120 	EXP 	enc_fx_interior: autoDraw = False
+195.2120 	EXP 	enc_fx_cross: autoDraw = False
+195.2120 	EXP 	enc_fx_text_block: autoDraw = False
+195.2120 	EXP 	enc_fx_instructions_text: autoDraw = False
+195.2120 	EXP 	enc_fx_interior: autoDraw = False
+195.2120 	EXP 	enc_fx_cross: autoDraw = False
+195.2120 	EXP 	enc_fx_text_block: autoDraw = False
+195.2120 	EXP 	enc_fx_instructions_text: autoDraw = False
+195.2120 	EXP 	enc_trial_main_image: pos = array([-0.23802254,  0.07881518])
+195.2120 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+195.2120 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/133a.jpg'
+195.2120 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+195.2120 	EXP 	enc_trial_interior: autoDraw = True
+195.2120 	EXP 	enc_trial_main_image: autoDraw = True
+195.2120 	EXP 	enc_trial_text_block: autoDraw = True
+195.2120 	EXP 	enc_trial_instructions_text: autoDraw = True
+198.1975 	EXP 	New trial (rep=0, index=15): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 16), ('Jitter', 2000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'OLP'), ('Order', 2), ('Delay', 0), ('CurrentImage', 'stimuli/fractals/125b.jpg'), ('CurrentX', 0.0055760276359743295), ('CurrentY', 0.408717785705827), ('TripletMemberA', 'stimuli/fractals/125a.jpg'), ('TripletMemberB', 'stimuli/fractals/125b.jpg'), ('TripletMemberC', 'stimuli/fractals/125c.jpg'), ('Xcoordinate', 0.0055760276359743295), ('Ycoordinate', 0.408717785705827), ('Xcoordinate_lure1', -0.21528856086430803), ('Ycoordinate_lure1', 0.0671398857376904), ('Xcoordinate_lure2', 0.20940797832040303), ('Ycoordinate_lure2', 0.00958268889866081), ('Xcoordinate_foil', 0.23801143420985502), ('Ycoordinate_foil', -0.358024705676253)])
+198.2120 	EXP 	enc_trial_interior: autoDraw = False
+198.2120 	EXP 	enc_trial_main_image: autoDraw = False
+198.2120 	EXP 	enc_trial_text_block: autoDraw = False
+198.2120 	EXP 	enc_trial_instructions_text: autoDraw = False
+198.2120 	EXP 	enc_trial_interior: autoDraw = False
+198.2120 	EXP 	enc_trial_main_image: autoDraw = False
+198.2120 	EXP 	enc_trial_text_block: autoDraw = False
+198.2120 	EXP 	enc_trial_instructions_text: autoDraw = False
+198.2120 	EXP 	enc_fx_cross: pos = array([0.00557603, 0.40871779])
+198.2120 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+198.2120 	EXP 	enc_fx_interior: autoDraw = True
+198.2120 	EXP 	enc_fx_cross: autoDraw = True
+198.2120 	EXP 	enc_fx_text_block: autoDraw = True
+198.2120 	EXP 	enc_fx_instructions_text: autoDraw = True
+200.2301 	EXP 	enc_fx_interior: autoDraw = False
+200.2301 	EXP 	enc_fx_cross: autoDraw = False
+200.2301 	EXP 	enc_fx_text_block: autoDraw = False
+200.2301 	EXP 	enc_fx_instructions_text: autoDraw = False
+200.2301 	EXP 	enc_fx_interior: autoDraw = False
+200.2301 	EXP 	enc_fx_cross: autoDraw = False
+200.2301 	EXP 	enc_fx_text_block: autoDraw = False
+200.2301 	EXP 	enc_fx_instructions_text: autoDraw = False
+200.2301 	EXP 	enc_trial_main_image: pos = array([0.00557603, 0.40871779])
+200.2301 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+200.2301 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/125b.jpg'
+200.2301 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+200.2301 	EXP 	enc_trial_interior: autoDraw = True
+200.2301 	EXP 	enc_trial_main_image: autoDraw = True
+200.2301 	EXP 	enc_trial_text_block: autoDraw = True
+200.2301 	EXP 	enc_trial_instructions_text: autoDraw = True
+203.2133 	EXP 	New trial (rep=0, index=16): OrderedDict([('TASK', 'ENC'), ('TrialIndex', 17), ('Jitter', 3000), ('ScannerRun', 1), ('BlockNr', 1), ('TrialType', 'OBJ'), ('StimType', 'ERP'), ('Order', 2), ('Delay', 0), ('CurrentImage', 'stimuli/fractals/92a.jpg'), ('CurrentX', -0.38041157120891794), ('CurrentY', -0.0346713547780233), ('TripletMemberA', 'stimuli/fractals/92a.jpg'), ('TripletMemberB', 'stimuli/fractals/92b.jpg'), ('TripletMemberC', 'stimuli/fractals/92c.jpg'), ('Xcoordinate', -0.38041157120891794), ('Ycoordinate', -0.0346713547780233), ('Xcoordinate_lure1', -0.125804258327099), ('Ycoordinate_lure1', -0.19425055276826697), ('Xcoordinate_lure2', -0.0612254088749184), ('Ycoordinate_lure2', 0.0707338448656324), ('Xcoordinate_foil', 0.302672407064961), ('Ycoordinate_foil', 0.39678615142758794)])
+203.2286 	EXP 	enc_trial_interior: autoDraw = False
+203.2286 	EXP 	enc_trial_main_image: autoDraw = False
+203.2286 	EXP 	enc_trial_text_block: autoDraw = False
+203.2286 	EXP 	enc_trial_instructions_text: autoDraw = False
+203.2286 	EXP 	enc_fx_cross: pos = array([-0.38041157, -0.03467135])
+203.2286 	EXP 	enc_fx_text_block: text = 'Képválasztás'
+203.2286 	EXP 	enc_fx_interior: autoDraw = True
+203.2286 	EXP 	enc_fx_cross: autoDraw = True
+203.2286 	EXP 	enc_fx_text_block: autoDraw = True
+203.2286 	EXP 	enc_fx_instructions_text: autoDraw = True
+206.1824 	DATA 	Keypress: escape
+206.2286 	EXP 	enc_fx_interior: autoDraw = False
+206.2286 	EXP 	enc_fx_cross: autoDraw = False
+206.2286 	EXP 	enc_fx_text_block: autoDraw = False
+206.2286 	EXP 	enc_fx_instructions_text: autoDraw = False
+206.2286 	EXP 	enc_fx_interior: autoDraw = False
+206.2286 	EXP 	enc_fx_cross: autoDraw = False
+206.2286 	EXP 	enc_fx_text_block: autoDraw = False
+206.2286 	EXP 	enc_fx_instructions_text: autoDraw = False
+206.2286 	EXP 	enc_trial_main_image: pos = array([-0.38041157, -0.03467135])
+206.2286 	EXP 	enc_trial_main_image: size = array([0.3125    , 0.55555556])
+206.2286 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/92a.jpg'
+206.2286 	EXP 	enc_trial_text_block: text = 'Képválasztás'
+206.2286 	EXP 	enc_trial_interior: autoDraw = True
+206.2286 	EXP 	enc_trial_main_image: autoDraw = True
+206.2286 	EXP 	enc_trial_text_block: autoDraw = True
+206.2286 	EXP 	enc_trial_instructions_text: autoDraw = True
+208.0569 	EXP 	window1: mouseVisible = True
