@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2021.1.4">
+<PsychoPy2experiment encoding="utf-8" version="2020.2.4post1">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -455,6 +455,23 @@
       </CodeComponent>
     </Routine>
     <Routine name="prepare_task">
+      <CodeComponent name="experimenter_message_end">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="cprint(&quot;On Screen: \nMessage on screen:\nMost a feladatok k\u00f6vetkeznek.Ha minden rendben, nyomja le a gombot a jobb h\u00fcvelykujj\u00e1val.&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;Waiting for participant response...&quot;, &quot;yellow&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="cprint('On Screen: \nMessage on screen:\nMost a feladatok következnek.Ha minden rendben, nyomja le a gombot a jobb hüvelykujjával.',  'blue', 'on_white')&amp;#10;cprint('Waiting for participant response...', 'yellow')&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="cprint(&quot;Button pressed: d&quot;, &quot;green&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="cprint('Button pressed: d', 'green')" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="experimenter_message_end" valType="code"/>
+      </CodeComponent>
       <TextComponent name="prepare_task_text">
         <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -476,7 +493,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Most a feladatok következnek.&amp;#10;&amp;#10;Ha minden rendben, nyomja le a gombot a jobb hüvelykujjával. " valType="str"/>
+        <Param name="text" updates="constant" val="Most a feladatok következnek." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="0.52" valType="code"/>
       </TextComponent>
@@ -498,23 +515,6 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
-      <CodeComponent name="experimenter_message_end">
-        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="cprint(&quot;On Screen: \nMessage on screen:\nMost a feladatok k\u00f6vetkeznek.Ha minden rendben, nyomja le a gombot a jobb h\u00fcvelykujj\u00e1val.&quot;, &quot;blue&quot;, &quot;on_white&quot;);&amp;#10;cprint(&quot;Waiting for participant response...&quot;, &quot;yellow&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="cprint('On Screen: \nMessage on screen:\nMost a feladatok következnek.Ha minden rendben, nyomja le a gombot a jobb hüvelykujjával.',  'blue', 'on_white')&amp;#10;cprint('Waiting for participant response...', 'yellow')&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="cprint(&quot;Button pressed: d&quot;, &quot;green&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="cprint('Button pressed: d', 'green')" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="experimenter_message_end" valType="code"/>
-      </CodeComponent>
       <TextComponent name="prepare_task_button_text">
         <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>

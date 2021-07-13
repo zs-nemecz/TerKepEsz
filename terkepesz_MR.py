@@ -1,8 +1,8 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2021.1.4),
-    on July 02, 2021, at 14:30
+This experiment was created using PsychoPy3 Experiment Builder (v2020.2.9),
+    on Mon Jul 12 13:39:26 2021
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -19,14 +19,14 @@ psychopy.useVersion('latest')
 
 from psychopy import locale_setup
 from psychopy import prefs
-from psychopy import sound, gui, visual, core, data, event, logging, clock, colors
+from psychopy import sound, gui, visual, core, data, event, logging, clock
 from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
                                 STOPPED, FINISHED, PRESSED, RELEASED, FOREVER)
 
 import numpy as np  # whole numpy lib is available, prepend 'np.'
 from numpy import (sin, cos, tan, log, log10, pi, average,
                    sqrt, std, deg2rad, rad2deg, linspace, asarray)
-from numpy.random import random, randint, normal, shuffle, choice as randchoice
+from numpy.random import random, randint, normal, shuffle
 import os  # handy system and path functions
 import sys  # to get file system encoding
 
@@ -39,7 +39,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-psychopyVersion = '2021.1.4'
+psychopyVersion = '2020.2.9'
 expName = 'miniTRK'  # from the Builder filename that created this script
 expInfo = {'online ID': '', 'MR ID': '', 'Session': 'OBJ/LOC', 'Stimuli Table': '0'}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
@@ -55,7 +55,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s_%s_%s' % (expInfo['online ID'],'A
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\Latlab\\Desktop\\TerKepEsz\\miniTRK\\terkepesz_MR.py',
+    originPath='/home/zsuzsanna/Documents/TRK/experiment/MR_version/TerKepEsz/terkepesz_MR.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -159,7 +159,7 @@ general_instructions_4_continue = visual.TextStim(win=win, name='general_instruc
     languageStyle='LTR',
     depth=-1.0);
 general_instructions_text = visual.TextStim(win=win, name='general_instructions_text',
-    text='',
+    text='default text',
     font='Arial',
     pos=(0, -0.01), height=0.03, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -188,7 +188,7 @@ else:
 step = 1
 
 practice_block_text = visual.TextStim(win=win, name='practice_block_text',
-    text='',
+    text='default text',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -214,7 +214,7 @@ enc_fx_cross_practice = visual.TextStim(win=win, name='enc_fx_cross_practice',
     depth=-2.0);
 enc_fx_key_practice = keyboard.Keyboard()
 enc_fx_text_block_practice = visual.TextStim(win=win, name='enc_fx_text_block_practice',
-    text='',
+    text='default text',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -248,7 +248,7 @@ enc_trial_main_image_practice = visual.ImageStim(
     texRes=128, interpolate=True, depth=-1.0)
 enc_trial_key_practice = keyboard.Keyboard()
 enc_trial_text_block_practice = visual.TextStim(win=win, name='enc_trial_text_block_practice',
-    text='',
+    text='default text',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -281,14 +281,14 @@ enc_practice_feedback_image = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
 enc_practice_feedback_text = visual.TextStim(win=win, name='enc_practice_feedback_text',
-    text='',
+    text='default text',
     font='Arial',
     units='norm', pos=[0,0], height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 enc_practice_feedback_block = visual.TextStim(win=win, name='enc_practice_feedback_block',
-    text='',
+    text='default text',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -298,7 +298,7 @@ enc_practice_feedback_block = visual.TextStim(win=win, name='enc_practice_feedba
 # Initialize components for Routine "recognition_title"
 recognition_titleClock = core.Clock()
 start_recognition_text = visual.TextStim(win=win, name='start_recognition_text',
-    text='Képfelismerés',
+    text='default text',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -324,7 +324,7 @@ rec_fx_cross_practice = visual.TextStim(win=win, name='rec_fx_cross_practice',
     depth=-2.0);
 rec_fx_key_practice = keyboard.Keyboard()
 rec_fx_text_block_practice = visual.TextStim(win=win, name='rec_fx_text_block_practice',
-    text='',
+    text='default text',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -358,7 +358,7 @@ rec_trial_main_image_practice = visual.ImageStim(
     texRes=128, interpolate=True, depth=-1.0)
 rec_trial_key_practice = keyboard.Keyboard()
 rec_trial_text_block_practice = visual.TextStim(win=win, name='rec_trial_text_block_practice',
-    text='',
+    text='default text',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -375,7 +375,7 @@ rec_trial_instructions_text_practice = visual.TextStim(win=win, name='rec_trial_
 # Initialize components for Routine "rec_practice_feedback"
 rec_practice_feedbackClock = core.Clock()
 rec_practice_feedback_text = visual.TextStim(win=win, name='rec_practice_feedback_text',
-    text='',
+    text='default text',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -400,7 +400,7 @@ end_practice_continue = visual.TextStim(win=win, name='end_practice_continue',
     languageStyle='LTR',
     depth=-4.0);
 coming_up_next_text = visual.TextStim(win=win, name='coming_up_next_text',
-    text='',
+    text='default text',
     font='Arial',
     pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -448,7 +448,7 @@ start_enc_run_text = visual.TextStim(win=win, name='start_enc_run_text',
 # Initialize components for Routine "encoding_title"
 encoding_titleClock = core.Clock()
 encoding_title_text = visual.TextStim(win=win, name='encoding_title_text',
-    text='',
+    text='default text',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -481,7 +481,7 @@ encoding_baseline_interior = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
 encoding_baseline_text_block = visual.TextStim(win=win, name='encoding_baseline_text_block',
-    text='',
+    text='default text',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -521,7 +521,7 @@ enc_fx_cross = visual.TextStim(win=win, name='enc_fx_cross',
     depth=-2.0);
 enc_fx_key = keyboard.Keyboard()
 enc_fx_text_block = visual.TextStim(win=win, name='enc_fx_text_block',
-    text='',
+    text='default text',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -555,7 +555,7 @@ enc_trial_main_image = visual.ImageStim(
     texRes=128, interpolate=True, depth=-1.0)
 enc_trial_key = keyboard.Keyboard()
 enc_trial_text_block = visual.TextStim(win=win, name='enc_trial_text_block',
-    text='',
+    text='default text',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -580,7 +580,7 @@ encoding_baseline_interior_2 = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
 encoding_baseline_text_block_2 = visual.TextStim(win=win, name='encoding_baseline_text_block_2',
-    text='',
+    text='default text',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -636,14 +636,14 @@ math_correct = [correct1,correct2,correct3,correct4,correct5,correct6]
 
 i = 0
 math_problem = visual.TextStim(win=win, name='math_problem',
-    text='',
+    text='default text',
     font='Arial',
     pos=(0, 0.1), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 math_solution = visual.TextStim(win=win, name='math_solution',
-    text='',
+    text='default text',
     font='Arial',
     pos=(0, -0.1), height=0.03, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -686,7 +686,7 @@ start_rec_run_text = visual.TextStim(win=win, name='start_rec_run_text',
 # Initialize components for Routine "recognition_title"
 recognition_titleClock = core.Clock()
 start_recognition_text = visual.TextStim(win=win, name='start_recognition_text',
-    text='Képfelismerés',
+    text='default text',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -704,7 +704,7 @@ recognition_baseline_interior = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
 recognition_baseline_text_block = visual.TextStim(win=win, name='recognition_baseline_text_block',
-    text='',
+    text='default text',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -744,7 +744,7 @@ rec_fx_cross = visual.TextStim(win=win, name='rec_fx_cross',
     depth=-2.0);
 rec_fx_key = keyboard.Keyboard()
 rec_fx_text_block = visual.TextStim(win=win, name='rec_fx_text_block',
-    text='',
+    text='default text',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -778,7 +778,7 @@ rec_trial_main_image = visual.ImageStim(
     texRes=128, interpolate=True, depth=-1.0)
 rec_trial_key = keyboard.Keyboard()
 rec_trial_text_block = visual.TextStim(win=win, name='rec_trial_text_block',
-    text='',
+    text='default text',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -803,7 +803,7 @@ recognition_baseline_interior_2 = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
 recognition_baseline_text_block_2 = visual.TextStim(win=win, name='recognition_baseline_text_block_2',
-    text='',
+    text='default text',
     font='Arial',
     units='norm', pos=(0, 0.87), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -827,7 +827,7 @@ baseline_rec_fx_cross_2 = visual.TextStim(win=win, name='baseline_rec_fx_cross_2
 # Initialize components for Routine "end_run"
 end_runClock = core.Clock()
 end_run_text_comp = visual.TextStim(win=win, name='end_run_text_comp',
-    text='',
+    text='default text',
     font='Arial',
     pos=(0, 0), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -1732,6 +1732,7 @@ elif TrialType=='LOC':
     block_name='Helyfelismerés'
 else:
     block_name='Block Unknown'
+start_recognition_text.setText(block_name)
 # keep track of which components have finished
 recognition_titleComponents = [start_recognition_text]
 for thisComponent in recognition_titleComponents:
@@ -3992,6 +3993,7 @@ for thisRun in run:
         block_name='Helyfelismerés'
     else:
         block_name='Block Unknown'
+    start_recognition_text.setText(block_name)
     # keep track of which components have finished
     recognition_titleComponents = [start_recognition_text]
     for thisComponent in recognition_titleComponents:
