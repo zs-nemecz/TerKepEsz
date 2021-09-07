@@ -192,7 +192,7 @@
         <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <KeyboardComponent name="enc_trial_key">
-        <Param name="allowedKeys" updates="constant" val="'b', 'c'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b', 'c', 'a', 'd'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -289,7 +289,7 @@
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="response=enc_trial_key.keys&amp;#10;if response == 'b':&amp;#10;    info_text = 'Nem marad.'&amp;#10;elif response == 'c':&amp;#10;    info_text = 'Marad.'&amp;#10;else:&amp;#10;    response='-'&amp;#10;    info_text = 'Nem adott választ.'&amp;#10;    enc_missing = enc_missing + 1&amp;#10;&amp;#10;print('Button pressed: {}. {}'.format(response, info_text))" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="response=enc_trial_key.keys&amp;#10;if response == 'b':&amp;#10;    info_text = '\'Nem marad.\''&amp;#10;elif response == 'c':&amp;#10;    info_text = '\'Marad.\''&amp;#10;elif response=='a' or response=='d':&amp;#10;    info_text = 'Invalid!'&amp;#10;else:&amp;#10;    response='-'&amp;#10;    info_text = '\'Nem adott választ.\''&amp;#10;    enc_missing = enc_missing + 1&amp;#10;&amp;#10;print('Button pressed: {}. Response: {}'.format(response, info_text))" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="exp_info_encoding" valType="code"/>
       </CodeComponent>
@@ -364,7 +364,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="enc_fx_key">
-        <Param name="allowedKeys" updates="constant" val="'b', 'c'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b', 'c', 'a', 'd'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -592,7 +592,7 @@
         <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <KeyboardComponent name="rec_trial_key">
-        <Param name="allowedKeys" updates="constant" val="'b','c'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b', 'c', 'a', 'd'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -689,7 +689,7 @@
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="response = rec_trial_key.keys&amp;#10;if response == 'b':&amp;#10;    response_text = 'B - OLD'&amp;#10;    if StimType == 'TARGET':&amp;#10;        hits = hits + 1&amp;#10;elif response == 'c':&amp;#10;    response_text = 'C - NEW'&amp;#10;else:&amp;#10;    response_text = 'Missing'&amp;#10;    rec_missing = rec_missing + 1&amp;#10;    &amp;#10;info_text = 'Stimulus Type: {}. Response: {}'.format(StimType, response_text)&amp;#10;print(info_text)&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="response = rec_trial_key.keys&amp;#10;if response=='b':&amp;#10;    response_text = 'B - OLD'&amp;#10;    if StimType == 'TARGET':&amp;#10;        hits = hits + 1&amp;#10;elif response=='c':&amp;#10;    response_text = 'C - NEW'&amp;#10;elif response == 'a' or response=='d':&amp;#10;    response_text = 'INVALID!'&amp;#10;else:&amp;#10;    response_text = 'Missing'&amp;#10;    rec_missing = rec_missing + 1&amp;#10;    &amp;#10;info_text = 'Stimulus Type: {}. Response: {}'.format(StimType, response_text)&amp;#10;print(info_text)&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="exp_info_rec_trial" valType="code"/>
       </CodeComponent>
@@ -856,8 +856,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="response = enc_trial_key_practice.keys;&amp;#10;feedback_text = &quot;&quot;;&amp;#10;if ((response === &quot;b&quot;)) {&amp;#10;    feedback_text = &quot;Az \u00d6n v\u00e1lasza:\nA k\u00e9p nem marad.&quot;;&amp;#10;} else {&amp;#10;    if ((response === &quot;c&quot;)) {&amp;#10;        feedback_text = &quot;Az \u00d6n v\u00e1lasza:\nA k\u00e9p marad.&quot;;&amp;#10;    } else {&amp;#10;        feedback_text = &quot;Nem adott v\u00e1laszt.&quot;;&amp;#10;    }&amp;#10;}&amp;#10;console.log(feedback_text);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="response = enc_trial_key_practice.keys&amp;#10;feedback_text = ''&amp;#10;if response == 'b':&amp;#10;    feedback_text = 'Az Ön válasza:\nA kép nem marad.'&amp;#10;elif response == 'c':&amp;#10;    feedback_text = 'Az Ön válasza:\nA kép marad.'&amp;#10;else:&amp;#10;    feedback_text = 'Nem adott választ.'&amp;#10;print(feedback_text)" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="response = enc_trial_key_practice.keys;&amp;#10;feedback_text = &quot;&quot;;&amp;#10;if ((response === &quot;b&quot;)) {&amp;#10;    feedback_text = &quot;Az \u00d6n v\u00e1lasza:\nA k\u00e9p nem marad.&quot;;&amp;#10;} else {&amp;#10;    if ((response === &quot;c&quot;)) {&amp;#10;        feedback_text = &quot;Az \u00d6n v\u00e1lasza:\nA k\u00e9p marad.&quot;;&amp;#10;    } else {&amp;#10;        if (((response === &quot;a&quot;) || (response === &quot;d&quot;))) {&amp;#10;            feedback_text = &quot;\u00c9rv\u00e9nytelen v\u00e1lasz.\nHaszn\u00e1lja a mutat\u00f3ujj\u00e1t!&quot;;&amp;#10;        } else {&amp;#10;            feedback_text = &quot;Nem adott v\u00e1laszt.&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;console.log(feedback_text);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="response = enc_trial_key_practice.keys&amp;#10;feedback_text = ''&amp;#10;if response=='b':&amp;#10;    feedback_text = 'Az Ön válasza:\nA kép nem marad.'&amp;#10;elif response=='c':&amp;#10;    feedback_text = 'Az Ön válasza:\nA kép marad.'&amp;#10;elif response=='a' or response=='d':&amp;#10;    feedback_text = 'Érvénytelen válasz.\nHasználja a mutatóujját!'&amp;#10;else:&amp;#10;    feedback_text = 'Nem adott választ.'&amp;#10;print(feedback_text)" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -977,8 +977,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="correct_response = &quot;&quot;;&amp;#10;if ((StimType === &quot;FOIL&quot;)) {&amp;#10;    correct_response = &quot;A helyes v\u00e1lasz: \u00daj&quot;;&amp;#10;} else {&amp;#10;    if ((StimType === &quot;LURE&quot;)) {&amp;#10;        correct_response = &quot;A helyes v\u00e1lasz: \u00daj&quot;;&amp;#10;    } else {&amp;#10;        if ((StimType === &quot;TARGET&quot;)) {&amp;#10;            correct_response = &quot;A helyes v\u00e1lasz: R\u00e9gi&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;response = &quot;&quot;;&amp;#10;if ((rec_trial_key_practice.keys === &quot;b&quot;)) {&amp;#10;    response = &quot;Az \u00d6n v\u00e1lasza: R\u00e9gi&quot;;&amp;#10;} else {&amp;#10;    if ((rec_trial_key_practice.keys === &quot;c&quot;)) {&amp;#10;        response = &quot;Az \u00d6n v\u00e1lasza: \u00daj&quot;;&amp;#10;    }&amp;#10;}&amp;#10;feedback_text = ((correct_response + &quot;\n&quot;) + response);&amp;#10;console.log(feedback_text);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="correct_response = ''&amp;#10;if StimType == 'FOIL':&amp;#10;    correct_response = 'A helyes válasz: Új'&amp;#10;elif StimType == 'LURE':&amp;#10;    correct_response = 'A helyes válasz: Új'&amp;#10;elif StimType == 'TARGET':&amp;#10;    correct_response = 'A helyes válasz: Régi'&amp;#10;&amp;#10;response = ''&amp;#10;if rec_trial_key_practice.keys == 'b':&amp;#10;    response = 'Az Ön válasza: Régi'&amp;#10;&amp;#10;elif rec_trial_key_practice.keys == 'c':&amp;#10;    response = 'Az Ön válasza: Új'&amp;#10;    &amp;#10;feedback_text = correct_response +'\n'+ response&amp;#10;print(feedback_text)&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="correct_response = &quot;&quot;;&amp;#10;if ((StimType === &quot;FOIL&quot;)) {&amp;#10;    correct_response = &quot;A helyes v\u00e1lasz: \u00daj&quot;;&amp;#10;} else {&amp;#10;    if ((StimType === &quot;LURE&quot;)) {&amp;#10;        correct_response = &quot;A helyes v\u00e1lasz: \u00daj&quot;;&amp;#10;    } else {&amp;#10;        if ((StimType === &quot;TARGET&quot;)) {&amp;#10;            correct_response = &quot;A helyes v\u00e1lasz: R\u00e9gi&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;response = rec_trial_key_practice.keys;&amp;#10;if ((response === &quot;b&quot;)) {&amp;#10;    feedback = &quot;Az \u00d6n v\u00e1lasza: R\u00e9gi&quot;;&amp;#10;} else {&amp;#10;    if ((response === &quot;c&quot;)) {&amp;#10;        feedback = &quot;Az \u00d6n v\u00e1lasza: \u00daj&quot;;&amp;#10;    } else {&amp;#10;        if (((response === &quot;a&quot;) || (response === &quot;d&quot;))) {&amp;#10;            feedback = &quot;\u00c9rv\u00e9nytelen. Haszn\u00e1lja a mutat\u00f3ujj\u00e1t!&quot;;&amp;#10;        } else {&amp;#10;            feedback = &quot;Nem adott v\u00e1laszt.&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;feedback_text = ((correct_response + &quot;\n&quot;) + feedback);&amp;#10;console.log(feedback_text);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="correct_response = ''&amp;#10;if StimType == 'FOIL':&amp;#10;    correct_response = 'A helyes válasz: Új'&amp;#10;elif StimType == 'LURE':&amp;#10;    correct_response = 'A helyes válasz: Új'&amp;#10;elif StimType == 'TARGET':&amp;#10;    correct_response = 'A helyes válasz: Régi'&amp;#10;&amp;#10;response = rec_trial_key_practice.keys&amp;#10;if response=='b':&amp;#10;    feedback = 'Az Ön válasza: Régi'&amp;#10;elif response=='c':&amp;#10;    feedback = 'Az Ön válasza: Új'&amp;#10;elif response=='a' or response=='d':&amp;#10;    feedback = 'Érvénytelen. Használja a mutatóujját!'&amp;#10;else:&amp;#10;    feedback = 'Nem adott választ.'&amp;#10;    &amp;#10;feedback_text = correct_response +'\n'+ feedback&amp;#10;print(feedback_text)&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -1750,7 +1750,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="enc_fx_key_practice">
-        <Param name="allowedKeys" updates="constant" val="'b', 'c'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b', 'c', 'a', 'd'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -1872,7 +1872,7 @@
         <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <KeyboardComponent name="enc_trial_key_practice">
-        <Param name="allowedKeys" updates="constant" val="'b', 'c'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b', 'c', 'a', 'd'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -2010,7 +2010,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="rec_fx_key">
-        <Param name="allowedKeys" updates="constant" val="'b','c'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b', 'c', 'a', 'd'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -2165,7 +2165,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="rec_fx_key_practice">
-        <Param name="allowedKeys" updates="constant" val="'b','c'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b', 'c', 'a', 'd'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -2349,7 +2349,7 @@
         <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <KeyboardComponent name="rec_trial_key_practice">
-        <Param name="allowedKeys" updates="constant" val="'b','c'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b', 'c', 'a', 'd'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>

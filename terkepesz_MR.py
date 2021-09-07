@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.1.4),
-    on July 13, 2021, at 17:15
+    on September 07, 2021, at 16:43
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1329,7 +1329,7 @@ for thisEnc_full_practice in enc_full_practice:
                 win.timeOnFlip(enc_fx_key_practice, 'tStopRefresh')  # time at next scr refresh
                 enc_fx_key_practice.status = FINISHED
         if enc_fx_key_practice.status == STARTED and not waitOnFlip:
-            theseKeys = enc_fx_key_practice.getKeys(keyList=['b', 'c'], waitRelease=False)
+            theseKeys = enc_fx_key_practice.getKeys(keyList=['b', 'c', 'a', 'd'], waitRelease=False)
             _enc_fx_key_practice_allKeys.extend(theseKeys)
             if len(_enc_fx_key_practice_allKeys):
                 enc_fx_key_practice.keys = _enc_fx_key_practice_allKeys[-1].name  # just the last key pressed
@@ -1500,7 +1500,7 @@ for thisEnc_full_practice in enc_full_practice:
                 win.timeOnFlip(enc_trial_key_practice, 'tStopRefresh')  # time at next scr refresh
                 enc_trial_key_practice.status = FINISHED
         if enc_trial_key_practice.status == STARTED and not waitOnFlip:
-            theseKeys = enc_trial_key_practice.getKeys(keyList=['b', 'c'], waitRelease=False)
+            theseKeys = enc_trial_key_practice.getKeys(keyList=['b', 'c', 'a', 'd'], waitRelease=False)
             _enc_trial_key_practice_allKeys.extend(theseKeys)
             if len(_enc_trial_key_practice_allKeys):
                 enc_trial_key_practice.keys = _enc_trial_key_practice_allKeys[-1].name  # just the last key pressed
@@ -1584,10 +1584,12 @@ for thisEnc_full_practice in enc_full_practice:
     # update component parameters for each repeat
     response = enc_trial_key_practice.keys
     feedback_text = ''
-    if response == 'b':
+    if response=='b':
         feedback_text = 'Az Ön válasza:\nA kép nem marad.'
-    elif response == 'c':
+    elif response=='c':
         feedback_text = 'Az Ön válasza:\nA kép marad.'
+    elif response=='a' or response=='d':
+        feedback_text = 'Érvénytelen válasz.\nHasználja a mutatóujját!'
     else:
         feedback_text = 'Nem adott választ.'
     print(feedback_text)
@@ -1914,7 +1916,7 @@ for thisRec_full_practice in rec_full_practice:
                 win.timeOnFlip(rec_fx_key_practice, 'tStopRefresh')  # time at next scr refresh
                 rec_fx_key_practice.status = FINISHED
         if rec_fx_key_practice.status == STARTED and not waitOnFlip:
-            theseKeys = rec_fx_key_practice.getKeys(keyList=['b', 'c'], waitRelease=False)
+            theseKeys = rec_fx_key_practice.getKeys(keyList=['b', 'c', 'a', 'd'], waitRelease=False)
             _rec_fx_key_practice_allKeys.extend(theseKeys)
             if len(_rec_fx_key_practice_allKeys):
                 rec_fx_key_practice.keys = _rec_fx_key_practice_allKeys[-1].name  # just the last key pressed
@@ -2085,7 +2087,7 @@ for thisRec_full_practice in rec_full_practice:
                 win.timeOnFlip(rec_trial_key_practice, 'tStopRefresh')  # time at next scr refresh
                 rec_trial_key_practice.status = FINISHED
         if rec_trial_key_practice.status == STARTED and not waitOnFlip:
-            theseKeys = rec_trial_key_practice.getKeys(keyList=['b', 'c'], waitRelease=False)
+            theseKeys = rec_trial_key_practice.getKeys(keyList=['b', 'c', 'a', 'd'], waitRelease=False)
             _rec_trial_key_practice_allKeys.extend(theseKeys)
             if len(_rec_trial_key_practice_allKeys):
                 rec_trial_key_practice.keys = _rec_trial_key_practice_allKeys[-1].name  # just the last key pressed
@@ -2175,14 +2177,17 @@ for thisRec_full_practice in rec_full_practice:
     elif StimType == 'TARGET':
         correct_response = 'A helyes válasz: Régi'
     
-    response = ''
-    if rec_trial_key_practice.keys == 'b':
-        response = 'Az Ön válasza: Régi'
-    
-    elif rec_trial_key_practice.keys == 'c':
-        response = 'Az Ön válasza: Új'
+    response = rec_trial_key_practice.keys
+    if response=='b':
+        feedback = 'Az Ön válasza: Régi'
+    elif response=='c':
+        feedback = 'Az Ön válasza: Új'
+    elif response=='a' or response=='d':
+        feedback = 'Érvénytelen. Használja a mutatóujját!'
+    else:
+        feedback = 'Nem adott választ.'
         
-    feedback_text = correct_response +'\n'+ response
+    feedback_text = correct_response +'\n'+ feedback
     print(feedback_text)
     
     rec_practice_feedback_text.setText(feedback_text)
@@ -3113,7 +3118,7 @@ for thisRun in run:
                     win.timeOnFlip(enc_fx_key, 'tStopRefresh')  # time at next scr refresh
                     enc_fx_key.status = FINISHED
             if enc_fx_key.status == STARTED and not waitOnFlip:
-                theseKeys = enc_fx_key.getKeys(keyList=['b', 'c'], waitRelease=False)
+                theseKeys = enc_fx_key.getKeys(keyList=['b', 'c', 'a', 'd'], waitRelease=False)
                 _enc_fx_key_allKeys.extend(theseKeys)
                 if len(_enc_fx_key_allKeys):
                     enc_fx_key.keys = _enc_fx_key_allKeys[-1].name  # just the last key pressed
@@ -3292,7 +3297,7 @@ for thisRun in run:
                     win.timeOnFlip(enc_trial_key, 'tStopRefresh')  # time at next scr refresh
                     enc_trial_key.status = FINISHED
             if enc_trial_key.status == STARTED and not waitOnFlip:
-                theseKeys = enc_trial_key.getKeys(keyList=['b', 'c'], waitRelease=False)
+                theseKeys = enc_trial_key.getKeys(keyList=['b', 'c', 'a', 'd'], waitRelease=False)
                 _enc_trial_key_allKeys.extend(theseKeys)
                 if len(_enc_trial_key_allKeys):
                     enc_trial_key.keys = _enc_trial_key_allKeys[-1].name  # just the last key pressed
@@ -3379,15 +3384,17 @@ for thisRun in run:
         enc_trials.addData('enc_trial_instructions_text.stopped', enc_trial_instructions_text.tStopRefresh)
         response=enc_trial_key.keys
         if response == 'b':
-            info_text = 'Nem marad.'
+            info_text = '\'Nem marad.\''
         elif response == 'c':
-            info_text = 'Marad.'
+            info_text = '\'Marad.\''
+        elif response=='a' or response=='d':
+            info_text = 'Invalid!'
         else:
             response='-'
-            info_text = 'Nem adott választ.'
+            info_text = '\'Nem adott választ.\''
             enc_missing = enc_missing + 1
         
-        print('Button pressed: {}. {}'.format(response, info_text))
+        print('Button pressed: {}. Response: {}'.format(response, info_text))
         thisExp.nextEntry()
         
     # completed 1 repeats of 'enc_trials'
@@ -4315,7 +4322,7 @@ for thisRun in run:
                     win.timeOnFlip(rec_fx_key, 'tStopRefresh')  # time at next scr refresh
                     rec_fx_key.status = FINISHED
             if rec_fx_key.status == STARTED and not waitOnFlip:
-                theseKeys = rec_fx_key.getKeys(keyList=['b', 'c'], waitRelease=False)
+                theseKeys = rec_fx_key.getKeys(keyList=['b', 'c', 'a', 'd'], waitRelease=False)
                 _rec_fx_key_allKeys.extend(theseKeys)
                 if len(_rec_fx_key_allKeys):
                     rec_fx_key.keys = _rec_fx_key_allKeys[-1].name  # just the last key pressed
@@ -4494,7 +4501,7 @@ for thisRun in run:
                     win.timeOnFlip(rec_trial_key, 'tStopRefresh')  # time at next scr refresh
                     rec_trial_key.status = FINISHED
             if rec_trial_key.status == STARTED and not waitOnFlip:
-                theseKeys = rec_trial_key.getKeys(keyList=['b', 'c'], waitRelease=False)
+                theseKeys = rec_trial_key.getKeys(keyList=['b', 'c', 'a', 'd'], waitRelease=False)
                 _rec_trial_key_allKeys.extend(theseKeys)
                 if len(_rec_trial_key_allKeys):
                     rec_trial_key.keys = _rec_trial_key_allKeys[-1].name  # just the last key pressed
@@ -4580,12 +4587,14 @@ for thisRun in run:
         rec_trials.addData('rec_trial_instructions_text.started', rec_trial_instructions_text.tStartRefresh)
         rec_trials.addData('rec_trial_instructions_text.stopped', rec_trial_instructions_text.tStopRefresh)
         response = rec_trial_key.keys
-        if response == 'b':
+        if response=='b':
             response_text = 'B - OLD'
             if StimType == 'TARGET':
                 hits = hits + 1
-        elif response == 'c':
+        elif response=='c':
             response_text = 'C - NEW'
+        elif response == 'a' or response=='d':
+            response_text = 'INVALID!'
         else:
             response_text = 'Missing'
             rec_missing = rec_missing + 1
