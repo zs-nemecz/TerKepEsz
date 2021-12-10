@@ -1,0 +1,60 @@
+29.3277 	WARNING 	Monitor specification not found. Creating a temporary one...
+30.7244 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0.114, 0.31 , 0.38 ]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000000001EA49F98>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000000001E9E9898>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=1, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+30.7244 	EXP 	window1: mouseVisible = True
+30.7245 	EXP 	window1: recordFrameIntervals = False
+30.8906 	EXP 	window1: recordFrameIntervals = True
+31.0742 	EXP 	window1: recordFrameIntervals = False
+31.4721 	EXP 	Created welcome_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='welcome_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='Üdvözöljük a TTK Agyi Képalkotó Központjában!', units='height', win=Window(...), wrapWidth=1)
+31.5486 	EXP 	window1: mouseVisible = False
+31.5614 	EXP 	Created anatomy_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='anatomy_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+31.5694 	EXP 	Created general_instructions_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='general_instructions_continue', opacity=1, ori=0, pos=array([ 0. , -0.4]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+31.5826 	EXP 	Created choose_video_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='choose_video_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+31.6044 	EXP 	Created loading_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='loading_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='A videó betölt...', units='height', win=Window(...), wrapWidth=1)
+31.6285 	EXP 	Created rest_instructions_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='rest_instructions_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+31.6320 	EXP 	Created rest_instructions_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='rest_instructions_continue', opacity=1, ori=0, pos=array([ 0. , -0.4]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+31.6344 	EXP 	Created fx_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fx_cross', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=0.65)
+31.6417 	EXP 	Created prepare_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='prepare_task_text', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='Most a feladatok következnek.', units='height', win=Window(...), wrapWidth=0.52)
+31.6493 	EXP 	Created prepare_task_button_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='prepare_task_button_text', opacity=1, ori=0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=0.52)
+31.6798 	EXP 	welcome_text: autoDraw = True
+35.1571 	DATA 	Keypress: space
+35.1870 	EXP 	welcome_text: autoDraw = False
+35.1870 	EXP 	anatomy_text: autoDraw = True
+40.1702 	EXP 	general_instructions_continue: autoDraw = True
+50.2932 	DATA 	Keypress: d
+50.3234 	EXP 	anatomy_text: autoDraw = False
+50.3234 	EXP 	general_instructions_continue: autoDraw = False
+50.3234 	EXP 	choose_video_text: autoDraw = True
+60.6896 	EXP 	window1: recordFrameIntervals = False
+60.6912 	DATA 	Keypress: d
+60.7034 	EXP 	choose_video_text: autoDraw = False
+60.7034 	EXP 	loading_text: autoDraw = True
+60.7035 	EXP 	window1: recordFrameIntervals = False
+64.5951 	EXP 	Created video_file = MovieStim3(__class__=<class 'psychopy.visual.movie3.MovieStim3'>, autoLog=True, color=UNKNOWN, colorSpace=UNKNOWN, depth=0.0, filename='stimuli/beauty_of_africa.mp4', flipHoriz=False, flipVert=False, fps=UNKNOWN, interpolate=True, loop=True, name='video_file', noAudio=False, opacity=1, ori=method-wrapper(...), pos=array([0., 0.]), size=method-wrapper(...), units='pix', vframe_callback=UNKNOWN, volume=UNKNOWN, win=Window(...))
+67.4431 	EXP 	Sound  started
+67.4546 	EXP 	loading_text: autoDraw = False
+67.4546 	EXP 	loading_text: autoDraw = False
+67.4546 	EXP 	video_file: autoLog = True
+67.4546 	EXP 	video_file: movie = 'stimuli/beauty_of_africa.mp4'
+67.4546 	EXP 	video_file: size = array([1920., 1080.])
+67.4546 	EXP 	video_file: ori = 0
+67.4546 	EXP 	video_file: autoDraw = True
+451.3514 	EXP 	Sound  reached end of file
+453.2516 	EXP 	Sound  started
+453.3078 	EXP 	Set video_file finished
+703.5815 	EXP 	Sound  stopped
+703.5866 	DATA 	Keypress: space
+703.5891 	EXP 	video_file: autoDraw = False
+703.5891 	EXP 	rest_instructions_text: autoDraw = True
+713.5903 	EXP 	rest_instructions_continue: autoDraw = True
+720.1120 	DATA 	Keypress: d
+720.1237 	EXP 	rest_instructions_text: autoDraw = False
+720.1237 	EXP 	rest_instructions_continue: autoDraw = False
+720.1237 	EXP 	fx_cross: autoDraw = True
+1314.2042 	DATA 	Keypress: space
+1314.2154 	EXP 	fx_cross: autoDraw = False
+1314.2154 	EXP 	prepare_task_text: autoDraw = True
+1319.1947 	EXP 	prepare_task_button_text: autoDraw = True
+1324.0312 	DATA 	Keypress: d
+1324.0449 	EXP 	prepare_task_text: autoDraw = False
+1324.0449 	EXP 	prepare_task_button_text: autoDraw = False
+1324.0516 	EXP 	window1: mouseVisible = True
